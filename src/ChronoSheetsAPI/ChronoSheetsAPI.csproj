@@ -12,7 +12,7 @@ OpenAPI spec version: v1
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{5B95DECF-ABC7-41DB-A28E-1DD0888CCE14}</ProjectGuid>
+    <ProjectGuid>{9C59B7B3-07C2-46DE-BC93-8B59DBB6DC0A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ChronoSheetsAPI</RootNamespace>
