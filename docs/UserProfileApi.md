@@ -1,0 +1,305 @@
+# ChronoSheetsAPI.ChronoSheetsClientLibApi.UserProfileApi
+
+All URIs are relative to *https://www.chronosheets.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**UserProfileDoLogin**](UserProfileApi.md#userprofiledologin) | **POST** /api/UserProfile/DoLogin | 
+[**UserProfileDoLogout**](UserProfileApi.md#userprofiledologout) | **DELETE** /api/UserProfile/DoLogout | 
+[**UserProfileGetMyProfile**](UserProfileApi.md#userprofilegetmyprofile) | **GET** /api/UserProfile/GetMyProfile | 
+[**UserProfileKeepSessionAlive**](UserProfileApi.md#userprofilekeepsessionalive) | **GET** /api/UserProfile/KeepSessionAlive | 
+[**UserProfileUpdateMyProfile**](UserProfileApi.md#userprofileupdatemyprofile) | **POST** /api/UserProfile/UpdateMyProfile | 
+
+
+<a name="userprofiledologin"></a>
+# **UserProfileDoLogin**
+> CsApiApiResponseDoLoginResponse UserProfileDoLogin (CsApiDoLoginRequest request)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class UserProfileDoLoginExample
+    {
+        public void main()
+        {
+            var apiInstance = new UserProfileApi();
+            var request = new CsApiDoLoginRequest(); // CsApiDoLoginRequest | 
+
+            try
+            {
+                CsApiApiResponseDoLoginResponse result = apiInstance.UserProfileDoLogin(request);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UserProfileApi.UserProfileDoLogin: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CsApiDoLoginRequest**](CsApiDoLoginRequest.md)|  | 
+
+### Return type
+
+[**CsApiApiResponseDoLoginResponse**](CsApiApiResponseDoLoginResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="userprofiledologout"></a>
+# **UserProfileDoLogout**
+> CsApiApiResponseBoolean UserProfileDoLogout (string xChronosheetsAuth)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class UserProfileDoLogoutExample
+    {
+        public void main()
+        {
+            var apiInstance = new UserProfileApi();
+            var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+
+            try
+            {
+                CsApiApiResponseBoolean result = apiInstance.UserProfileDoLogout(xChronosheetsAuth);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UserProfileApi.UserProfileDoLogout: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="userprofilegetmyprofile"></a>
+# **UserProfileGetMyProfile**
+> CsApiApiResponseUserProfile UserProfileGetMyProfile (string xChronosheetsAuth)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class UserProfileGetMyProfileExample
+    {
+        public void main()
+        {
+            var apiInstance = new UserProfileApi();
+            var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+
+            try
+            {
+                CsApiApiResponseUserProfile result = apiInstance.UserProfileGetMyProfile(xChronosheetsAuth);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UserProfileApi.UserProfileGetMyProfile: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**CsApiApiResponseUserProfile**](CsApiApiResponseUserProfile.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="userprofilekeepsessionalive"></a>
+# **UserProfileKeepSessionAlive**
+> CsApiApiResponseBoolean UserProfileKeepSessionAlive (string xChronosheetsAuth)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class UserProfileKeepSessionAliveExample
+    {
+        public void main()
+        {
+            var apiInstance = new UserProfileApi();
+            var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+
+            try
+            {
+                CsApiApiResponseBoolean result = apiInstance.UserProfileKeepSessionAlive(xChronosheetsAuth);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UserProfileApi.UserProfileKeepSessionAlive: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="userprofileupdatemyprofile"></a>
+# **UserProfileUpdateMyProfile**
+> CsApiApiResponseSignupResponse UserProfileUpdateMyProfile (CsApiUpdateMyProfileRequest request, string xChronosheetsAuth)
+
+
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class UserProfileUpdateMyProfileExample
+    {
+        public void main()
+        {
+            var apiInstance = new UserProfileApi();
+            var request = new CsApiUpdateMyProfileRequest(); // CsApiUpdateMyProfileRequest | 
+            var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+
+            try
+            {
+                CsApiApiResponseSignupResponse result = apiInstance.UserProfileUpdateMyProfile(request, xChronosheetsAuth);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling UserProfileApi.UserProfileUpdateMyProfile: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **request** | [**CsApiUpdateMyProfileRequest**](CsApiUpdateMyProfileRequest.md)|  | 
+ **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**CsApiApiResponseSignupResponse**](CsApiApiResponseSignupResponse.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
