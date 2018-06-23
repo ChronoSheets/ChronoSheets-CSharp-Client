@@ -12,7 +12,7 @@ Contact: lachlan@chronosheets.com
     
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{0B91A265-1E17-4C51-9860-C1C7320A268B}</ProjectGuid>
+    <ProjectGuid>{90BAFE3B-F2E3-44EB-9572-A922A079B5A8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>ChronoSheetsAPI</RootNamespace>
