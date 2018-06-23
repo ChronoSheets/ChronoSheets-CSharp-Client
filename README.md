@@ -140,7 +140,7 @@ Class | Method | HTTP request | Description
 *TasksApi* | [**TasksUpdateTask**](docs/TasksApi.md#tasksupdatetask) | **POST** /api/Tasks/UpdateTask | Update a task
 *TimesheetsApi* | [**TimesheetsDeleteTimesheet**](docs/TimesheetsApi.md#timesheetsdeletetimesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet
 *TimesheetsApi* | [**TimesheetsGetTimesheets**](docs/TimesheetsApi.md#timesheetsgettimesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates
-*TimesheetsApi* | [**TimesheetsInsertSingleTimesheet**](docs/TimesheetsApi.md#timesheetsinsertsingletimesheet) | **POST** /api/Timesheets/InsertSingleTimesheet | Inserts a single timesheet record
+*TimesheetsApi* | [**TimesheetsInsertSingleTimesheet**](docs/TimesheetsApi.md#timesheetsinsertsingletimesheet) | **PUT** /api/Timesheets/InsertSingleTimesheet | Inserts a single timesheet record
 *TimesheetsApi* | [**TimesheetsUpdateTimesheets**](docs/TimesheetsApi.md#timesheetsupdatetimesheets) | **POST** /api/Timesheets/UpdateTimesheets | Batch update timesheets
 *TripsApi* | [**TripsCreateTrip**](docs/TripsApi.md#tripscreatetrip) | **POST** /api/Trips/CreateTrip | Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
 *TripsApi* | [**TripsGetMyTripById**](docs/TripsApi.md#tripsgetmytripbyid) | **GET** /api/Trips/GetMyTripById | Get trip by Id

@@ -6,7 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**TimesheetsDeleteTimesheet**](TimesheetsApi.md#timesheetsdeletetimesheet) | **DELETE** /api/Timesheets/DeleteTimesheet | Delete a timesheet
 [**TimesheetsGetTimesheets**](TimesheetsApi.md#timesheetsgettimesheets) | **GET** /api/Timesheets/GetTimesheets | Get timesheets between start and end dates
-[**TimesheetsInsertSingleTimesheet**](TimesheetsApi.md#timesheetsinsertsingletimesheet) | **POST** /api/Timesheets/InsertSingleTimesheet | Inserts a single timesheet record
+[**TimesheetsInsertSingleTimesheet**](TimesheetsApi.md#timesheetsinsertsingletimesheet) | **PUT** /api/Timesheets/InsertSingleTimesheet | Inserts a single timesheet record
 [**TimesheetsUpdateTimesheets**](TimesheetsApi.md#timesheetsupdatetimesheets) | **POST** /api/Timesheets/UpdateTimesheets | Batch update timesheets
 
 
