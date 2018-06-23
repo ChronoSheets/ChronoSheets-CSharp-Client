@@ -31,9 +31,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class CsApiApiResponseForPaginatedListRawReportItem :  IEquatable<CsApiApiResponseForPaginatedListRawReportItem>, IValidatableObject
     {
         /// <summary>
-        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
+        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC
         /// </summary>
-        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired</value>
+        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC</value>
         public enum StatusEnum
         {
             
@@ -71,13 +71,19 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             /// Enum NUMBER_5 for value: 5
             /// </summary>
             
-            NUMBER_5 = 5
+            NUMBER_5 = 5,
+            
+            /// <summary>
+            /// Enum NUMBER_128 for value: 128
+            /// </summary>
+            
+            NUMBER_128 = 128
         }
 
         /// <summary>
-        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
+        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC
         /// </summary>
-        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired</value>
+        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
@@ -85,7 +91,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// </summary>
         /// <param name="TotalSetCount">TotalSetCount.</param>
         /// <param name="Data">Data.</param>
-        /// <param name="Status">0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired.</param>
+        /// <param name="Status">0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC.</param>
         /// <param name="Message">Message.</param>
         public CsApiApiResponseForPaginatedListRawReportItem(int? TotalSetCount = default(int?), List<CsApiRawReportItem> Data = default(List<CsApiRawReportItem>), StatusEnum? Status = default(StatusEnum?), string Message = default(string))
         {
