@@ -31,9 +31,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class CsApiApiResponseClient :  IEquatable<CsApiApiResponseClient>, IValidatableObject
     {
         /// <summary>
-        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC
+        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
         /// </summary>
-        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC</value>
+        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired</value>
         public enum StatusEnum
         {
             
@@ -71,26 +71,20 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             /// Enum NUMBER_5 for value: 5
             /// </summary>
             
-            NUMBER_5 = 5,
-            
-            /// <summary>
-            /// Enum NUMBER_128 for value: 128
-            /// </summary>
-            
-            NUMBER_128 = 128
+            NUMBER_5 = 5
         }
 
         /// <summary>
-        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC
+        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
         /// </summary>
-        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC</value>
+        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CsApiApiResponseClient" /> class.
         /// </summary>
         /// <param name="Data">Data.</param>
-        /// <param name="Status">0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired, 128 &#x3D; TestingABC.</param>
+        /// <param name="Status">0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired.</param>
         /// <param name="Message">Message.</param>
         public CsApiApiResponseClient(CsApiClient Data = default(CsApiClient), StatusEnum? Status = default(StatusEnum?), string Message = default(string))
         {
