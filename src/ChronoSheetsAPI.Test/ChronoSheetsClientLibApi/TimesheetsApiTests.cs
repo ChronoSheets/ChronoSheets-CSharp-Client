@@ -65,6 +65,19 @@ namespace ChronoSheetsAPI.Test
 
         
         /// <summary>
+        /// Test TimesheetsCreateSingleTimesheet
+        /// </summary>
+        [Test]
+        public void TimesheetsCreateSingleTimesheetTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //CsApiTimesheet request = null;
+            //string xChronosheetsAuth = null;
+            //var response = instance.TimesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
+            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+        }
+        
+        /// <summary>
         /// Test TimesheetsDeleteTimesheet
         /// </summary>
         [Test]
@@ -89,19 +102,6 @@ namespace ChronoSheetsAPI.Test
             //string xChronosheetsAuth = null;
             //var response = instance.TimesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
             //Assert.IsInstanceOf<CsApiApiResponseListTimesheet> (response, "response is CsApiApiResponseListTimesheet");
-        }
-        
-        /// <summary>
-        /// Test TimesheetsInsertSingleTimesheet
-        /// </summary>
-        [Test]
-        public void TimesheetsInsertSingleTimesheetTest()
-        {
-            // TODO uncomment below to test the method and replace null with proper value
-            //CsApiTimesheet request = null;
-            //string xChronosheetsAuth = null;
-            //var response = instance.TimesheetsInsertSingleTimesheet(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
         }
         
         /// <summary>

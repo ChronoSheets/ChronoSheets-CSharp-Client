@@ -25,6 +25,29 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
+        /// Inserts a single timesheet record
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The timesheet request object</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CsApiApiResponseInt32</returns>
+        CsApiApiResponseInt32 TimesheetsCreateSingleTimesheet (CsApiTimesheet request, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Inserts a single timesheet record
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The timesheet request object</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
+        ApiResponse<CsApiApiResponseInt32> TimesheetsCreateSingleTimesheetWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth);
+        /// <summary>
         /// Delete a timesheet
         /// </summary>
         /// <remarks>
@@ -73,29 +96,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CsApiApiResponseListTimesheet</returns>
         ApiResponse<CsApiApiResponseListTimesheet> TimesheetsGetTimesheetsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
-        /// Inserts a single timesheet record
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
-        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        CsApiApiResponseInt32 TimesheetsInsertSingleTimesheet (CsApiTimesheet request, string xChronosheetsAuth);
-
-        /// <summary>
-        /// Inserts a single timesheet record
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
-        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        ApiResponse<CsApiApiResponseInt32> TimesheetsInsertSingleTimesheetWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth);
-        /// <summary>
         /// Batch update timesheets
         /// </summary>
         /// <remarks>
@@ -120,6 +120,29 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         ApiResponse<CsApiApiResponseListInt32> TimesheetsUpdateTimesheetsWithHttpInfo (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Inserts a single timesheet record
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The timesheet request object</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CsApiApiResponseInt32</returns>
+        System.Threading.Tasks.Task<CsApiApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (CsApiTimesheet request, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Inserts a single timesheet record
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The timesheet request object</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth);
         /// <summary>
         /// Delete a timesheet
         /// </summary>
@@ -168,29 +191,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CsApiApiResponseListTimesheet)</returns>
         System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListTimesheet>> TimesheetsGetTimesheetsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
-        /// <summary>
-        /// Inserts a single timesheet record
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
-        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseInt32> TimesheetsInsertSingleTimesheetAsync (CsApiTimesheet request, string xChronosheetsAuth);
-
-        /// <summary>
-        /// Inserts a single timesheet record
-        /// </summary>
-        /// <remarks>
-        /// 
-        /// </remarks>
-        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
-        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> TimesheetsInsertSingleTimesheetAsyncWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth);
         /// <summary>
         /// Batch update timesheets
         /// </summary>
@@ -312,6 +312,185 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Inserts a single timesheet record 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The timesheet request object</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CsApiApiResponseInt32</returns>
+        public CsApiApiResponseInt32 TimesheetsCreateSingleTimesheet (CsApiTimesheet request, string xChronosheetsAuth)
+        {
+             ApiResponse<CsApiApiResponseInt32> localVarResponse = TimesheetsCreateSingleTimesheetWithHttpInfo(request, xChronosheetsAuth);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Inserts a single timesheet record 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The timesheet request object</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
+        public ApiResponse< CsApiApiResponseInt32 > TimesheetsCreateSingleTimesheetWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TimesheetsApi->TimesheetsCreateSingleTimesheet");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsCreateSingleTimesheet");
+
+            var localVarPath = "/api/Timesheets/CreateSingleTimesheet";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded", 
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TimesheetsCreateSingleTimesheet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+        }
+
+        /// <summary>
+        /// Inserts a single timesheet record 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The timesheet request object</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CsApiApiResponseInt32</returns>
+        public async System.Threading.Tasks.Task<CsApiApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (CsApiTimesheet request, string xChronosheetsAuth)
+        {
+             ApiResponse<CsApiApiResponseInt32> localVarResponse = await TimesheetsCreateSingleTimesheetAsyncWithHttpInfo(request, xChronosheetsAuth);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Inserts a single timesheet record 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="request">The timesheet request object</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'request' is set
+            if (request == null)
+                throw new ApiException(400, "Missing required parameter 'request' when calling TimesheetsApi->TimesheetsCreateSingleTimesheet");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsCreateSingleTimesheet");
+
+            var localVarPath = "/api/Timesheets/CreateSingleTimesheet";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded", 
+                "multipart/form-data"
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+            if (request != null && request.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = request; // byte array
+            }
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TimesheetsCreateSingleTimesheet", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
         }
 
         /// <summary>
@@ -630,185 +809,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             return new ApiResponse<CsApiApiResponseListTimesheet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CsApiApiResponseListTimesheet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListTimesheet)));
-        }
-
-        /// <summary>
-        /// Inserts a single timesheet record 
-        /// </summary>
-        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
-        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        public CsApiApiResponseInt32 TimesheetsInsertSingleTimesheet (CsApiTimesheet request, string xChronosheetsAuth)
-        {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = TimesheetsInsertSingleTimesheetWithHttpInfo(request, xChronosheetsAuth);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Inserts a single timesheet record 
-        /// </summary>
-        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
-        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        public ApiResponse< CsApiApiResponseInt32 > TimesheetsInsertSingleTimesheetWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth)
-        {
-            // verify the required parameter 'request' is set
-            if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling TimesheetsApi->TimesheetsInsertSingleTimesheet");
-            // verify the required parameter 'xChronosheetsAuth' is set
-            if (xChronosheetsAuth == null)
-                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsInsertSingleTimesheet");
-
-            var localVarPath = "/api/Timesheets/InsertSingleTimesheet";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded", 
-                "multipart/form-data"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml",
-                "multipart/form-data"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
-            if (request != null && request.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = request; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TimesheetsInsertSingleTimesheet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
-        }
-
-        /// <summary>
-        /// Inserts a single timesheet record 
-        /// </summary>
-        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
-        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseInt32> TimesheetsInsertSingleTimesheetAsync (CsApiTimesheet request, string xChronosheetsAuth)
-        {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = await TimesheetsInsertSingleTimesheetAsyncWithHttpInfo(request, xChronosheetsAuth);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Inserts a single timesheet record 
-        /// </summary>
-        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
-        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> TimesheetsInsertSingleTimesheetAsyncWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth)
-        {
-            // verify the required parameter 'request' is set
-            if (request == null)
-                throw new ApiException(400, "Missing required parameter 'request' when calling TimesheetsApi->TimesheetsInsertSingleTimesheet");
-            // verify the required parameter 'xChronosheetsAuth' is set
-            if (xChronosheetsAuth == null)
-                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsInsertSingleTimesheet");
-
-            var localVarPath = "/api/Timesheets/InsertSingleTimesheet";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded", 
-                "multipart/form-data"
-            };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml",
-                "multipart/form-data"
-            };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
-            if (request != null && request.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = Configuration.ApiClient.Serialize(request); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = request; // byte array
-            }
-
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("TimesheetsInsertSingleTimesheet", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
         }
 
         /// <summary>
