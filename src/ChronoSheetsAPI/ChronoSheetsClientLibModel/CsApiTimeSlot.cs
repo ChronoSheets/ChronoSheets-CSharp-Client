@@ -31,64 +31,65 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class CsApiTimeSlot :  IEquatable<CsApiTimeSlot>, IValidatableObject
     {
         /// <summary>
-        /// Defines DayType
+        /// 0 &#x3D; Monday, 1 &#x3D; Tuesday, 2 &#x3D; Wednesday, 3 &#x3D; Thursday, 4 &#x3D; Friday, 5 &#x3D; Saturday, 6 &#x3D; Sunday
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        /// <value>0 &#x3D; Monday, 1 &#x3D; Tuesday, 2 &#x3D; Wednesday, 3 &#x3D; Thursday, 4 &#x3D; Friday, 5 &#x3D; Saturday, 6 &#x3D; Sunday</value>
         public enum DayTypeEnum
         {
             
             /// <summary>
-            /// Enum Monday for value: Monday
+            /// Enum NUMBER_0 for value: 0
             /// </summary>
-            [EnumMember(Value = "Monday")]
-            Monday = 1,
+            
+            NUMBER_0 = 0,
             
             /// <summary>
-            /// Enum Tuesday for value: Tuesday
+            /// Enum NUMBER_1 for value: 1
             /// </summary>
-            [EnumMember(Value = "Tuesday")]
-            Tuesday = 2,
+            
+            NUMBER_1 = 1,
             
             /// <summary>
-            /// Enum Wednesday for value: Wednesday
+            /// Enum NUMBER_2 for value: 2
             /// </summary>
-            [EnumMember(Value = "Wednesday")]
-            Wednesday = 3,
+            
+            NUMBER_2 = 2,
             
             /// <summary>
-            /// Enum Thursday for value: Thursday
+            /// Enum NUMBER_3 for value: 3
             /// </summary>
-            [EnumMember(Value = "Thursday")]
-            Thursday = 4,
+            
+            NUMBER_3 = 3,
             
             /// <summary>
-            /// Enum Friday for value: Friday
+            /// Enum NUMBER_4 for value: 4
             /// </summary>
-            [EnumMember(Value = "Friday")]
-            Friday = 5,
+            
+            NUMBER_4 = 4,
             
             /// <summary>
-            /// Enum Saturday for value: Saturday
+            /// Enum NUMBER_5 for value: 5
             /// </summary>
-            [EnumMember(Value = "Saturday")]
-            Saturday = 6,
+            
+            NUMBER_5 = 5,
             
             /// <summary>
-            /// Enum Sunday for value: Sunday
+            /// Enum NUMBER_6 for value: 6
             /// </summary>
-            [EnumMember(Value = "Sunday")]
-            Sunday = 7
+            
+            NUMBER_6 = 6
         }
 
         /// <summary>
-        /// Gets or Sets DayType
+        /// 0 &#x3D; Monday, 1 &#x3D; Tuesday, 2 &#x3D; Wednesday, 3 &#x3D; Thursday, 4 &#x3D; Friday, 5 &#x3D; Saturday, 6 &#x3D; Sunday
         /// </summary>
+        /// <value>0 &#x3D; Monday, 1 &#x3D; Tuesday, 2 &#x3D; Wednesday, 3 &#x3D; Thursday, 4 &#x3D; Friday, 5 &#x3D; Saturday, 6 &#x3D; Sunday</value>
         [DataMember(Name="DayType", EmitDefaultValue=false)]
         public DayTypeEnum? DayType { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CsApiTimeSlot" /> class.
         /// </summary>
-        /// <param name="DayType">DayType.</param>
+        /// <param name="DayType">0 &#x3D; Monday, 1 &#x3D; Tuesday, 2 &#x3D; Wednesday, 3 &#x3D; Thursday, 4 &#x3D; Friday, 5 &#x3D; Saturday, 6 &#x3D; Sunday.</param>
         /// <param name="UsualHourId">UsualHourId.</param>
         /// <param name="StartHour">StartHour.</param>
         /// <param name="StartMinute">StartMinute.</param>

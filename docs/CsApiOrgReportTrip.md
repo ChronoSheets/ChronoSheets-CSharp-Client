@@ -12,7 +12,7 @@ Name | Type | Description | Notes
 **VehicleId** | **int?** |  | [optional] 
 **UserId** | **int?** |  | [optional] 
 **OrgId** | **int?** |  | [optional] 
-**MobilePlatform** | **string** |  | [optional] 
+**MobilePlatform** | **int?** | 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android | [optional] 
 **StartDate** | **DateTime?** |  | [optional] 
 **EndDate** | **DateTime?** |  | [optional] 
 **VehicleName** | **string** |  | [optional] 

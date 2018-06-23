@@ -31,34 +31,35 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class CsApiCreateTripRequest :  IEquatable<CsApiCreateTripRequest>, IValidatableObject
     {
         /// <summary>
-        /// Defines MobilePlatform
+        /// 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
         /// </summary>
-        [JsonConverter(typeof(StringEnumConverter))]
+        /// <value>0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android</value>
         public enum MobilePlatformEnum
         {
             
             /// <summary>
-            /// Enum Unknown for value: Unknown
+            /// Enum NUMBER_0 for value: 0
             /// </summary>
-            [EnumMember(Value = "Unknown")]
-            Unknown = 1,
+            
+            NUMBER_0 = 0,
             
             /// <summary>
-            /// Enum IOS for value: iOS
+            /// Enum NUMBER_1 for value: 1
             /// </summary>
-            [EnumMember(Value = "iOS")]
-            IOS = 2,
+            
+            NUMBER_1 = 1,
             
             /// <summary>
-            /// Enum Android for value: Android
+            /// Enum NUMBER_2 for value: 2
             /// </summary>
-            [EnumMember(Value = "Android")]
-            Android = 3
+            
+            NUMBER_2 = 2
         }
 
         /// <summary>
-        /// Gets or Sets MobilePlatform
+        /// 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
         /// </summary>
+        /// <value>0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android</value>
         [DataMember(Name="MobilePlatform", EmitDefaultValue=false)]
         public MobilePlatformEnum? MobilePlatform { get; set; }
         /// <summary>
@@ -68,7 +69,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="VehicleId">VehicleId.</param>
         /// <param name="PathCoordsStringCsv">PathCoordsStringCsv.</param>
         /// <param name="DistanceMeters">DistanceMeters.</param>
-        /// <param name="MobilePlatform">MobilePlatform.</param>
+        /// <param name="MobilePlatform">0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android.</param>
         public CsApiCreateTripRequest(int? TimesheetId = default(int?), int? VehicleId = default(int?), string PathCoordsStringCsv = default(string), double? DistanceMeters = default(double?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?))
         {
             this.TimesheetId = TimesheetId;
