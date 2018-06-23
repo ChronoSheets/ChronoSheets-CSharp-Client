@@ -42,8 +42,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="Roles">Roles.</param>
         /// <param name="AlertSettings">AlertSettings.</param>
         /// <param name="SetupWizardRequired">SetupWizardRequired.</param>
+        /// <param name="IsSubscribedToNewsletter">IsSubscribedToNewsletter.</param>
         /// <param name="Organisation">Organisation.</param>
-        public CsApiClientSideUser(int? Id = default(int?), int? OrganisationId = default(int?), string UserName = default(string), string FirstName = default(string), string LastName = default(string), string EmailAddress = default(string), long? Roles = default(long?), long? AlertSettings = default(long?), bool? SetupWizardRequired = default(bool?), CsApiOrganisation Organisation = default(CsApiOrganisation))
+        public CsApiClientSideUser(int? Id = default(int?), int? OrganisationId = default(int?), string UserName = default(string), string FirstName = default(string), string LastName = default(string), string EmailAddress = default(string), long? Roles = default(long?), long? AlertSettings = default(long?), bool? SetupWizardRequired = default(bool?), bool? IsSubscribedToNewsletter = default(bool?), CsApiOrganisation Organisation = default(CsApiOrganisation))
         {
             this.Id = Id;
             this.OrganisationId = OrganisationId;
@@ -54,6 +55,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             this.Roles = Roles;
             this.AlertSettings = AlertSettings;
             this.SetupWizardRequired = SetupWizardRequired;
+            this.IsSubscribedToNewsletter = IsSubscribedToNewsletter;
             this.Organisation = Organisation;
         }
         
@@ -112,6 +114,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public bool? SetupWizardRequired { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsSubscribedToNewsletter
+        /// </summary>
+        [DataMember(Name="IsSubscribedToNewsletter", EmitDefaultValue=false)]
+        public bool? IsSubscribedToNewsletter { get; set; }
+
+        /// <summary>
         /// Gets or Sets Organisation
         /// </summary>
         [DataMember(Name="Organisation", EmitDefaultValue=false)]
@@ -134,6 +142,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  AlertSettings: ").Append(AlertSettings).Append("\n");
             sb.Append("  SetupWizardRequired: ").Append(SetupWizardRequired).Append("\n");
+            sb.Append("  IsSubscribedToNewsletter: ").Append(IsSubscribedToNewsletter).Append("\n");
             sb.Append("  Organisation: ").Append(Organisation).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -215,6 +224,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.SetupWizardRequired.Equals(input.SetupWizardRequired))
                 ) && 
                 (
+                    this.IsSubscribedToNewsletter == input.IsSubscribedToNewsletter ||
+                    (this.IsSubscribedToNewsletter != null &&
+                    this.IsSubscribedToNewsletter.Equals(input.IsSubscribedToNewsletter))
+                ) && 
+                (
                     this.Organisation == input.Organisation ||
                     (this.Organisation != null &&
                     this.Organisation.Equals(input.Organisation))
@@ -248,6 +262,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.AlertSettings.GetHashCode();
                 if (this.SetupWizardRequired != null)
                     hashCode = hashCode * 59 + this.SetupWizardRequired.GetHashCode();
+                if (this.IsSubscribedToNewsletter != null)
+                    hashCode = hashCode * 59 + this.IsSubscribedToNewsletter.GetHashCode();
                 if (this.Organisation != null)
                     hashCode = hashCode * 59 + this.Organisation.GetHashCode();
                 return hashCode;

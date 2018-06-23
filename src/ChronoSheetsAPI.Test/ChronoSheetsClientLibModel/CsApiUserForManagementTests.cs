@@ -67,14 +67,6 @@ namespace ChronoSheetsAPI.Test
 
 
         /// <summary>
-        /// Test the property 'IsSubscribedToNewsletter'
-        /// </summary>
-        [Test]
-        public void IsSubscribedToNewsletterTest()
-        {
-            // TODO unit test for the property 'IsSubscribedToNewsletter'
-        }
-        /// <summary>
         /// Test the property 'IsAccountActive'
         /// </summary>
         [Test]
@@ -153,6 +145,14 @@ namespace ChronoSheetsAPI.Test
         public void SetupWizardRequiredTest()
         {
             // TODO unit test for the property 'SetupWizardRequired'
+        }
+        /// <summary>
+        /// Test the property 'IsSubscribedToNewsletter'
+        /// </summary>
+        [Test]
+        public void IsSubscribedToNewsletterTest()
+        {
+            // TODO unit test for the property 'IsSubscribedToNewsletter'
         }
         /// <summary>
         /// Test the property 'Organisation'
