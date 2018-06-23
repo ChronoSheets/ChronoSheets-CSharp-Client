@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **UserName** | **string** |  | [optional] 
 **FirstName** | **string** |  | [optional] 
 **LastName** | **string** |  | [optional] 
+**EmailAddress** | **string** |  | [optional] 
 **Roles** | **long?** |  | [optional] 
 **AlertSettings** | **long?** |  | [optional] 
 **SetupWizardRequired** | **bool?** |  | [optional] 

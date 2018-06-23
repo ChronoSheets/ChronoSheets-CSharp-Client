@@ -38,17 +38,19 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="UserName">UserName.</param>
         /// <param name="FirstName">FirstName.</param>
         /// <param name="LastName">LastName.</param>
+        /// <param name="EmailAddress">EmailAddress.</param>
         /// <param name="Roles">Roles.</param>
         /// <param name="AlertSettings">AlertSettings.</param>
         /// <param name="SetupWizardRequired">SetupWizardRequired.</param>
         /// <param name="Organisation">Organisation.</param>
-        public CsApiClientSideUser(int? Id = default(int?), int? OrganisationId = default(int?), string UserName = default(string), string FirstName = default(string), string LastName = default(string), long? Roles = default(long?), long? AlertSettings = default(long?), bool? SetupWizardRequired = default(bool?), CsApiOrganisation Organisation = default(CsApiOrganisation))
+        public CsApiClientSideUser(int? Id = default(int?), int? OrganisationId = default(int?), string UserName = default(string), string FirstName = default(string), string LastName = default(string), string EmailAddress = default(string), long? Roles = default(long?), long? AlertSettings = default(long?), bool? SetupWizardRequired = default(bool?), CsApiOrganisation Organisation = default(CsApiOrganisation))
         {
             this.Id = Id;
             this.OrganisationId = OrganisationId;
             this.UserName = UserName;
             this.FirstName = FirstName;
             this.LastName = LastName;
+            this.EmailAddress = EmailAddress;
             this.Roles = Roles;
             this.AlertSettings = AlertSettings;
             this.SetupWizardRequired = SetupWizardRequired;
@@ -84,6 +86,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// </summary>
         [DataMember(Name="LastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets EmailAddress
+        /// </summary>
+        [DataMember(Name="EmailAddress", EmitDefaultValue=false)]
+        public string EmailAddress { get; set; }
 
         /// <summary>
         /// Gets or Sets Roles
@@ -122,6 +130,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  UserName: ").Append(UserName).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
             sb.Append("  LastName: ").Append(LastName).Append("\n");
+            sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  Roles: ").Append(Roles).Append("\n");
             sb.Append("  AlertSettings: ").Append(AlertSettings).Append("\n");
             sb.Append("  SetupWizardRequired: ").Append(SetupWizardRequired).Append("\n");
@@ -186,6 +195,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.LastName.Equals(input.LastName))
                 ) && 
                 (
+                    this.EmailAddress == input.EmailAddress ||
+                    (this.EmailAddress != null &&
+                    this.EmailAddress.Equals(input.EmailAddress))
+                ) && 
+                (
                     this.Roles == input.Roles ||
                     (this.Roles != null &&
                     this.Roles.Equals(input.Roles))
@@ -226,6 +240,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.FirstName.GetHashCode();
                 if (this.LastName != null)
                     hashCode = hashCode * 59 + this.LastName.GetHashCode();
+                if (this.EmailAddress != null)
+                    hashCode = hashCode * 59 + this.EmailAddress.GetHashCode();
                 if (this.Roles != null)
                     hashCode = hashCode * 59 + this.Roles.GetHashCode();
                 if (this.AlertSettings != null)

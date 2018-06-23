@@ -107,6 +107,14 @@ namespace ChronoSheetsAPI.Test
             // TODO unit test for the property 'LastName'
         }
         /// <summary>
+        /// Test the property 'EmailAddress'
+        /// </summary>
+        [Test]
+        public void EmailAddressTest()
+        {
+            // TODO unit test for the property 'EmailAddress'
+        }
+        /// <summary>
         /// Test the property 'Roles'
         /// </summary>
         [Test]

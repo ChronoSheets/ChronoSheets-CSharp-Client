@@ -3,7 +3,6 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**EmailAddress** | **string** |  | [optional] 
 **IsSubscribedToNewsletter** | **bool?** |  | [optional] 
 **IsAccountActive** | **bool?** |  | [optional] 
 **Id** | **int?** |  | [optional] 
@@ -11,6 +10,7 @@ Name | Type | Description | Notes
 **UserName** | **string** |  | [optional] 
 **FirstName** | **string** |  | [optional] 
 **LastName** | **string** |  | [optional] 
+**EmailAddress** | **string** |  | [optional] 
 **Roles** | **long?** |  | [optional] 
 **AlertSettings** | **long?** |  | [optional] 
 **SetupWizardRequired** | **bool?** |  | [optional] 
