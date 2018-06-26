@@ -71,9 +71,9 @@ namespace ChronoSheetsAPI.Test
         public void UserProfileDoLoginTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiDoLoginRequest request = null;
+            //CSDoLoginRequest request = null;
             //var response = instance.UserProfileDoLogin(request);
-            //Assert.IsInstanceOf<CsApiApiResponseDoLoginResponse> (response, "response is CsApiApiResponseDoLoginResponse");
+            //Assert.IsInstanceOf<CSApiResponseDoLoginResponse> (response, "response is CSApiResponseDoLoginResponse");
         }
         
         /// <summary>
@@ -85,7 +85,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.UserProfileDoLogout(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
         /// <summary>
@@ -97,7 +97,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.UserProfileGetMyProfile(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseUserProfile> (response, "response is CsApiApiResponseUserProfile");
+            //Assert.IsInstanceOf<CSApiResponseUserProfile> (response, "response is CSApiResponseUserProfile");
         }
         
         /// <summary>
@@ -109,7 +109,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.UserProfileKeepSessionAlive(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
         /// <summary>
@@ -119,10 +119,10 @@ namespace ChronoSheetsAPI.Test
         public void UserProfileUpdateMyProfileTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiUpdateMyProfileRequest request = null;
+            //CSUpdateMyProfileRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UserProfileUpdateMyProfile(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseSignupResponse> (response, "response is CsApiApiResponseSignupResponse");
+            //Assert.IsInstanceOf<CSApiResponseSignupResponse> (response, "response is CSApiResponseSignupResponse");
         }
         
     }

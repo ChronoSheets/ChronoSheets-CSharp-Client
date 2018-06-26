@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="aggregatejobtasksgetaggregatejobtasks"></a>
 # **AggregateJobTasksGetAggregateJobTasks**
-> CsApiApiResponseListAggregateJobCode AggregateJobTasksGetAggregateJobTasks (string xChronosheetsAuth)
+> CSApiResponseListAggregateJobCode AggregateJobTasksGetAggregateJobTasks (string xChronosheetsAuth)
 
 Get jobs and tasks information, aggregated
 
@@ -33,7 +33,7 @@ namespace Example
             try
             {
                 // Get jobs and tasks information, aggregated
-                CsApiApiResponseListAggregateJobCode result = apiInstance.AggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth);
+                CSApiResponseListAggregateJobCode result = apiInstance.AggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,7 +53,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListAggregateJobCode**](CsApiApiResponseListAggregateJobCode.md)
+[**CSApiResponseListAggregateJobCode**](CSApiResponseListAggregateJobCode.md)
 
 ### Authorization
 

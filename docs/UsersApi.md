@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="userscreatetimesheetuser"></a>
 # **UsersCreateTimesheetUser**
-> CsApiApiResponseInsertUserResponse UsersCreateTimesheetUser (CsApiInsertUserRequest request, string xChronosheetsAuth)
+> CSApiResponseInsertUserResponse UsersCreateTimesheetUser (CSInsertUserRequest request, string xChronosheetsAuth)
 
 Create a user in your organisation
 
@@ -31,13 +31,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new UsersApi();
-            var request = new CsApiInsertUserRequest(); // CsApiInsertUserRequest | 
+            var request = new CSInsertUserRequest(); // CSInsertUserRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Create a user in your organisation
-                CsApiApiResponseInsertUserResponse result = apiInstance.UsersCreateTimesheetUser(request, xChronosheetsAuth);
+                CSApiResponseInsertUserResponse result = apiInstance.UsersCreateTimesheetUser(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,12 +53,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertUserRequest**](CsApiInsertUserRequest.md)|  | 
+ **request** | [**CSInsertUserRequest**](CSInsertUserRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInsertUserResponse**](CsApiApiResponseInsertUserResponse.md)
+[**CSApiResponseInsertUserResponse**](CSApiResponseInsertUserResponse.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 
 <a name="usersgettimesheetuser"></a>
 # **UsersGetTimesheetUser**
-> CsApiApiResponseUserForManagement UsersGetTimesheetUser (int? userId, string xChronosheetsAuth)
+> CSApiResponseUserForManagement UsersGetTimesheetUser (int? userId, string xChronosheetsAuth)
 
 Get a particular user in your organisation
 
@@ -98,7 +98,7 @@ namespace Example
             try
             {
                 // Get a particular user in your organisation
-                CsApiApiResponseUserForManagement result = apiInstance.UsersGetTimesheetUser(userId, xChronosheetsAuth);
+                CSApiResponseUserForManagement result = apiInstance.UsersGetTimesheetUser(userId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseUserForManagement**](CsApiApiResponseUserForManagement.md)
+[**CSApiResponseUserForManagement**](CSApiResponseUserForManagement.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 
 <a name="usersgettimesheetusers"></a>
 # **UsersGetTimesheetUsers**
-> CsApiApiResponseListUserForManagement UsersGetTimesheetUsers (string xChronosheetsAuth)
+> CSApiResponseListUserForManagement UsersGetTimesheetUsers (string xChronosheetsAuth)
 
 Get users for your organisation
 
@@ -158,7 +158,7 @@ namespace Example
             try
             {
                 // Get users for your organisation
-                CsApiApiResponseListUserForManagement result = apiInstance.UsersGetTimesheetUsers(xChronosheetsAuth);
+                CSApiResponseListUserForManagement result = apiInstance.UsersGetTimesheetUsers(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserForManagement**](CsApiApiResponseListUserForManagement.md)
+[**CSApiResponseListUserForManagement**](CSApiResponseListUserForManagement.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ No authorization required
 
 <a name="usersupdatetimesheetuser"></a>
 # **UsersUpdateTimesheetUser**
-> CsApiApiResponseUpdateUserResponse UsersUpdateTimesheetUser (CsApiUpdateUserRequest request, string xChronosheetsAuth)
+> CSApiResponseUpdateUserResponse UsersUpdateTimesheetUser (CSUpdateUserRequest request, string xChronosheetsAuth)
 
 Update a user
 
@@ -212,13 +212,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new UsersApi();
-            var request = new CsApiUpdateUserRequest(); // CsApiUpdateUserRequest | 
+            var request = new CSUpdateUserRequest(); // CSUpdateUserRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Update a user
-                CsApiApiResponseUpdateUserResponse result = apiInstance.UsersUpdateTimesheetUser(request, xChronosheetsAuth);
+                CSApiResponseUpdateUserResponse result = apiInstance.UsersUpdateTimesheetUser(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -234,12 +234,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateUserRequest**](CsApiUpdateUserRequest.md)|  | 
+ **request** | [**CSUpdateUserRequest**](CSUpdateUserRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseUpdateUserResponse**](CsApiApiResponseUpdateUserResponse.md)
+[**CSApiResponseUpdateUserResponse**](CSApiResponseUpdateUserResponse.md)
 
 ### Authorization
 

@@ -33,8 +33,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        CsApiApiResponseInt32 UserJobFavouritesCreateJobFavourite (CsApiInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseInt32</returns>
+        CSApiResponseInt32 UserJobFavouritesCreateJobFavourite (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a job favourite
@@ -45,8 +45,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        ApiResponse<CsApiApiResponseInt32> UserJobFavouritesCreateJobFavouriteWithHttpInfo (CsApiInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        ApiResponse<CSApiResponseInt32> UserJobFavouritesCreateJobFavouriteWithHttpInfo (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Delete a job favourite
         /// </summary>
@@ -56,8 +56,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        CsApiApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseBoolean</returns>
+        CSApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth);
 
         /// <summary>
         /// Delete a job favourite
@@ -68,8 +68,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        ApiResponse<CsApiApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteWithHttpInfo (int? jobId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        ApiResponse<CSApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteWithHttpInfo (int? jobId, string xChronosheetsAuth);
         /// <summary>
         /// Get your job favourites
         /// </summary>
@@ -78,8 +78,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListUserJobFavourite</returns>
-        CsApiApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth);
+        /// <returns>CSApiResponseListUserJobFavourite</returns>
+        CSApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth);
 
         /// <summary>
         /// Get your job favourites
@@ -89,8 +89,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListUserJobFavourite</returns>
-        ApiResponse<CsApiApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListUserJobFavourite</returns>
+        ApiResponse<CSApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesWithHttpInfo (string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -102,8 +102,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (CsApiInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseInt32</returns>
+        System.Threading.Tasks.Task<CSApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a job favourite
@@ -114,8 +114,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo (CsApiInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Delete a job favourite
         /// </summary>
@@ -125,8 +125,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int? jobId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        System.Threading.Tasks.Task<CSApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int? jobId, string xChronosheetsAuth);
 
         /// <summary>
         /// Delete a job favourite
@@ -137,8 +137,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo (int? jobId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo (int? jobId, string xChronosheetsAuth);
         /// <summary>
         /// Get your job favourites
         /// </summary>
@@ -147,8 +147,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListUserJobFavourite</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesAsync (string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListUserJobFavourite</returns>
+        System.Threading.Tasks.Task<CSApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesAsync (string xChronosheetsAuth);
 
         /// <summary>
         /// Get your job favourites
@@ -158,8 +158,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListUserJobFavourite)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListUserJobFavourite>> UserJobFavouritesGetJobFavouritesAsyncWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListUserJobFavourite)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserJobFavourite>> UserJobFavouritesGetJobFavouritesAsyncWithHttpInfo (string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -266,10 +266,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        public CsApiApiResponseInt32 UserJobFavouritesCreateJobFavourite (CsApiInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseInt32</returns>
+        public CSApiResponseInt32 UserJobFavouritesCreateJobFavourite (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = UserJobFavouritesCreateJobFavouriteWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = UserJobFavouritesCreateJobFavouriteWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -279,8 +279,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        public ApiResponse< CsApiApiResponseInt32 > UserJobFavouritesCreateJobFavouriteWithHttpInfo (CsApiInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        public ApiResponse< CSApiResponseInt32 > UserJobFavouritesCreateJobFavouriteWithHttpInfo (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -344,9 +344,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -355,10 +355,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (CsApiInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseInt32</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = await UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = await UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -369,8 +369,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo (CsApiInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -434,9 +434,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -445,10 +445,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        public CsApiApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseBoolean</returns>
+        public CSApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = UserJobFavouritesDeleteJobFavouriteWithHttpInfo(jobId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = UserJobFavouritesDeleteJobFavouriteWithHttpInfo(jobId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -458,8 +458,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        public ApiResponse< CsApiApiResponseBoolean > UserJobFavouritesDeleteJobFavouriteWithHttpInfo (int? jobId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        public ApiResponse< CSApiResponseBoolean > UserJobFavouritesDeleteJobFavouriteWithHttpInfo (int? jobId, string xChronosheetsAuth)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -510,9 +510,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -521,10 +521,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int? jobId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int? jobId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = await UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo(jobId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = await UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo(jobId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -535,8 +535,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo (int? jobId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo (int? jobId, string xChronosheetsAuth)
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -587,9 +587,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -597,10 +597,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListUserJobFavourite</returns>
-        public CsApiApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth)
+        /// <returns>CSApiResponseListUserJobFavourite</returns>
+        public CSApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListUserJobFavourite> localVarResponse = UserJobFavouritesGetJobFavouritesWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseListUserJobFavourite> localVarResponse = UserJobFavouritesGetJobFavouritesWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -609,8 +609,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListUserJobFavourite</returns>
-        public ApiResponse< CsApiApiResponseListUserJobFavourite > UserJobFavouritesGetJobFavouritesWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListUserJobFavourite</returns>
+        public ApiResponse< CSApiResponseListUserJobFavourite > UserJobFavouritesGetJobFavouritesWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -657,9 +657,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListUserJobFavourite>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListUserJobFavourite>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListUserJobFavourite) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListUserJobFavourite)));
+                (CSApiResponseListUserJobFavourite) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListUserJobFavourite)));
         }
 
         /// <summary>
@@ -667,10 +667,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListUserJobFavourite</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesAsync (string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListUserJobFavourite</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesAsync (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListUserJobFavourite> localVarResponse = await UserJobFavouritesGetJobFavouritesAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseListUserJobFavourite> localVarResponse = await UserJobFavouritesGetJobFavouritesAsyncWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -680,8 +680,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListUserJobFavourite)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListUserJobFavourite>> UserJobFavouritesGetJobFavouritesAsyncWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListUserJobFavourite)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserJobFavourite>> UserJobFavouritesGetJobFavouritesAsyncWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -728,9 +728,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListUserJobFavourite>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListUserJobFavourite>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListUserJobFavourite) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListUserJobFavourite)));
+                (CSApiResponseListUserJobFavourite) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListUserJobFavourite)));
         }
 
     }

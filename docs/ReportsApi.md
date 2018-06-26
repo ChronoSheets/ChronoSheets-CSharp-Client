@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 <a name="reportsgetallchartsdataadmin"></a>
 # **ReportsGetAllChartsDataAdmin**
-> CsApiApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+> CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
 
 Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
 
@@ -43,7 +43,7 @@ namespace Example
             try
             {
                 // Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
-                CsApiApiResponseCombinedReportsData result = apiInstance.ReportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+                CSApiResponseCombinedReportsData result = apiInstance.ReportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -66,7 +66,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseCombinedReportsData**](CsApiApiResponseCombinedReportsData.md)
+[**CSApiResponseCombinedReportsData**](CSApiResponseCombinedReportsData.md)
 
 ### Authorization
 
@@ -81,7 +81,7 @@ No authorization required
 
 <a name="reportsgetallchartsdatauser"></a>
 # **ReportsGetAllChartsDataUser**
-> CsApiApiResponseCombinedReportsData ReportsGetAllChartsDataUser (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+> CSApiResponseCombinedReportsData ReportsGetAllChartsDataUser (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
 
 Get Consolidated User Reports Data (Jobs and Tasks)
 
@@ -107,7 +107,7 @@ namespace Example
             try
             {
                 // Get Consolidated User Reports Data (Jobs and Tasks)
-                CsApiApiResponseCombinedReportsData result = apiInstance.ReportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
+                CSApiResponseCombinedReportsData result = apiInstance.ReportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -129,7 +129,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseCombinedReportsData**](CsApiApiResponseCombinedReportsData.md)
+[**CSApiResponseCombinedReportsData**](CSApiResponseCombinedReportsData.md)
 
 ### Authorization
 
@@ -144,7 +144,7 @@ No authorization required
 
 <a name="reportsgetorgtripbyid"></a>
 # **ReportsGetOrgTripById**
-> CsApiApiResponseTrip ReportsGetOrgTripById (int? tripId, string xChronosheetsAuth)
+> CSApiResponseTrip ReportsGetOrgTripById (int? tripId, string xChronosheetsAuth)
 
 Get trip by Id, for reporting purposes
 
@@ -169,7 +169,7 @@ namespace Example
             try
             {
                 // Get trip by Id, for reporting purposes
-                CsApiApiResponseTrip result = apiInstance.ReportsGetOrgTripById(tripId, xChronosheetsAuth);
+                CSApiResponseTrip result = apiInstance.ReportsGetOrgTripById(tripId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -190,7 +190,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseTrip**](CsApiApiResponseTrip.md)
+[**CSApiResponseTrip**](CSApiResponseTrip.md)
 
 ### Authorization
 
@@ -205,7 +205,7 @@ No authorization required
 
 <a name="reportsgetorganisationtimesheetfileattachments"></a>
 # **ReportsGetOrganisationTimesheetFileAttachments**
-> CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment ReportsGetOrganisationTimesheetFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+> CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment ReportsGetOrganisationTimesheetFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
 
 Reports on Organisation timesheet file attachments
 
@@ -234,7 +234,7 @@ namespace Example
             try
             {
                 // Reports on Organisation timesheet file attachments
-                CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment result = apiInstance.ReportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+                CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment result = apiInstance.ReportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -259,7 +259,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment**](CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
+[**CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment**](CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -274,7 +274,7 @@ No authorization required
 
 <a name="reportsgetorganisationtrips"></a>
 # **ReportsGetOrganisationTrips**
-> CsApiApiResponseForPaginatedListOrgReportTrip ReportsGetOrganisationTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+> CSApiResponseForPaginatedListOrgReportTrip ReportsGetOrganisationTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
 
 Reports on Organisation trips (GPS tracking from whole organisation)
 
@@ -303,7 +303,7 @@ namespace Example
             try
             {
                 // Reports on Organisation trips (GPS tracking from whole organisation)
-                CsApiApiResponseForPaginatedListOrgReportTrip result = apiInstance.ReportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+                CSApiResponseForPaginatedListOrgReportTrip result = apiInstance.ReportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -328,7 +328,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListOrgReportTrip**](CsApiApiResponseForPaginatedListOrgReportTrip.md)
+[**CSApiResponseForPaginatedListOrgReportTrip**](CSApiResponseForPaginatedListOrgReportTrip.md)
 
 ### Authorization
 
@@ -343,7 +343,7 @@ No authorization required
 
 <a name="reportsgetrawdataadmin"></a>
 # **ReportsGetRawDataAdmin**
-> CsApiApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
+> CSApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
 
 Get Timesheets Raw Data
 
@@ -374,7 +374,7 @@ namespace Example
             try
             {
                 // Get Timesheets Raw Data
-                CsApiApiResponseForPaginatedListRawReportItem result = apiInstance.ReportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
+                CSApiResponseForPaginatedListRawReportItem result = apiInstance.ReportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -401,7 +401,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListRawReportItem**](CsApiApiResponseForPaginatedListRawReportItem.md)
+[**CSApiResponseForPaginatedListRawReportItem**](CSApiResponseForPaginatedListRawReportItem.md)
 
 ### Authorization
 
@@ -416,7 +416,7 @@ No authorization required
 
 <a name="reportsprojectcostingsadmin"></a>
 # **ReportsProjectCostingsAdmin**
-> CsApiApiResponseListProjectCostingReportItem ReportsProjectCostingsAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+> CSApiResponseListProjectCostingReportItem ReportsProjectCostingsAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
 
 Gets project cost estimations VS actual cost for date range and users
 
@@ -443,7 +443,7 @@ namespace Example
             try
             {
                 // Gets project cost estimations VS actual cost for date range and users
-                CsApiApiResponseListProjectCostingReportItem result = apiInstance.ReportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+                CSApiResponseListProjectCostingReportItem result = apiInstance.ReportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -466,7 +466,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListProjectCostingReportItem**](CsApiApiResponseListProjectCostingReportItem.md)
+[**CSApiResponseListProjectCostingReportItem**](CSApiResponseListProjectCostingReportItem.md)
 
 ### Authorization
 
@@ -481,7 +481,7 @@ No authorization required
 
 <a name="reportsuserjobsovertime"></a>
 # **ReportsUserJobsOverTime**
-> CsApiApiResponseListJobSeriesReportItem ReportsUserJobsOverTime (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+> CSApiResponseListJobSeriesReportItem ReportsUserJobsOverTime (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
 
 Timeseries jobs data for the logged in user
 
@@ -507,7 +507,7 @@ namespace Example
             try
             {
                 // Timeseries jobs data for the logged in user
-                CsApiApiResponseListJobSeriesReportItem result = apiInstance.ReportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);
+                CSApiResponseListJobSeriesReportItem result = apiInstance.ReportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -529,7 +529,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListJobSeriesReportItem**](CsApiApiResponseListJobSeriesReportItem.md)
+[**CSApiResponseListJobSeriesReportItem**](CSApiResponseListJobSeriesReportItem.md)
 
 ### Authorization
 

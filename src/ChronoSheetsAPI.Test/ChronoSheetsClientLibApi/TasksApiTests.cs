@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void TasksCreateTaskTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiInsertTaskRequest request = null;
+            //CSInsertTaskRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TasksCreateTask(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? taskId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TasksDeleteTask(taskId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
         /// <summary>
@@ -100,7 +100,7 @@ namespace ChronoSheetsAPI.Test
             //int? taskId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TasksGetTaskById(taskId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseTimesheetTask> (response, "response is CsApiApiResponseTimesheetTask");
+            //Assert.IsInstanceOf<CSApiResponseTimesheetTask> (response, "response is CSApiResponseTimesheetTask");
         }
         
         /// <summary>
@@ -112,7 +112,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.TasksGetTasks(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListTimesheetTask> (response, "response is CsApiApiResponseListTimesheetTask");
+            //Assert.IsInstanceOf<CSApiResponseListTimesheetTask> (response, "response is CSApiResponseListTimesheetTask");
         }
         
         /// <summary>
@@ -125,7 +125,7 @@ namespace ChronoSheetsAPI.Test
             //int? jobId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TasksGetTasksForJob(jobId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListTimesheetTask> (response, "response is CsApiApiResponseListTimesheetTask");
+            //Assert.IsInstanceOf<CSApiResponseListTimesheetTask> (response, "response is CSApiResponseListTimesheetTask");
         }
         
         /// <summary>
@@ -135,10 +135,10 @@ namespace ChronoSheetsAPI.Test
         public void TasksUpdateTaskTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiUpdateTaskRequest request = null;
+            //CSUpdateTaskRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TasksUpdateTask(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
     }

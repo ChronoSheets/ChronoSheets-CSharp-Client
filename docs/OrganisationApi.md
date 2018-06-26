@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="organisationgetorganisation"></a>
 # **OrganisationGetOrganisation**
-> CsApiApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth)
+> CSApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth)
 
 Get your organisation.  Requires 'OrganisationAdmin' permission.
 
@@ -34,7 +34,7 @@ namespace Example
             try
             {
                 // Get your organisation.  Requires 'OrganisationAdmin' permission.
-                CsApiApiResponseOrganisation result = apiInstance.OrganisationGetOrganisation(xChronosheetsAuth);
+                CSApiResponseOrganisation result = apiInstance.OrganisationGetOrganisation(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -54,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseOrganisation**](CsApiApiResponseOrganisation.md)
+[**CSApiResponseOrganisation**](CSApiResponseOrganisation.md)
 
 ### Authorization
 
@@ -69,7 +69,7 @@ No authorization required
 
 <a name="organisationupdateorganisation"></a>
 # **OrganisationUpdateOrganisation**
-> CsApiApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CsApiUpdateOrganisationRequest request, string xChronosheetsAuth)
+> CSApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
 
 Update an organisation.  Requires 'OrganisationAdmin' permission.
 
@@ -88,13 +88,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new OrganisationApi();
-            var request = new CsApiUpdateOrganisationRequest(); // CsApiUpdateOrganisationRequest | 
+            var request = new CSUpdateOrganisationRequest(); // CSUpdateOrganisationRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Update an organisation.  Requires 'OrganisationAdmin' permission.
-                CsApiApiResponseUpdateOrganisationResponse result = apiInstance.OrganisationUpdateOrganisation(request, xChronosheetsAuth);
+                CSApiResponseUpdateOrganisationResponse result = apiInstance.OrganisationUpdateOrganisation(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -110,12 +110,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateOrganisationRequest**](CsApiUpdateOrganisationRequest.md)|  | 
+ **request** | [**CSUpdateOrganisationRequest**](CSUpdateOrganisationRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseUpdateOrganisationResponse**](CsApiApiResponseUpdateOrganisationResponse.md)
+[**CSApiResponseUpdateOrganisationResponse**](CSApiResponseUpdateOrganisationResponse.md)
 
 ### Authorization
 

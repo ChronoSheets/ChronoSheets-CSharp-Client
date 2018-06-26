@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="userprofiledologin"></a>
 # **UserProfileDoLogin**
-> CsApiApiResponseDoLoginResponse UserProfileDoLogin (CsApiDoLoginRequest request)
+> CSApiResponseDoLoginResponse UserProfileDoLogin (CSDoLoginRequest request)
 
 
 
@@ -32,11 +32,11 @@ namespace Example
         public void main()
         {
             var apiInstance = new UserProfileApi();
-            var request = new CsApiDoLoginRequest(); // CsApiDoLoginRequest | 
+            var request = new CSDoLoginRequest(); // CSDoLoginRequest | 
 
             try
             {
-                CsApiApiResponseDoLoginResponse result = apiInstance.UserProfileDoLogin(request);
+                CSApiResponseDoLoginResponse result = apiInstance.UserProfileDoLogin(request);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -52,11 +52,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiDoLoginRequest**](CsApiDoLoginRequest.md)|  | 
+ **request** | [**CSDoLoginRequest**](CSDoLoginRequest.md)|  | 
 
 ### Return type
 
-[**CsApiApiResponseDoLoginResponse**](CsApiApiResponseDoLoginResponse.md)
+[**CSApiResponseDoLoginResponse**](CSApiResponseDoLoginResponse.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 
 <a name="userprofiledologout"></a>
 # **UserProfileDoLogout**
-> CsApiApiResponseBoolean UserProfileDoLogout (string xChronosheetsAuth)
+> CSApiResponseBoolean UserProfileDoLogout (string xChronosheetsAuth)
 
 
 
@@ -94,7 +94,7 @@ namespace Example
 
             try
             {
-                CsApiApiResponseBoolean result = apiInstance.UserProfileDoLogout(xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.UserProfileDoLogout(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -129,7 +129,7 @@ No authorization required
 
 <a name="userprofilegetmyprofile"></a>
 # **UserProfileGetMyProfile**
-> CsApiApiResponseUserProfile UserProfileGetMyProfile (string xChronosheetsAuth)
+> CSApiResponseUserProfile UserProfileGetMyProfile (string xChronosheetsAuth)
 
 
 
@@ -152,7 +152,7 @@ namespace Example
 
             try
             {
-                CsApiApiResponseUserProfile result = apiInstance.UserProfileGetMyProfile(xChronosheetsAuth);
+                CSApiResponseUserProfile result = apiInstance.UserProfileGetMyProfile(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseUserProfile**](CsApiApiResponseUserProfile.md)
+[**CSApiResponseUserProfile**](CSApiResponseUserProfile.md)
 
 ### Authorization
 
@@ -187,7 +187,7 @@ No authorization required
 
 <a name="userprofilekeepsessionalive"></a>
 # **UserProfileKeepSessionAlive**
-> CsApiApiResponseBoolean UserProfileKeepSessionAlive (string xChronosheetsAuth)
+> CSApiResponseBoolean UserProfileKeepSessionAlive (string xChronosheetsAuth)
 
 
 
@@ -210,7 +210,7 @@ namespace Example
 
             try
             {
-                CsApiApiResponseBoolean result = apiInstance.UserProfileKeepSessionAlive(xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.UserProfileKeepSessionAlive(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -230,7 +230,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -245,7 +245,7 @@ No authorization required
 
 <a name="userprofileupdatemyprofile"></a>
 # **UserProfileUpdateMyProfile**
-> CsApiApiResponseSignupResponse UserProfileUpdateMyProfile (CsApiUpdateMyProfileRequest request, string xChronosheetsAuth)
+> CSApiResponseSignupResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
 
 
 
@@ -264,12 +264,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new UserProfileApi();
-            var request = new CsApiUpdateMyProfileRequest(); // CsApiUpdateMyProfileRequest | 
+            var request = new CSUpdateMyProfileRequest(); // CSUpdateMyProfileRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                CsApiApiResponseSignupResponse result = apiInstance.UserProfileUpdateMyProfile(request, xChronosheetsAuth);
+                CSApiResponseSignupResponse result = apiInstance.UserProfileUpdateMyProfile(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -285,12 +285,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateMyProfileRequest**](CsApiUpdateMyProfileRequest.md)|  | 
+ **request** | [**CSUpdateMyProfileRequest**](CSUpdateMyProfileRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseSignupResponse**](CsApiApiResponseSignupResponse.md)
+[**CSApiResponseSignupResponse**](CSApiResponseSignupResponse.md)
 
 ### Authorization
 

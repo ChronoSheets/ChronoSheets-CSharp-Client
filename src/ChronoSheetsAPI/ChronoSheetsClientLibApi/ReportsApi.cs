@@ -35,8 +35,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseCombinedReportsData</returns>
-        CsApiApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <returns>CSApiResponseCombinedReportsData</returns>
+        CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
 
         /// <summary>
         /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
@@ -49,8 +49,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseCombinedReportsData</returns>
-        ApiResponse<CsApiApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseCombinedReportsData</returns>
+        ApiResponse<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
         /// <summary>
         /// Get Consolidated User Reports Data (Jobs and Tasks)
         /// </summary>
@@ -61,8 +61,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseCombinedReportsData</returns>
-        CsApiApiResponseCombinedReportsData ReportsGetAllChartsDataUser (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>CSApiResponseCombinedReportsData</returns>
+        CSApiResponseCombinedReportsData ReportsGetAllChartsDataUser (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
         /// Get Consolidated User Reports Data (Jobs and Tasks)
@@ -74,8 +74,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseCombinedReportsData</returns>
-        ApiResponse<CsApiApiResponseCombinedReportsData> ReportsGetAllChartsDataUserWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseCombinedReportsData</returns>
+        ApiResponse<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataUserWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
         /// Get trip by Id, for reporting purposes
         /// </summary>
@@ -85,8 +85,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseTrip</returns>
-        CsApiApiResponseTrip ReportsGetOrgTripById (int? tripId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseTrip</returns>
+        CSApiResponseTrip ReportsGetOrgTripById (int? tripId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get trip by Id, for reporting purposes
@@ -97,8 +97,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseTrip</returns>
-        ApiResponse<CsApiApiResponseTrip> ReportsGetOrgTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseTrip</returns>
+        ApiResponse<CSApiResponseTrip> ReportsGetOrgTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
         /// Reports on Organisation timesheet file attachments
         /// </summary>
@@ -112,8 +112,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
-        CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment ReportsGetOrganisationTimesheetFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <returns>CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
+        CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment ReportsGetOrganisationTimesheetFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
         /// Reports on Organisation timesheet file attachments
@@ -128,8 +128,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
-        ApiResponse<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
         /// <summary>
         /// Reports on Organisation trips (GPS tracking from whole organisation)
         /// </summary>
@@ -143,8 +143,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseForPaginatedListOrgReportTrip</returns>
-        CsApiApiResponseForPaginatedListOrgReportTrip ReportsGetOrganisationTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <returns>CSApiResponseForPaginatedListOrgReportTrip</returns>
+        CSApiResponseForPaginatedListOrgReportTrip ReportsGetOrganisationTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
         /// Reports on Organisation trips (GPS tracking from whole organisation)
@@ -159,8 +159,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseForPaginatedListOrgReportTrip</returns>
-        ApiResponse<CsApiApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTrip</returns>
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
         /// <summary>
         /// Get Timesheets Raw Data
         /// </summary>
@@ -176,8 +176,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseForPaginatedListRawReportItem</returns>
-        CsApiApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
+        /// <returns>CSApiResponseForPaginatedListRawReportItem</returns>
+        CSApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
 
         /// <summary>
         /// Get Timesheets Raw Data
@@ -194,8 +194,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseForPaginatedListRawReportItem</returns>
-        ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListRawReportItem</returns>
+        ApiResponse<CSApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
         /// <summary>
         /// Gets project cost estimations VS actual cost for date range and users
         /// </summary>
@@ -207,8 +207,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListProjectCostingReportItem</returns>
-        CsApiApiResponseListProjectCostingReportItem ReportsProjectCostingsAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <returns>CSApiResponseListProjectCostingReportItem</returns>
+        CSApiResponseListProjectCostingReportItem ReportsProjectCostingsAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
 
         /// <summary>
         /// Gets project cost estimations VS actual cost for date range and users
@@ -221,8 +221,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListProjectCostingReportItem</returns>
-        ApiResponse<CsApiApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListProjectCostingReportItem</returns>
+        ApiResponse<CSApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
         /// <summary>
         /// Timeseries jobs data for the logged in user
         /// </summary>
@@ -233,8 +233,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListJobSeriesReportItem</returns>
-        CsApiApiResponseListJobSeriesReportItem ReportsUserJobsOverTime (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>CSApiResponseListJobSeriesReportItem</returns>
+        CSApiResponseListJobSeriesReportItem ReportsUserJobsOverTime (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
         /// Timeseries jobs data for the logged in user
@@ -246,8 +246,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListJobSeriesReportItem</returns>
-        ApiResponse<CsApiApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListJobSeriesReportItem</returns>
+        ApiResponse<CSApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -261,8 +261,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseCombinedReportsData</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseCombinedReportsData</returns>
+        System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
 
         /// <summary>
         /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects)
@@ -275,8 +275,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseCombinedReportsData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseCombinedReportsData)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
         /// <summary>
         /// Get Consolidated User Reports Data (Jobs and Tasks)
         /// </summary>
@@ -287,8 +287,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseCombinedReportsData</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseCombinedReportsData> ReportsGetAllChartsDataUserAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseCombinedReportsData</returns>
+        System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataUserAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
         /// Get Consolidated User Reports Data (Jobs and Tasks)
@@ -300,8 +300,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseCombinedReportsData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseCombinedReportsData)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
         /// Get trip by Id, for reporting purposes
         /// </summary>
@@ -311,8 +311,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseTrip</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseTrip> ReportsGetOrgTripByIdAsync (int? tripId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseTrip</returns>
+        System.Threading.Tasks.Task<CSApiResponseTrip> ReportsGetOrgTripByIdAsync (int? tripId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get trip by Id, for reporting purposes
@@ -323,8 +323,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseTrip)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseTrip>> ReportsGetOrgTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseTrip)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseTrip>> ReportsGetOrgTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
         /// Reports on Organisation timesheet file attachments
         /// </summary>
@@ -338,8 +338,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
         /// Reports on Organisation timesheet file attachments
@@ -354,8 +354,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
         /// <summary>
         /// Reports on Organisation trips (GPS tracking from whole organisation)
         /// </summary>
@@ -369,8 +369,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseForPaginatedListOrgReportTrip</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseForPaginatedListOrgReportTrip</returns>
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
         /// Reports on Organisation trips (GPS tracking from whole organisation)
@@ -385,8 +385,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListOrgReportTrip)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListOrgReportTrip>> ReportsGetOrganisationTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTrip)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTrip>> ReportsGetOrganisationTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
         /// <summary>
         /// Get Timesheets Raw Data
         /// </summary>
@@ -402,8 +402,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseForPaginatedListRawReportItem</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseForPaginatedListRawReportItem</returns>
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
 
         /// <summary>
         /// Get Timesheets Raw Data
@@ -420,8 +420,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListRawReportItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListRawReportItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
         /// <summary>
         /// Gets project cost estimations VS actual cost for date range and users
         /// </summary>
@@ -433,8 +433,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListProjectCostingReportItem</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListProjectCostingReportItem</returns>
+        System.Threading.Tasks.Task<CSApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
 
         /// <summary>
         /// Gets project cost estimations VS actual cost for date range and users
@@ -447,8 +447,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListProjectCostingReportItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListProjectCostingReportItem>> ReportsProjectCostingsAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListProjectCostingReportItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListProjectCostingReportItem>> ReportsProjectCostingsAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
         /// <summary>
         /// Timeseries jobs data for the logged in user
         /// </summary>
@@ -459,8 +459,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListJobSeriesReportItem</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListJobSeriesReportItem</returns>
+        System.Threading.Tasks.Task<CSApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
         /// Timeseries jobs data for the logged in user
@@ -472,8 +472,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListJobSeriesReportItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListJobSeriesReportItem>> ReportsUserJobsOverTimeAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListJobSeriesReportItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListJobSeriesReportItem>> ReportsUserJobsOverTimeAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -582,10 +582,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseCombinedReportsData</returns>
-        public CsApiApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        /// <returns>CSApiResponseCombinedReportsData</returns>
+        public CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseCombinedReportsData> localVarResponse = ReportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+             ApiResponse<CSApiResponseCombinedReportsData> localVarResponse = ReportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -597,8 +597,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseCombinedReportsData</returns>
-        public ApiResponse< CsApiApiResponseCombinedReportsData > ReportsGetAllChartsDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseCombinedReportsData</returns>
+        public ApiResponse< CSApiResponseCombinedReportsData > ReportsGetAllChartsDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -657,9 +657,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseCombinedReportsData>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseCombinedReportsData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseCombinedReportsData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseCombinedReportsData)));
+                (CSApiResponseCombinedReportsData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseCombinedReportsData)));
         }
 
         /// <summary>
@@ -670,10 +670,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseCombinedReportsData</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseCombinedReportsData</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataAdminAsyncWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+             ApiResponse<CSApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataAdminAsyncWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -686,8 +686,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseCombinedReportsData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseCombinedReportsData)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -746,9 +746,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseCombinedReportsData>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseCombinedReportsData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseCombinedReportsData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseCombinedReportsData)));
+                (CSApiResponseCombinedReportsData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseCombinedReportsData)));
         }
 
         /// <summary>
@@ -758,10 +758,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseCombinedReportsData</returns>
-        public CsApiApiResponseCombinedReportsData ReportsGetAllChartsDataUser (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>CSApiResponseCombinedReportsData</returns>
+        public CSApiResponseCombinedReportsData ReportsGetAllChartsDataUser (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseCombinedReportsData> localVarResponse = ReportsGetAllChartsDataUserWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+             ApiResponse<CSApiResponseCombinedReportsData> localVarResponse = ReportsGetAllChartsDataUserWithHttpInfo(startDate, endDate, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -772,8 +772,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseCombinedReportsData</returns>
-        public ApiResponse< CsApiApiResponseCombinedReportsData > ReportsGetAllChartsDataUserWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseCombinedReportsData</returns>
+        public ApiResponse< CSApiResponseCombinedReportsData > ReportsGetAllChartsDataUserWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -828,9 +828,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseCombinedReportsData>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseCombinedReportsData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseCombinedReportsData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseCombinedReportsData)));
+                (CSApiResponseCombinedReportsData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseCombinedReportsData)));
         }
 
         /// <summary>
@@ -840,10 +840,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseCombinedReportsData</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseCombinedReportsData> ReportsGetAllChartsDataUserAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseCombinedReportsData</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataUserAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataUserAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+             ApiResponse<CSApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataUserAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -855,8 +855,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseCombinedReportsData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseCombinedReportsData)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -911,9 +911,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseCombinedReportsData>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseCombinedReportsData>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseCombinedReportsData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseCombinedReportsData)));
+                (CSApiResponseCombinedReportsData) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseCombinedReportsData)));
         }
 
         /// <summary>
@@ -922,10 +922,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseTrip</returns>
-        public CsApiApiResponseTrip ReportsGetOrgTripById (int? tripId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseTrip</returns>
+        public CSApiResponseTrip ReportsGetOrgTripById (int? tripId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseTrip> localVarResponse = ReportsGetOrgTripByIdWithHttpInfo(tripId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseTrip> localVarResponse = ReportsGetOrgTripByIdWithHttpInfo(tripId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -935,8 +935,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseTrip</returns>
-        public ApiResponse< CsApiApiResponseTrip > ReportsGetOrgTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseTrip</returns>
+        public ApiResponse< CSApiResponseTrip > ReportsGetOrgTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth)
         {
             // verify the required parameter 'tripId' is set
             if (tripId == null)
@@ -987,9 +987,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseTrip>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseTrip>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseTrip)));
+                (CSApiResponseTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseTrip)));
         }
 
         /// <summary>
@@ -998,10 +998,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseTrip</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseTrip> ReportsGetOrgTripByIdAsync (int? tripId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseTrip</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseTrip> ReportsGetOrgTripByIdAsync (int? tripId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseTrip> localVarResponse = await ReportsGetOrgTripByIdAsyncWithHttpInfo(tripId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseTrip> localVarResponse = await ReportsGetOrgTripByIdAsyncWithHttpInfo(tripId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -1012,8 +1012,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseTrip)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseTrip>> ReportsGetOrgTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseTrip)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseTrip>> ReportsGetOrgTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth)
         {
             // verify the required parameter 'tripId' is set
             if (tripId == null)
@@ -1064,9 +1064,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseTrip>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseTrip>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseTrip)));
+                (CSApiResponseTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseTrip)));
         }
 
         /// <summary>
@@ -1079,10 +1079,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
-        public CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment ReportsGetOrganisationTimesheetFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+        /// <returns>CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
+        public CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment ReportsGetOrganisationTimesheetFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment> localVarResponse = ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> localVarResponse = ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -1096,8 +1096,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
-        public ApiResponse< CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment > ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
+        public ApiResponse< CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment > ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1164,9 +1164,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment)));
+                (CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment)));
         }
 
         /// <summary>
@@ -1179,10 +1179,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment> localVarResponse = await ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> localVarResponse = await ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -1197,8 +1197,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1265,9 +1265,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseForPaginatedListOrgReportTimesheetFileAttachment)));
+                (CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment)));
         }
 
         /// <summary>
@@ -1280,10 +1280,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseForPaginatedListOrgReportTrip</returns>
-        public CsApiApiResponseForPaginatedListOrgReportTrip ReportsGetOrganisationTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+        /// <returns>CSApiResponseForPaginatedListOrgReportTrip</returns>
+        public CSApiResponseForPaginatedListOrgReportTrip ReportsGetOrganisationTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseForPaginatedListOrgReportTrip> localVarResponse = ReportsGetOrganisationTripsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> localVarResponse = ReportsGetOrganisationTripsWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -1297,8 +1297,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseForPaginatedListOrgReportTrip</returns>
-        public ApiResponse< CsApiApiResponseForPaginatedListOrgReportTrip > ReportsGetOrganisationTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTrip</returns>
+        public ApiResponse< CSApiResponseForPaginatedListOrgReportTrip > ReportsGetOrganisationTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1365,9 +1365,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseForPaginatedListOrgReportTrip>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseForPaginatedListOrgReportTrip>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseForPaginatedListOrgReportTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseForPaginatedListOrgReportTrip)));
+                (CSApiResponseForPaginatedListOrgReportTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListOrgReportTrip)));
         }
 
         /// <summary>
@@ -1380,10 +1380,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseForPaginatedListOrgReportTrip</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseForPaginatedListOrgReportTrip</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseForPaginatedListOrgReportTrip> localVarResponse = await ReportsGetOrganisationTripsAsyncWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> localVarResponse = await ReportsGetOrganisationTripsAsyncWithHttpInfo(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -1398,8 +1398,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListOrgReportTrip)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListOrgReportTrip>> ReportsGetOrganisationTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTrip)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTrip>> ReportsGetOrganisationTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1466,9 +1466,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseForPaginatedListOrgReportTrip>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseForPaginatedListOrgReportTrip>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseForPaginatedListOrgReportTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseForPaginatedListOrgReportTrip)));
+                (CSApiResponseForPaginatedListOrgReportTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListOrgReportTrip)));
         }
 
         /// <summary>
@@ -1483,10 +1483,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseForPaginatedListRawReportItem</returns>
-        public CsApiApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
+        /// <returns>CSApiResponseForPaginatedListRawReportItem</returns>
+        public CSApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> localVarResponse = ReportsGetRawDataAdminWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListRawReportItem> localVarResponse = ReportsGetRawDataAdminWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -1502,8 +1502,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseForPaginatedListRawReportItem</returns>
-        public ApiResponse< CsApiApiResponseForPaginatedListRawReportItem > ReportsGetRawDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListRawReportItem</returns>
+        public ApiResponse< CSApiResponseForPaginatedListRawReportItem > ReportsGetRawDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1578,9 +1578,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseForPaginatedListRawReportItem>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseForPaginatedListRawReportItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseForPaginatedListRawReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseForPaginatedListRawReportItem)));
+                (CSApiResponseForPaginatedListRawReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListRawReportItem)));
         }
 
         /// <summary>
@@ -1595,10 +1595,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseForPaginatedListRawReportItem</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseForPaginatedListRawReportItem</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> localVarResponse = await ReportsGetRawDataAdminAsyncWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListRawReportItem> localVarResponse = await ReportsGetRawDataAdminAsyncWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -1615,8 +1615,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListRawReportItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListRawReportItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1691,9 +1691,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseForPaginatedListRawReportItem>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseForPaginatedListRawReportItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseForPaginatedListRawReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseForPaginatedListRawReportItem)));
+                (CSApiResponseForPaginatedListRawReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListRawReportItem)));
         }
 
         /// <summary>
@@ -1704,10 +1704,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListProjectCostingReportItem</returns>
-        public CsApiApiResponseListProjectCostingReportItem ReportsProjectCostingsAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        /// <returns>CSApiResponseListProjectCostingReportItem</returns>
+        public CSApiResponseListProjectCostingReportItem ReportsProjectCostingsAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListProjectCostingReportItem> localVarResponse = ReportsProjectCostingsAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListProjectCostingReportItem> localVarResponse = ReportsProjectCostingsAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -1719,8 +1719,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListProjectCostingReportItem</returns>
-        public ApiResponse< CsApiApiResponseListProjectCostingReportItem > ReportsProjectCostingsAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListProjectCostingReportItem</returns>
+        public ApiResponse< CSApiResponseListProjectCostingReportItem > ReportsProjectCostingsAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1779,9 +1779,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListProjectCostingReportItem>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListProjectCostingReportItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListProjectCostingReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListProjectCostingReportItem)));
+                (CSApiResponseListProjectCostingReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListProjectCostingReportItem)));
         }
 
         /// <summary>
@@ -1792,10 +1792,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListProjectCostingReportItem</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListProjectCostingReportItem</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListProjectCostingReportItem> localVarResponse = await ReportsProjectCostingsAdminAsyncWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListProjectCostingReportItem> localVarResponse = await ReportsProjectCostingsAdminAsyncWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -1808,8 +1808,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListProjectCostingReportItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListProjectCostingReportItem>> ReportsProjectCostingsAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListProjectCostingReportItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListProjectCostingReportItem>> ReportsProjectCostingsAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1868,9 +1868,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListProjectCostingReportItem>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListProjectCostingReportItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListProjectCostingReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListProjectCostingReportItem)));
+                (CSApiResponseListProjectCostingReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListProjectCostingReportItem)));
         }
 
         /// <summary>
@@ -1880,10 +1880,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListJobSeriesReportItem</returns>
-        public CsApiApiResponseListJobSeriesReportItem ReportsUserJobsOverTime (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>CSApiResponseListJobSeriesReportItem</returns>
+        public CSApiResponseListJobSeriesReportItem ReportsUserJobsOverTime (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListJobSeriesReportItem> localVarResponse = ReportsUserJobsOverTimeWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListJobSeriesReportItem> localVarResponse = ReportsUserJobsOverTimeWithHttpInfo(startDate, endDate, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -1894,8 +1894,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListJobSeriesReportItem</returns>
-        public ApiResponse< CsApiApiResponseListJobSeriesReportItem > ReportsUserJobsOverTimeWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListJobSeriesReportItem</returns>
+        public ApiResponse< CSApiResponseListJobSeriesReportItem > ReportsUserJobsOverTimeWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1950,9 +1950,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListJobSeriesReportItem>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListJobSeriesReportItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListJobSeriesReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListJobSeriesReportItem)));
+                (CSApiResponseListJobSeriesReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListJobSeriesReportItem)));
         }
 
         /// <summary>
@@ -1962,10 +1962,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListJobSeriesReportItem</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListJobSeriesReportItem</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListJobSeriesReportItem> localVarResponse = await ReportsUserJobsOverTimeAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListJobSeriesReportItem> localVarResponse = await ReportsUserJobsOverTimeAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -1977,8 +1977,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListJobSeriesReportItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListJobSeriesReportItem>> ReportsUserJobsOverTimeAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListJobSeriesReportItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListJobSeriesReportItem>> ReportsUserJobsOverTimeAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -2033,9 +2033,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListJobSeriesReportItem>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListJobSeriesReportItem>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListJobSeriesReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListJobSeriesReportItem)));
+                (CSApiResponseListJobSeriesReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListJobSeriesReportItem)));
         }
 
     }

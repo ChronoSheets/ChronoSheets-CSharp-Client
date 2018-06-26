@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void OrganisationGroupsCreateOrganisationGroupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiInsertOrganisationGroupRequest request = null;
+            //CSInsertOrganisationGroupRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.OrganisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? organisationGroupId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.OrganisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseOrganisationGroup> (response, "response is CsApiApiResponseOrganisationGroup");
+            //Assert.IsInstanceOf<CSApiResponseOrganisationGroup> (response, "response is CSApiResponseOrganisationGroup");
         }
         
         /// <summary>
@@ -99,7 +99,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.OrganisationGroupsGetOrganisationGroups(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListOrganisationGroup> (response, "response is CsApiApiResponseListOrganisationGroup");
+            //Assert.IsInstanceOf<CSApiResponseListOrganisationGroup> (response, "response is CSApiResponseListOrganisationGroup");
         }
         
         /// <summary>
@@ -112,7 +112,7 @@ namespace ChronoSheetsAPI.Test
             //int? jobId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.OrganisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListOrganisationGroup> (response, "response is CsApiApiResponseListOrganisationGroup");
+            //Assert.IsInstanceOf<CSApiResponseListOrganisationGroup> (response, "response is CSApiResponseListOrganisationGroup");
         }
         
         /// <summary>
@@ -125,7 +125,7 @@ namespace ChronoSheetsAPI.Test
             //int? vehicleId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.OrganisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListOrganisationGroup> (response, "response is CsApiApiResponseListOrganisationGroup");
+            //Assert.IsInstanceOf<CSApiResponseListOrganisationGroup> (response, "response is CSApiResponseListOrganisationGroup");
         }
         
         /// <summary>
@@ -135,10 +135,10 @@ namespace ChronoSheetsAPI.Test
         public void OrganisationGroupsUpdateOrganisationGroupTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiSaveOrganisationGroupRequest request = null;
+            //CSSaveOrganisationGroupRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.OrganisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
     }

@@ -74,7 +74,7 @@ namespace ChronoSheetsAPI.Test
             //int? orgGroupId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.OrganisationGroupUsersGetOrganisationGroupUsers(orgGroupId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListUserForManagement> (response, "response is CsApiApiResponseListUserForManagement");
+            //Assert.IsInstanceOf<CSApiResponseListUserForManagement> (response, "response is CSApiResponseListUserForManagement");
         }
         
         /// <summary>
@@ -84,10 +84,10 @@ namespace ChronoSheetsAPI.Test
         public void OrganisationGroupUsersUpdateOrganisationGroupUsersTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiSetOrganisationGroupUsersRequest request = null;
+            //CSSetOrganisationGroupUsersRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.OrganisationGroupUsersUpdateOrganisationGroupUsers(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
     }

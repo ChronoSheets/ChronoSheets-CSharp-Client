@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void FleetCreateVehicleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiInsertVehicleRequest request = null;
+            //CSInsertVehicleRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.FleetCreateVehicle(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? vehicleId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.FleetGetVehicleById(vehicleId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseFleetVehicle> (response, "response is CsApiApiResponseFleetVehicle");
+            //Assert.IsInstanceOf<CSApiResponseFleetVehicle> (response, "response is CSApiResponseFleetVehicle");
         }
         
         /// <summary>
@@ -100,7 +100,7 @@ namespace ChronoSheetsAPI.Test
             //bool? includeDeleted = null;
             //string xChronosheetsAuth = null;
             //var response = instance.FleetGetVehicles(includeDeleted, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListFleetVehicle> (response, "response is CsApiApiResponseListFleetVehicle");
+            //Assert.IsInstanceOf<CSApiResponseListFleetVehicle> (response, "response is CSApiResponseListFleetVehicle");
         }
         
         /// <summary>
@@ -110,10 +110,10 @@ namespace ChronoSheetsAPI.Test
         public void FleetUpdateVehicleTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiSaveVehicleRequest request = null;
+            //CSSaveVehicleRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.FleetUpdateVehicle(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
     }

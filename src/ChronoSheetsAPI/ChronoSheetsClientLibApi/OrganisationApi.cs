@@ -32,8 +32,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseOrganisation</returns>
-        CsApiApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth);
+        /// <returns>CSApiResponseOrganisation</returns>
+        CSApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth);
 
         /// <summary>
         /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
@@ -43,8 +43,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseOrganisation</returns>
-        ApiResponse<CsApiApiResponseOrganisation> OrganisationGetOrganisationWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseOrganisation</returns>
+        ApiResponse<CSApiResponseOrganisation> OrganisationGetOrganisationWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
         /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
@@ -54,8 +54,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseUpdateOrganisationResponse</returns>
-        CsApiApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CsApiUpdateOrganisationRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseUpdateOrganisationResponse</returns>
+        CSApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
@@ -66,8 +66,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseUpdateOrganisationResponse</returns>
-        ApiResponse<CsApiApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationWithHttpInfo (CsApiUpdateOrganisationRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseUpdateOrganisationResponse</returns>
+        ApiResponse<CSApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationWithHttpInfo (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -78,8 +78,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseOrganisation</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseOrganisation> OrganisationGetOrganisationAsync (string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseOrganisation</returns>
+        System.Threading.Tasks.Task<CSApiResponseOrganisation> OrganisationGetOrganisationAsync (string xChronosheetsAuth);
 
         /// <summary>
         /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
@@ -89,8 +89,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseOrganisation)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseOrganisation>> OrganisationGetOrganisationAsyncWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseOrganisation)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseOrganisation>> OrganisationGetOrganisationAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
         /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
@@ -100,8 +100,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseUpdateOrganisationResponse</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationAsync (CsApiUpdateOrganisationRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseUpdateOrganisationResponse</returns>
+        System.Threading.Tasks.Task<CSApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationAsync (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
@@ -112,8 +112,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseUpdateOrganisationResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseUpdateOrganisationResponse>> OrganisationUpdateOrganisationAsyncWithHttpInfo (CsApiUpdateOrganisationRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseUpdateOrganisationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateOrganisationResponse>> OrganisationUpdateOrganisationAsyncWithHttpInfo (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -219,10 +219,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseOrganisation</returns>
-        public CsApiApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth)
+        /// <returns>CSApiResponseOrganisation</returns>
+        public CSApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseOrganisation> localVarResponse = OrganisationGetOrganisationWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseOrganisation> localVarResponse = OrganisationGetOrganisationWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -231,8 +231,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseOrganisation</returns>
-        public ApiResponse< CsApiApiResponseOrganisation > OrganisationGetOrganisationWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseOrganisation</returns>
+        public ApiResponse< CSApiResponseOrganisation > OrganisationGetOrganisationWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -279,9 +279,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseOrganisation>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseOrganisation>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseOrganisation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseOrganisation)));
+                (CSApiResponseOrganisation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseOrganisation)));
         }
 
         /// <summary>
@@ -289,10 +289,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseOrganisation</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseOrganisation> OrganisationGetOrganisationAsync (string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseOrganisation</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseOrganisation> OrganisationGetOrganisationAsync (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseOrganisation> localVarResponse = await OrganisationGetOrganisationAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseOrganisation> localVarResponse = await OrganisationGetOrganisationAsyncWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -302,8 +302,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseOrganisation)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseOrganisation>> OrganisationGetOrganisationAsyncWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseOrganisation)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseOrganisation>> OrganisationGetOrganisationAsyncWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -350,9 +350,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseOrganisation>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseOrganisation>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseOrganisation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseOrganisation)));
+                (CSApiResponseOrganisation) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseOrganisation)));
         }
 
         /// <summary>
@@ -361,10 +361,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseUpdateOrganisationResponse</returns>
-        public CsApiApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CsApiUpdateOrganisationRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseUpdateOrganisationResponse</returns>
+        public CSApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseUpdateOrganisationResponse> localVarResponse = OrganisationUpdateOrganisationWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseUpdateOrganisationResponse> localVarResponse = OrganisationUpdateOrganisationWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -374,8 +374,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseUpdateOrganisationResponse</returns>
-        public ApiResponse< CsApiApiResponseUpdateOrganisationResponse > OrganisationUpdateOrganisationWithHttpInfo (CsApiUpdateOrganisationRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseUpdateOrganisationResponse</returns>
+        public ApiResponse< CSApiResponseUpdateOrganisationResponse > OrganisationUpdateOrganisationWithHttpInfo (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -439,9 +439,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseUpdateOrganisationResponse>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseUpdateOrganisationResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseUpdateOrganisationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseUpdateOrganisationResponse)));
+                (CSApiResponseUpdateOrganisationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseUpdateOrganisationResponse)));
         }
 
         /// <summary>
@@ -450,10 +450,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseUpdateOrganisationResponse</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationAsync (CsApiUpdateOrganisationRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseUpdateOrganisationResponse</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationAsync (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseUpdateOrganisationResponse> localVarResponse = await OrganisationUpdateOrganisationAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseUpdateOrganisationResponse> localVarResponse = await OrganisationUpdateOrganisationAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -464,8 +464,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseUpdateOrganisationResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseUpdateOrganisationResponse>> OrganisationUpdateOrganisationAsyncWithHttpInfo (CsApiUpdateOrganisationRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseUpdateOrganisationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateOrganisationResponse>> OrganisationUpdateOrganisationAsyncWithHttpInfo (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -529,9 +529,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseUpdateOrganisationResponse>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseUpdateOrganisationResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseUpdateOrganisationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseUpdateOrganisationResponse)));
+                (CSApiResponseUpdateOrganisationResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseUpdateOrganisationResponse)));
         }
 
     }

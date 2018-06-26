@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void ProjectsCreateProjectTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiInsertProjectRequest request = null;
+            //CSInsertProjectRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.ProjectsCreateProject(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? projectId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.ProjectsGetProjectById(projectId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseProject> (response, "response is CsApiApiResponseProject");
+            //Assert.IsInstanceOf<CSApiResponseProject> (response, "response is CSApiResponseProject");
         }
         
         /// <summary>
@@ -100,7 +100,7 @@ namespace ChronoSheetsAPI.Test
             //int? clientId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.ProjectsGetProjectsForClient(clientId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListProject> (response, "response is CsApiApiResponseListProject");
+            //Assert.IsInstanceOf<CSApiResponseListProject> (response, "response is CSApiResponseListProject");
         }
         
         /// <summary>
@@ -110,10 +110,10 @@ namespace ChronoSheetsAPI.Test
         public void ProjectsUpdateProjectTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiUpdateProjectRequest request = null;
+            //CSUpdateProjectRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.ProjectsUpdateProject(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
     }

@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="usualhoursgetusualhours"></a>
 # **UsualHoursGetUsualHours**
-> CsApiApiResponseListUsualHoursDay UsualHoursGetUsualHours (int? userId, string xChronosheetsAuth)
+> CSApiResponseListUsualHoursDay UsualHoursGetUsualHours (int? userId, string xChronosheetsAuth)
 
 Get usual hours (rostered hours) for an employee
 
@@ -35,7 +35,7 @@ namespace Example
             try
             {
                 // Get usual hours (rostered hours) for an employee
-                CsApiApiResponseListUsualHoursDay result = apiInstance.UsualHoursGetUsualHours(userId, xChronosheetsAuth);
+                CSApiResponseListUsualHoursDay result = apiInstance.UsualHoursGetUsualHours(userId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUsualHoursDay**](CsApiApiResponseListUsualHoursDay.md)
+[**CSApiResponseListUsualHoursDay**](CSApiResponseListUsualHoursDay.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 
 <a name="usualhourssetusualhours"></a>
 # **UsualHoursSetUsualHours**
-> CsApiApiResponseBoolean UsualHoursSetUsualHours (CsApiSetUsualHoursRequest request, string xChronosheetsAuth)
+> CSApiResponseBoolean UsualHoursSetUsualHours (CSSetUsualHoursRequest request, string xChronosheetsAuth)
 
 Set usual hours (rostered hours) for an employee
 
@@ -90,13 +90,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new UsualHoursApi();
-            var request = new CsApiSetUsualHoursRequest(); // CsApiSetUsualHoursRequest | 
+            var request = new CSSetUsualHoursRequest(); // CSSetUsualHoursRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Set usual hours (rostered hours) for an employee
-                CsApiApiResponseBoolean result = apiInstance.UsualHoursSetUsualHours(request, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.UsualHoursSetUsualHours(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -112,12 +112,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSetUsualHoursRequest**](CsApiSetUsualHoursRequest.md)|  | 
+ **request** | [**CSSetUsualHoursRequest**](CSSetUsualHoursRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

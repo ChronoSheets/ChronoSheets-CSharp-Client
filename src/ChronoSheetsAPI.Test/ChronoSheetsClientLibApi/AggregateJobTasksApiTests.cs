@@ -73,7 +73,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.AggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListAggregateJobCode> (response, "response is CsApiApiResponseListAggregateJobCode");
+            //Assert.IsInstanceOf<CSApiResponseListAggregateJobCode> (response, "response is CSApiResponseListAggregateJobCode");
         }
         
     }

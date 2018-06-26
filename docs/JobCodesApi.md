@@ -13,7 +13,7 @@ Method | HTTP request | Description
 
 <a name="jobcodescreatejobcode"></a>
 # **JobCodesCreateJobCode**
-> CsApiApiResponseInt32 JobCodesCreateJobCode (CsApiInsertJobCodeRequest request, string xChronosheetsAuth)
+> CSApiResponseInt32 JobCodesCreateJobCode (CSInsertJobCodeRequest request, string xChronosheetsAuth)
 
 Create a job code
 
@@ -32,13 +32,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new JobCodesApi();
-            var request = new CsApiInsertJobCodeRequest(); // CsApiInsertJobCodeRequest | 
+            var request = new CSInsertJobCodeRequest(); // CSInsertJobCodeRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Create a job code
-                CsApiApiResponseInt32 result = apiInstance.JobCodesCreateJobCode(request, xChronosheetsAuth);
+                CSApiResponseInt32 result = apiInstance.JobCodesCreateJobCode(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -54,12 +54,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertJobCodeRequest**](CsApiInsertJobCodeRequest.md)|  | 
+ **request** | [**CSInsertJobCodeRequest**](CSInsertJobCodeRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -74,7 +74,7 @@ No authorization required
 
 <a name="jobcodesdeletejobcode"></a>
 # **JobCodesDeleteJobCode**
-> CsApiApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth)
+> CSApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth)
 
 Delete a job code
 
@@ -99,7 +99,7 @@ namespace Example
             try
             {
                 // Delete a job code
-                CsApiApiResponseBoolean result = apiInstance.JobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.JobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -120,7 +120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -135,7 +135,7 @@ No authorization required
 
 <a name="jobcodesgetjobcodebyid"></a>
 # **JobCodesGetJobCodeById**
-> CsApiApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth)
+> CSApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth)
 
 Get a particular job code by job code id
 
@@ -160,7 +160,7 @@ namespace Example
             try
             {
                 // Get a particular job code by job code id
-                CsApiApiResponseJobCode result = apiInstance.JobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
+                CSApiResponseJobCode result = apiInstance.JobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -181,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseJobCode**](CsApiApiResponseJobCode.md)
+[**CSApiResponseJobCode**](CSApiResponseJobCode.md)
 
 ### Authorization
 
@@ -196,7 +196,7 @@ No authorization required
 
 <a name="jobcodesgetjobcodes"></a>
 # **JobCodesGetJobCodes**
-> CsApiApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth)
+> CSApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth)
 
 Get job codes for your organisation
 
@@ -220,7 +220,7 @@ namespace Example
             try
             {
                 // Get job codes for your organisation
-                CsApiApiResponseListJobCode result = apiInstance.JobCodesGetJobCodes(xChronosheetsAuth);
+                CSApiResponseListJobCode result = apiInstance.JobCodesGetJobCodes(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -240,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListJobCode**](CsApiApiResponseListJobCode.md)
+[**CSApiResponseListJobCode**](CSApiResponseListJobCode.md)
 
 ### Authorization
 
@@ -255,7 +255,7 @@ No authorization required
 
 <a name="jobcodesupdatejobcode"></a>
 # **JobCodesUpdateJobCode**
-> CsApiApiResponseBoolean JobCodesUpdateJobCode (CsApiUpdateJobCodeRequest request, string xChronosheetsAuth)
+> CSApiResponseBoolean JobCodesUpdateJobCode (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
 
 Update a job code
 
@@ -274,13 +274,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new JobCodesApi();
-            var request = new CsApiUpdateJobCodeRequest(); // CsApiUpdateJobCodeRequest | 
+            var request = new CSUpdateJobCodeRequest(); // CSUpdateJobCodeRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Update a job code
-                CsApiApiResponseBoolean result = apiInstance.JobCodesUpdateJobCode(request, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.JobCodesUpdateJobCode(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -296,12 +296,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateJobCodeRequest**](CsApiUpdateJobCodeRequest.md)|  | 
+ **request** | [**CSUpdateJobCodeRequest**](CSUpdateJobCodeRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

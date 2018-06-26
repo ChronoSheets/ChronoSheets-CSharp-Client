@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="taskscreatetask"></a>
 # **TasksCreateTask**
-> CsApiApiResponseInt32 TasksCreateTask (CsApiInsertTaskRequest request, string xChronosheetsAuth)
+> CSApiResponseInt32 TasksCreateTask (CSInsertTaskRequest request, string xChronosheetsAuth)
 
 Create a task
 
@@ -33,13 +33,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new TasksApi();
-            var request = new CsApiInsertTaskRequest(); // CsApiInsertTaskRequest | 
+            var request = new CSInsertTaskRequest(); // CSInsertTaskRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Create a task
-                CsApiApiResponseInt32 result = apiInstance.TasksCreateTask(request, xChronosheetsAuth);
+                CSApiResponseInt32 result = apiInstance.TasksCreateTask(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,12 +55,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertTaskRequest**](CsApiInsertTaskRequest.md)|  | 
+ **request** | [**CSInsertTaskRequest**](CSInsertTaskRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 
 <a name="tasksdeletetask"></a>
 # **TasksDeleteTask**
-> CsApiApiResponseBoolean TasksDeleteTask (int? taskId, string xChronosheetsAuth)
+> CSApiResponseBoolean TasksDeleteTask (int? taskId, string xChronosheetsAuth)
 
 Delete a task
 
@@ -100,7 +100,7 @@ namespace Example
             try
             {
                 // Delete a task
-                CsApiApiResponseBoolean result = apiInstance.TasksDeleteTask(taskId, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.TasksDeleteTask(taskId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ No authorization required
 
 <a name="tasksgettaskbyid"></a>
 # **TasksGetTaskById**
-> CsApiApiResponseTimesheetTask TasksGetTaskById (int? taskId, string xChronosheetsAuth)
+> CSApiResponseTimesheetTask TasksGetTaskById (int? taskId, string xChronosheetsAuth)
 
 Get a particular task by id
 
@@ -161,7 +161,7 @@ namespace Example
             try
             {
                 // Get a particular task by id
-                CsApiApiResponseTimesheetTask result = apiInstance.TasksGetTaskById(taskId, xChronosheetsAuth);
+                CSApiResponseTimesheetTask result = apiInstance.TasksGetTaskById(taskId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseTimesheetTask**](CsApiApiResponseTimesheetTask.md)
+[**CSApiResponseTimesheetTask**](CSApiResponseTimesheetTask.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ No authorization required
 
 <a name="tasksgettasks"></a>
 # **TasksGetTasks**
-> CsApiApiResponseListTimesheetTask TasksGetTasks (string xChronosheetsAuth)
+> CSApiResponseListTimesheetTask TasksGetTasks (string xChronosheetsAuth)
 
 Get tasks in your organisation
 
@@ -221,7 +221,7 @@ namespace Example
             try
             {
                 // Get tasks in your organisation
-                CsApiApiResponseListTimesheetTask result = apiInstance.TasksGetTasks(xChronosheetsAuth);
+                CSApiResponseListTimesheetTask result = apiInstance.TasksGetTasks(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListTimesheetTask**](CsApiApiResponseListTimesheetTask.md)
+[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ No authorization required
 
 <a name="tasksgettasksforjob"></a>
 # **TasksGetTasksForJob**
-> CsApiApiResponseListTimesheetTask TasksGetTasksForJob (int? jobId, string xChronosheetsAuth)
+> CSApiResponseListTimesheetTask TasksGetTasksForJob (int? jobId, string xChronosheetsAuth)
 
 Get tasks for a particular job
 
@@ -281,7 +281,7 @@ namespace Example
             try
             {
                 // Get tasks for a particular job
-                CsApiApiResponseListTimesheetTask result = apiInstance.TasksGetTasksForJob(jobId, xChronosheetsAuth);
+                CSApiResponseListTimesheetTask result = apiInstance.TasksGetTasksForJob(jobId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListTimesheetTask**](CsApiApiResponseListTimesheetTask.md)
+[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ No authorization required
 
 <a name="tasksupdatetask"></a>
 # **TasksUpdateTask**
-> CsApiApiResponseBoolean TasksUpdateTask (CsApiUpdateTaskRequest request, string xChronosheetsAuth)
+> CSApiResponseBoolean TasksUpdateTask (CSUpdateTaskRequest request, string xChronosheetsAuth)
 
 Update a task
 
@@ -336,13 +336,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new TasksApi();
-            var request = new CsApiUpdateTaskRequest(); // CsApiUpdateTaskRequest | 
+            var request = new CSUpdateTaskRequest(); // CSUpdateTaskRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Update a task
-                CsApiApiResponseBoolean result = apiInstance.TasksUpdateTask(request, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.TasksUpdateTask(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -358,12 +358,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateTaskRequest**](CsApiUpdateTaskRequest.md)|  | 
+ **request** | [**CSUpdateTaskRequest**](CSUpdateTaskRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

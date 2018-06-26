@@ -14,7 +14,7 @@ Method | HTTP request | Description
 
 <a name="organisationgroupscreateorganisationgroup"></a>
 # **OrganisationGroupsCreateOrganisationGroup**
-> CsApiApiResponseInt32 OrganisationGroupsCreateOrganisationGroup (CsApiInsertOrganisationGroupRequest request, string xChronosheetsAuth)
+> CSApiResponseInt32 OrganisationGroupsCreateOrganisationGroup (CSInsertOrganisationGroupRequest request, string xChronosheetsAuth)
 
 Create an organisation group
 
@@ -33,13 +33,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new OrganisationGroupsApi();
-            var request = new CsApiInsertOrganisationGroupRequest(); // CsApiInsertOrganisationGroupRequest | 
+            var request = new CSInsertOrganisationGroupRequest(); // CSInsertOrganisationGroupRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Create an organisation group
-                CsApiApiResponseInt32 result = apiInstance.OrganisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth);
+                CSApiResponseInt32 result = apiInstance.OrganisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -55,12 +55,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertOrganisationGroupRequest**](CsApiInsertOrganisationGroupRequest.md)|  | 
+ **request** | [**CSInsertOrganisationGroupRequest**](CSInsertOrganisationGroupRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -75,7 +75,7 @@ No authorization required
 
 <a name="organisationgroupsgetorganisationgroup"></a>
 # **OrganisationGroupsGetOrganisationGroup**
-> CsApiApiResponseOrganisationGroup OrganisationGroupsGetOrganisationGroup (int? organisationGroupId, string xChronosheetsAuth)
+> CSApiResponseOrganisationGroup OrganisationGroupsGetOrganisationGroup (int? organisationGroupId, string xChronosheetsAuth)
 
 Get a particular organisation group
 
@@ -100,7 +100,7 @@ namespace Example
             try
             {
                 // Get a particular organisation group
-                CsApiApiResponseOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth);
+                CSApiResponseOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseOrganisationGroup**](CsApiApiResponseOrganisationGroup.md)
+[**CSApiResponseOrganisationGroup**](CSApiResponseOrganisationGroup.md)
 
 ### Authorization
 
@@ -136,7 +136,7 @@ No authorization required
 
 <a name="organisationgroupsgetorganisationgroups"></a>
 # **OrganisationGroupsGetOrganisationGroups**
-> CsApiApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroups (string xChronosheetsAuth)
+> CSApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroups (string xChronosheetsAuth)
 
 Get a collection of organisation groups that are under your organisation
 
@@ -160,7 +160,7 @@ namespace Example
             try
             {
                 // Get a collection of organisation groups that are under your organisation
-                CsApiApiResponseListOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroups(xChronosheetsAuth);
+                CSApiResponseListOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroups(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListOrganisationGroup**](CsApiApiResponseListOrganisationGroup.md)
+[**CSApiResponseListOrganisationGroup**](CSApiResponseListOrganisationGroup.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ No authorization required
 
 <a name="organisationgroupsgetorganisationgroupsforjob"></a>
 # **OrganisationGroupsGetOrganisationGroupsForJob**
-> CsApiApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroupsForJob (int? jobId, string xChronosheetsAuth)
+> CSApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroupsForJob (int? jobId, string xChronosheetsAuth)
 
 Get org groups for a particular job
 
@@ -220,7 +220,7 @@ namespace Example
             try
             {
                 // Get org groups for a particular job
-                CsApiApiResponseListOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth);
+                CSApiResponseListOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -241,7 +241,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListOrganisationGroup**](CsApiApiResponseListOrganisationGroup.md)
+[**CSApiResponseListOrganisationGroup**](CSApiResponseListOrganisationGroup.md)
 
 ### Authorization
 
@@ -256,7 +256,7 @@ No authorization required
 
 <a name="organisationgroupsgetorganisationgroupsforvehicle"></a>
 # **OrganisationGroupsGetOrganisationGroupsForVehicle**
-> CsApiApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroupsForVehicle (int? vehicleId, string xChronosheetsAuth)
+> CSApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroupsForVehicle (int? vehicleId, string xChronosheetsAuth)
 
 Get org groups for a particular vehicle
 
@@ -281,7 +281,7 @@ namespace Example
             try
             {
                 // Get org groups for a particular vehicle
-                CsApiApiResponseListOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth);
+                CSApiResponseListOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -302,7 +302,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListOrganisationGroup**](CsApiApiResponseListOrganisationGroup.md)
+[**CSApiResponseListOrganisationGroup**](CSApiResponseListOrganisationGroup.md)
 
 ### Authorization
 
@@ -317,7 +317,7 @@ No authorization required
 
 <a name="organisationgroupsupdateorganisationgroup"></a>
 # **OrganisationGroupsUpdateOrganisationGroup**
-> CsApiApiResponseBoolean OrganisationGroupsUpdateOrganisationGroup (CsApiSaveOrganisationGroupRequest request, string xChronosheetsAuth)
+> CSApiResponseBoolean OrganisationGroupsUpdateOrganisationGroup (CSSaveOrganisationGroupRequest request, string xChronosheetsAuth)
 
 Update an organisation group
 
@@ -336,13 +336,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new OrganisationGroupsApi();
-            var request = new CsApiSaveOrganisationGroupRequest(); // CsApiSaveOrganisationGroupRequest | 
+            var request = new CSSaveOrganisationGroupRequest(); // CSSaveOrganisationGroupRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Update an organisation group
-                CsApiApiResponseBoolean result = apiInstance.OrganisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.OrganisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -358,12 +358,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSaveOrganisationGroupRequest**](CsApiSaveOrganisationGroupRequest.md)|  | 
+ **request** | [**CSSaveOrganisationGroupRequest**](CSSaveOrganisationGroupRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

@@ -33,8 +33,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListUsualHoursDay</returns>
-        CsApiApiResponseListUsualHoursDay UsualHoursGetUsualHours (int? userId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseListUsualHoursDay</returns>
+        CSApiResponseListUsualHoursDay UsualHoursGetUsualHours (int? userId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get usual hours (rostered hours) for an employee
@@ -45,8 +45,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListUsualHoursDay</returns>
-        ApiResponse<CsApiApiResponseListUsualHoursDay> UsualHoursGetUsualHoursWithHttpInfo (int? userId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListUsualHoursDay</returns>
+        ApiResponse<CSApiResponseListUsualHoursDay> UsualHoursGetUsualHoursWithHttpInfo (int? userId, string xChronosheetsAuth);
         /// <summary>
         /// Set usual hours (rostered hours) for an employee
         /// </summary>
@@ -56,8 +56,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        CsApiApiResponseBoolean UsualHoursSetUsualHours (CsApiSetUsualHoursRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseBoolean</returns>
+        CSApiResponseBoolean UsualHoursSetUsualHours (CSSetUsualHoursRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Set usual hours (rostered hours) for an employee
@@ -68,8 +68,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        ApiResponse<CsApiApiResponseBoolean> UsualHoursSetUsualHoursWithHttpInfo (CsApiSetUsualHoursRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        ApiResponse<CSApiResponseBoolean> UsualHoursSetUsualHoursWithHttpInfo (CSSetUsualHoursRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -81,8 +81,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListUsualHoursDay</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListUsualHoursDay> UsualHoursGetUsualHoursAsync (int? userId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListUsualHoursDay</returns>
+        System.Threading.Tasks.Task<CSApiResponseListUsualHoursDay> UsualHoursGetUsualHoursAsync (int? userId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get usual hours (rostered hours) for an employee
@@ -93,8 +93,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListUsualHoursDay)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListUsualHoursDay>> UsualHoursGetUsualHoursAsyncWithHttpInfo (int? userId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListUsualHoursDay)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUsualHoursDay>> UsualHoursGetUsualHoursAsyncWithHttpInfo (int? userId, string xChronosheetsAuth);
         /// <summary>
         /// Set usual hours (rostered hours) for an employee
         /// </summary>
@@ -104,8 +104,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseBoolean> UsualHoursSetUsualHoursAsync (CsApiSetUsualHoursRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        System.Threading.Tasks.Task<CSApiResponseBoolean> UsualHoursSetUsualHoursAsync (CSSetUsualHoursRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Set usual hours (rostered hours) for an employee
@@ -116,8 +116,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> UsualHoursSetUsualHoursAsyncWithHttpInfo (CsApiSetUsualHoursRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> UsualHoursSetUsualHoursAsyncWithHttpInfo (CSSetUsualHoursRequest request, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -224,10 +224,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListUsualHoursDay</returns>
-        public CsApiApiResponseListUsualHoursDay UsualHoursGetUsualHours (int? userId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseListUsualHoursDay</returns>
+        public CSApiResponseListUsualHoursDay UsualHoursGetUsualHours (int? userId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListUsualHoursDay> localVarResponse = UsualHoursGetUsualHoursWithHttpInfo(userId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListUsualHoursDay> localVarResponse = UsualHoursGetUsualHoursWithHttpInfo(userId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -237,8 +237,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListUsualHoursDay</returns>
-        public ApiResponse< CsApiApiResponseListUsualHoursDay > UsualHoursGetUsualHoursWithHttpInfo (int? userId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListUsualHoursDay</returns>
+        public ApiResponse< CSApiResponseListUsualHoursDay > UsualHoursGetUsualHoursWithHttpInfo (int? userId, string xChronosheetsAuth)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -289,9 +289,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListUsualHoursDay>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListUsualHoursDay>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListUsualHoursDay) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListUsualHoursDay)));
+                (CSApiResponseListUsualHoursDay) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListUsualHoursDay)));
         }
 
         /// <summary>
@@ -300,10 +300,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListUsualHoursDay</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListUsualHoursDay> UsualHoursGetUsualHoursAsync (int? userId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListUsualHoursDay</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListUsualHoursDay> UsualHoursGetUsualHoursAsync (int? userId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListUsualHoursDay> localVarResponse = await UsualHoursGetUsualHoursAsyncWithHttpInfo(userId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListUsualHoursDay> localVarResponse = await UsualHoursGetUsualHoursAsyncWithHttpInfo(userId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -314,8 +314,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListUsualHoursDay)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListUsualHoursDay>> UsualHoursGetUsualHoursAsyncWithHttpInfo (int? userId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListUsualHoursDay)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUsualHoursDay>> UsualHoursGetUsualHoursAsyncWithHttpInfo (int? userId, string xChronosheetsAuth)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -366,9 +366,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListUsualHoursDay>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListUsualHoursDay>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListUsualHoursDay) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListUsualHoursDay)));
+                (CSApiResponseListUsualHoursDay) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListUsualHoursDay)));
         }
 
         /// <summary>
@@ -377,10 +377,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        public CsApiApiResponseBoolean UsualHoursSetUsualHours (CsApiSetUsualHoursRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseBoolean</returns>
+        public CSApiResponseBoolean UsualHoursSetUsualHours (CSSetUsualHoursRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = UsualHoursSetUsualHoursWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = UsualHoursSetUsualHoursWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -390,8 +390,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        public ApiResponse< CsApiApiResponseBoolean > UsualHoursSetUsualHoursWithHttpInfo (CsApiSetUsualHoursRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        public ApiResponse< CSApiResponseBoolean > UsualHoursSetUsualHoursWithHttpInfo (CSSetUsualHoursRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -455,9 +455,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -466,10 +466,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseBoolean> UsualHoursSetUsualHoursAsync (CsApiSetUsualHoursRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseBoolean> UsualHoursSetUsualHoursAsync (CSSetUsualHoursRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = await UsualHoursSetUsualHoursAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = await UsualHoursSetUsualHoursAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -480,8 +480,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> UsualHoursSetUsualHoursAsyncWithHttpInfo (CsApiSetUsualHoursRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> UsualHoursSetUsualHoursAsyncWithHttpInfo (CSSetUsualHoursRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -545,9 +545,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
     }

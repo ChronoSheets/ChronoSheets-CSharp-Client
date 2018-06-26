@@ -33,8 +33,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        CsApiApiResponseInt32 ClientsCreateClient (CsApiInsertClientRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseInt32</returns>
+        CSApiResponseInt32 ClientsCreateClient (CSInsertClientRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a client
@@ -45,8 +45,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        ApiResponse<CsApiApiResponseInt32> ClientsCreateClientWithHttpInfo (CsApiInsertClientRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        ApiResponse<CSApiResponseInt32> ClientsCreateClientWithHttpInfo (CSInsertClientRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Get a particular client
         /// </summary>
@@ -56,8 +56,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseClient</returns>
-        CsApiApiResponseClient ClientsGetClient (int? clientId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseClient</returns>
+        CSApiResponseClient ClientsGetClient (int? clientId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get a particular client
@@ -68,8 +68,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseClient</returns>
-        ApiResponse<CsApiApiResponseClient> ClientsGetClientWithHttpInfo (int? clientId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseClient</returns>
+        ApiResponse<CSApiResponseClient> ClientsGetClientWithHttpInfo (int? clientId, string xChronosheetsAuth);
         /// <summary>
         /// Get a collection of clients that are under your organisation
         /// </summary>
@@ -78,8 +78,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListClient</returns>
-        CsApiApiResponseListClient ClientsGetClients (string xChronosheetsAuth);
+        /// <returns>CSApiResponseListClient</returns>
+        CSApiResponseListClient ClientsGetClients (string xChronosheetsAuth);
 
         /// <summary>
         /// Get a collection of clients that are under your organisation
@@ -89,8 +89,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListClient</returns>
-        ApiResponse<CsApiApiResponseListClient> ClientsGetClientsWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListClient</returns>
+        ApiResponse<CSApiResponseListClient> ClientsGetClientsWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
         /// Update a client
         /// </summary>
@@ -100,8 +100,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        CsApiApiResponseBoolean ClientsUpdateClient (CsApiSaveClientRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseBoolean</returns>
+        CSApiResponseBoolean ClientsUpdateClient (CSSaveClientRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Update a client
@@ -112,8 +112,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        ApiResponse<CsApiApiResponseBoolean> ClientsUpdateClientWithHttpInfo (CsApiSaveClientRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        ApiResponse<CSApiResponseBoolean> ClientsUpdateClientWithHttpInfo (CSSaveClientRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -125,8 +125,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseInt32> ClientsCreateClientAsync (CsApiInsertClientRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseInt32</returns>
+        System.Threading.Tasks.Task<CSApiResponseInt32> ClientsCreateClientAsync (CSInsertClientRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a client
@@ -137,8 +137,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> ClientsCreateClientAsyncWithHttpInfo (CsApiInsertClientRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> ClientsCreateClientAsyncWithHttpInfo (CSInsertClientRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Get a particular client
         /// </summary>
@@ -148,8 +148,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseClient</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseClient> ClientsGetClientAsync (int? clientId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseClient</returns>
+        System.Threading.Tasks.Task<CSApiResponseClient> ClientsGetClientAsync (int? clientId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get a particular client
@@ -160,8 +160,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseClient>> ClientsGetClientAsyncWithHttpInfo (int? clientId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseClient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseClient>> ClientsGetClientAsyncWithHttpInfo (int? clientId, string xChronosheetsAuth);
         /// <summary>
         /// Get a collection of clients that are under your organisation
         /// </summary>
@@ -170,8 +170,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListClient</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListClient> ClientsGetClientsAsync (string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListClient</returns>
+        System.Threading.Tasks.Task<CSApiResponseListClient> ClientsGetClientsAsync (string xChronosheetsAuth);
 
         /// <summary>
         /// Get a collection of clients that are under your organisation
@@ -181,8 +181,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListClient)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListClient>> ClientsGetClientsAsyncWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListClient)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListClient>> ClientsGetClientsAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
         /// Update a client
         /// </summary>
@@ -192,8 +192,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseBoolean> ClientsUpdateClientAsync (CsApiSaveClientRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        System.Threading.Tasks.Task<CSApiResponseBoolean> ClientsUpdateClientAsync (CSSaveClientRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Update a client
@@ -204,8 +204,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> ClientsUpdateClientAsyncWithHttpInfo (CsApiSaveClientRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> ClientsUpdateClientAsyncWithHttpInfo (CSSaveClientRequest request, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -312,10 +312,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        public CsApiApiResponseInt32 ClientsCreateClient (CsApiInsertClientRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseInt32</returns>
+        public CSApiResponseInt32 ClientsCreateClient (CSInsertClientRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = ClientsCreateClientWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = ClientsCreateClientWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -325,8 +325,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        public ApiResponse< CsApiApiResponseInt32 > ClientsCreateClientWithHttpInfo (CsApiInsertClientRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        public ApiResponse< CSApiResponseInt32 > ClientsCreateClientWithHttpInfo (CSInsertClientRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -390,9 +390,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -401,10 +401,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseInt32> ClientsCreateClientAsync (CsApiInsertClientRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseInt32</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseInt32> ClientsCreateClientAsync (CSInsertClientRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = await ClientsCreateClientAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = await ClientsCreateClientAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -415,8 +415,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> ClientsCreateClientAsyncWithHttpInfo (CsApiInsertClientRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> ClientsCreateClientAsyncWithHttpInfo (CSInsertClientRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -480,9 +480,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -491,10 +491,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseClient</returns>
-        public CsApiApiResponseClient ClientsGetClient (int? clientId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseClient</returns>
+        public CSApiResponseClient ClientsGetClient (int? clientId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseClient> localVarResponse = ClientsGetClientWithHttpInfo(clientId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseClient> localVarResponse = ClientsGetClientWithHttpInfo(clientId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -504,8 +504,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseClient</returns>
-        public ApiResponse< CsApiApiResponseClient > ClientsGetClientWithHttpInfo (int? clientId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseClient</returns>
+        public ApiResponse< CSApiResponseClient > ClientsGetClientWithHttpInfo (int? clientId, string xChronosheetsAuth)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -556,9 +556,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseClient>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseClient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseClient)));
+                (CSApiResponseClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseClient)));
         }
 
         /// <summary>
@@ -567,10 +567,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseClient</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseClient> ClientsGetClientAsync (int? clientId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseClient</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseClient> ClientsGetClientAsync (int? clientId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseClient> localVarResponse = await ClientsGetClientAsyncWithHttpInfo(clientId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseClient> localVarResponse = await ClientsGetClientAsyncWithHttpInfo(clientId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -581,8 +581,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseClient>> ClientsGetClientAsyncWithHttpInfo (int? clientId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseClient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseClient>> ClientsGetClientAsyncWithHttpInfo (int? clientId, string xChronosheetsAuth)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -633,9 +633,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseClient>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseClient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseClient)));
+                (CSApiResponseClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseClient)));
         }
 
         /// <summary>
@@ -643,10 +643,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListClient</returns>
-        public CsApiApiResponseListClient ClientsGetClients (string xChronosheetsAuth)
+        /// <returns>CSApiResponseListClient</returns>
+        public CSApiResponseListClient ClientsGetClients (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListClient> localVarResponse = ClientsGetClientsWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseListClient> localVarResponse = ClientsGetClientsWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -655,8 +655,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListClient</returns>
-        public ApiResponse< CsApiApiResponseListClient > ClientsGetClientsWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListClient</returns>
+        public ApiResponse< CSApiResponseListClient > ClientsGetClientsWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -703,9 +703,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListClient>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListClient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListClient)));
+                (CSApiResponseListClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListClient)));
         }
 
         /// <summary>
@@ -713,10 +713,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListClient</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListClient> ClientsGetClientsAsync (string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListClient</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListClient> ClientsGetClientsAsync (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListClient> localVarResponse = await ClientsGetClientsAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseListClient> localVarResponse = await ClientsGetClientsAsyncWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -726,8 +726,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListClient)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListClient>> ClientsGetClientsAsyncWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListClient)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListClient>> ClientsGetClientsAsyncWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -774,9 +774,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListClient>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListClient>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListClient)));
+                (CSApiResponseListClient) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListClient)));
         }
 
         /// <summary>
@@ -785,10 +785,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        public CsApiApiResponseBoolean ClientsUpdateClient (CsApiSaveClientRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseBoolean</returns>
+        public CSApiResponseBoolean ClientsUpdateClient (CSSaveClientRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = ClientsUpdateClientWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = ClientsUpdateClientWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -798,8 +798,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        public ApiResponse< CsApiApiResponseBoolean > ClientsUpdateClientWithHttpInfo (CsApiSaveClientRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        public ApiResponse< CSApiResponseBoolean > ClientsUpdateClientWithHttpInfo (CSSaveClientRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -863,9 +863,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -874,10 +874,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseBoolean> ClientsUpdateClientAsync (CsApiSaveClientRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseBoolean> ClientsUpdateClientAsync (CSSaveClientRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = await ClientsUpdateClientAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = await ClientsUpdateClientAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -888,8 +888,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> ClientsUpdateClientAsyncWithHttpInfo (CsApiSaveClientRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> ClientsUpdateClientAsyncWithHttpInfo (CSSaveClientRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -953,9 +953,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
     }

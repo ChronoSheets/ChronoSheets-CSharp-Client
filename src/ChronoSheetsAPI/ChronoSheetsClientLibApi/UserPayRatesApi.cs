@@ -33,8 +33,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        CsApiApiResponseInt32 UserPayRatesCreatePayRate (CsApiInsertUserHourlyRateRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseInt32</returns>
+        CSApiResponseInt32 UserPayRatesCreatePayRate (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a new pay rate for a particular user, archiving the previous pay rate
@@ -45,8 +45,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        ApiResponse<CsApiApiResponseInt32> UserPayRatesCreatePayRateWithHttpInfo (CsApiInsertUserHourlyRateRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        ApiResponse<CSApiResponseInt32> UserPayRatesCreatePayRateWithHttpInfo (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Get a collection of pay rates for a particular user, specified by user id
         /// </summary>
@@ -56,8 +56,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListUserHourlyRate</returns>
-        CsApiApiResponseListUserHourlyRate UserPayRatesGetPayRates (int? userId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseListUserHourlyRate</returns>
+        CSApiResponseListUserHourlyRate UserPayRatesGetPayRates (int? userId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get a collection of pay rates for a particular user, specified by user id
@@ -68,8 +68,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListUserHourlyRate</returns>
-        ApiResponse<CsApiApiResponseListUserHourlyRate> UserPayRatesGetPayRatesWithHttpInfo (int? userId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListUserHourlyRate</returns>
+        ApiResponse<CSApiResponseListUserHourlyRate> UserPayRatesGetPayRatesWithHttpInfo (int? userId, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -81,8 +81,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseInt32> UserPayRatesCreatePayRateAsync (CsApiInsertUserHourlyRateRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseInt32</returns>
+        System.Threading.Tasks.Task<CSApiResponseInt32> UserPayRatesCreatePayRateAsync (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a new pay rate for a particular user, archiving the previous pay rate
@@ -93,8 +93,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> UserPayRatesCreatePayRateAsyncWithHttpInfo (CsApiInsertUserHourlyRateRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> UserPayRatesCreatePayRateAsyncWithHttpInfo (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Get a collection of pay rates for a particular user, specified by user id
         /// </summary>
@@ -104,8 +104,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListUserHourlyRate</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int? userId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListUserHourlyRate</returns>
+        System.Threading.Tasks.Task<CSApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int? userId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get a collection of pay rates for a particular user, specified by user id
@@ -116,8 +116,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListUserHourlyRate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesAsyncWithHttpInfo (int? userId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListUserHourlyRate)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesAsyncWithHttpInfo (int? userId, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -224,10 +224,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        public CsApiApiResponseInt32 UserPayRatesCreatePayRate (CsApiInsertUserHourlyRateRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseInt32</returns>
+        public CSApiResponseInt32 UserPayRatesCreatePayRate (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = UserPayRatesCreatePayRateWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = UserPayRatesCreatePayRateWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -237,8 +237,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        public ApiResponse< CsApiApiResponseInt32 > UserPayRatesCreatePayRateWithHttpInfo (CsApiInsertUserHourlyRateRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        public ApiResponse< CSApiResponseInt32 > UserPayRatesCreatePayRateWithHttpInfo (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -302,9 +302,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -313,10 +313,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseInt32> UserPayRatesCreatePayRateAsync (CsApiInsertUserHourlyRateRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseInt32</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseInt32> UserPayRatesCreatePayRateAsync (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = await UserPayRatesCreatePayRateAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = await UserPayRatesCreatePayRateAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -327,8 +327,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> UserPayRatesCreatePayRateAsyncWithHttpInfo (CsApiInsertUserHourlyRateRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> UserPayRatesCreatePayRateAsyncWithHttpInfo (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -392,9 +392,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -403,10 +403,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListUserHourlyRate</returns>
-        public CsApiApiResponseListUserHourlyRate UserPayRatesGetPayRates (int? userId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseListUserHourlyRate</returns>
+        public CSApiResponseListUserHourlyRate UserPayRatesGetPayRates (int? userId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListUserHourlyRate> localVarResponse = UserPayRatesGetPayRatesWithHttpInfo(userId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListUserHourlyRate> localVarResponse = UserPayRatesGetPayRatesWithHttpInfo(userId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -416,8 +416,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListUserHourlyRate</returns>
-        public ApiResponse< CsApiApiResponseListUserHourlyRate > UserPayRatesGetPayRatesWithHttpInfo (int? userId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListUserHourlyRate</returns>
+        public ApiResponse< CSApiResponseListUserHourlyRate > UserPayRatesGetPayRatesWithHttpInfo (int? userId, string xChronosheetsAuth)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -468,9 +468,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListUserHourlyRate>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListUserHourlyRate>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListUserHourlyRate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListUserHourlyRate)));
+                (CSApiResponseListUserHourlyRate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListUserHourlyRate)));
         }
 
         /// <summary>
@@ -479,10 +479,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListUserHourlyRate</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int? userId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListUserHourlyRate</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int? userId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListUserHourlyRate> localVarResponse = await UserPayRatesGetPayRatesAsyncWithHttpInfo(userId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListUserHourlyRate> localVarResponse = await UserPayRatesGetPayRatesAsyncWithHttpInfo(userId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -493,8 +493,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListUserHourlyRate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesAsyncWithHttpInfo (int? userId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListUserHourlyRate)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesAsyncWithHttpInfo (int? userId, string xChronosheetsAuth)
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -545,9 +545,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListUserHourlyRate>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListUserHourlyRate>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListUserHourlyRate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListUserHourlyRate)));
+                (CSApiResponseListUserHourlyRate) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListUserHourlyRate)));
         }
 
     }

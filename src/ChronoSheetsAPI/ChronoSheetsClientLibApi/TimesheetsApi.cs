@@ -33,8 +33,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The timesheet request object</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        CsApiApiResponseInt32 TimesheetsCreateSingleTimesheet (CsApiTimesheet request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseInt32</returns>
+        CSApiResponseInt32 TimesheetsCreateSingleTimesheet (CSTimesheet request, string xChronosheetsAuth);
 
         /// <summary>
         /// Inserts a single timesheet record
@@ -45,8 +45,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The timesheet request object</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        ApiResponse<CsApiApiResponseInt32> TimesheetsCreateSingleTimesheetWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        ApiResponse<CSApiResponseInt32> TimesheetsCreateSingleTimesheetWithHttpInfo (CSTimesheet request, string xChronosheetsAuth);
         /// <summary>
         /// Delete a timesheet
         /// </summary>
@@ -56,8 +56,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the timesheet to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        CsApiApiResponseBoolean TimesheetsDeleteTimesheet (int? timesheetId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseBoolean</returns>
+        CSApiResponseBoolean TimesheetsDeleteTimesheet (int? timesheetId, string xChronosheetsAuth);
 
         /// <summary>
         /// Delete a timesheet
@@ -68,8 +68,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the timesheet to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        ApiResponse<CsApiApiResponseBoolean> TimesheetsDeleteTimesheetWithHttpInfo (int? timesheetId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        ApiResponse<CSApiResponseBoolean> TimesheetsDeleteTimesheetWithHttpInfo (int? timesheetId, string xChronosheetsAuth);
         /// <summary>
         /// Get timesheets between start and end dates
         /// </summary>
@@ -80,8 +80,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListTimesheet</returns>
-        CsApiApiResponseListTimesheet TimesheetsGetTimesheets (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>CSApiResponseListTimesheet</returns>
+        CSApiResponseListTimesheet TimesheetsGetTimesheets (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
         /// Get timesheets between start and end dates
@@ -93,8 +93,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListTimesheet</returns>
-        ApiResponse<CsApiApiResponseListTimesheet> TimesheetsGetTimesheetsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListTimesheet</returns>
+        ApiResponse<CSApiResponseListTimesheet> TimesheetsGetTimesheetsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
         /// Batch update timesheets
         /// </summary>
@@ -104,8 +104,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The batch update timesheets request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListInt32</returns>
-        CsApiApiResponseListInt32 TimesheetsUpdateTimesheets (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseListInt32</returns>
+        CSApiResponseListInt32 TimesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Batch update timesheets
@@ -116,8 +116,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The batch update timesheets request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListInt32</returns>
-        ApiResponse<CsApiApiResponseListInt32> TimesheetsUpdateTimesheetsWithHttpInfo (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListInt32</returns>
+        ApiResponse<CSApiResponseListInt32> TimesheetsUpdateTimesheetsWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -129,8 +129,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The timesheet request object</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (CsApiTimesheet request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseInt32</returns>
+        System.Threading.Tasks.Task<CSApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (CSTimesheet request, string xChronosheetsAuth);
 
         /// <summary>
         /// Inserts a single timesheet record
@@ -141,8 +141,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The timesheet request object</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (CSTimesheet request, string xChronosheetsAuth);
         /// <summary>
         /// Delete a timesheet
         /// </summary>
@@ -152,8 +152,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the timesheet to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int? timesheetId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        System.Threading.Tasks.Task<CSApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int? timesheetId, string xChronosheetsAuth);
 
         /// <summary>
         /// Delete a timesheet
@@ -164,8 +164,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the timesheet to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> TimesheetsDeleteTimesheetAsyncWithHttpInfo (int? timesheetId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> TimesheetsDeleteTimesheetAsyncWithHttpInfo (int? timesheetId, string xChronosheetsAuth);
         /// <summary>
         /// Get timesheets between start and end dates
         /// </summary>
@@ -176,8 +176,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListTimesheet</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListTimesheet> TimesheetsGetTimesheetsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListTimesheet</returns>
+        System.Threading.Tasks.Task<CSApiResponseListTimesheet> TimesheetsGetTimesheetsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
         /// Get timesheets between start and end dates
@@ -189,8 +189,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListTimesheet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListTimesheet>> TimesheetsGetTimesheetsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListTimesheet)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListTimesheet>> TimesheetsGetTimesheetsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
         /// Batch update timesheets
         /// </summary>
@@ -200,8 +200,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The batch update timesheets request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListInt32</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListInt32</returns>
+        System.Threading.Tasks.Task<CSApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Batch update timesheets
@@ -212,8 +212,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The batch update timesheets request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListInt32)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -320,10 +320,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The timesheet request object</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        public CsApiApiResponseInt32 TimesheetsCreateSingleTimesheet (CsApiTimesheet request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseInt32</returns>
+        public CSApiResponseInt32 TimesheetsCreateSingleTimesheet (CSTimesheet request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = TimesheetsCreateSingleTimesheetWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = TimesheetsCreateSingleTimesheetWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -333,8 +333,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The timesheet request object</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        public ApiResponse< CsApiApiResponseInt32 > TimesheetsCreateSingleTimesheetWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        public ApiResponse< CSApiResponseInt32 > TimesheetsCreateSingleTimesheetWithHttpInfo (CSTimesheet request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -398,9 +398,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -409,10 +409,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The timesheet request object</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (CsApiTimesheet request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseInt32</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (CSTimesheet request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = await TimesheetsCreateSingleTimesheetAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = await TimesheetsCreateSingleTimesheetAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -423,8 +423,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The timesheet request object</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (CsApiTimesheet request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (CSTimesheet request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -488,9 +488,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -499,10 +499,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the timesheet to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        public CsApiApiResponseBoolean TimesheetsDeleteTimesheet (int? timesheetId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseBoolean</returns>
+        public CSApiResponseBoolean TimesheetsDeleteTimesheet (int? timesheetId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = TimesheetsDeleteTimesheetWithHttpInfo(timesheetId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = TimesheetsDeleteTimesheetWithHttpInfo(timesheetId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -512,8 +512,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the timesheet to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        public ApiResponse< CsApiApiResponseBoolean > TimesheetsDeleteTimesheetWithHttpInfo (int? timesheetId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        public ApiResponse< CSApiResponseBoolean > TimesheetsDeleteTimesheetWithHttpInfo (int? timesheetId, string xChronosheetsAuth)
         {
             // verify the required parameter 'timesheetId' is set
             if (timesheetId == null)
@@ -564,9 +564,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -575,10 +575,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the timesheet to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int? timesheetId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int? timesheetId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = await TimesheetsDeleteTimesheetAsyncWithHttpInfo(timesheetId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = await TimesheetsDeleteTimesheetAsyncWithHttpInfo(timesheetId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -589,8 +589,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the timesheet to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> TimesheetsDeleteTimesheetAsyncWithHttpInfo (int? timesheetId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> TimesheetsDeleteTimesheetAsyncWithHttpInfo (int? timesheetId, string xChronosheetsAuth)
         {
             // verify the required parameter 'timesheetId' is set
             if (timesheetId == null)
@@ -641,9 +641,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -653,10 +653,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListTimesheet</returns>
-        public CsApiApiResponseListTimesheet TimesheetsGetTimesheets (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>CSApiResponseListTimesheet</returns>
+        public CSApiResponseListTimesheet TimesheetsGetTimesheets (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListTimesheet> localVarResponse = TimesheetsGetTimesheetsWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListTimesheet> localVarResponse = TimesheetsGetTimesheetsWithHttpInfo(startDate, endDate, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -667,8 +667,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListTimesheet</returns>
-        public ApiResponse< CsApiApiResponseListTimesheet > TimesheetsGetTimesheetsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListTimesheet</returns>
+        public ApiResponse< CSApiResponseListTimesheet > TimesheetsGetTimesheetsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -723,9 +723,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListTimesheet>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListTimesheet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListTimesheet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListTimesheet)));
+                (CSApiResponseListTimesheet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListTimesheet)));
         }
 
         /// <summary>
@@ -735,10 +735,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListTimesheet</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListTimesheet> TimesheetsGetTimesheetsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListTimesheet</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListTimesheet> TimesheetsGetTimesheetsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListTimesheet> localVarResponse = await TimesheetsGetTimesheetsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListTimesheet> localVarResponse = await TimesheetsGetTimesheetsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -750,8 +750,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListTimesheet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListTimesheet>> TimesheetsGetTimesheetsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListTimesheet)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListTimesheet>> TimesheetsGetTimesheetsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -806,9 +806,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListTimesheet>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListTimesheet>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListTimesheet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListTimesheet)));
+                (CSApiResponseListTimesheet) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListTimesheet)));
         }
 
         /// <summary>
@@ -817,10 +817,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The batch update timesheets request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListInt32</returns>
-        public CsApiApiResponseListInt32 TimesheetsUpdateTimesheets (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseListInt32</returns>
+        public CSApiResponseListInt32 TimesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListInt32> localVarResponse = TimesheetsUpdateTimesheetsWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListInt32> localVarResponse = TimesheetsUpdateTimesheetsWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -830,8 +830,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The batch update timesheets request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListInt32</returns>
-        public ApiResponse< CsApiApiResponseListInt32 > TimesheetsUpdateTimesheetsWithHttpInfo (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListInt32</returns>
+        public ApiResponse< CSApiResponseListInt32 > TimesheetsUpdateTimesheetsWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -895,9 +895,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListInt32)));
+                (CSApiResponseListInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListInt32)));
         }
 
         /// <summary>
@@ -906,10 +906,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The batch update timesheets request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListInt32</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListInt32</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListInt32> localVarResponse = await TimesheetsUpdateTimesheetsAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListInt32> localVarResponse = await TimesheetsUpdateTimesheetsAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -920,8 +920,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The batch update timesheets request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListInt32)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -985,9 +985,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListInt32)));
+                (CSApiResponseListInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListInt32)));
         }
 
     }

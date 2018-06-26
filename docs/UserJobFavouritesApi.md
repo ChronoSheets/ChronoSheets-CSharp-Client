@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="userjobfavouritescreatejobfavourite"></a>
 # **UserJobFavouritesCreateJobFavourite**
-> CsApiApiResponseInt32 UserJobFavouritesCreateJobFavourite (CsApiInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
+> CSApiResponseInt32 UserJobFavouritesCreateJobFavourite (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
 
 Create a job favourite
 
@@ -30,13 +30,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new UserJobFavouritesApi();
-            var request = new CsApiInsertUserJobFavouriteRequest(); // CsApiInsertUserJobFavouriteRequest | 
+            var request = new CSInsertUserJobFavouriteRequest(); // CSInsertUserJobFavouriteRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Create a job favourite
-                CsApiApiResponseInt32 result = apiInstance.UserJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
+                CSApiResponseInt32 result = apiInstance.UserJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -52,12 +52,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertUserJobFavouriteRequest**](CsApiInsertUserJobFavouriteRequest.md)|  | 
+ **request** | [**CSInsertUserJobFavouriteRequest**](CSInsertUserJobFavouriteRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ No authorization required
 
 <a name="userjobfavouritesdeletejobfavourite"></a>
 # **UserJobFavouritesDeleteJobFavourite**
-> CsApiApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth)
+> CSApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth)
 
 Delete a job favourite
 
@@ -97,7 +97,7 @@ namespace Example
             try
             {
                 // Delete a job favourite
-                CsApiApiResponseBoolean result = apiInstance.UserJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.UserJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ No authorization required
 
 <a name="userjobfavouritesgetjobfavourites"></a>
 # **UserJobFavouritesGetJobFavourites**
-> CsApiApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth)
+> CSApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth)
 
 Get your job favourites
 
@@ -157,7 +157,7 @@ namespace Example
             try
             {
                 // Get your job favourites
-                CsApiApiResponseListUserJobFavourite result = apiInstance.UserJobFavouritesGetJobFavourites(xChronosheetsAuth);
+                CSApiResponseListUserJobFavourite result = apiInstance.UserJobFavouritesGetJobFavourites(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -177,7 +177,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserJobFavourite**](CsApiApiResponseListUserJobFavourite.md)
+[**CSApiResponseListUserJobFavourite**](CSApiResponseListUserJobFavourite.md)
 
 ### Authorization
 

@@ -33,8 +33,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        CsApiApiResponseInt32 ProjectsCreateProject (CsApiInsertProjectRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseInt32</returns>
+        CSApiResponseInt32 ProjectsCreateProject (CSInsertProjectRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a project
@@ -45,8 +45,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        ApiResponse<CsApiApiResponseInt32> ProjectsCreateProjectWithHttpInfo (CsApiInsertProjectRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        ApiResponse<CSApiResponseInt32> ProjectsCreateProjectWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Get project by Id
         /// </summary>
@@ -56,8 +56,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the project</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseProject</returns>
-        CsApiApiResponseProject ProjectsGetProjectById (int? projectId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseProject</returns>
+        CSApiResponseProject ProjectsGetProjectById (int? projectId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get project by Id
@@ -68,8 +68,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the project</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseProject</returns>
-        ApiResponse<CsApiApiResponseProject> ProjectsGetProjectByIdWithHttpInfo (int? projectId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseProject</returns>
+        ApiResponse<CSApiResponseProject> ProjectsGetProjectByIdWithHttpInfo (int? projectId, string xChronosheetsAuth);
         /// <summary>
         /// Get projects for a particular client
         /// </summary>
@@ -79,8 +79,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListProject</returns>
-        CsApiApiResponseListProject ProjectsGetProjectsForClient (int? clientId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseListProject</returns>
+        CSApiResponseListProject ProjectsGetProjectsForClient (int? clientId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get projects for a particular client
@@ -91,8 +91,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListProject</returns>
-        ApiResponse<CsApiApiResponseListProject> ProjectsGetProjectsForClientWithHttpInfo (int? clientId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListProject</returns>
+        ApiResponse<CSApiResponseListProject> ProjectsGetProjectsForClientWithHttpInfo (int? clientId, string xChronosheetsAuth);
         /// <summary>
         /// Update a project
         /// </summary>
@@ -102,8 +102,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        CsApiApiResponseBoolean ProjectsUpdateProject (CsApiUpdateProjectRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseBoolean</returns>
+        CSApiResponseBoolean ProjectsUpdateProject (CSUpdateProjectRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Update a project
@@ -114,8 +114,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        ApiResponse<CsApiApiResponseBoolean> ProjectsUpdateProjectWithHttpInfo (CsApiUpdateProjectRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        ApiResponse<CSApiResponseBoolean> ProjectsUpdateProjectWithHttpInfo (CSUpdateProjectRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -127,8 +127,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseInt32> ProjectsCreateProjectAsync (CsApiInsertProjectRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseInt32</returns>
+        System.Threading.Tasks.Task<CSApiResponseInt32> ProjectsCreateProjectAsync (CSInsertProjectRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a project
@@ -139,8 +139,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (CsApiInsertProjectRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Get project by Id
         /// </summary>
@@ -150,8 +150,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the project</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseProject</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseProject> ProjectsGetProjectByIdAsync (int? projectId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseProject</returns>
+        System.Threading.Tasks.Task<CSApiResponseProject> ProjectsGetProjectByIdAsync (int? projectId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get project by Id
@@ -162,8 +162,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the project</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseProject)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseProject>> ProjectsGetProjectByIdAsyncWithHttpInfo (int? projectId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseProject)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseProject>> ProjectsGetProjectByIdAsyncWithHttpInfo (int? projectId, string xChronosheetsAuth);
         /// <summary>
         /// Get projects for a particular client
         /// </summary>
@@ -173,8 +173,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListProject</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListProject> ProjectsGetProjectsForClientAsync (int? clientId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListProject</returns>
+        System.Threading.Tasks.Task<CSApiResponseListProject> ProjectsGetProjectsForClientAsync (int? clientId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get projects for a particular client
@@ -185,8 +185,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListProject)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListProject>> ProjectsGetProjectsForClientAsyncWithHttpInfo (int? clientId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListProject)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListProject>> ProjectsGetProjectsForClientAsyncWithHttpInfo (int? clientId, string xChronosheetsAuth);
         /// <summary>
         /// Update a project
         /// </summary>
@@ -196,8 +196,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseBoolean> ProjectsUpdateProjectAsync (CsApiUpdateProjectRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        System.Threading.Tasks.Task<CSApiResponseBoolean> ProjectsUpdateProjectAsync (CSUpdateProjectRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Update a project
@@ -208,8 +208,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> ProjectsUpdateProjectAsyncWithHttpInfo (CsApiUpdateProjectRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> ProjectsUpdateProjectAsyncWithHttpInfo (CSUpdateProjectRequest request, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -316,10 +316,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        public CsApiApiResponseInt32 ProjectsCreateProject (CsApiInsertProjectRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseInt32</returns>
+        public CSApiResponseInt32 ProjectsCreateProject (CSInsertProjectRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = ProjectsCreateProjectWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = ProjectsCreateProjectWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -329,8 +329,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        public ApiResponse< CsApiApiResponseInt32 > ProjectsCreateProjectWithHttpInfo (CsApiInsertProjectRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        public ApiResponse< CSApiResponseInt32 > ProjectsCreateProjectWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -394,9 +394,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -405,10 +405,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseInt32> ProjectsCreateProjectAsync (CsApiInsertProjectRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseInt32</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseInt32> ProjectsCreateProjectAsync (CSInsertProjectRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = await ProjectsCreateProjectAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = await ProjectsCreateProjectAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -419,8 +419,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (CsApiInsertProjectRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -484,9 +484,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -495,10 +495,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the project</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseProject</returns>
-        public CsApiApiResponseProject ProjectsGetProjectById (int? projectId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseProject</returns>
+        public CSApiResponseProject ProjectsGetProjectById (int? projectId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseProject> localVarResponse = ProjectsGetProjectByIdWithHttpInfo(projectId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseProject> localVarResponse = ProjectsGetProjectByIdWithHttpInfo(projectId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -508,8 +508,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the project</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseProject</returns>
-        public ApiResponse< CsApiApiResponseProject > ProjectsGetProjectByIdWithHttpInfo (int? projectId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseProject</returns>
+        public ApiResponse< CSApiResponseProject > ProjectsGetProjectByIdWithHttpInfo (int? projectId, string xChronosheetsAuth)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -560,9 +560,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseProject>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseProject>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseProject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseProject)));
+                (CSApiResponseProject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseProject)));
         }
 
         /// <summary>
@@ -571,10 +571,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the project</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseProject</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseProject> ProjectsGetProjectByIdAsync (int? projectId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseProject</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseProject> ProjectsGetProjectByIdAsync (int? projectId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseProject> localVarResponse = await ProjectsGetProjectByIdAsyncWithHttpInfo(projectId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseProject> localVarResponse = await ProjectsGetProjectByIdAsyncWithHttpInfo(projectId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -585,8 +585,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the project</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseProject)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseProject>> ProjectsGetProjectByIdAsyncWithHttpInfo (int? projectId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseProject)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseProject>> ProjectsGetProjectByIdAsyncWithHttpInfo (int? projectId, string xChronosheetsAuth)
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -637,9 +637,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseProject>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseProject>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseProject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseProject)));
+                (CSApiResponseProject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseProject)));
         }
 
         /// <summary>
@@ -648,10 +648,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListProject</returns>
-        public CsApiApiResponseListProject ProjectsGetProjectsForClient (int? clientId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseListProject</returns>
+        public CSApiResponseListProject ProjectsGetProjectsForClient (int? clientId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListProject> localVarResponse = ProjectsGetProjectsForClientWithHttpInfo(clientId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListProject> localVarResponse = ProjectsGetProjectsForClientWithHttpInfo(clientId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -661,8 +661,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListProject</returns>
-        public ApiResponse< CsApiApiResponseListProject > ProjectsGetProjectsForClientWithHttpInfo (int? clientId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListProject</returns>
+        public ApiResponse< CSApiResponseListProject > ProjectsGetProjectsForClientWithHttpInfo (int? clientId, string xChronosheetsAuth)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -713,9 +713,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListProject>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListProject>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListProject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListProject)));
+                (CSApiResponseListProject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListProject)));
         }
 
         /// <summary>
@@ -724,10 +724,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListProject</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListProject> ProjectsGetProjectsForClientAsync (int? clientId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListProject</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListProject> ProjectsGetProjectsForClientAsync (int? clientId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListProject> localVarResponse = await ProjectsGetProjectsForClientAsyncWithHttpInfo(clientId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListProject> localVarResponse = await ProjectsGetProjectsForClientAsyncWithHttpInfo(clientId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -738,8 +738,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListProject)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListProject>> ProjectsGetProjectsForClientAsyncWithHttpInfo (int? clientId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListProject)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListProject>> ProjectsGetProjectsForClientAsyncWithHttpInfo (int? clientId, string xChronosheetsAuth)
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -790,9 +790,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListProject>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListProject>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListProject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListProject)));
+                (CSApiResponseListProject) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListProject)));
         }
 
         /// <summary>
@@ -801,10 +801,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        public CsApiApiResponseBoolean ProjectsUpdateProject (CsApiUpdateProjectRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseBoolean</returns>
+        public CSApiResponseBoolean ProjectsUpdateProject (CSUpdateProjectRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = ProjectsUpdateProjectWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = ProjectsUpdateProjectWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -814,8 +814,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        public ApiResponse< CsApiApiResponseBoolean > ProjectsUpdateProjectWithHttpInfo (CsApiUpdateProjectRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        public ApiResponse< CSApiResponseBoolean > ProjectsUpdateProjectWithHttpInfo (CSUpdateProjectRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -879,9 +879,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -890,10 +890,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseBoolean> ProjectsUpdateProjectAsync (CsApiUpdateProjectRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseBoolean> ProjectsUpdateProjectAsync (CSUpdateProjectRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = await ProjectsUpdateProjectAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = await ProjectsUpdateProjectAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -904,8 +904,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> ProjectsUpdateProjectAsyncWithHttpInfo (CsApiUpdateProjectRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> ProjectsUpdateProjectAsyncWithHttpInfo (CSUpdateProjectRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -969,9 +969,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
     }

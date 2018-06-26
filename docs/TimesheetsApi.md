@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="timesheetscreatesingletimesheet"></a>
 # **TimesheetsCreateSingleTimesheet**
-> CsApiApiResponseInt32 TimesheetsCreateSingleTimesheet (CsApiTimesheet request, string xChronosheetsAuth)
+> CSApiResponseInt32 TimesheetsCreateSingleTimesheet (CSTimesheet request, string xChronosheetsAuth)
 
 Inserts a single timesheet record
 
@@ -31,13 +31,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new TimesheetsApi();
-            var request = new CsApiTimesheet(); // CsApiTimesheet | The timesheet request object
+            var request = new CSTimesheet(); // CSTimesheet | The timesheet request object
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Inserts a single timesheet record
-                CsApiApiResponseInt32 result = apiInstance.TimesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
+                CSApiResponseInt32 result = apiInstance.TimesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,12 +53,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiTimesheet**](CsApiTimesheet.md)| The timesheet request object | 
+ **request** | [**CSTimesheet**](CSTimesheet.md)| The timesheet request object | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 
 <a name="timesheetsdeletetimesheet"></a>
 # **TimesheetsDeleteTimesheet**
-> CsApiApiResponseBoolean TimesheetsDeleteTimesheet (int? timesheetId, string xChronosheetsAuth)
+> CSApiResponseBoolean TimesheetsDeleteTimesheet (int? timesheetId, string xChronosheetsAuth)
 
 Delete a timesheet
 
@@ -98,7 +98,7 @@ namespace Example
             try
             {
                 // Delete a timesheet
-                CsApiApiResponseBoolean result = apiInstance.TimesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.TimesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 
 <a name="timesheetsgettimesheets"></a>
 # **TimesheetsGetTimesheets**
-> CsApiApiResponseListTimesheet TimesheetsGetTimesheets (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
+> CSApiResponseListTimesheet TimesheetsGetTimesheets (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
 
 Get timesheets between start and end dates
 
@@ -160,7 +160,7 @@ namespace Example
             try
             {
                 // Get timesheets between start and end dates
-                CsApiApiResponseListTimesheet result = apiInstance.TimesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
+                CSApiResponseListTimesheet result = apiInstance.TimesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -182,7 +182,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListTimesheet**](CsApiApiResponseListTimesheet.md)
+[**CSApiResponseListTimesheet**](CSApiResponseListTimesheet.md)
 
 ### Authorization
 
@@ -197,7 +197,7 @@ No authorization required
 
 <a name="timesheetsupdatetimesheets"></a>
 # **TimesheetsUpdateTimesheets**
-> CsApiApiResponseListInt32 TimesheetsUpdateTimesheets (CsApiBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
+> CSApiResponseListInt32 TimesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
 
 Batch update timesheets
 
@@ -216,13 +216,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new TimesheetsApi();
-            var request = new CsApiBatchUpdateTimesheetRequest(); // CsApiBatchUpdateTimesheetRequest | The batch update timesheets request
+            var request = new CSBatchUpdateTimesheetRequest(); // CSBatchUpdateTimesheetRequest | The batch update timesheets request
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Batch update timesheets
-                CsApiApiResponseListInt32 result = apiInstance.TimesheetsUpdateTimesheets(request, xChronosheetsAuth);
+                CSApiResponseListInt32 result = apiInstance.TimesheetsUpdateTimesheets(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -238,12 +238,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiBatchUpdateTimesheetRequest**](CsApiBatchUpdateTimesheetRequest.md)| The batch update timesheets request | 
+ **request** | [**CSBatchUpdateTimesheetRequest**](CSBatchUpdateTimesheetRequest.md)| The batch update timesheets request | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseListInt32**](CsApiApiResponseListInt32.md)
+[**CSApiResponseListInt32**](CSApiResponseListInt32.md)
 
 ### Authorization
 

@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void UsersCreateTimesheetUserTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiInsertUserRequest request = null;
+            //CSInsertUserRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UsersCreateTimesheetUser(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInsertUserResponse> (response, "response is CsApiApiResponseInsertUserResponse");
+            //Assert.IsInstanceOf<CSApiResponseInsertUserResponse> (response, "response is CSApiResponseInsertUserResponse");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? userId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UsersGetTimesheetUser(userId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseUserForManagement> (response, "response is CsApiApiResponseUserForManagement");
+            //Assert.IsInstanceOf<CSApiResponseUserForManagement> (response, "response is CSApiResponseUserForManagement");
         }
         
         /// <summary>
@@ -99,7 +99,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.UsersGetTimesheetUsers(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListUserForManagement> (response, "response is CsApiApiResponseListUserForManagement");
+            //Assert.IsInstanceOf<CSApiResponseListUserForManagement> (response, "response is CSApiResponseListUserForManagement");
         }
         
         /// <summary>
@@ -109,10 +109,10 @@ namespace ChronoSheetsAPI.Test
         public void UsersUpdateTimesheetUserTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiUpdateUserRequest request = null;
+            //CSUpdateUserRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UsersUpdateTimesheetUser(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseUpdateUserResponse> (response, "response is CsApiApiResponseUpdateUserResponse");
+            //Assert.IsInstanceOf<CSApiResponseUpdateUserResponse> (response, "response is CSApiResponseUpdateUserResponse");
         }
         
     }

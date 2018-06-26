@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="organisationgroupusersgetorganisationgroupusers"></a>
 # **OrganisationGroupUsersGetOrganisationGroupUsers**
-> CsApiApiResponseListUserForManagement OrganisationGroupUsersGetOrganisationGroupUsers (int? orgGroupId, string xChronosheetsAuth)
+> CSApiResponseListUserForManagement OrganisationGroupUsersGetOrganisationGroupUsers (int? orgGroupId, string xChronosheetsAuth)
 
 Get a collection of organisation group users that belong to an organisation group
 
@@ -35,7 +35,7 @@ namespace Example
             try
             {
                 // Get a collection of organisation group users that belong to an organisation group
-                CsApiApiResponseListUserForManagement result = apiInstance.OrganisationGroupUsersGetOrganisationGroupUsers(orgGroupId, xChronosheetsAuth);
+                CSApiResponseListUserForManagement result = apiInstance.OrganisationGroupUsersGetOrganisationGroupUsers(orgGroupId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListUserForManagement**](CsApiApiResponseListUserForManagement.md)
+[**CSApiResponseListUserForManagement**](CSApiResponseListUserForManagement.md)
 
 ### Authorization
 
@@ -71,7 +71,7 @@ No authorization required
 
 <a name="organisationgroupusersupdateorganisationgroupusers"></a>
 # **OrganisationGroupUsersUpdateOrganisationGroupUsers**
-> CsApiApiResponseBoolean OrganisationGroupUsersUpdateOrganisationGroupUsers (CsApiSetOrganisationGroupUsersRequest request, string xChronosheetsAuth)
+> CSApiResponseBoolean OrganisationGroupUsersUpdateOrganisationGroupUsers (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth)
 
 Set the users who belong to an organisation group
 
@@ -90,13 +90,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new OrganisationGroupUsersApi();
-            var request = new CsApiSetOrganisationGroupUsersRequest(); // CsApiSetOrganisationGroupUsersRequest | 
+            var request = new CSSetOrganisationGroupUsersRequest(); // CSSetOrganisationGroupUsersRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Set the users who belong to an organisation group
-                CsApiApiResponseBoolean result = apiInstance.OrganisationGroupUsersUpdateOrganisationGroupUsers(request, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.OrganisationGroupUsersUpdateOrganisationGroupUsers(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -112,12 +112,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSetOrganisationGroupUsersRequest**](CsApiSetOrganisationGroupUsersRequest.md)|  | 
+ **request** | [**CSSetOrganisationGroupUsersRequest**](CSSetOrganisationGroupUsersRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

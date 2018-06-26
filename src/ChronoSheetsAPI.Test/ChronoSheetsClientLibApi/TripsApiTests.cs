@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void TripsCreateTripTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiCreateTripRequest request = null;
+            //CSCreateTripRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TripsCreateTrip(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? tripId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TripsGetMyTripById(tripId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseTrip> (response, "response is CsApiApiResponseTrip");
+            //Assert.IsInstanceOf<CSApiResponseTrip> (response, "response is CSApiResponseTrip");
         }
         
         /// <summary>
@@ -104,7 +104,7 @@ namespace ChronoSheetsAPI.Test
             //int? vehicleId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseForPaginatedListTrip> (response, "response is CsApiApiResponseForPaginatedListTrip");
+            //Assert.IsInstanceOf<CSApiResponseForPaginatedListTrip> (response, "response is CSApiResponseForPaginatedListTrip");
         }
         
     }

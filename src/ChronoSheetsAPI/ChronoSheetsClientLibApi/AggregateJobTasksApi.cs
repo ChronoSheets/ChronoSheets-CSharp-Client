@@ -32,8 +32,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListAggregateJobCode</returns>
-        CsApiApiResponseListAggregateJobCode AggregateJobTasksGetAggregateJobTasks (string xChronosheetsAuth);
+        /// <returns>CSApiResponseListAggregateJobCode</returns>
+        CSApiResponseListAggregateJobCode AggregateJobTasksGetAggregateJobTasks (string xChronosheetsAuth);
 
         /// <summary>
         /// Get jobs and tasks information, aggregated
@@ -43,8 +43,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListAggregateJobCode</returns>
-        ApiResponse<CsApiApiResponseListAggregateJobCode> AggregateJobTasksGetAggregateJobTasksWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListAggregateJobCode</returns>
+        ApiResponse<CSApiResponseListAggregateJobCode> AggregateJobTasksGetAggregateJobTasksWithHttpInfo (string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -55,8 +55,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListAggregateJobCode</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListAggregateJobCode> AggregateJobTasksGetAggregateJobTasksAsync (string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListAggregateJobCode</returns>
+        System.Threading.Tasks.Task<CSApiResponseListAggregateJobCode> AggregateJobTasksGetAggregateJobTasksAsync (string xChronosheetsAuth);
 
         /// <summary>
         /// Get jobs and tasks information, aggregated
@@ -66,8 +66,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListAggregateJobCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListAggregateJobCode>> AggregateJobTasksGetAggregateJobTasksAsyncWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListAggregateJobCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListAggregateJobCode>> AggregateJobTasksGetAggregateJobTasksAsyncWithHttpInfo (string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -173,10 +173,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListAggregateJobCode</returns>
-        public CsApiApiResponseListAggregateJobCode AggregateJobTasksGetAggregateJobTasks (string xChronosheetsAuth)
+        /// <returns>CSApiResponseListAggregateJobCode</returns>
+        public CSApiResponseListAggregateJobCode AggregateJobTasksGetAggregateJobTasks (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListAggregateJobCode> localVarResponse = AggregateJobTasksGetAggregateJobTasksWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseListAggregateJobCode> localVarResponse = AggregateJobTasksGetAggregateJobTasksWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -185,8 +185,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListAggregateJobCode</returns>
-        public ApiResponse< CsApiApiResponseListAggregateJobCode > AggregateJobTasksGetAggregateJobTasksWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListAggregateJobCode</returns>
+        public ApiResponse< CSApiResponseListAggregateJobCode > AggregateJobTasksGetAggregateJobTasksWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -233,9 +233,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListAggregateJobCode>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListAggregateJobCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListAggregateJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListAggregateJobCode)));
+                (CSApiResponseListAggregateJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListAggregateJobCode)));
         }
 
         /// <summary>
@@ -243,10 +243,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListAggregateJobCode</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListAggregateJobCode> AggregateJobTasksGetAggregateJobTasksAsync (string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListAggregateJobCode</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListAggregateJobCode> AggregateJobTasksGetAggregateJobTasksAsync (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListAggregateJobCode> localVarResponse = await AggregateJobTasksGetAggregateJobTasksAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseListAggregateJobCode> localVarResponse = await AggregateJobTasksGetAggregateJobTasksAsyncWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -256,8 +256,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListAggregateJobCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListAggregateJobCode>> AggregateJobTasksGetAggregateJobTasksAsyncWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListAggregateJobCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListAggregateJobCode>> AggregateJobTasksGetAggregateJobTasksAsyncWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -304,9 +304,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListAggregateJobCode>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListAggregateJobCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListAggregateJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListAggregateJobCode)));
+                (CSApiResponseListAggregateJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListAggregateJobCode)));
         }
 
     }

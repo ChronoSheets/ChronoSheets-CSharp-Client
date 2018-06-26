@@ -74,7 +74,7 @@ namespace ChronoSheetsAPI.Test
             //int? userId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UsualHoursGetUsualHours(userId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListUsualHoursDay> (response, "response is CsApiApiResponseListUsualHoursDay");
+            //Assert.IsInstanceOf<CSApiResponseListUsualHoursDay> (response, "response is CSApiResponseListUsualHoursDay");
         }
         
         /// <summary>
@@ -84,10 +84,10 @@ namespace ChronoSheetsAPI.Test
         public void UsualHoursSetUsualHoursTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiSetUsualHoursRequest request = null;
+            //CSSetUsualHoursRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UsualHoursSetUsualHours(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
     }

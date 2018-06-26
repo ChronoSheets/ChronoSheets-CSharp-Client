@@ -33,8 +33,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        CsApiApiResponseInt32 JobCodesCreateJobCode (CsApiInsertJobCodeRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseInt32</returns>
+        CSApiResponseInt32 JobCodesCreateJobCode (CSInsertJobCodeRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a job code
@@ -45,8 +45,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        ApiResponse<CsApiApiResponseInt32> JobCodesCreateJobCodeWithHttpInfo (CsApiInsertJobCodeRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        ApiResponse<CSApiResponseInt32> JobCodesCreateJobCodeWithHttpInfo (CSInsertJobCodeRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Delete a job code
         /// </summary>
@@ -56,8 +56,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId">The ID of the job code your want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        CsApiApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseBoolean</returns>
+        CSApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth);
 
         /// <summary>
         /// Delete a job code
@@ -68,8 +68,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId">The ID of the job code your want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        ApiResponse<CsApiApiResponseBoolean> JobCodesDeleteJobCodeWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        ApiResponse<CSApiResponseBoolean> JobCodesDeleteJobCodeWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
         /// <summary>
         /// Get a particular job code by job code id
         /// </summary>
@@ -79,8 +79,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseJobCode</returns>
-        CsApiApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseJobCode</returns>
+        CSApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get a particular job code by job code id
@@ -91,8 +91,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseJobCode</returns>
-        ApiResponse<CsApiApiResponseJobCode> JobCodesGetJobCodeByIdWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseJobCode</returns>
+        ApiResponse<CSApiResponseJobCode> JobCodesGetJobCodeByIdWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
         /// <summary>
         /// Get job codes for your organisation
         /// </summary>
@@ -101,8 +101,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListJobCode</returns>
-        CsApiApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth);
+        /// <returns>CSApiResponseListJobCode</returns>
+        CSApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth);
 
         /// <summary>
         /// Get job codes for your organisation
@@ -112,8 +112,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListJobCode</returns>
-        ApiResponse<CsApiApiResponseListJobCode> JobCodesGetJobCodesWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseListJobCode</returns>
+        ApiResponse<CSApiResponseListJobCode> JobCodesGetJobCodesWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
         /// Update a job code
         /// </summary>
@@ -123,8 +123,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        CsApiApiResponseBoolean JobCodesUpdateJobCode (CsApiUpdateJobCodeRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseBoolean</returns>
+        CSApiResponseBoolean JobCodesUpdateJobCode (CSUpdateJobCodeRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Update a job code
@@ -135,8 +135,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        ApiResponse<CsApiApiResponseBoolean> JobCodesUpdateJobCodeWithHttpInfo (CsApiUpdateJobCodeRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        ApiResponse<CSApiResponseBoolean> JobCodesUpdateJobCodeWithHttpInfo (CSUpdateJobCodeRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -148,8 +148,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseInt32> JobCodesCreateJobCodeAsync (CsApiInsertJobCodeRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseInt32</returns>
+        System.Threading.Tasks.Task<CSApiResponseInt32> JobCodesCreateJobCodeAsync (CSInsertJobCodeRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a job code
@@ -160,8 +160,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> JobCodesCreateJobCodeAsyncWithHttpInfo (CsApiInsertJobCodeRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> JobCodesCreateJobCodeAsyncWithHttpInfo (CSInsertJobCodeRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Delete a job code
         /// </summary>
@@ -171,8 +171,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId">The ID of the job code your want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseBoolean> JobCodesDeleteJobCodeAsync (int? jobCodeId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        System.Threading.Tasks.Task<CSApiResponseBoolean> JobCodesDeleteJobCodeAsync (int? jobCodeId, string xChronosheetsAuth);
 
         /// <summary>
         /// Delete a job code
@@ -183,8 +183,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId">The ID of the job code your want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> JobCodesDeleteJobCodeAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> JobCodesDeleteJobCodeAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
         /// <summary>
         /// Get a particular job code by job code id
         /// </summary>
@@ -194,8 +194,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseJobCode</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseJobCode> JobCodesGetJobCodeByIdAsync (int? jobCodeId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseJobCode</returns>
+        System.Threading.Tasks.Task<CSApiResponseJobCode> JobCodesGetJobCodeByIdAsync (int? jobCodeId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get a particular job code by job code id
@@ -206,8 +206,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseJobCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseJobCode>> JobCodesGetJobCodeByIdAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseJobCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseJobCode>> JobCodesGetJobCodeByIdAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
         /// <summary>
         /// Get job codes for your organisation
         /// </summary>
@@ -216,8 +216,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListJobCode</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseListJobCode> JobCodesGetJobCodesAsync (string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseListJobCode</returns>
+        System.Threading.Tasks.Task<CSApiResponseListJobCode> JobCodesGetJobCodesAsync (string xChronosheetsAuth);
 
         /// <summary>
         /// Get job codes for your organisation
@@ -227,8 +227,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListJobCode)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListJobCode>> JobCodesGetJobCodesAsyncWithHttpInfo (string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseListJobCode)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListJobCode>> JobCodesGetJobCodesAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
         /// Update a job code
         /// </summary>
@@ -238,8 +238,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseBoolean> JobCodesUpdateJobCodeAsync (CsApiUpdateJobCodeRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        System.Threading.Tasks.Task<CSApiResponseBoolean> JobCodesUpdateJobCodeAsync (CSUpdateJobCodeRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Update a job code
@@ -250,8 +250,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> JobCodesUpdateJobCodeAsyncWithHttpInfo (CsApiUpdateJobCodeRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> JobCodesUpdateJobCodeAsyncWithHttpInfo (CSUpdateJobCodeRequest request, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -358,10 +358,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        public CsApiApiResponseInt32 JobCodesCreateJobCode (CsApiInsertJobCodeRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseInt32</returns>
+        public CSApiResponseInt32 JobCodesCreateJobCode (CSInsertJobCodeRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = JobCodesCreateJobCodeWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = JobCodesCreateJobCodeWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -371,8 +371,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        public ApiResponse< CsApiApiResponseInt32 > JobCodesCreateJobCodeWithHttpInfo (CsApiInsertJobCodeRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        public ApiResponse< CSApiResponseInt32 > JobCodesCreateJobCodeWithHttpInfo (CSInsertJobCodeRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -436,9 +436,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -447,10 +447,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseInt32> JobCodesCreateJobCodeAsync (CsApiInsertJobCodeRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseInt32</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseInt32> JobCodesCreateJobCodeAsync (CSInsertJobCodeRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = await JobCodesCreateJobCodeAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = await JobCodesCreateJobCodeAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -461,8 +461,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> JobCodesCreateJobCodeAsyncWithHttpInfo (CsApiInsertJobCodeRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> JobCodesCreateJobCodeAsyncWithHttpInfo (CSInsertJobCodeRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -526,9 +526,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -537,10 +537,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId">The ID of the job code your want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        public CsApiApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseBoolean</returns>
+        public CSApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = JobCodesDeleteJobCodeWithHttpInfo(jobCodeId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = JobCodesDeleteJobCodeWithHttpInfo(jobCodeId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -550,8 +550,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId">The ID of the job code your want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        public ApiResponse< CsApiApiResponseBoolean > JobCodesDeleteJobCodeWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        public ApiResponse< CSApiResponseBoolean > JobCodesDeleteJobCodeWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
         {
             // verify the required parameter 'jobCodeId' is set
             if (jobCodeId == null)
@@ -602,9 +602,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -613,10 +613,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId">The ID of the job code your want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseBoolean> JobCodesDeleteJobCodeAsync (int? jobCodeId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseBoolean> JobCodesDeleteJobCodeAsync (int? jobCodeId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = await JobCodesDeleteJobCodeAsyncWithHttpInfo(jobCodeId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = await JobCodesDeleteJobCodeAsyncWithHttpInfo(jobCodeId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -627,8 +627,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId">The ID of the job code your want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> JobCodesDeleteJobCodeAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> JobCodesDeleteJobCodeAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
         {
             // verify the required parameter 'jobCodeId' is set
             if (jobCodeId == null)
@@ -679,9 +679,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -690,10 +690,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseJobCode</returns>
-        public CsApiApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseJobCode</returns>
+        public CSApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseJobCode> localVarResponse = JobCodesGetJobCodeByIdWithHttpInfo(jobCodeId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseJobCode> localVarResponse = JobCodesGetJobCodeByIdWithHttpInfo(jobCodeId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -703,8 +703,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseJobCode</returns>
-        public ApiResponse< CsApiApiResponseJobCode > JobCodesGetJobCodeByIdWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseJobCode</returns>
+        public ApiResponse< CSApiResponseJobCode > JobCodesGetJobCodeByIdWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
         {
             // verify the required parameter 'jobCodeId' is set
             if (jobCodeId == null)
@@ -755,9 +755,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseJobCode>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseJobCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseJobCode)));
+                (CSApiResponseJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseJobCode)));
         }
 
         /// <summary>
@@ -766,10 +766,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseJobCode</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseJobCode> JobCodesGetJobCodeByIdAsync (int? jobCodeId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseJobCode</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseJobCode> JobCodesGetJobCodeByIdAsync (int? jobCodeId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseJobCode> localVarResponse = await JobCodesGetJobCodeByIdAsyncWithHttpInfo(jobCodeId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseJobCode> localVarResponse = await JobCodesGetJobCodeByIdAsyncWithHttpInfo(jobCodeId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -780,8 +780,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobCodeId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseJobCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseJobCode>> JobCodesGetJobCodeByIdAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseJobCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseJobCode>> JobCodesGetJobCodeByIdAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
         {
             // verify the required parameter 'jobCodeId' is set
             if (jobCodeId == null)
@@ -832,9 +832,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseJobCode>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseJobCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseJobCode)));
+                (CSApiResponseJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseJobCode)));
         }
 
         /// <summary>
@@ -842,10 +842,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseListJobCode</returns>
-        public CsApiApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth)
+        /// <returns>CSApiResponseListJobCode</returns>
+        public CSApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListJobCode> localVarResponse = JobCodesGetJobCodesWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseListJobCode> localVarResponse = JobCodesGetJobCodesWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -854,8 +854,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseListJobCode</returns>
-        public ApiResponse< CsApiApiResponseListJobCode > JobCodesGetJobCodesWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseListJobCode</returns>
+        public ApiResponse< CSApiResponseListJobCode > JobCodesGetJobCodesWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -902,9 +902,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListJobCode>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListJobCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListJobCode)));
+                (CSApiResponseListJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListJobCode)));
         }
 
         /// <summary>
@@ -912,10 +912,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseListJobCode</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseListJobCode> JobCodesGetJobCodesAsync (string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseListJobCode</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListJobCode> JobCodesGetJobCodesAsync (string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseListJobCode> localVarResponse = await JobCodesGetJobCodesAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<CSApiResponseListJobCode> localVarResponse = await JobCodesGetJobCodesAsyncWithHttpInfo(xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -925,8 +925,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseListJobCode)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseListJobCode>> JobCodesGetJobCodesAsyncWithHttpInfo (string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseListJobCode)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListJobCode>> JobCodesGetJobCodesAsyncWithHttpInfo (string xChronosheetsAuth)
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -973,9 +973,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseListJobCode>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseListJobCode>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseListJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseListJobCode)));
+                (CSApiResponseListJobCode) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListJobCode)));
         }
 
         /// <summary>
@@ -984,10 +984,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseBoolean</returns>
-        public CsApiApiResponseBoolean JobCodesUpdateJobCode (CsApiUpdateJobCodeRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseBoolean</returns>
+        public CSApiResponseBoolean JobCodesUpdateJobCode (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = JobCodesUpdateJobCodeWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = JobCodesUpdateJobCodeWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -997,8 +997,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseBoolean</returns>
-        public ApiResponse< CsApiApiResponseBoolean > JobCodesUpdateJobCodeWithHttpInfo (CsApiUpdateJobCodeRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        public ApiResponse< CSApiResponseBoolean > JobCodesUpdateJobCodeWithHttpInfo (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1062,9 +1062,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
@@ -1073,10 +1073,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseBoolean> JobCodesUpdateJobCodeAsync (CsApiUpdateJobCodeRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseBoolean> JobCodesUpdateJobCodeAsync (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseBoolean> localVarResponse = await JobCodesUpdateJobCodeAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseBoolean> localVarResponse = await JobCodesUpdateJobCodeAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -1087,8 +1087,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseBoolean>> JobCodesUpdateJobCodeAsyncWithHttpInfo (CsApiUpdateJobCodeRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> JobCodesUpdateJobCodeAsyncWithHttpInfo (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1152,9 +1152,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseBoolean>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseBoolean)));
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
     }

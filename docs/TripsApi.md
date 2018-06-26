@@ -11,7 +11,7 @@ Method | HTTP request | Description
 
 <a name="tripscreatetrip"></a>
 # **TripsCreateTrip**
-> CsApiApiResponseInt32 TripsCreateTrip (CsApiCreateTripRequest request, string xChronosheetsAuth)
+> CSApiResponseInt32 TripsCreateTrip (CSCreateTripRequest request, string xChronosheetsAuth)
 
 Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
 
@@ -30,13 +30,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new TripsApi();
-            var request = new CsApiCreateTripRequest(); // CsApiCreateTripRequest | The create trip request
+            var request = new CSCreateTripRequest(); // CSCreateTripRequest | The create trip request
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
-                CsApiApiResponseInt32 result = apiInstance.TripsCreateTrip(request, xChronosheetsAuth);
+                CSApiResponseInt32 result = apiInstance.TripsCreateTrip(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -52,12 +52,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiCreateTripRequest**](CsApiCreateTripRequest.md)| The create trip request | 
+ **request** | [**CSCreateTripRequest**](CSCreateTripRequest.md)| The create trip request | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -72,7 +72,7 @@ No authorization required
 
 <a name="tripsgetmytripbyid"></a>
 # **TripsGetMyTripById**
-> CsApiApiResponseTrip TripsGetMyTripById (int? tripId, string xChronosheetsAuth)
+> CSApiResponseTrip TripsGetMyTripById (int? tripId, string xChronosheetsAuth)
 
 Get trip by Id
 
@@ -97,7 +97,7 @@ namespace Example
             try
             {
                 // Get trip by Id
-                CsApiApiResponseTrip result = apiInstance.TripsGetMyTripById(tripId, xChronosheetsAuth);
+                CSApiResponseTrip result = apiInstance.TripsGetMyTripById(tripId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseTrip**](CsApiApiResponseTrip.md)
+[**CSApiResponseTrip**](CSApiResponseTrip.md)
 
 ### Authorization
 
@@ -133,7 +133,7 @@ No authorization required
 
 <a name="tripsgetmytrips"></a>
 # **TripsGetMyTrips**
-> CsApiApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+> CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
 
 Get my trips
 
@@ -162,7 +162,7 @@ namespace Example
             try
             {
                 // Get my trips
-                CsApiApiResponseForPaginatedListTrip result = apiInstance.TripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+                CSApiResponseForPaginatedListTrip result = apiInstance.TripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -187,7 +187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseForPaginatedListTrip**](CsApiApiResponseForPaginatedListTrip.md)
+[**CSApiResponseForPaginatedListTrip**](CSApiResponseForPaginatedListTrip.md)
 
 ### Authorization
 

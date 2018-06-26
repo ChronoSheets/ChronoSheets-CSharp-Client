@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void JobCodesCreateJobCodeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiInsertJobCodeRequest request = null;
+            //CSInsertJobCodeRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.JobCodesCreateJobCode(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? jobCodeId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.JobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
         /// <summary>
@@ -100,7 +100,7 @@ namespace ChronoSheetsAPI.Test
             //int? jobCodeId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.JobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseJobCode> (response, "response is CsApiApiResponseJobCode");
+            //Assert.IsInstanceOf<CSApiResponseJobCode> (response, "response is CSApiResponseJobCode");
         }
         
         /// <summary>
@@ -112,7 +112,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.JobCodesGetJobCodes(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListJobCode> (response, "response is CsApiApiResponseListJobCode");
+            //Assert.IsInstanceOf<CSApiResponseListJobCode> (response, "response is CSApiResponseListJobCode");
         }
         
         /// <summary>
@@ -122,10 +122,10 @@ namespace ChronoSheetsAPI.Test
         public void JobCodesUpdateJobCodeTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiUpdateJobCodeRequest request = null;
+            //CSUpdateJobCodeRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.JobCodesUpdateJobCode(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
     }

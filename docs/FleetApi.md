@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="fleetcreatevehicle"></a>
 # **FleetCreateVehicle**
-> CsApiApiResponseInt32 FleetCreateVehicle (CsApiInsertVehicleRequest request, string xChronosheetsAuth)
+> CSApiResponseInt32 FleetCreateVehicle (CSInsertVehicleRequest request, string xChronosheetsAuth)
 
 Create a vehicle
 
@@ -31,13 +31,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new FleetApi();
-            var request = new CsApiInsertVehicleRequest(); // CsApiInsertVehicleRequest | 
+            var request = new CSInsertVehicleRequest(); // CSInsertVehicleRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Create a vehicle
-                CsApiApiResponseInt32 result = apiInstance.FleetCreateVehicle(request, xChronosheetsAuth);
+                CSApiResponseInt32 result = apiInstance.FleetCreateVehicle(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,12 +53,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertVehicleRequest**](CsApiInsertVehicleRequest.md)|  | 
+ **request** | [**CSInsertVehicleRequest**](CSInsertVehicleRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 
 <a name="fleetgetvehiclebyid"></a>
 # **FleetGetVehicleById**
-> CsApiApiResponseFleetVehicle FleetGetVehicleById (int? vehicleId, string xChronosheetsAuth)
+> CSApiResponseFleetVehicle FleetGetVehicleById (int? vehicleId, string xChronosheetsAuth)
 
 Get a particular vehicle
 
@@ -98,7 +98,7 @@ namespace Example
             try
             {
                 // Get a particular vehicle
-                CsApiApiResponseFleetVehicle result = apiInstance.FleetGetVehicleById(vehicleId, xChronosheetsAuth);
+                CSApiResponseFleetVehicle result = apiInstance.FleetGetVehicleById(vehicleId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseFleetVehicle**](CsApiApiResponseFleetVehicle.md)
+[**CSApiResponseFleetVehicle**](CSApiResponseFleetVehicle.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 
 <a name="fleetgetvehicles"></a>
 # **FleetGetVehicles**
-> CsApiApiResponseListFleetVehicle FleetGetVehicles (bool? includeDeleted, string xChronosheetsAuth)
+> CSApiResponseListFleetVehicle FleetGetVehicles (bool? includeDeleted, string xChronosheetsAuth)
 
 Get a collection of vehicles that are under your organisation
 
@@ -159,7 +159,7 @@ namespace Example
             try
             {
                 // Get a collection of vehicles that are under your organisation
-                CsApiApiResponseListFleetVehicle result = apiInstance.FleetGetVehicles(includeDeleted, xChronosheetsAuth);
+                CSApiResponseListFleetVehicle result = apiInstance.FleetGetVehicles(includeDeleted, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListFleetVehicle**](CsApiApiResponseListFleetVehicle.md)
+[**CSApiResponseListFleetVehicle**](CSApiResponseListFleetVehicle.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ No authorization required
 
 <a name="fleetupdatevehicle"></a>
 # **FleetUpdateVehicle**
-> CsApiApiResponseBoolean FleetUpdateVehicle (CsApiSaveVehicleRequest request, string xChronosheetsAuth)
+> CSApiResponseBoolean FleetUpdateVehicle (CSSaveVehicleRequest request, string xChronosheetsAuth)
 
 Update a vehicle
 
@@ -214,13 +214,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new FleetApi();
-            var request = new CsApiSaveVehicleRequest(); // CsApiSaveVehicleRequest | 
+            var request = new CSSaveVehicleRequest(); // CSSaveVehicleRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Update a vehicle
-                CsApiApiResponseBoolean result = apiInstance.FleetUpdateVehicle(request, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.FleetUpdateVehicle(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -236,12 +236,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSaveVehicleRequest**](CsApiSaveVehicleRequest.md)|  | 
+ **request** | [**CSSaveVehicleRequest**](CSSaveVehicleRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

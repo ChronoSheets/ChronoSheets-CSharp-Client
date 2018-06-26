@@ -33,8 +33,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The create trip request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        CsApiApiResponseInt32 TripsCreateTrip (CsApiCreateTripRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseInt32</returns>
+        CSApiResponseInt32 TripsCreateTrip (CSCreateTripRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
@@ -45,8 +45,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The create trip request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        ApiResponse<CsApiApiResponseInt32> TripsCreateTripWithHttpInfo (CsApiCreateTripRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        ApiResponse<CSApiResponseInt32> TripsCreateTripWithHttpInfo (CSCreateTripRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Get trip by Id
         /// </summary>
@@ -56,8 +56,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseTrip</returns>
-        CsApiApiResponseTrip TripsGetMyTripById (int? tripId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseTrip</returns>
+        CSApiResponseTrip TripsGetMyTripById (int? tripId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get trip by Id
@@ -68,8 +68,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseTrip</returns>
-        ApiResponse<CsApiApiResponseTrip> TripsGetMyTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseTrip</returns>
+        ApiResponse<CSApiResponseTrip> TripsGetMyTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
         /// Get my trips
         /// </summary>
@@ -83,8 +83,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="vehicleId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseForPaginatedListTrip</returns>
-        CsApiApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
+        /// <returns>CSApiResponseForPaginatedListTrip</returns>
+        CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get my trips
@@ -99,8 +99,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="vehicleId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseForPaginatedListTrip</returns>
-        ApiResponse<CsApiApiResponseForPaginatedListTrip> TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListTrip</returns>
+        ApiResponse<CSApiResponseForPaginatedListTrip> TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -112,8 +112,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The create trip request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseInt32> TripsCreateTripAsync (CsApiCreateTripRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseInt32</returns>
+        System.Threading.Tasks.Task<CSApiResponseInt32> TripsCreateTripAsync (CSCreateTripRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
@@ -124,8 +124,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The create trip request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> TripsCreateTripAsyncWithHttpInfo (CsApiCreateTripRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TripsCreateTripAsyncWithHttpInfo (CSCreateTripRequest request, string xChronosheetsAuth);
         /// <summary>
         /// Get trip by Id
         /// </summary>
@@ -135,8 +135,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseTrip</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseTrip> TripsGetMyTripByIdAsync (int? tripId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseTrip</returns>
+        System.Threading.Tasks.Task<CSApiResponseTrip> TripsGetMyTripByIdAsync (int? tripId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get trip by Id
@@ -147,8 +147,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseTrip)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseTrip>> TripsGetMyTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseTrip)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseTrip>> TripsGetMyTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
         /// Get my trips
         /// </summary>
@@ -162,8 +162,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="vehicleId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseForPaginatedListTrip</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseForPaginatedListTrip</returns>
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
 
         /// <summary>
         /// Get my trips
@@ -178,8 +178,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="vehicleId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListTrip)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTrip)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -286,10 +286,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The create trip request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseInt32</returns>
-        public CsApiApiResponseInt32 TripsCreateTrip (CsApiCreateTripRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseInt32</returns>
+        public CSApiResponseInt32 TripsCreateTrip (CSCreateTripRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = TripsCreateTripWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = TripsCreateTripWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -299,8 +299,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The create trip request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseInt32</returns>
-        public ApiResponse< CsApiApiResponseInt32 > TripsCreateTripWithHttpInfo (CsApiCreateTripRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseInt32</returns>
+        public ApiResponse< CSApiResponseInt32 > TripsCreateTripWithHttpInfo (CSCreateTripRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -364,9 +364,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -375,10 +375,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The create trip request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseInt32> TripsCreateTripAsync (CsApiCreateTripRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseInt32</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseInt32> TripsCreateTripAsync (CSCreateTripRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseInt32> localVarResponse = await TripsCreateTripAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseInt32> localVarResponse = await TripsCreateTripAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -389,8 +389,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">The create trip request</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseInt32>> TripsCreateTripAsyncWithHttpInfo (CsApiCreateTripRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TripsCreateTripAsyncWithHttpInfo (CSCreateTripRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -454,9 +454,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseInt32>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseInt32)));
+                (CSApiResponseInt32) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
         }
 
         /// <summary>
@@ -465,10 +465,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseTrip</returns>
-        public CsApiApiResponseTrip TripsGetMyTripById (int? tripId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseTrip</returns>
+        public CSApiResponseTrip TripsGetMyTripById (int? tripId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseTrip> localVarResponse = TripsGetMyTripByIdWithHttpInfo(tripId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseTrip> localVarResponse = TripsGetMyTripByIdWithHttpInfo(tripId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -478,8 +478,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseTrip</returns>
-        public ApiResponse< CsApiApiResponseTrip > TripsGetMyTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseTrip</returns>
+        public ApiResponse< CSApiResponseTrip > TripsGetMyTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth)
         {
             // verify the required parameter 'tripId' is set
             if (tripId == null)
@@ -530,9 +530,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseTrip>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseTrip>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseTrip)));
+                (CSApiResponseTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseTrip)));
         }
 
         /// <summary>
@@ -541,10 +541,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseTrip</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseTrip> TripsGetMyTripByIdAsync (int? tripId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseTrip</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseTrip> TripsGetMyTripByIdAsync (int? tripId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseTrip> localVarResponse = await TripsGetMyTripByIdAsyncWithHttpInfo(tripId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseTrip> localVarResponse = await TripsGetMyTripByIdAsyncWithHttpInfo(tripId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -555,8 +555,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the trip</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseTrip)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseTrip>> TripsGetMyTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseTrip)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseTrip>> TripsGetMyTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth)
         {
             // verify the required parameter 'tripId' is set
             if (tripId == null)
@@ -607,9 +607,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseTrip>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseTrip>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseTrip)));
+                (CSApiResponseTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseTrip)));
         }
 
         /// <summary>
@@ -622,10 +622,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="vehicleId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CsApiApiResponseForPaginatedListTrip</returns>
-        public CsApiApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+        /// <returns>CSApiResponseForPaginatedListTrip</returns>
+        public CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseForPaginatedListTrip> localVarResponse = TripsGetMyTripsWithHttpInfo(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListTrip> localVarResponse = TripsGetMyTripsWithHttpInfo(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -639,8 +639,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="vehicleId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CsApiApiResponseForPaginatedListTrip</returns>
-        public ApiResponse< CsApiApiResponseForPaginatedListTrip > TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListTrip</returns>
+        public ApiResponse< CSApiResponseForPaginatedListTrip > TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -707,9 +707,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseForPaginatedListTrip>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseForPaginatedListTrip>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseForPaginatedListTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseForPaginatedListTrip)));
+                (CSApiResponseForPaginatedListTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListTrip)));
         }
 
         /// <summary>
@@ -722,10 +722,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="vehicleId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CsApiApiResponseForPaginatedListTrip</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseForPaginatedListTrip</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
         {
-             ApiResponse<CsApiApiResponseForPaginatedListTrip> localVarResponse = await TripsGetMyTripsAsyncWithHttpInfo(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListTrip> localVarResponse = await TripsGetMyTripsAsyncWithHttpInfo(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -740,8 +740,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take"></param>
         /// <param name="vehicleId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListTrip)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTrip)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -808,9 +808,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CsApiApiResponseForPaginatedListTrip>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseForPaginatedListTrip>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CsApiApiResponseForPaginatedListTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CsApiApiResponseForPaginatedListTrip)));
+                (CSApiResponseForPaginatedListTrip) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListTrip)));
         }
 
     }

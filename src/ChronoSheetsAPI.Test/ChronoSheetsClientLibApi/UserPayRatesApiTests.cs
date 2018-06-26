@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void UserPayRatesCreatePayRateTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiInsertUserHourlyRateRequest request = null;
+            //CSInsertUserHourlyRateRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UserPayRatesCreatePayRate(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? userId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UserPayRatesGetPayRates(userId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListUserHourlyRate> (response, "response is CsApiApiResponseListUserHourlyRate");
+            //Assert.IsInstanceOf<CSApiResponseListUserHourlyRate> (response, "response is CSApiResponseListUserHourlyRate");
         }
         
     }

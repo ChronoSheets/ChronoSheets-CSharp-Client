@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void ClientsCreateClientTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiInsertClientRequest request = null;
+            //CSInsertClientRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.ClientsCreateClient(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? clientId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.ClientsGetClient(clientId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseClient> (response, "response is CsApiApiResponseClient");
+            //Assert.IsInstanceOf<CSApiResponseClient> (response, "response is CSApiResponseClient");
         }
         
         /// <summary>
@@ -99,7 +99,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.ClientsGetClients(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListClient> (response, "response is CsApiApiResponseListClient");
+            //Assert.IsInstanceOf<CSApiResponseListClient> (response, "response is CSApiResponseListClient");
         }
         
         /// <summary>
@@ -109,10 +109,10 @@ namespace ChronoSheetsAPI.Test
         public void ClientsUpdateClientTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiSaveClientRequest request = null;
+            //CSSaveClientRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.ClientsUpdateClient(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
     }

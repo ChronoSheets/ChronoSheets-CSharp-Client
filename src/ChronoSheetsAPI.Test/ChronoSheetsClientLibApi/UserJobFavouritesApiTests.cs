@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void UserJobFavouritesCreateJobFavouriteTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiInsertUserJobFavouriteRequest request = null;
+            //CSInsertUserJobFavouriteRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UserJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? jobId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UserJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
         /// <summary>
@@ -99,7 +99,7 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //string xChronosheetsAuth = null;
             //var response = instance.UserJobFavouritesGetJobFavourites(xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListUserJobFavourite> (response, "response is CsApiApiResponseListUserJobFavourite");
+            //Assert.IsInstanceOf<CSApiResponseListUserJobFavourite> (response, "response is CSApiResponseListUserJobFavourite");
         }
         
     }

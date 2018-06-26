@@ -71,10 +71,10 @@ namespace ChronoSheetsAPI.Test
         public void TimesheetsCreateSingleTimesheetTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiTimesheet request = null;
+            //CSTimesheet request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TimesheetsCreateSingleTimesheet(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseInt32> (response, "response is CsApiApiResponseInt32");
+            //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
         /// <summary>
@@ -87,7 +87,7 @@ namespace ChronoSheetsAPI.Test
             //int? timesheetId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TimesheetsDeleteTimesheet(timesheetId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseBoolean> (response, "response is CsApiApiResponseBoolean");
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
         }
         
         /// <summary>
@@ -101,7 +101,7 @@ namespace ChronoSheetsAPI.Test
             //DateTime? endDate = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TimesheetsGetTimesheets(startDate, endDate, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListTimesheet> (response, "response is CsApiApiResponseListTimesheet");
+            //Assert.IsInstanceOf<CSApiResponseListTimesheet> (response, "response is CSApiResponseListTimesheet");
         }
         
         /// <summary>
@@ -111,10 +111,10 @@ namespace ChronoSheetsAPI.Test
         public void TimesheetsUpdateTimesheetsTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //CsApiBatchUpdateTimesheetRequest request = null;
+            //CSBatchUpdateTimesheetRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TimesheetsUpdateTimesheets(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CsApiApiResponseListInt32> (response, "response is CsApiApiResponseListInt32");
+            //Assert.IsInstanceOf<CSApiResponseListInt32> (response, "response is CSApiResponseListInt32");
         }
         
     }

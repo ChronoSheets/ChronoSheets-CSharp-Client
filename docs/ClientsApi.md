@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="clientscreateclient"></a>
 # **ClientsCreateClient**
-> CsApiApiResponseInt32 ClientsCreateClient (CsApiInsertClientRequest request, string xChronosheetsAuth)
+> CSApiResponseInt32 ClientsCreateClient (CSInsertClientRequest request, string xChronosheetsAuth)
 
 Create a client
 
@@ -31,13 +31,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new ClientsApi();
-            var request = new CsApiInsertClientRequest(); // CsApiInsertClientRequest | 
+            var request = new CSInsertClientRequest(); // CSInsertClientRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Create a client
-                CsApiApiResponseInt32 result = apiInstance.ClientsCreateClient(request, xChronosheetsAuth);
+                CSApiResponseInt32 result = apiInstance.ClientsCreateClient(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,12 +53,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertClientRequest**](CsApiInsertClientRequest.md)|  | 
+ **request** | [**CSInsertClientRequest**](CSInsertClientRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 
 <a name="clientsgetclient"></a>
 # **ClientsGetClient**
-> CsApiApiResponseClient ClientsGetClient (int? clientId, string xChronosheetsAuth)
+> CSApiResponseClient ClientsGetClient (int? clientId, string xChronosheetsAuth)
 
 Get a particular client
 
@@ -98,7 +98,7 @@ namespace Example
             try
             {
                 // Get a particular client
-                CsApiApiResponseClient result = apiInstance.ClientsGetClient(clientId, xChronosheetsAuth);
+                CSApiResponseClient result = apiInstance.ClientsGetClient(clientId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseClient**](CsApiApiResponseClient.md)
+[**CSApiResponseClient**](CSApiResponseClient.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 
 <a name="clientsgetclients"></a>
 # **ClientsGetClients**
-> CsApiApiResponseListClient ClientsGetClients (string xChronosheetsAuth)
+> CSApiResponseListClient ClientsGetClients (string xChronosheetsAuth)
 
 Get a collection of clients that are under your organisation
 
@@ -158,7 +158,7 @@ namespace Example
             try
             {
                 // Get a collection of clients that are under your organisation
-                CsApiApiResponseListClient result = apiInstance.ClientsGetClients(xChronosheetsAuth);
+                CSApiResponseListClient result = apiInstance.ClientsGetClients(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -178,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListClient**](CsApiApiResponseListClient.md)
+[**CSApiResponseListClient**](CSApiResponseListClient.md)
 
 ### Authorization
 
@@ -193,7 +193,7 @@ No authorization required
 
 <a name="clientsupdateclient"></a>
 # **ClientsUpdateClient**
-> CsApiApiResponseBoolean ClientsUpdateClient (CsApiSaveClientRequest request, string xChronosheetsAuth)
+> CSApiResponseBoolean ClientsUpdateClient (CSSaveClientRequest request, string xChronosheetsAuth)
 
 Update a client
 
@@ -212,13 +212,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new ClientsApi();
-            var request = new CsApiSaveClientRequest(); // CsApiSaveClientRequest | 
+            var request = new CSSaveClientRequest(); // CSSaveClientRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Update a client
-                CsApiApiResponseBoolean result = apiInstance.ClientsUpdateClient(request, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.ClientsUpdateClient(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -234,12 +234,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiSaveClientRequest**](CsApiSaveClientRequest.md)|  | 
+ **request** | [**CSSaveClientRequest**](CSSaveClientRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 

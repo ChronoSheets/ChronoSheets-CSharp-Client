@@ -12,7 +12,7 @@ Method | HTTP request | Description
 
 <a name="projectscreateproject"></a>
 # **ProjectsCreateProject**
-> CsApiApiResponseInt32 ProjectsCreateProject (CsApiInsertProjectRequest request, string xChronosheetsAuth)
+> CSApiResponseInt32 ProjectsCreateProject (CSInsertProjectRequest request, string xChronosheetsAuth)
 
 Create a project
 
@@ -31,13 +31,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new ProjectsApi();
-            var request = new CsApiInsertProjectRequest(); // CsApiInsertProjectRequest | 
+            var request = new CSInsertProjectRequest(); // CSInsertProjectRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Create a project
-                CsApiApiResponseInt32 result = apiInstance.ProjectsCreateProject(request, xChronosheetsAuth);
+                CSApiResponseInt32 result = apiInstance.ProjectsCreateProject(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -53,12 +53,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiInsertProjectRequest**](CsApiInsertProjectRequest.md)|  | 
+ **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseInt32**](CsApiApiResponseInt32.md)
+[**CSApiResponseInt32**](CSApiResponseInt32.md)
 
 ### Authorization
 
@@ -73,7 +73,7 @@ No authorization required
 
 <a name="projectsgetprojectbyid"></a>
 # **ProjectsGetProjectById**
-> CsApiApiResponseProject ProjectsGetProjectById (int? projectId, string xChronosheetsAuth)
+> CSApiResponseProject ProjectsGetProjectById (int? projectId, string xChronosheetsAuth)
 
 Get project by Id
 
@@ -98,7 +98,7 @@ namespace Example
             try
             {
                 // Get project by Id
-                CsApiApiResponseProject result = apiInstance.ProjectsGetProjectById(projectId, xChronosheetsAuth);
+                CSApiResponseProject result = apiInstance.ProjectsGetProjectById(projectId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseProject**](CsApiApiResponseProject.md)
+[**CSApiResponseProject**](CSApiResponseProject.md)
 
 ### Authorization
 
@@ -134,7 +134,7 @@ No authorization required
 
 <a name="projectsgetprojectsforclient"></a>
 # **ProjectsGetProjectsForClient**
-> CsApiApiResponseListProject ProjectsGetProjectsForClient (int? clientId, string xChronosheetsAuth)
+> CSApiResponseListProject ProjectsGetProjectsForClient (int? clientId, string xChronosheetsAuth)
 
 Get projects for a particular client
 
@@ -159,7 +159,7 @@ namespace Example
             try
             {
                 // Get projects for a particular client
-                CsApiApiResponseListProject result = apiInstance.ProjectsGetProjectsForClient(clientId, xChronosheetsAuth);
+                CSApiResponseListProject result = apiInstance.ProjectsGetProjectsForClient(clientId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -180,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CsApiApiResponseListProject**](CsApiApiResponseListProject.md)
+[**CSApiResponseListProject**](CSApiResponseListProject.md)
 
 ### Authorization
 
@@ -195,7 +195,7 @@ No authorization required
 
 <a name="projectsupdateproject"></a>
 # **ProjectsUpdateProject**
-> CsApiApiResponseBoolean ProjectsUpdateProject (CsApiUpdateProjectRequest request, string xChronosheetsAuth)
+> CSApiResponseBoolean ProjectsUpdateProject (CSUpdateProjectRequest request, string xChronosheetsAuth)
 
 Update a project
 
@@ -214,13 +214,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new ProjectsApi();
-            var request = new CsApiUpdateProjectRequest(); // CsApiUpdateProjectRequest | 
+            var request = new CSUpdateProjectRequest(); // CSUpdateProjectRequest | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Update a project
-                CsApiApiResponseBoolean result = apiInstance.ProjectsUpdateProject(request, xChronosheetsAuth);
+                CSApiResponseBoolean result = apiInstance.ProjectsUpdateProject(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -236,12 +236,12 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CsApiUpdateProjectRequest**](CsApiUpdateProjectRequest.md)|  | 
+ **request** | [**CSUpdateProjectRequest**](CSUpdateProjectRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CsApiApiResponseBoolean**](CsApiApiResponseBoolean.md)
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
 
 ### Authorization
 
