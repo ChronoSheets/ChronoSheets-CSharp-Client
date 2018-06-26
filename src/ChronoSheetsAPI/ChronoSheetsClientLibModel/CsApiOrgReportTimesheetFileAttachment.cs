@@ -31,97 +31,95 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class CsApiOrgReportTimesheetFileAttachment :  IEquatable<CsApiOrgReportTimesheetFileAttachment>, IValidatableObject
     {
         /// <summary>
-        /// 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
+        /// Defines MobilePlatform
         /// </summary>
-        /// <value>0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android</value>
+        [JsonConverter(typeof(StringEnumConverter))]
         public enum MobilePlatformEnum
         {
             
             /// <summary>
-            /// Enum NUMBER_0 for value: 0
+            /// Enum Unknown for value: Unknown
             /// </summary>
-            
-            NUMBER_0 = 0,
+            [EnumMember(Value = "Unknown")]
+            Unknown = 1,
             
             /// <summary>
-            /// Enum NUMBER_1 for value: 1
+            /// Enum IOS for value: iOS
             /// </summary>
-            
-            NUMBER_1 = 1,
+            [EnumMember(Value = "iOS")]
+            IOS = 2,
             
             /// <summary>
-            /// Enum NUMBER_2 for value: 2
+            /// Enum Android for value: Android
             /// </summary>
-            
-            NUMBER_2 = 2
+            [EnumMember(Value = "Android")]
+            Android = 3
         }
 
         /// <summary>
-        /// 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
+        /// Gets or Sets MobilePlatform
         /// </summary>
-        /// <value>0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android</value>
         [DataMember(Name="MobilePlatform", EmitDefaultValue=false)]
         public MobilePlatformEnum? MobilePlatform { get; set; }
         /// <summary>
-        /// 1 &#x3D; Image, 30 &#x3D; WordDoc, 31 &#x3D; Pdf, 32 &#x3D; MSSpreadSheet, 33 &#x3D; MSPowerPoint, 34 &#x3D; RichTextFormat, 35 &#x3D; ZipFile, 100 &#x3D; Other
+        /// Defines AttachmentType
         /// </summary>
-        /// <value>1 &#x3D; Image, 30 &#x3D; WordDoc, 31 &#x3D; Pdf, 32 &#x3D; MSSpreadSheet, 33 &#x3D; MSPowerPoint, 34 &#x3D; RichTextFormat, 35 &#x3D; ZipFile, 100 &#x3D; Other</value>
+        [JsonConverter(typeof(StringEnumConverter))]
         public enum AttachmentTypeEnum
         {
             
             /// <summary>
-            /// Enum NUMBER_1 for value: 1
+            /// Enum Image for value: Image
             /// </summary>
-            
-            NUMBER_1 = 1,
+            [EnumMember(Value = "Image")]
+            Image = 1,
             
             /// <summary>
-            /// Enum NUMBER_30 for value: 30
+            /// Enum WordDoc for value: WordDoc
             /// </summary>
-            
-            NUMBER_30 = 30,
+            [EnumMember(Value = "WordDoc")]
+            WordDoc = 2,
             
             /// <summary>
-            /// Enum NUMBER_31 for value: 31
+            /// Enum Pdf for value: Pdf
             /// </summary>
-            
-            NUMBER_31 = 31,
+            [EnumMember(Value = "Pdf")]
+            Pdf = 3,
             
             /// <summary>
-            /// Enum NUMBER_32 for value: 32
+            /// Enum MSSpreadSheet for value: MSSpreadSheet
             /// </summary>
-            
-            NUMBER_32 = 32,
+            [EnumMember(Value = "MSSpreadSheet")]
+            MSSpreadSheet = 4,
             
             /// <summary>
-            /// Enum NUMBER_33 for value: 33
+            /// Enum MSPowerPoint for value: MSPowerPoint
             /// </summary>
-            
-            NUMBER_33 = 33,
+            [EnumMember(Value = "MSPowerPoint")]
+            MSPowerPoint = 5,
             
             /// <summary>
-            /// Enum NUMBER_34 for value: 34
+            /// Enum RichTextFormat for value: RichTextFormat
             /// </summary>
-            
-            NUMBER_34 = 34,
+            [EnumMember(Value = "RichTextFormat")]
+            RichTextFormat = 6,
             
             /// <summary>
-            /// Enum NUMBER_35 for value: 35
+            /// Enum ZipFile for value: ZipFile
             /// </summary>
-            
-            NUMBER_35 = 35,
+            [EnumMember(Value = "ZipFile")]
+            ZipFile = 7,
             
             /// <summary>
-            /// Enum NUMBER_100 for value: 100
+            /// Enum Other for value: Other
             /// </summary>
-            
-            NUMBER_100 = 100
+            [EnumMember(Value = "Other")]
+            Other = 8
         }
 
         /// <summary>
-        /// 1 &#x3D; Image, 30 &#x3D; WordDoc, 31 &#x3D; Pdf, 32 &#x3D; MSSpreadSheet, 33 &#x3D; MSPowerPoint, 34 &#x3D; RichTextFormat, 35 &#x3D; ZipFile, 100 &#x3D; Other
+        /// Gets or Sets AttachmentType
         /// </summary>
-        /// <value>1 &#x3D; Image, 30 &#x3D; WordDoc, 31 &#x3D; Pdf, 32 &#x3D; MSSpreadSheet, 33 &#x3D; MSPowerPoint, 34 &#x3D; RichTextFormat, 35 &#x3D; ZipFile, 100 &#x3D; Other</value>
         [DataMember(Name="AttachmentType", EmitDefaultValue=false)]
         public AttachmentTypeEnum? AttachmentType { get; set; }
         /// <summary>
@@ -141,8 +139,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="FileAttachmentId">FileAttachmentId.</param>
         /// <param name="UserId">UserId.</param>
         /// <param name="OrgId">OrgId.</param>
-        /// <param name="MobilePlatform">0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android.</param>
-        /// <param name="AttachmentType">1 &#x3D; Image, 30 &#x3D; WordDoc, 31 &#x3D; Pdf, 32 &#x3D; MSSpreadSheet, 33 &#x3D; MSPowerPoint, 34 &#x3D; RichTextFormat, 35 &#x3D; ZipFile, 100 &#x3D; Other.</param>
+        /// <param name="MobilePlatform">MobilePlatform.</param>
+        /// <param name="AttachmentType">AttachmentType.</param>
         /// <param name="Notes">Notes.</param>
         /// <param name="NonImageFilePath">NonImageFilePath.</param>
         /// <param name="ImageLargeFilePath">ImageLargeFilePath.</param>

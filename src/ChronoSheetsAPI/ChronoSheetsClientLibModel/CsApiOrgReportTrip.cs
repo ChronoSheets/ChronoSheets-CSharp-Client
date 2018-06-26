@@ -31,35 +31,34 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class CsApiOrgReportTrip :  IEquatable<CsApiOrgReportTrip>, IValidatableObject
     {
         /// <summary>
-        /// 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
+        /// Defines MobilePlatform
         /// </summary>
-        /// <value>0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android</value>
+        [JsonConverter(typeof(StringEnumConverter))]
         public enum MobilePlatformEnum
         {
             
             /// <summary>
-            /// Enum NUMBER_0 for value: 0
+            /// Enum Unknown for value: Unknown
             /// </summary>
-            
-            NUMBER_0 = 0,
+            [EnumMember(Value = "Unknown")]
+            Unknown = 1,
             
             /// <summary>
-            /// Enum NUMBER_1 for value: 1
+            /// Enum IOS for value: iOS
             /// </summary>
-            
-            NUMBER_1 = 1,
+            [EnumMember(Value = "iOS")]
+            IOS = 2,
             
             /// <summary>
-            /// Enum NUMBER_2 for value: 2
+            /// Enum Android for value: Android
             /// </summary>
-            
-            NUMBER_2 = 2
+            [EnumMember(Value = "Android")]
+            Android = 3
         }
 
         /// <summary>
-        /// 0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android
+        /// Gets or Sets MobilePlatform
         /// </summary>
-        /// <value>0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android</value>
         [DataMember(Name="MobilePlatform", EmitDefaultValue=false)]
         public MobilePlatformEnum? MobilePlatform { get; set; }
         /// <summary>
@@ -74,7 +73,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="VehicleId">VehicleId.</param>
         /// <param name="UserId">UserId.</param>
         /// <param name="OrgId">OrgId.</param>
-        /// <param name="MobilePlatform">0 &#x3D; Unknown, 1 &#x3D; iOS, 2 &#x3D; Android.</param>
+        /// <param name="MobilePlatform">MobilePlatform.</param>
         /// <param name="StartDate">StartDate.</param>
         /// <param name="EndDate">EndDate.</param>
         /// <param name="VehicleName">VehicleName.</param>

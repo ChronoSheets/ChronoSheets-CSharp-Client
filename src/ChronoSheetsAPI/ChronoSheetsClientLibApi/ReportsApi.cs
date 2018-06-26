@@ -171,13 +171,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
-        /// <param name="sort">0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters</param>
-        /// <param name="order">0 &#x3D; Ascending, 1 &#x3D; Descending</param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CsApiApiResponseForPaginatedListRawReportItem</returns>
-        CsApiApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, int? sort, int? order, int? skip, int? take, string xChronosheetsAuth);
+        CsApiApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
 
         /// <summary>
         /// Get Timesheets Raw Data
@@ -189,13 +189,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
-        /// <param name="sort">0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters</param>
-        /// <param name="order">0 &#x3D; Ascending, 1 &#x3D; Descending</param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CsApiApiResponseForPaginatedListRawReportItem</returns>
-        ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, int? sort, int? order, int? skip, int? take, string xChronosheetsAuth);
+        ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
         /// <summary>
         /// Gets project cost estimations VS actual cost for date range and users
         /// </summary>
@@ -397,13 +397,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
-        /// <param name="sort">0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters</param>
-        /// <param name="order">0 &#x3D; Ascending, 1 &#x3D; Descending</param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CsApiApiResponseForPaginatedListRawReportItem</returns>
-        System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, int? sort, int? order, int? skip, int? take, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
 
         /// <summary>
         /// Get Timesheets Raw Data
@@ -415,13 +415,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
-        /// <param name="sort">0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters</param>
-        /// <param name="order">0 &#x3D; Ascending, 1 &#x3D; Descending</param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListRawReportItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, int? sort, int? order, int? skip, int? take, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
         /// <summary>
         /// Gets project cost estimations VS actual cost for date range and users
         /// </summary>
@@ -1478,13 +1478,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
-        /// <param name="sort">0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters</param>
-        /// <param name="order">0 &#x3D; Ascending, 1 &#x3D; Descending</param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CsApiApiResponseForPaginatedListRawReportItem</returns>
-        public CsApiApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, int? sort, int? order, int? skip, int? take, string xChronosheetsAuth)
+        public CsApiApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
         {
              ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> localVarResponse = ReportsGetRawDataAdminWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
              return localVarResponse.Data;
@@ -1497,13 +1497,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
-        /// <param name="sort">0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters</param>
-        /// <param name="order">0 &#x3D; Ascending, 1 &#x3D; Descending</param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CsApiApiResponseForPaginatedListRawReportItem</returns>
-        public ApiResponse< CsApiApiResponseForPaginatedListRawReportItem > ReportsGetRawDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, int? sort, int? order, int? skip, int? take, string xChronosheetsAuth)
+        public ApiResponse< CsApiApiResponseForPaginatedListRawReportItem > ReportsGetRawDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1590,13 +1590,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
-        /// <param name="sort">0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters</param>
-        /// <param name="order">0 &#x3D; Ascending, 1 &#x3D; Descending</param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CsApiApiResponseForPaginatedListRawReportItem</returns>
-        public async System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, int? sort, int? order, int? skip, int? take, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<CsApiApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
         {
              ApiResponse<CsApiApiResponseForPaginatedListRawReportItem> localVarResponse = await ReportsGetRawDataAdminAsyncWithHttpInfo(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
              return localVarResponse.Data;
@@ -1610,13 +1610,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate"></param>
         /// <param name="endDate"></param>
         /// <param name="userIds"></param>
-        /// <param name="sort">0 &#x3D; Username, 1 &#x3D; EmailAddress, 2 &#x3D; JobCode, 3 &#x3D; TaskName, 4 &#x3D; ClientName, 5 &#x3D; ProjectName, 6 &#x3D; StartDate, 7 &#x3D; EndDate, 8 &#x3D; SpanSeconds, 9 &#x3D; Description, 10 &#x3D; PayAmount, 11 &#x3D; PayOvertimeAmount, 12 &#x3D; TripCost, 13 &#x3D; TripDistanceMeters</param>
-        /// <param name="order">0 &#x3D; Ascending, 1 &#x3D; Descending</param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
         /// <param name="skip"></param>
         /// <param name="take"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CsApiApiResponseForPaginatedListRawReportItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, int? sort, int? order, int? skip, int? take, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<CsApiApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)

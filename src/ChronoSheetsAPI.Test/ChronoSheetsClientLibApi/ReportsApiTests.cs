@@ -150,8 +150,8 @@ namespace ChronoSheetsAPI.Test
             //DateTime? startDate = null;
             //DateTime? endDate = null;
             //string userIds = null;
-            //int? sort = null;
-            //int? order = null;
+            //string sort = null;
+            //string order = null;
             //int? skip = null;
             //int? take = null;
             //string xChronosheetsAuth = null;

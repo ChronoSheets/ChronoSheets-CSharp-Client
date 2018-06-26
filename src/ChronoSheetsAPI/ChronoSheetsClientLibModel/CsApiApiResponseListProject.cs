@@ -31,60 +31,59 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class CsApiApiResponseListProject :  IEquatable<CsApiApiResponseListProject>, IValidatableObject
     {
         /// <summary>
-        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
+        /// Defines Status
         /// </summary>
-        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired</value>
+        [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
             
             /// <summary>
-            /// Enum NUMBER_0 for value: 0
+            /// Enum Succeeded for value: Succeeded
             /// </summary>
-            
-            NUMBER_0 = 0,
+            [EnumMember(Value = "Succeeded")]
+            Succeeded = 1,
             
             /// <summary>
-            /// Enum NUMBER_1 for value: 1
+            /// Enum FatalException for value: FatalException
             /// </summary>
-            
-            NUMBER_1 = 1,
+            [EnumMember(Value = "FatalException")]
+            FatalException = 2,
             
             /// <summary>
-            /// Enum NUMBER_2 for value: 2
+            /// Enum GeneralError for value: GeneralError
             /// </summary>
-            
-            NUMBER_2 = 2,
+            [EnumMember(Value = "GeneralError")]
+            GeneralError = 3,
             
             /// <summary>
-            /// Enum NUMBER_3 for value: 3
+            /// Enum ValidationError for value: ValidationError
             /// </summary>
-            
-            NUMBER_3 = 3,
+            [EnumMember(Value = "ValidationError")]
+            ValidationError = 4,
             
             /// <summary>
-            /// Enum NUMBER_4 for value: 4
+            /// Enum UnAuthorized for value: UnAuthorized
             /// </summary>
-            
-            NUMBER_4 = 4,
+            [EnumMember(Value = "UnAuthorized")]
+            UnAuthorized = 5,
             
             /// <summary>
-            /// Enum NUMBER_5 for value: 5
+            /// Enum SessionExpired for value: SessionExpired
             /// </summary>
-            
-            NUMBER_5 = 5
+            [EnumMember(Value = "SessionExpired")]
+            SessionExpired = 6
         }
 
         /// <summary>
-        /// 0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired
+        /// Gets or Sets Status
         /// </summary>
-        /// <value>0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CsApiApiResponseListProject" /> class.
         /// </summary>
         /// <param name="Data">Data.</param>
-        /// <param name="Status">0 &#x3D; Succeeded, 1 &#x3D; FatalException, 2 &#x3D; GeneralError, 3 &#x3D; ValidationError, 4 &#x3D; UnAuthorized, 5 &#x3D; SessionExpired.</param>
+        /// <param name="Status">Status.</param>
         /// <param name="Message">Message.</param>
         public CsApiApiResponseListProject(List<CsApiProject> Data = default(List<CsApiProject>), StatusEnum? Status = default(StatusEnum?), string Message = default(string))
         {
