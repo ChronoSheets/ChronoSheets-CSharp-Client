@@ -25,53 +25,53 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a project
+        /// Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         CSApiResponseInt32 ProjectsCreateProject (CSInsertProjectRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a project
+        /// Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> ProjectsCreateProjectWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get project by Id
+        /// Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">The ID of the project</param>
+        /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseProject</returns>
         CSApiResponseProject ProjectsGetProjectById (int? projectId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get project by Id
+        /// Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">The ID of the project</param>
+        /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseProject</returns>
         ApiResponse<CSApiResponseProject> ProjectsGetProjectByIdWithHttpInfo (int? projectId, string xChronosheetsAuth);
         /// <summary>
-        /// Get projects for a particular client
+        /// Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -83,7 +83,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListProject ProjectsGetProjectsForClient (int? clientId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get projects for a particular client
+        /// Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -94,78 +94,78 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListProject</returns>
         ApiResponse<CSApiResponseListProject> ProjectsGetProjectsForClientWithHttpInfo (int? clientId, string xChronosheetsAuth);
         /// <summary>
-        /// Update a project
+        /// Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         CSApiResponseBoolean ProjectsUpdateProject (CSUpdateProjectRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a project
+        /// Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> ProjectsUpdateProjectWithHttpInfo (CSUpdateProjectRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a project
+        /// Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseInt32> ProjectsCreateProjectAsync (CSInsertProjectRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a project
+        /// Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get project by Id
+        /// Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">The ID of the project</param>
+        /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseProject</returns>
         System.Threading.Tasks.Task<CSApiResponseProject> ProjectsGetProjectByIdAsync (int? projectId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get project by Id
+        /// Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">The ID of the project</param>
+        /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseProject)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseProject>> ProjectsGetProjectByIdAsyncWithHttpInfo (int? projectId, string xChronosheetsAuth);
         /// <summary>
-        /// Get projects for a particular client
+        /// Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -177,7 +177,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListProject> ProjectsGetProjectsForClientAsync (int? clientId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get projects for a particular client
+        /// Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -188,25 +188,25 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListProject)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListProject>> ProjectsGetProjectsForClientAsyncWithHttpInfo (int? clientId, string xChronosheetsAuth);
         /// <summary>
-        /// Update a project
+        /// Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         System.Threading.Tasks.Task<CSApiResponseBoolean> ProjectsUpdateProjectAsync (CSUpdateProjectRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a project
+        /// Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> ProjectsUpdateProjectAsyncWithHttpInfo (CSUpdateProjectRequest request, string xChronosheetsAuth);
@@ -311,10 +311,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a project 
+        /// Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         public CSApiResponseInt32 ProjectsCreateProject (CSInsertProjectRequest request, string xChronosheetsAuth)
@@ -324,10 +324,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a project 
+        /// Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         public ApiResponse< CSApiResponseInt32 > ProjectsCreateProjectWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth)
@@ -400,10 +400,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a project 
+        /// Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInt32> ProjectsCreateProjectAsync (CSInsertProjectRequest request, string xChronosheetsAuth)
@@ -414,10 +414,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a project 
+        /// Create a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth)
@@ -490,10 +490,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get project by Id 
+        /// Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">The ID of the project</param>
+        /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseProject</returns>
         public CSApiResponseProject ProjectsGetProjectById (int? projectId, string xChronosheetsAuth)
@@ -503,10 +503,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get project by Id 
+        /// Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">The ID of the project</param>
+        /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseProject</returns>
         public ApiResponse< CSApiResponseProject > ProjectsGetProjectByIdWithHttpInfo (int? projectId, string xChronosheetsAuth)
@@ -566,10 +566,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get project by Id 
+        /// Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">The ID of the project</param>
+        /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseProject</returns>
         public async System.Threading.Tasks.Task<CSApiResponseProject> ProjectsGetProjectByIdAsync (int? projectId, string xChronosheetsAuth)
@@ -580,10 +580,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get project by Id 
+        /// Get a project by its Id.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="projectId">The ID of the project</param>
+        /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseProject)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseProject>> ProjectsGetProjectByIdAsyncWithHttpInfo (int? projectId, string xChronosheetsAuth)
@@ -643,7 +643,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get projects for a particular client 
+        /// Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
@@ -656,7 +656,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get projects for a particular client 
+        /// Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
@@ -719,7 +719,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get projects for a particular client 
+        /// Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
@@ -733,7 +733,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get projects for a particular client 
+        /// Get projects for a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
@@ -796,10 +796,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a project 
+        /// Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         public CSApiResponseBoolean ProjectsUpdateProject (CSUpdateProjectRequest request, string xChronosheetsAuth)
@@ -809,10 +809,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a project 
+        /// Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         public ApiResponse< CSApiResponseBoolean > ProjectsUpdateProjectWithHttpInfo (CSUpdateProjectRequest request, string xChronosheetsAuth)
@@ -885,10 +885,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a project 
+        /// Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         public async System.Threading.Tasks.Task<CSApiResponseBoolean> ProjectsUpdateProjectAsync (CSUpdateProjectRequest request, string xChronosheetsAuth)
@@ -899,10 +899,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a project 
+        /// Update a project.  Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> ProjectsUpdateProjectAsyncWithHttpInfo (CSUpdateProjectRequest request, string xChronosheetsAuth)
