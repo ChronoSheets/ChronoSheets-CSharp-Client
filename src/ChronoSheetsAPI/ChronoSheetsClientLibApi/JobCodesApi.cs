@@ -25,76 +25,76 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a job code
+        /// Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert JobCode Request object containing values for the new JobCode to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         CSApiResponseInt32 JobCodesCreateJobCode (CSInsertJobCodeRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a job code
+        /// Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert JobCode Request object containing values for the new JobCode to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> JobCodesCreateJobCodeWithHttpInfo (CSInsertJobCodeRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Delete a job code
+        /// Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId">The ID of the job code your want to delete</param>
+        /// <param name="jobCodeId">The ID of the job code you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         CSApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a job code
+        /// Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId">The ID of the job code your want to delete</param>
+        /// <param name="jobCodeId">The ID of the job code you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> JobCodesDeleteJobCodeWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular job code by job code id
+        /// Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId"></param>
+        /// <param name="jobCodeId">The ID of the JobCode you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseJobCode</returns>
         CSApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular job code by job code id
+        /// Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId"></param>
+        /// <param name="jobCodeId">The ID of the JobCode you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseJobCode</returns>
         ApiResponse<CSApiResponseJobCode> JobCodesGetJobCodeByIdWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
         /// <summary>
-        /// Get job codes for your organisation
+        /// Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -105,7 +105,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get job codes for your organisation
+        /// Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -115,101 +115,101 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListJobCode</returns>
         ApiResponse<CSApiResponseListJobCode> JobCodesGetJobCodesWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Update a job code
+        /// Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         CSApiResponseBoolean JobCodesUpdateJobCode (CSUpdateJobCodeRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a job code
+        /// Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> JobCodesUpdateJobCodeWithHttpInfo (CSUpdateJobCodeRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a job code
+        /// Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert JobCode Request object containing values for the new JobCode to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseInt32> JobCodesCreateJobCodeAsync (CSInsertJobCodeRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a job code
+        /// Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert JobCode Request object containing values for the new JobCode to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> JobCodesCreateJobCodeAsyncWithHttpInfo (CSInsertJobCodeRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Delete a job code
+        /// Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId">The ID of the job code your want to delete</param>
+        /// <param name="jobCodeId">The ID of the job code you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         System.Threading.Tasks.Task<CSApiResponseBoolean> JobCodesDeleteJobCodeAsync (int? jobCodeId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a job code
+        /// Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId">The ID of the job code your want to delete</param>
+        /// <param name="jobCodeId">The ID of the job code you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> JobCodesDeleteJobCodeAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular job code by job code id
+        /// Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId"></param>
+        /// <param name="jobCodeId">The ID of the JobCode you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseJobCode</returns>
         System.Threading.Tasks.Task<CSApiResponseJobCode> JobCodesGetJobCodeByIdAsync (int? jobCodeId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular job code by job code id
+        /// Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId"></param>
+        /// <param name="jobCodeId">The ID of the JobCode you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseJobCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseJobCode>> JobCodesGetJobCodeByIdAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth);
         /// <summary>
-        /// Get job codes for your organisation
+        /// Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -220,7 +220,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListJobCode> JobCodesGetJobCodesAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get job codes for your organisation
+        /// Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -230,25 +230,25 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListJobCode)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListJobCode>> JobCodesGetJobCodesAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Update a job code
+        /// Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         System.Threading.Tasks.Task<CSApiResponseBoolean> JobCodesUpdateJobCodeAsync (CSUpdateJobCodeRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a job code
+        /// Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> JobCodesUpdateJobCodeAsyncWithHttpInfo (CSUpdateJobCodeRequest request, string xChronosheetsAuth);
@@ -353,10 +353,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a job code 
+        /// Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert JobCode Request object containing values for the new JobCode to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         public CSApiResponseInt32 JobCodesCreateJobCode (CSInsertJobCodeRequest request, string xChronosheetsAuth)
@@ -366,10 +366,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a job code 
+        /// Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert JobCode Request object containing values for the new JobCode to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         public ApiResponse< CSApiResponseInt32 > JobCodesCreateJobCodeWithHttpInfo (CSInsertJobCodeRequest request, string xChronosheetsAuth)
@@ -442,10 +442,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a job code 
+        /// Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert JobCode Request object containing values for the new JobCode to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInt32> JobCodesCreateJobCodeAsync (CSInsertJobCodeRequest request, string xChronosheetsAuth)
@@ -456,10 +456,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a job code 
+        /// Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert JobCode Request object containing values for the new JobCode to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> JobCodesCreateJobCodeAsyncWithHttpInfo (CSInsertJobCodeRequest request, string xChronosheetsAuth)
@@ -532,10 +532,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a job code 
+        /// Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId">The ID of the job code your want to delete</param>
+        /// <param name="jobCodeId">The ID of the job code you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         public CSApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth)
@@ -545,10 +545,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a job code 
+        /// Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId">The ID of the job code your want to delete</param>
+        /// <param name="jobCodeId">The ID of the job code you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         public ApiResponse< CSApiResponseBoolean > JobCodesDeleteJobCodeWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
@@ -608,10 +608,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a job code 
+        /// Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId">The ID of the job code your want to delete</param>
+        /// <param name="jobCodeId">The ID of the job code you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         public async System.Threading.Tasks.Task<CSApiResponseBoolean> JobCodesDeleteJobCodeAsync (int? jobCodeId, string xChronosheetsAuth)
@@ -622,10 +622,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a job code 
+        /// Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId">The ID of the job code your want to delete</param>
+        /// <param name="jobCodeId">The ID of the job code you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> JobCodesDeleteJobCodeAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
@@ -685,10 +685,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular job code by job code id 
+        /// Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId"></param>
+        /// <param name="jobCodeId">The ID of the JobCode you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseJobCode</returns>
         public CSApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth)
@@ -698,10 +698,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular job code by job code id 
+        /// Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId"></param>
+        /// <param name="jobCodeId">The ID of the JobCode you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseJobCode</returns>
         public ApiResponse< CSApiResponseJobCode > JobCodesGetJobCodeByIdWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
@@ -761,10 +761,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular job code by job code id 
+        /// Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId"></param>
+        /// <param name="jobCodeId">The ID of the JobCode you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseJobCode</returns>
         public async System.Threading.Tasks.Task<CSApiResponseJobCode> JobCodesGetJobCodeByIdAsync (int? jobCodeId, string xChronosheetsAuth)
@@ -775,10 +775,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular job code by job code id 
+        /// Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobCodeId"></param>
+        /// <param name="jobCodeId">The ID of the JobCode you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseJobCode)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseJobCode>> JobCodesGetJobCodeByIdAsyncWithHttpInfo (int? jobCodeId, string xChronosheetsAuth)
@@ -838,7 +838,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get job codes for your organisation 
+        /// Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -850,7 +850,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get job codes for your organisation 
+        /// Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -908,7 +908,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get job codes for your organisation 
+        /// Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -921,7 +921,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get job codes for your organisation 
+        /// Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -979,10 +979,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a job code 
+        /// Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         public CSApiResponseBoolean JobCodesUpdateJobCode (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
@@ -992,10 +992,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a job code 
+        /// Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         public ApiResponse< CSApiResponseBoolean > JobCodesUpdateJobCodeWithHttpInfo (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
@@ -1068,10 +1068,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a job code 
+        /// Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         public async System.Threading.Tasks.Task<CSApiResponseBoolean> JobCodesUpdateJobCodeAsync (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
@@ -1082,10 +1082,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a job code 
+        /// Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> JobCodesUpdateJobCodeAsyncWithHttpInfo (CSUpdateJobCodeRequest request, string xChronosheetsAuth)

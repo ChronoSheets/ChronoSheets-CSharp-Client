@@ -122,7 +122,7 @@ namespace ChronoSheetsAPI.Test
             //CSUpdateMyProfileRequest request = null;
             //string xChronosheetsAuth = null;
             //var response = instance.UserProfileUpdateMyProfile(request, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CSApiResponseSignupResponse> (response, "response is CSApiResponseSignupResponse");
+            //Assert.IsInstanceOf<CSApiResponseUpdateProfileResponse> (response, "response is CSApiResponseUpdateProfileResponse");
         }
         
     }

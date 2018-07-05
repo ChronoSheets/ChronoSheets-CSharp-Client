@@ -25,25 +25,25 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a vehicle
+        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         CSApiResponseInt32 FleetCreateVehicle (CSInsertVehicleRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a vehicle
+        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> FleetCreateVehicleWithHttpInfo (CSInsertVehicleRequest request, string xChronosheetsAuth);
@@ -54,7 +54,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vehicleId">The ID of the vehicle you want to get</param>
+        /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseFleetVehicle</returns>
         CSApiResponseFleetVehicle FleetGetVehicleById (int? vehicleId, string xChronosheetsAuth);
@@ -66,7 +66,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vehicleId">The ID of the vehicle you want to get</param>
+        /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseFleetVehicle</returns>
         ApiResponse<CSApiResponseFleetVehicle> FleetGetVehicleByIdWithHttpInfo (int? vehicleId, string xChronosheetsAuth);
@@ -77,7 +77,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted"></param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListFleetVehicle</returns>
         CSApiResponseListFleetVehicle FleetGetVehicles (bool? includeDeleted, string xChronosheetsAuth);
@@ -89,55 +89,55 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted"></param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListFleetVehicle</returns>
         ApiResponse<CSApiResponseListFleetVehicle> FleetGetVehiclesWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth);
         /// <summary>
-        /// Update a vehicle
+        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         CSApiResponseBoolean FleetUpdateVehicle (CSSaveVehicleRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a vehicle
+        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> FleetUpdateVehicleWithHttpInfo (CSSaveVehicleRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a vehicle
+        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseInt32> FleetCreateVehicleAsync (CSInsertVehicleRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a vehicle
+        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> FleetCreateVehicleAsyncWithHttpInfo (CSInsertVehicleRequest request, string xChronosheetsAuth);
@@ -148,7 +148,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vehicleId">The ID of the vehicle you want to get</param>
+        /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseFleetVehicle</returns>
         System.Threading.Tasks.Task<CSApiResponseFleetVehicle> FleetGetVehicleByIdAsync (int? vehicleId, string xChronosheetsAuth);
@@ -160,7 +160,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vehicleId">The ID of the vehicle you want to get</param>
+        /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseFleetVehicle)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseFleetVehicle>> FleetGetVehicleByIdAsyncWithHttpInfo (int? vehicleId, string xChronosheetsAuth);
@@ -171,7 +171,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted"></param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListFleetVehicle</returns>
         System.Threading.Tasks.Task<CSApiResponseListFleetVehicle> FleetGetVehiclesAsync (bool? includeDeleted, string xChronosheetsAuth);
@@ -183,30 +183,30 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted"></param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListFleetVehicle)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListFleetVehicle>> FleetGetVehiclesAsyncWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth);
         /// <summary>
-        /// Update a vehicle
+        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         System.Threading.Tasks.Task<CSApiResponseBoolean> FleetUpdateVehicleAsync (CSSaveVehicleRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a vehicle
+        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> FleetUpdateVehicleAsyncWithHttpInfo (CSSaveVehicleRequest request, string xChronosheetsAuth);
@@ -311,10 +311,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a vehicle 
+        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         public CSApiResponseInt32 FleetCreateVehicle (CSInsertVehicleRequest request, string xChronosheetsAuth)
@@ -324,10 +324,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a vehicle 
+        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         public ApiResponse< CSApiResponseInt32 > FleetCreateVehicleWithHttpInfo (CSInsertVehicleRequest request, string xChronosheetsAuth)
@@ -400,10 +400,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a vehicle 
+        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInt32> FleetCreateVehicleAsync (CSInsertVehicleRequest request, string xChronosheetsAuth)
@@ -414,10 +414,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a vehicle 
+        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> FleetCreateVehicleAsyncWithHttpInfo (CSInsertVehicleRequest request, string xChronosheetsAuth)
@@ -493,7 +493,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a particular vehicle 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vehicleId">The ID of the vehicle you want to get</param>
+        /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseFleetVehicle</returns>
         public CSApiResponseFleetVehicle FleetGetVehicleById (int? vehicleId, string xChronosheetsAuth)
@@ -506,7 +506,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a particular vehicle 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vehicleId">The ID of the vehicle you want to get</param>
+        /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseFleetVehicle</returns>
         public ApiResponse< CSApiResponseFleetVehicle > FleetGetVehicleByIdWithHttpInfo (int? vehicleId, string xChronosheetsAuth)
@@ -569,7 +569,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a particular vehicle 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vehicleId">The ID of the vehicle you want to get</param>
+        /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseFleetVehicle</returns>
         public async System.Threading.Tasks.Task<CSApiResponseFleetVehicle> FleetGetVehicleByIdAsync (int? vehicleId, string xChronosheetsAuth)
@@ -583,7 +583,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a particular vehicle 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="vehicleId">The ID of the vehicle you want to get</param>
+        /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseFleetVehicle)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseFleetVehicle>> FleetGetVehicleByIdAsyncWithHttpInfo (int? vehicleId, string xChronosheetsAuth)
@@ -646,7 +646,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of vehicles that are under your organisation 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted"></param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListFleetVehicle</returns>
         public CSApiResponseListFleetVehicle FleetGetVehicles (bool? includeDeleted, string xChronosheetsAuth)
@@ -659,7 +659,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of vehicles that are under your organisation 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted"></param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListFleetVehicle</returns>
         public ApiResponse< CSApiResponseListFleetVehicle > FleetGetVehiclesWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth)
@@ -722,7 +722,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of vehicles that are under your organisation 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted"></param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListFleetVehicle</returns>
         public async System.Threading.Tasks.Task<CSApiResponseListFleetVehicle> FleetGetVehiclesAsync (bool? includeDeleted, string xChronosheetsAuth)
@@ -736,7 +736,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of vehicles that are under your organisation 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted"></param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListFleetVehicle)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListFleetVehicle>> FleetGetVehiclesAsyncWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth)
@@ -796,10 +796,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a vehicle 
+        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         public CSApiResponseBoolean FleetUpdateVehicle (CSSaveVehicleRequest request, string xChronosheetsAuth)
@@ -809,10 +809,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a vehicle 
+        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         public ApiResponse< CSApiResponseBoolean > FleetUpdateVehicleWithHttpInfo (CSSaveVehicleRequest request, string xChronosheetsAuth)
@@ -885,10 +885,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a vehicle 
+        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         public async System.Threading.Tasks.Task<CSApiResponseBoolean> FleetUpdateVehicleAsync (CSSaveVehicleRequest request, string xChronosheetsAuth)
@@ -899,10 +899,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a vehicle 
+        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> FleetUpdateVehicleAsyncWithHttpInfo (CSSaveVehicleRequest request, string xChronosheetsAuth)

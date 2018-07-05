@@ -117,8 +117,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CSApiResponseSignupResponse</returns>
-        CSApiResponseSignupResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
+        /// <returns>CSApiResponseUpdateProfileResponse</returns>
+        CSApiResponseUpdateProfileResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// 
@@ -129,8 +129,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CSApiResponseSignupResponse</returns>
-        ApiResponse<CSApiResponseSignupResponse> UserProfileUpdateMyProfileWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
+        /// <returns>ApiResponse of CSApiResponseUpdateProfileResponse</returns>
+        ApiResponse<CSApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -226,8 +226,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CSApiResponseSignupResponse</returns>
-        System.Threading.Tasks.Task<CSApiResponseSignupResponse> UserProfileUpdateMyProfileAsync (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
+        /// <returns>Task of CSApiResponseUpdateProfileResponse</returns>
+        System.Threading.Tasks.Task<CSApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileAsync (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
 
         /// <summary>
         /// 
@@ -238,8 +238,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CSApiResponseSignupResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CSApiResponseSignupResponse>> UserProfileUpdateMyProfileAsyncWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
+        /// <returns>Task of ApiResponse (CSApiResponseUpdateProfileResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateProfileResponse>> UserProfileUpdateMyProfileAsyncWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
         #endregion Asynchronous Operations
     }
 
@@ -936,10 +936,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>CSApiResponseSignupResponse</returns>
-        public CSApiResponseSignupResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
+        /// <returns>CSApiResponseUpdateProfileResponse</returns>
+        public CSApiResponseUpdateProfileResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CSApiResponseSignupResponse> localVarResponse = UserProfileUpdateMyProfileWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseUpdateProfileResponse> localVarResponse = UserProfileUpdateMyProfileWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
         }
 
@@ -949,8 +949,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>ApiResponse of CSApiResponseSignupResponse</returns>
-        public ApiResponse< CSApiResponseSignupResponse > UserProfileUpdateMyProfileWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
+        /// <returns>ApiResponse of CSApiResponseUpdateProfileResponse</returns>
+        public ApiResponse< CSApiResponseUpdateProfileResponse > UserProfileUpdateMyProfileWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1014,9 +1014,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CSApiResponseSignupResponse>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseUpdateProfileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CSApiResponseSignupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseSignupResponse)));
+                (CSApiResponseUpdateProfileResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseUpdateProfileResponse)));
         }
 
         /// <summary>
@@ -1025,10 +1025,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of CSApiResponseSignupResponse</returns>
-        public async System.Threading.Tasks.Task<CSApiResponseSignupResponse> UserProfileUpdateMyProfileAsync (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
+        /// <returns>Task of CSApiResponseUpdateProfileResponse</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileAsync (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
         {
-             ApiResponse<CSApiResponseSignupResponse> localVarResponse = await UserProfileUpdateMyProfileAsyncWithHttpInfo(request, xChronosheetsAuth);
+             ApiResponse<CSApiResponseUpdateProfileResponse> localVarResponse = await UserProfileUpdateMyProfileAsyncWithHttpInfo(request, xChronosheetsAuth);
              return localVarResponse.Data;
 
         }
@@ -1039,8 +1039,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
-        /// <returns>Task of ApiResponse (CSApiResponseSignupResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseSignupResponse>> UserProfileUpdateMyProfileAsyncWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
+        /// <returns>Task of ApiResponse (CSApiResponseUpdateProfileResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateProfileResponse>> UserProfileUpdateMyProfileAsyncWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -1104,9 +1104,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CSApiResponseSignupResponse>(localVarStatusCode,
+            return new ApiResponse<CSApiResponseUpdateProfileResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CSApiResponseSignupResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseSignupResponse)));
+                (CSApiResponseUpdateProfileResponse) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseUpdateProfileResponse)));
         }
 
     }

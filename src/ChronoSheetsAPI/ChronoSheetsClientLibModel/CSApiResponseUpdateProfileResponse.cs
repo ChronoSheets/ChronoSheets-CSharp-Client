@@ -25,10 +25,10 @@ using SwaggerDateConverter = ChronoSheetsAPI.Client.SwaggerDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// CSApiResponseSignupResponse
+    /// CSApiResponseUpdateProfileResponse
     /// </summary>
     [DataContract]
-    public partial class CSApiResponseSignupResponse :  IEquatable<CSApiResponseSignupResponse>, IValidatableObject
+    public partial class CSApiResponseUpdateProfileResponse :  IEquatable<CSApiResponseUpdateProfileResponse>, IValidatableObject
     {
         /// <summary>
         /// Defines Status
@@ -80,12 +80,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CSApiResponseSignupResponse" /> class.
+        /// Initializes a new instance of the <see cref="CSApiResponseUpdateProfileResponse" /> class.
         /// </summary>
         /// <param name="Data">Data.</param>
         /// <param name="Status">Status.</param>
         /// <param name="Message">Message.</param>
-        public CSApiResponseSignupResponse(CSSignupResponse Data = default(CSSignupResponse), StatusEnum? Status = default(StatusEnum?), string Message = default(string))
+        public CSApiResponseUpdateProfileResponse(CSUpdateProfileResponse Data = default(CSUpdateProfileResponse), StatusEnum? Status = default(StatusEnum?), string Message = default(string))
         {
             this.Data = Data;
             this.Status = Status;
@@ -96,7 +96,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="Data", EmitDefaultValue=false)]
-        public CSSignupResponse Data { get; set; }
+        public CSUpdateProfileResponse Data { get; set; }
 
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CSApiResponseSignupResponse {\n");
+            sb.Append("class CSApiResponseUpdateProfileResponse {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
@@ -136,15 +136,15 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CSApiResponseSignupResponse);
+            return this.Equals(input as CSApiResponseUpdateProfileResponse);
         }
 
         /// <summary>
-        /// Returns true if CSApiResponseSignupResponse instances are equal
+        /// Returns true if CSApiResponseUpdateProfileResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of CSApiResponseSignupResponse to be compared</param>
+        /// <param name="input">Instance of CSApiResponseUpdateProfileResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CSApiResponseSignupResponse input)
+        public bool Equals(CSApiResponseUpdateProfileResponse input)
         {
             if (input == null)
                 return false;

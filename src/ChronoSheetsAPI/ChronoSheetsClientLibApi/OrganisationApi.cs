@@ -52,7 +52,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseUpdateOrganisationResponse</returns>
         CSApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
@@ -64,7 +64,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseUpdateOrganisationResponse</returns>
         ApiResponse<CSApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationWithHttpInfo (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
@@ -98,7 +98,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseUpdateOrganisationResponse</returns>
         System.Threading.Tasks.Task<CSApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationAsync (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
@@ -110,7 +110,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseUpdateOrganisationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateOrganisationResponse>> OrganisationUpdateOrganisationAsyncWithHttpInfo (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
@@ -359,7 +359,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseUpdateOrganisationResponse</returns>
         public CSApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
@@ -372,7 +372,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseUpdateOrganisationResponse</returns>
         public ApiResponse< CSApiResponseUpdateOrganisationResponse > OrganisationUpdateOrganisationWithHttpInfo (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
@@ -448,7 +448,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseUpdateOrganisationResponse</returns>
         public async System.Threading.Tasks.Task<CSApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationAsync (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
@@ -462,7 +462,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseUpdateOrganisationResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateOrganisationResponse>> OrganisationUpdateOrganisationAsyncWithHttpInfo (CSUpdateOrganisationRequest request, string xChronosheetsAuth)

@@ -81,7 +81,7 @@ Contact: lachlan@chronosheets.com
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\ChronoSheetsAPI\ChronoSheetsAPI.csproj">
-          <Project>{629A0AD9-D4E9-4FE4-8AAC-289A5E254DDD}</Project>
+          <Project>{163F8B55-20FB-4535-84C3-F7E708256A21}</Project>
           <Name>ChronoSheetsAPI</Name>
       </ProjectReference>
   </ItemGroup>

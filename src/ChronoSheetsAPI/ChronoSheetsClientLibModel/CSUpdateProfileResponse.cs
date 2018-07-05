@@ -25,18 +25,18 @@ using SwaggerDateConverter = ChronoSheetsAPI.Client.SwaggerDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// CSSignupResponse
+    /// CSUpdateProfileResponse
     /// </summary>
     [DataContract]
-    public partial class CSSignupResponse :  IEquatable<CSSignupResponse>, IValidatableObject
+    public partial class CSUpdateProfileResponse :  IEquatable<CSUpdateProfileResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CSSignupResponse" /> class.
+        /// Initializes a new instance of the <see cref="CSUpdateProfileResponse" /> class.
         /// </summary>
         /// <param name="OrganisationId">OrganisationId.</param>
         /// <param name="UserId">UserId.</param>
         /// <param name="ValidationErrors">ValidationErrors.</param>
-        public CSSignupResponse(int? OrganisationId = default(int?), int? UserId = default(int?), List<string> ValidationErrors = default(List<string>))
+        public CSUpdateProfileResponse(int? OrganisationId = default(int?), int? UserId = default(int?), List<string> ValidationErrors = default(List<string>))
         {
             this.OrganisationId = OrganisationId;
             this.UserId = UserId;
@@ -68,7 +68,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CSSignupResponse {\n");
+            sb.Append("class CSUpdateProfileResponse {\n");
             sb.Append("  OrganisationId: ").Append(OrganisationId).Append("\n");
             sb.Append("  UserId: ").Append(UserId).Append("\n");
             sb.Append("  ValidationErrors: ").Append(ValidationErrors).Append("\n");
@@ -92,15 +92,15 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CSSignupResponse);
+            return this.Equals(input as CSUpdateProfileResponse);
         }
 
         /// <summary>
-        /// Returns true if CSSignupResponse instances are equal
+        /// Returns true if CSUpdateProfileResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of CSSignupResponse to be compared</param>
+        /// <param name="input">Instance of CSUpdateProfileResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CSSignupResponse input)
+        public bool Equals(CSUpdateProfileResponse input)
         {
             if (input == null)
                 return false;

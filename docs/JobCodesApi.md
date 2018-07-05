@@ -4,18 +4,18 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**JobCodesCreateJobCode**](JobCodesApi.md#jobcodescreatejobcode) | **PUT** /api/JobCodes/CreateJobCode | Create a job code
-[**JobCodesDeleteJobCode**](JobCodesApi.md#jobcodesdeletejobcode) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code
-[**JobCodesGetJobCodeById**](JobCodesApi.md#jobcodesgetjobcodebyid) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id
-[**JobCodesGetJobCodes**](JobCodesApi.md#jobcodesgetjobcodes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation
-[**JobCodesUpdateJobCode**](JobCodesApi.md#jobcodesupdatejobcode) | **POST** /api/JobCodes/UpdateJobCode | Update a job code
+[**JobCodesCreateJobCode**](JobCodesApi.md#jobcodescreatejobcode) | **PUT** /api/JobCodes/CreateJobCode | Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+[**JobCodesDeleteJobCode**](JobCodesApi.md#jobcodesdeletejobcode) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+[**JobCodesGetJobCodeById**](JobCodesApi.md#jobcodesgetjobcodebyid) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+[**JobCodesGetJobCodes**](JobCodesApi.md#jobcodesgetjobcodes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+[**JobCodesUpdateJobCode**](JobCodesApi.md#jobcodesupdatejobcode) | **POST** /api/JobCodes/UpdateJobCode | Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
 
 
 <a name="jobcodescreatejobcode"></a>
 # **JobCodesCreateJobCode**
 > CSApiResponseInt32 JobCodesCreateJobCode (CSInsertJobCodeRequest request, string xChronosheetsAuth)
 
-Create a job code
+Create a job code.  Requires the 'ManageJobsAndTask' permission.
 
 ### Example
 ```csharp
@@ -32,12 +32,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new JobCodesApi();
-            var request = new CSInsertJobCodeRequest(); // CSInsertJobCodeRequest | 
+            var request = new CSInsertJobCodeRequest(); // CSInsertJobCodeRequest | An Insert JobCode Request object containing values for the new JobCode to create
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Create a job code
+                // Create a job code.  Requires the 'ManageJobsAndTask' permission.
                 CSApiResponseInt32 result = apiInstance.JobCodesCreateJobCode(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -54,7 +54,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertJobCodeRequest**](CSInsertJobCodeRequest.md)|  | 
+ **request** | [**CSInsertJobCodeRequest**](CSInsertJobCodeRequest.md)| An Insert JobCode Request object containing values for the new JobCode to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -76,7 +76,7 @@ No authorization required
 # **JobCodesDeleteJobCode**
 > CSApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth)
 
-Delete a job code
+Delete a job code.  Requires the 'ManageJobsAndTask' permission.
 
 ### Example
 ```csharp
@@ -93,12 +93,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new JobCodesApi();
-            var jobCodeId = 56;  // int? | The ID of the job code your want to delete
+            var jobCodeId = 56;  // int? | The ID of the job code you want to delete
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Delete a job code
+                // Delete a job code.  Requires the 'ManageJobsAndTask' permission.
                 CSApiResponseBoolean result = apiInstance.JobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -115,7 +115,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobCodeId** | **int?**| The ID of the job code your want to delete | 
+ **jobCodeId** | **int?**| The ID of the job code you want to delete | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -137,7 +137,7 @@ No authorization required
 # **JobCodesGetJobCodeById**
 > CSApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth)
 
-Get a particular job code by job code id
+Get a particular job code by job code id.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
 ### Example
 ```csharp
@@ -154,12 +154,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new JobCodesApi();
-            var jobCodeId = 56;  // int? | 
+            var jobCodeId = 56;  // int? | The ID of the JobCode you want to get
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Get a particular job code by job code id
+                // Get a particular job code by job code id.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
                 CSApiResponseJobCode result = apiInstance.JobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -176,7 +176,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobCodeId** | **int?**|  | 
+ **jobCodeId** | **int?**| The ID of the JobCode you want to get | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -198,7 +198,7 @@ No authorization required
 # **JobCodesGetJobCodes**
 > CSApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth)
 
-Get job codes for your organisation
+Get job codes for your organisation.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
 ### Example
 ```csharp
@@ -219,7 +219,7 @@ namespace Example
 
             try
             {
-                // Get job codes for your organisation
+                // Get job codes for your organisation.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
                 CSApiResponseListJobCode result = apiInstance.JobCodesGetJobCodes(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -257,7 +257,7 @@ No authorization required
 # **JobCodesUpdateJobCode**
 > CSApiResponseBoolean JobCodesUpdateJobCode (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
 
-Update a job code
+Update a job code.  Requires the 'ManageJobsAndTask' permission.
 
 ### Example
 ```csharp
@@ -274,12 +274,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new JobCodesApi();
-            var request = new CSUpdateJobCodeRequest(); // CSUpdateJobCodeRequest | 
+            var request = new CSUpdateJobCodeRequest(); // CSUpdateJobCodeRequest | A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Update a job code
+                // Update a job code.  Requires the 'ManageJobsAndTask' permission.
                 CSApiResponseBoolean result = apiInstance.JobCodesUpdateJobCode(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -296,7 +296,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateJobCodeRequest**](CSUpdateJobCodeRequest.md)|  | 
+ **request** | [**CSUpdateJobCodeRequest**](CSUpdateJobCodeRequest.md)| A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type

@@ -4,17 +4,17 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ClientsCreateClient**](ClientsApi.md#clientscreateclient) | **PUT** /api/Clients/CreateClient | Create a client
-[**ClientsGetClient**](ClientsApi.md#clientsgetclient) | **GET** /api/Clients/GetClient | Get a particular client
-[**ClientsGetClients**](ClientsApi.md#clientsgetclients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation
-[**ClientsUpdateClient**](ClientsApi.md#clientsupdateclient) | **POST** /api/Clients/UpdateClient | Update a client
+[**ClientsCreateClient**](ClientsApi.md#clientscreateclient) | **PUT** /api/Clients/CreateClient | Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**ClientsGetClient**](ClientsApi.md#clientsgetclient) | **GET** /api/Clients/GetClient | Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**ClientsGetClients**](ClientsApi.md#clientsgetclients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**ClientsUpdateClient**](ClientsApi.md#clientsupdateclient) | **POST** /api/Clients/UpdateClient | Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
 <a name="clientscreateclient"></a>
 # **ClientsCreateClient**
 > CSApiResponseInt32 ClientsCreateClient (CSInsertClientRequest request, string xChronosheetsAuth)
 
-Create a client
+Create a client.  Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
 ```csharp
@@ -31,12 +31,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new ClientsApi();
-            var request = new CSInsertClientRequest(); // CSInsertClientRequest | 
+            var request = new CSInsertClientRequest(); // CSInsertClientRequest | An Insert Client Request object containing values for the new Client to create
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Create a client
+                // Create a client.  Requires the 'ManageClientsAndProjects' permission.
                 CSApiResponseInt32 result = apiInstance.ClientsCreateClient(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -53,7 +53,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertClientRequest**](CSInsertClientRequest.md)|  | 
+ **request** | [**CSInsertClientRequest**](CSInsertClientRequest.md)| An Insert Client Request object containing values for the new Client to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -75,7 +75,7 @@ No authorization required
 # **ClientsGetClient**
 > CSApiResponseClient ClientsGetClient (int? clientId, string xChronosheetsAuth)
 
-Get a particular client
+Get a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
 ```csharp
@@ -92,12 +92,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new ClientsApi();
-            var clientId = 56;  // int? | The ID of the client you want to get
+            var clientId = 56;  // int? | The ID of the Client you want to get
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Get a particular client
+                // Get a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
                 CSApiResponseClient result = apiInstance.ClientsGetClient(clientId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -114,7 +114,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **int?**| The ID of the client you want to get | 
+ **clientId** | **int?**| The ID of the Client you want to get | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -136,7 +136,7 @@ No authorization required
 # **ClientsGetClients**
 > CSApiResponseListClient ClientsGetClients (string xChronosheetsAuth)
 
-Get a collection of clients that are under your organisation
+Get a collection of clients that are under your organisation.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
 ```csharp
@@ -157,7 +157,7 @@ namespace Example
 
             try
             {
-                // Get a collection of clients that are under your organisation
+                // Get a collection of clients that are under your organisation.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
                 CSApiResponseListClient result = apiInstance.ClientsGetClients(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -195,7 +195,7 @@ No authorization required
 # **ClientsUpdateClient**
 > CSApiResponseBoolean ClientsUpdateClient (CSSaveClientRequest request, string xChronosheetsAuth)
 
-Update a client
+Update a client.  Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
 ```csharp
@@ -212,12 +212,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new ClientsApi();
-            var request = new CSSaveClientRequest(); // CSSaveClientRequest | 
+            var request = new CSSaveClientRequest(); // CSSaveClientRequest | A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Update a client
+                // Update a client.  Requires the 'ManageClientsAndProjects' permission.
                 CSApiResponseBoolean result = apiInstance.ClientsUpdateClient(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -234,7 +234,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSaveClientRequest**](CSSaveClientRequest.md)|  | 
+ **request** | [**CSSaveClientRequest**](CSSaveClientRequest.md)| A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type

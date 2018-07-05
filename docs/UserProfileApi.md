@@ -245,7 +245,7 @@ No authorization required
 
 <a name="userprofileupdatemyprofile"></a>
 # **UserProfileUpdateMyProfile**
-> CSApiResponseSignupResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
+> CSApiResponseUpdateProfileResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
 
 
 
@@ -269,7 +269,7 @@ namespace Example
 
             try
             {
-                CSApiResponseSignupResponse result = apiInstance.UserProfileUpdateMyProfile(request, xChronosheetsAuth);
+                CSApiResponseUpdateProfileResponse result = apiInstance.UserProfileUpdateMyProfile(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -290,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseSignupResponse**](CSApiResponseSignupResponse.md)
+[**CSApiResponseUpdateProfileResponse**](CSApiResponseUpdateProfileResponse.md)
 
 ### Authorization
 
