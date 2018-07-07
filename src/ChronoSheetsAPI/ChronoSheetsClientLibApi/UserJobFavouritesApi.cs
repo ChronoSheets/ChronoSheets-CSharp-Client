@@ -25,53 +25,53 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a job favourite
+        /// Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         CSApiResponseInt32 UserJobFavouritesCreateJobFavourite (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a job favourite
+        /// Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> UserJobFavouritesCreateJobFavouriteWithHttpInfo (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Delete a job favourite
+        /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">The ID of the Job</param>
+        /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         CSApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a job favourite
+        /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">The ID of the Job</param>
+        /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteWithHttpInfo (int? jobId, string xChronosheetsAuth);
         /// <summary>
-        /// Get your job favourites
+        /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -82,7 +82,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get your job favourites
+        /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -94,53 +94,53 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a job favourite
+        /// Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a job favourite
+        /// Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Delete a job favourite
+        /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">The ID of the Job</param>
+        /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         System.Threading.Tasks.Task<CSApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int? jobId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a job favourite
+        /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">The ID of the Job</param>
+        /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo (int? jobId, string xChronosheetsAuth);
         /// <summary>
-        /// Get your job favourites
+        /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -151,7 +151,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get your job favourites
+        /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -261,10 +261,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a job favourite 
+        /// Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         public CSApiResponseInt32 UserJobFavouritesCreateJobFavourite (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
@@ -274,10 +274,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a job favourite 
+        /// Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         public ApiResponse< CSApiResponseInt32 > UserJobFavouritesCreateJobFavouriteWithHttpInfo (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
@@ -350,10 +350,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a job favourite 
+        /// Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
@@ -364,10 +364,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a job favourite 
+        /// Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
@@ -440,10 +440,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a job favourite 
+        /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">The ID of the Job</param>
+        /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         public CSApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth)
@@ -453,10 +453,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a job favourite 
+        /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">The ID of the Job</param>
+        /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         public ApiResponse< CSApiResponseBoolean > UserJobFavouritesDeleteJobFavouriteWithHttpInfo (int? jobId, string xChronosheetsAuth)
@@ -516,10 +516,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a job favourite 
+        /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">The ID of the Job</param>
+        /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         public async System.Threading.Tasks.Task<CSApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int? jobId, string xChronosheetsAuth)
@@ -530,10 +530,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a job favourite 
+        /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="jobId">The ID of the Job</param>
+        /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo (int? jobId, string xChronosheetsAuth)
@@ -593,7 +593,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get your job favourites 
+        /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -605,7 +605,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get your job favourites 
+        /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -663,7 +663,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get your job favourites 
+        /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -676,7 +676,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get your job favourites 
+        /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>

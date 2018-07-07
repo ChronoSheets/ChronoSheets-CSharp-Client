@@ -25,7 +25,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
+        /// Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +36,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListAggregateJobCode AggregateJobTasksGetAggregateJobTasks (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
+        /// Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -48,7 +48,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
+        /// Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -59,7 +59,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListAggregateJobCode> AggregateJobTasksGetAggregateJobTasksAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
+        /// Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -169,7 +169,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
+        /// Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -181,7 +181,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
+        /// Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -239,7 +239,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
+        /// Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -252,7 +252,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
+        /// Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>

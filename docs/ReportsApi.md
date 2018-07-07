@@ -4,21 +4,21 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ReportsGetAllChartsDataAdmin**](ReportsApi.md#reportsgetallchartsdataadmin) | **GET** /api/Reports/GetAllChartsDataAdmin | Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
-[**ReportsGetAllChartsDataUser**](ReportsApi.md#reportsgetallchartsdatauser) | **GET** /api/Reports/GetAllChartsDataUser | Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
-[**ReportsGetOrgTripById**](ReportsApi.md#reportsgetorgtripbyid) | **GET** /api/Reports/GetOrgTripById | Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
-[**ReportsGetOrganisationTimesheetFileAttachments**](ReportsApi.md#reportsgetorganisationtimesheetfileattachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
-[**ReportsGetOrganisationTrips**](ReportsApi.md#reportsgetorganisationtrips) | **GET** /api/Reports/GetOrganisationTrips | Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
-[**ReportsGetRawDataAdmin**](ReportsApi.md#reportsgetrawdataadmin) | **GET** /api/Reports/GetRawDataAdmin | Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
-[**ReportsProjectCostingsAdmin**](ReportsApi.md#reportsprojectcostingsadmin) | **GET** /api/Reports/ProjectCostingsAdmin | Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
-[**ReportsUserJobsOverTime**](ReportsApi.md#reportsuserjobsovertime) | **GET** /api/Reports/UserJobsOverTime | Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
+[**ReportsGetAllChartsDataAdmin**](ReportsApi.md#reportsgetallchartsdataadmin) | **GET** /api/Reports/GetAllChartsDataAdmin | Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
+[**ReportsGetAllChartsDataUser**](ReportsApi.md#reportsgetallchartsdatauser) | **GET** /api/Reports/GetAllChartsDataUser | Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
+[**ReportsGetOrgTripById**](ReportsApi.md#reportsgetorgtripbyid) | **GET** /api/Reports/GetOrgTripById | Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
+[**ReportsGetOrganisationTimesheetFileAttachments**](ReportsApi.md#reportsgetorganisationtimesheetfileattachments) | **GET** /api/Reports/GetOrganisationTimesheetFileAttachments | Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+[**ReportsGetOrganisationTrips**](ReportsApi.md#reportsgetorganisationtrips) | **GET** /api/Reports/GetOrganisationTrips | Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
+[**ReportsGetRawDataAdmin**](ReportsApi.md#reportsgetrawdataadmin) | **GET** /api/Reports/GetRawDataAdmin | Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
+[**ReportsProjectCostingsAdmin**](ReportsApi.md#reportsprojectcostingsadmin) | **GET** /api/Reports/ProjectCostingsAdmin | Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
+[**ReportsUserJobsOverTime**](ReportsApi.md#reportsuserjobsovertime) | **GET** /api/Reports/UserJobsOverTime | Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
 
 
 <a name="reportsgetallchartsdataadmin"></a>
 # **ReportsGetAllChartsDataAdmin**
 > CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
 
-Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
+Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
 
 ### Example
 ```csharp
@@ -42,7 +42,7 @@ namespace Example
 
             try
             {
-                // Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
+                // Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
                 CSApiResponseCombinedReportsData result = apiInstance.ReportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -83,7 +83,7 @@ No authorization required
 # **ReportsGetAllChartsDataUser**
 > CSApiResponseCombinedReportsData ReportsGetAllChartsDataUser (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
 
-Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.  Requires the 'ViewOwnReports' permission.
+Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.    Requires the 'ViewOwnReports' permission.
 
 ### Example
 ```csharp
@@ -106,7 +106,7 @@ namespace Example
 
             try
             {
-                // Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.  Requires the 'ViewOwnReports' permission.
+                // Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user's own reports.    Requires the 'ViewOwnReports' permission.
                 CSApiResponseCombinedReportsData result = apiInstance.ReportsGetAllChartsDataUser(startDate, endDate, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -146,7 +146,7 @@ No authorization required
 # **ReportsGetOrgTripById**
 > CSApiResponseTrip ReportsGetOrgTripById (int? tripId, string xChronosheetsAuth)
 
-Get trip by Id, for reporting purposes.  Requires the 'ReportAdmin' permission.
+Get trip by Id, for reporting purposes.    Requires the 'ReportAdmin' permission.
 
 ### Example
 ```csharp
@@ -168,7 +168,7 @@ namespace Example
 
             try
             {
-                // Get trip by Id, for reporting purposes.  Requires the 'ReportAdmin' permission.
+                // Get trip by Id, for reporting purposes.    Requires the 'ReportAdmin' permission.
                 CSApiResponseTrip result = apiInstance.ReportsGetOrgTripById(tripId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -207,7 +207,7 @@ No authorization required
 # **ReportsGetOrganisationTimesheetFileAttachments**
 > CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment ReportsGetOrganisationTimesheetFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
 
-Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the 'ReportAdmin' permission.
+Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the 'ReportAdmin' permission.
 
 ### Example
 ```csharp
@@ -233,7 +233,7 @@ namespace Example
 
             try
             {
-                // Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the 'ReportAdmin' permission.
+                // Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the 'ReportAdmin' permission.
                 CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment result = apiInstance.ReportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -276,7 +276,7 @@ No authorization required
 # **ReportsGetOrganisationTrips**
 > CSApiResponseForPaginatedListOrgReportTrip ReportsGetOrganisationTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth)
 
-Reports on Organisation trips (GPS tracking from whole organisation).  Requires the 'ReportAdmin' permission.
+Reports on Organisation trips (GPS tracking from whole organisation).    Requires the 'ReportAdmin' permission.
 
 ### Example
 ```csharp
@@ -302,7 +302,7 @@ namespace Example
 
             try
             {
-                // Reports on Organisation trips (GPS tracking from whole organisation).  Requires the 'ReportAdmin' permission.
+                // Reports on Organisation trips (GPS tracking from whole organisation).    Requires the 'ReportAdmin' permission.
                 CSApiResponseForPaginatedListOrgReportTrip result = apiInstance.ReportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -345,7 +345,7 @@ No authorization required
 # **ReportsGetRawDataAdmin**
 > CSApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth)
 
-Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
+Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
 
 ### Example
 ```csharp
@@ -373,7 +373,7 @@ namespace Example
 
             try
             {
-                // Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the 'ReportAdmin' permission.
+                // Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
                 CSApiResponseForPaginatedListRawReportItem result = apiInstance.ReportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -418,7 +418,7 @@ No authorization required
 # **ReportsProjectCostingsAdmin**
 > CSApiResponseListProjectCostingReportItem ReportsProjectCostingsAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
 
-Gets project cost estimations VS actual cost for date range and users.  Requires the 'ReportAdmin' permission.
+Gets project cost estimations VS actual cost for date range and users.    Requires the 'ReportAdmin' permission.
 
 ### Example
 ```csharp
@@ -442,7 +442,7 @@ namespace Example
 
             try
             {
-                // Gets project cost estimations VS actual cost for date range and users.  Requires the 'ReportAdmin' permission.
+                // Gets project cost estimations VS actual cost for date range and users.    Requires the 'ReportAdmin' permission.
                 CSApiResponseListProjectCostingReportItem result = apiInstance.ReportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -483,7 +483,7 @@ No authorization required
 # **ReportsUserJobsOverTime**
 > CSApiResponseListJobSeriesReportItem ReportsUserJobsOverTime (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth)
 
-Timeseries jobs data for the logged in user.  Requires the 'ViewOwnReports' or 'SubmitTimesheets'.
+Timeseries jobs data for the logged in user.    Requires the 'ViewOwnReports' or 'SubmitTimesheets'.
 
 ### Example
 ```csharp
@@ -506,7 +506,7 @@ namespace Example
 
             try
             {
-                // Timeseries jobs data for the logged in user.  Requires the 'ViewOwnReports' or 'SubmitTimesheets'.
+                // Timeseries jobs data for the logged in user.    Requires the 'ViewOwnReports' or 'SubmitTimesheets'.
                 CSApiResponseListJobSeriesReportItem result = apiInstance.ReportsUserJobsOverTime(startDate, endDate, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

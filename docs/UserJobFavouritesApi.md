@@ -4,16 +4,16 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UserJobFavouritesCreateJobFavourite**](UserJobFavouritesApi.md#userjobfavouritescreatejobfavourite) | **PUT** /api/UserJobFavourites/CreateJobFavourite | Create a job favourite
-[**UserJobFavouritesDeleteJobFavourite**](UserJobFavouritesApi.md#userjobfavouritesdeletejobfavourite) | **DELETE** /api/UserJobFavourites/DeleteJobFavourite | Delete a job favourite
-[**UserJobFavouritesGetJobFavourites**](UserJobFavouritesApi.md#userjobfavouritesgetjobfavourites) | **GET** /api/UserJobFavourites/GetJobFavourites | Get your job favourites
+[**UserJobFavouritesCreateJobFavourite**](UserJobFavouritesApi.md#userjobfavouritescreatejobfavourite) | **PUT** /api/UserJobFavourites/CreateJobFavourite | Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**UserJobFavouritesDeleteJobFavourite**](UserJobFavouritesApi.md#userjobfavouritesdeletejobfavourite) | **DELETE** /api/UserJobFavourites/DeleteJobFavourite | Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**UserJobFavouritesGetJobFavourites**](UserJobFavouritesApi.md#userjobfavouritesgetjobfavourites) | **GET** /api/UserJobFavourites/GetJobFavourites | Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 
 <a name="userjobfavouritescreatejobfavourite"></a>
 # **UserJobFavouritesCreateJobFavourite**
 > CSApiResponseInt32 UserJobFavouritesCreateJobFavourite (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
 
-Create a job favourite
+Create a job favourite.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```csharp
@@ -30,12 +30,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new UserJobFavouritesApi();
-            var request = new CSInsertUserJobFavouriteRequest(); // CSInsertUserJobFavouriteRequest | 
+            var request = new CSInsertUserJobFavouriteRequest(); // CSInsertUserJobFavouriteRequest | An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Create a job favourite
+                // Create a job favourite.    Requires the 'SubmitTimesheets' permission.
                 CSApiResponseInt32 result = apiInstance.UserJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -52,7 +52,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertUserJobFavouriteRequest**](CSInsertUserJobFavouriteRequest.md)|  | 
+ **request** | [**CSInsertUserJobFavouriteRequest**](CSInsertUserJobFavouriteRequest.md)| An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -74,7 +74,7 @@ No authorization required
 # **UserJobFavouritesDeleteJobFavourite**
 > CSApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth)
 
-Delete a job favourite
+Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```csharp
@@ -91,12 +91,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new UserJobFavouritesApi();
-            var jobId = 56;  // int? | The ID of the Job
+            var jobId = 56;  // int? | The ID of the Job for the Job Favourite you want to delete.
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Delete a job favourite
+                // Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
                 CSApiResponseBoolean result = apiInstance.UserJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -113,7 +113,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobId** | **int?**| The ID of the Job | 
+ **jobId** | **int?**| The ID of the Job for the Job Favourite you want to delete. | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -135,7 +135,7 @@ No authorization required
 # **UserJobFavouritesGetJobFavourites**
 > CSApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth)
 
-Get your job favourites
+Get your job favourites.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```csharp
@@ -156,7 +156,7 @@ namespace Example
 
             try
             {
-                // Get your job favourites
+                // Get your job favourites.    Requires the 'SubmitTimesheets' permission.
                 CSApiResponseListUserJobFavourite result = apiInstance.UserJobFavouritesGetJobFavourites(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

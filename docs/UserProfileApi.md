@@ -4,18 +4,18 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UserProfileDoLogin**](UserProfileApi.md#userprofiledologin) | **POST** /api/UserProfile/DoLogin | 
-[**UserProfileDoLogout**](UserProfileApi.md#userprofiledologout) | **DELETE** /api/UserProfile/DoLogout | 
-[**UserProfileGetMyProfile**](UserProfileApi.md#userprofilegetmyprofile) | **GET** /api/UserProfile/GetMyProfile | 
-[**UserProfileKeepSessionAlive**](UserProfileApi.md#userprofilekeepsessionalive) | **GET** /api/UserProfile/KeepSessionAlive | 
-[**UserProfileUpdateMyProfile**](UserProfileApi.md#userprofileupdatemyprofile) | **POST** /api/UserProfile/UpdateMyProfile | 
+[**UserProfileDoLogin**](UserProfileApi.md#userprofiledologin) | **POST** /api/UserProfile/DoLogin | Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
+[**UserProfileDoLogout**](UserProfileApi.md#userprofiledologout) | **DELETE** /api/UserProfile/DoLogout | Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
+[**UserProfileGetMyProfile**](UserProfileApi.md#userprofilegetmyprofile) | **GET** /api/UserProfile/GetMyProfile | Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
+[**UserProfileKeepSessionAlive**](UserProfileApi.md#userprofilekeepsessionalive) | **GET** /api/UserProfile/KeepSessionAlive | Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
+[**UserProfileUpdateMyProfile**](UserProfileApi.md#userprofileupdatemyprofile) | **POST** /api/UserProfile/UpdateMyProfile | Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
 
 
 <a name="userprofiledologin"></a>
 # **UserProfileDoLogin**
 > CSApiResponseDoLoginResponse UserProfileDoLogin (CSDoLoginRequest request)
 
-
+Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
 
 ### Example
 ```csharp
@@ -32,10 +32,11 @@ namespace Example
         public void main()
         {
             var apiInstance = new UserProfileApi();
-            var request = new CSDoLoginRequest(); // CSDoLoginRequest | 
+            var request = new CSDoLoginRequest(); // CSDoLoginRequest | A request object containing your username/email and password.
 
             try
             {
+                // Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
                 CSApiResponseDoLoginResponse result = apiInstance.UserProfileDoLogin(request);
                 Debug.WriteLine(result);
             }
@@ -52,7 +53,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSDoLoginRequest**](CSDoLoginRequest.md)|  | 
+ **request** | [**CSDoLoginRequest**](CSDoLoginRequest.md)| A request object containing your username/email and password. | 
 
 ### Return type
 
@@ -73,7 +74,7 @@ No authorization required
 # **UserProfileDoLogout**
 > CSApiResponseBoolean UserProfileDoLogout (string xChronosheetsAuth)
 
-
+Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
 
 ### Example
 ```csharp
@@ -94,6 +95,7 @@ namespace Example
 
             try
             {
+                // Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
                 CSApiResponseBoolean result = apiInstance.UserProfileDoLogout(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -131,7 +133,7 @@ No authorization required
 # **UserProfileGetMyProfile**
 > CSApiResponseUserProfile UserProfileGetMyProfile (string xChronosheetsAuth)
 
-
+Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
 
 ### Example
 ```csharp
@@ -152,6 +154,7 @@ namespace Example
 
             try
             {
+                // Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
                 CSApiResponseUserProfile result = apiInstance.UserProfileGetMyProfile(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -189,7 +192,7 @@ No authorization required
 # **UserProfileKeepSessionAlive**
 > CSApiResponseBoolean UserProfileKeepSessionAlive (string xChronosheetsAuth)
 
-
+Keep a session alive.  Use this method to keep a session active.  You could use this to 'ping' ChronoSheets every 'x' minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
 
 ### Example
 ```csharp
@@ -210,6 +213,7 @@ namespace Example
 
             try
             {
+                // Keep a session alive.  Use this method to keep a session active.  You could use this to 'ping' ChronoSheets every 'x' minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
                 CSApiResponseBoolean result = apiInstance.UserProfileKeepSessionAlive(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -247,7 +251,7 @@ No authorization required
 # **UserProfileUpdateMyProfile**
 > CSApiResponseUpdateProfileResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
 
-
+Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
 
 ### Example
 ```csharp
@@ -264,11 +268,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new UserProfileApi();
-            var request = new CSUpdateMyProfileRequest(); // CSUpdateMyProfileRequest | 
+            var request = new CSUpdateMyProfileRequest(); // CSUpdateMyProfileRequest | An Update MyProfile Request object containing updated fields.
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
+                // Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
                 CSApiResponseUpdateProfileResponse result = apiInstance.UserProfileUpdateMyProfile(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -285,7 +290,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateMyProfileRequest**](CSUpdateMyProfileRequest.md)|  | 
+ **request** | [**CSUpdateMyProfileRequest**](CSUpdateMyProfileRequest.md)| An Update MyProfile Request object containing updated fields. | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type

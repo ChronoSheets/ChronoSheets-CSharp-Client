@@ -25,7 +25,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
+        /// Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -37,7 +37,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseInt32 OrganisationGroupsCreateOrganisationGroup (CSInsertOrganisationGroupRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
+        /// Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -48,7 +48,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> OrganisationGroupsCreateOrganisationGroupWithHttpInfo (CSInsertOrganisationGroupRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -60,7 +60,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseOrganisationGroup OrganisationGroupsGetOrganisationGroup (int? organisationGroupId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -71,7 +71,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseOrganisationGroup</returns>
         ApiResponse<CSApiResponseOrganisationGroup> OrganisationGroupsGetOrganisationGroupWithHttpInfo (int? organisationGroupId, string xChronosheetsAuth);
         /// <summary>
-        /// Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -82,7 +82,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroups (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -92,7 +92,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListOrganisationGroup</returns>
         ApiResponse<CSApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -104,7 +104,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroupsForJob (int? jobId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -115,7 +115,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListOrganisationGroup</returns>
         ApiResponse<CSApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForJobWithHttpInfo (int? jobId, string xChronosheetsAuth);
         /// <summary>
-        /// Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -127,7 +127,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroupsForVehicle (int? vehicleId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -138,7 +138,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListOrganisationGroup</returns>
         ApiResponse<CSApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForVehicleWithHttpInfo (int? vehicleId, string xChronosheetsAuth);
         /// <summary>
-        /// Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
+        /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -150,7 +150,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseBoolean OrganisationGroupsUpdateOrganisationGroup (CSSaveOrganisationGroupRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
+        /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -163,7 +163,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
+        /// Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -175,7 +175,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseInt32> OrganisationGroupsCreateOrganisationGroupAsync (CSInsertOrganisationGroupRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
+        /// Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -186,7 +186,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> OrganisationGroupsCreateOrganisationGroupAsyncWithHttpInfo (CSInsertOrganisationGroupRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -198,7 +198,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseOrganisationGroup> OrganisationGroupsGetOrganisationGroupAsync (int? organisationGroupId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -209,7 +209,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseOrganisationGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseOrganisationGroup>> OrganisationGroupsGetOrganisationGroupAsyncWithHttpInfo (int? organisationGroupId, string xChronosheetsAuth);
         /// <summary>
-        /// Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -220,7 +220,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -230,7 +230,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListOrganisationGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -242,7 +242,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForJobAsync (int? jobId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -253,7 +253,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListOrganisationGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForJobAsyncWithHttpInfo (int? jobId, string xChronosheetsAuth);
         /// <summary>
-        /// Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -265,7 +265,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForVehicleAsync (int? vehicleId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -276,7 +276,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListOrganisationGroup)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForVehicleAsyncWithHttpInfo (int? vehicleId, string xChronosheetsAuth);
         /// <summary>
-        /// Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
+        /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -288,7 +288,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseBoolean> OrganisationGroupsUpdateOrganisationGroupAsync (CSSaveOrganisationGroupRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
+        /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -399,7 +399,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. 
+        /// Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create</param>
@@ -412,7 +412,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. 
+        /// Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create</param>
@@ -488,7 +488,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. 
+        /// Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create</param>
@@ -502,7 +502,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. 
+        /// Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create</param>
@@ -578,7 +578,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId">The ID of the OrganisationGroup you want to get</param>
@@ -591,7 +591,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId">The ID of the OrganisationGroup you want to get</param>
@@ -654,7 +654,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId">The ID of the OrganisationGroup you want to get</param>
@@ -668,7 +668,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId">The ID of the OrganisationGroup you want to get</param>
@@ -731,7 +731,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -743,7 +743,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -801,7 +801,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -814,7 +814,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -872,7 +872,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
@@ -885,7 +885,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
@@ -948,7 +948,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
@@ -962,7 +962,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
@@ -1025,7 +1025,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the vehicle</param>
@@ -1038,7 +1038,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the vehicle</param>
@@ -1101,7 +1101,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the vehicle</param>
@@ -1115,7 +1115,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the vehicle</param>
@@ -1178,7 +1178,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. 
+        /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
@@ -1191,7 +1191,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. 
+        /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
@@ -1267,7 +1267,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. 
+        /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
@@ -1281,7 +1281,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions. 
+        /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>

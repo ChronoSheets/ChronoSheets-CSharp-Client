@@ -4,16 +4,16 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TripsCreateTrip**](TripsApi.md#tripscreatetrip) | **POST** /api/Trips/CreateTrip | Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
-[**TripsGetMyTripById**](TripsApi.md#tripsgetmytripbyid) | **GET** /api/Trips/GetMyTripById | Get trip by Id
-[**TripsGetMyTrips**](TripsApi.md#tripsgetmytrips) | **GET** /api/Trips/GetMyTrips | Get my trips
+[**TripsCreateTrip**](TripsApi.md#tripscreatetrip) | **POST** /api/Trips/CreateTrip | Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**TripsGetMyTripById**](TripsApi.md#tripsgetmytripbyid) | **GET** /api/Trips/GetMyTripById | Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
+[**TripsGetMyTrips**](TripsApi.md#tripsgetmytrips) | **GET** /api/Trips/GetMyTrips | Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
 
 
 <a name="tripscreatetrip"></a>
 # **TripsCreateTrip**
 > CSApiResponseInt32 TripsCreateTrip (CSCreateTripRequest request, string xChronosheetsAuth)
 
-Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```csharp
@@ -30,12 +30,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new TripsApi();
-            var request = new CSCreateTripRequest(); // CSCreateTripRequest | The create trip request
+            var request = new CSCreateTripRequest(); // CSCreateTripRequest | A Create Trip Request object containing values for the new Trip to create
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+                // Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the 'SubmitTimesheets' permission.
                 CSApiResponseInt32 result = apiInstance.TripsCreateTrip(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -52,7 +52,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSCreateTripRequest**](CSCreateTripRequest.md)| The create trip request | 
+ **request** | [**CSCreateTripRequest**](CSCreateTripRequest.md)| A Create Trip Request object containing values for the new Trip to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -74,7 +74,7 @@ No authorization required
 # **TripsGetMyTripById**
 > CSApiResponseTrip TripsGetMyTripById (int? tripId, string xChronosheetsAuth)
 
-Get trip by Id
+Get trip by Id.    Requires the 'ViewMyTrips' permission.
 
 ### Example
 ```csharp
@@ -91,12 +91,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new TripsApi();
-            var tripId = 56;  // int? | The ID of the trip
+            var tripId = 56;  // int? | The ID of the Trip you want to get
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Get trip by Id
+                // Get trip by Id.    Requires the 'ViewMyTrips' permission.
                 CSApiResponseTrip result = apiInstance.TripsGetMyTripById(tripId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -113,7 +113,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tripId** | **int?**| The ID of the trip | 
+ **tripId** | **int?**| The ID of the Trip you want to get | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -135,7 +135,7 @@ No authorization required
 # **TripsGetMyTrips**
 > CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
 
-Get my trips
+Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
 
 ### Example
 ```csharp
@@ -152,16 +152,16 @@ namespace Example
         public void main()
         {
             var apiInstance = new TripsApi();
-            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | 
-            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | 
-            var skip = 56;  // int? | 
-            var take = 56;  // int? | 
-            var vehicleId = 56;  // int? | 
+            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The Start date of the date range.  Trips after this date will be obtained.
+            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The End date of the date range.  Trips before this date will be obtained.
+            var skip = 56;  // int? | Skip this many Trips
+            var take = 56;  // int? | Take this many Trips
+            var vehicleId = 56;  // int? | Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Get my trips
+                // Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
                 CSApiResponseForPaginatedListTrip result = apiInstance.TripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -178,11 +178,11 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **DateTime?**|  | 
- **endDate** | **DateTime?**|  | 
- **skip** | **int?**|  | 
- **take** | **int?**|  | 
- **vehicleId** | **int?**|  | 
+ **startDate** | **DateTime?**| The Start date of the date range.  Trips after this date will be obtained. | 
+ **endDate** | **DateTime?**| The End date of the date range.  Trips before this date will be obtained. | 
+ **skip** | **int?**| Skip this many Trips | 
+ **take** | **int?**| Take this many Trips | 
+ **vehicleId** | **int?**| Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type

@@ -4,15 +4,15 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**OrganisationGetOrganisation**](OrganisationApi.md#organisationgetorganisation) | **GET** /api/Organisation/GetOrganisation | Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
-[**OrganisationUpdateOrganisation**](OrganisationApi.md#organisationupdateorganisation) | **POST** /api/Organisation/UpdateOrganisation | Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+[**OrganisationGetOrganisation**](OrganisationApi.md#organisationgetorganisation) | **GET** /api/Organisation/GetOrganisation | Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
+[**OrganisationUpdateOrganisation**](OrganisationApi.md#organisationupdateorganisation) | **POST** /api/Organisation/UpdateOrganisation | Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
 
 
 <a name="organisationgetorganisation"></a>
 # **OrganisationGetOrganisation**
 > CSApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth)
 
-Get your organisation.  Requires 'OrganisationAdmin' permission.
+Get your organisation.    Requires 'OrganisationAdmin' permission.
 
 ### Example
 ```csharp
@@ -33,7 +33,7 @@ namespace Example
 
             try
             {
-                // Get your organisation.  Requires 'OrganisationAdmin' permission.
+                // Get your organisation.    Requires 'OrganisationAdmin' permission.
                 CSApiResponseOrganisation result = apiInstance.OrganisationGetOrganisation(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -71,7 +71,7 @@ No authorization required
 # **OrganisationUpdateOrganisation**
 > CSApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
 
-Update an organisation.  Requires 'OrganisationAdmin' permission.
+Update an organisation.    Requires 'OrganisationAdmin' permission.
 
 ### Example
 ```csharp
@@ -93,7 +93,7 @@ namespace Example
 
             try
             {
-                // Update an organisation.  Requires 'OrganisationAdmin' permission.
+                // Update an organisation.    Requires 'OrganisationAdmin' permission.
                 CSApiResponseUpdateOrganisationResponse result = apiInstance.OrganisationUpdateOrganisation(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

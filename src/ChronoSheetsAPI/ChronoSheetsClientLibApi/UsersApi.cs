@@ -25,53 +25,53 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a user in your organisation
+        /// Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert User Request object containing values for the new User to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInsertUserResponse</returns>
         CSApiResponseInsertUserResponse UsersCreateTimesheetUser (CSInsertUserRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a user in your organisation
+        /// Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert User Request object containing values for the new User to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInsertUserResponse</returns>
         ApiResponse<CSApiResponseInsertUserResponse> UsersCreateTimesheetUserWithHttpInfo (CSInsertUserRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular user in your organisation
+        /// Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The User ID of the UserForManagement you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseUserForManagement</returns>
         CSApiResponseUserForManagement UsersGetTimesheetUser (int? userId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular user in your organisation
+        /// Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The User ID of the UserForManagement you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseUserForManagement</returns>
         ApiResponse<CSApiResponseUserForManagement> UsersGetTimesheetUserWithHttpInfo (int? userId, string xChronosheetsAuth);
         /// <summary>
-        /// Get users for your organisation
+        /// Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -82,7 +82,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListUserForManagement UsersGetTimesheetUsers (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get users for your organisation
+        /// Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -92,78 +92,78 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListUserForManagement</returns>
         ApiResponse<CSApiResponseListUserForManagement> UsersGetTimesheetUsersWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Update a user
+        /// Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseUpdateUserResponse</returns>
         CSApiResponseUpdateUserResponse UsersUpdateTimesheetUser (CSUpdateUserRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a user
+        /// Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseUpdateUserResponse</returns>
         ApiResponse<CSApiResponseUpdateUserResponse> UsersUpdateTimesheetUserWithHttpInfo (CSUpdateUserRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a user in your organisation
+        /// Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert User Request object containing values for the new User to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInsertUserResponse</returns>
         System.Threading.Tasks.Task<CSApiResponseInsertUserResponse> UsersCreateTimesheetUserAsync (CSInsertUserRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a user in your organisation
+        /// Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert User Request object containing values for the new User to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInsertUserResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInsertUserResponse>> UsersCreateTimesheetUserAsyncWithHttpInfo (CSInsertUserRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular user in your organisation
+        /// Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The User ID of the UserForManagement you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseUserForManagement</returns>
         System.Threading.Tasks.Task<CSApiResponseUserForManagement> UsersGetTimesheetUserAsync (int? userId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular user in your organisation
+        /// Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The User ID of the UserForManagement you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseUserForManagement)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseUserForManagement>> UsersGetTimesheetUserAsyncWithHttpInfo (int? userId, string xChronosheetsAuth);
         /// <summary>
-        /// Get users for your organisation
+        /// Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -174,7 +174,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListUserForManagement> UsersGetTimesheetUsersAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get users for your organisation
+        /// Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -184,25 +184,25 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListUserForManagement)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserForManagement>> UsersGetTimesheetUsersAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Update a user
+        /// Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseUpdateUserResponse</returns>
         System.Threading.Tasks.Task<CSApiResponseUpdateUserResponse> UsersUpdateTimesheetUserAsync (CSUpdateUserRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a user
+        /// Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseUpdateUserResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateUserResponse>> UsersUpdateTimesheetUserAsyncWithHttpInfo (CSUpdateUserRequest request, string xChronosheetsAuth);
@@ -307,10 +307,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a user in your organisation 
+        /// Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert User Request object containing values for the new User to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInsertUserResponse</returns>
         public CSApiResponseInsertUserResponse UsersCreateTimesheetUser (CSInsertUserRequest request, string xChronosheetsAuth)
@@ -320,10 +320,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a user in your organisation 
+        /// Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert User Request object containing values for the new User to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInsertUserResponse</returns>
         public ApiResponse< CSApiResponseInsertUserResponse > UsersCreateTimesheetUserWithHttpInfo (CSInsertUserRequest request, string xChronosheetsAuth)
@@ -396,10 +396,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a user in your organisation 
+        /// Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert User Request object containing values for the new User to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInsertUserResponse</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInsertUserResponse> UsersCreateTimesheetUserAsync (CSInsertUserRequest request, string xChronosheetsAuth)
@@ -410,10 +410,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a user in your organisation 
+        /// Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert User Request object containing values for the new User to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInsertUserResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInsertUserResponse>> UsersCreateTimesheetUserAsyncWithHttpInfo (CSInsertUserRequest request, string xChronosheetsAuth)
@@ -486,10 +486,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular user in your organisation 
+        /// Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The User ID of the UserForManagement you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseUserForManagement</returns>
         public CSApiResponseUserForManagement UsersGetTimesheetUser (int? userId, string xChronosheetsAuth)
@@ -499,10 +499,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular user in your organisation 
+        /// Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The User ID of the UserForManagement you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseUserForManagement</returns>
         public ApiResponse< CSApiResponseUserForManagement > UsersGetTimesheetUserWithHttpInfo (int? userId, string xChronosheetsAuth)
@@ -562,10 +562,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular user in your organisation 
+        /// Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The User ID of the UserForManagement you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseUserForManagement</returns>
         public async System.Threading.Tasks.Task<CSApiResponseUserForManagement> UsersGetTimesheetUserAsync (int? userId, string xChronosheetsAuth)
@@ -576,10 +576,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular user in your organisation 
+        /// Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The User ID of the UserForManagement you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseUserForManagement)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseUserForManagement>> UsersGetTimesheetUserAsyncWithHttpInfo (int? userId, string xChronosheetsAuth)
@@ -639,7 +639,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get users for your organisation 
+        /// Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -651,7 +651,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get users for your organisation 
+        /// Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -709,7 +709,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get users for your organisation 
+        /// Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -722,7 +722,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get users for your organisation 
+        /// Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -780,10 +780,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a user 
+        /// Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseUpdateUserResponse</returns>
         public CSApiResponseUpdateUserResponse UsersUpdateTimesheetUser (CSUpdateUserRequest request, string xChronosheetsAuth)
@@ -793,10 +793,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a user 
+        /// Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseUpdateUserResponse</returns>
         public ApiResponse< CSApiResponseUpdateUserResponse > UsersUpdateTimesheetUserWithHttpInfo (CSUpdateUserRequest request, string xChronosheetsAuth)
@@ -869,10 +869,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a user 
+        /// Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseUpdateUserResponse</returns>
         public async System.Threading.Tasks.Task<CSApiResponseUpdateUserResponse> UsersUpdateTimesheetUserAsync (CSUpdateUserRequest request, string xChronosheetsAuth)
@@ -883,10 +883,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a user 
+        /// Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseUpdateUserResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateUserResponse>> UsersUpdateTimesheetUserAsyncWithHttpInfo (CSUpdateUserRequest request, string xChronosheetsAuth)

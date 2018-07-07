@@ -4,17 +4,17 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UsersCreateTimesheetUser**](UsersApi.md#userscreatetimesheetuser) | **PUT** /api/Users/CreateTimesheetUser | Create a user in your organisation
-[**UsersGetTimesheetUser**](UsersApi.md#usersgettimesheetuser) | **GET** /api/Users/GetTimesheetUser | Get a particular user in your organisation
-[**UsersGetTimesheetUsers**](UsersApi.md#usersgettimesheetusers) | **GET** /api/Users/GetTimesheetUsers | Get users for your organisation
-[**UsersUpdateTimesheetUser**](UsersApi.md#usersupdatetimesheetuser) | **POST** /api/Users/UpdateTimesheetUser | Update a user
+[**UsersCreateTimesheetUser**](UsersApi.md#userscreatetimesheetuser) | **PUT** /api/Users/CreateTimesheetUser | Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
+[**UsersGetTimesheetUser**](UsersApi.md#usersgettimesheetuser) | **GET** /api/Users/GetTimesheetUser | Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
+[**UsersGetTimesheetUsers**](UsersApi.md#usersgettimesheetusers) | **GET** /api/Users/GetTimesheetUsers | Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
+[**UsersUpdateTimesheetUser**](UsersApi.md#usersupdatetimesheetuser) | **POST** /api/Users/UpdateTimesheetUser | Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
 
 
 <a name="userscreatetimesheetuser"></a>
 # **UsersCreateTimesheetUser**
 > CSApiResponseInsertUserResponse UsersCreateTimesheetUser (CSInsertUserRequest request, string xChronosheetsAuth)
 
-Create a user in your organisation
+Create a user account in your organisation.  Requires the 'ManageOrganisationUsers' permission.
 
 ### Example
 ```csharp
@@ -31,12 +31,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new UsersApi();
-            var request = new CSInsertUserRequest(); // CSInsertUserRequest | 
+            var request = new CSInsertUserRequest(); // CSInsertUserRequest | An Insert User Request object containing values for the new User to create
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Create a user in your organisation
+                // Create a user account in your organisation.  Requires the 'ManageOrganisationUsers' permission.
                 CSApiResponseInsertUserResponse result = apiInstance.UsersCreateTimesheetUser(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -53,7 +53,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertUserRequest**](CSInsertUserRequest.md)|  | 
+ **request** | [**CSInsertUserRequest**](CSInsertUserRequest.md)| An Insert User Request object containing values for the new User to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -75,7 +75,7 @@ No authorization required
 # **UsersGetTimesheetUser**
 > CSApiResponseUserForManagement UsersGetTimesheetUser (int? userId, string xChronosheetsAuth)
 
-Get a particular user in your organisation
+Get a particular user in your organisation.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationGroups' permissions.
 
 ### Example
 ```csharp
@@ -92,12 +92,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new UsersApi();
-            var userId = 56;  // int? | 
+            var userId = 56;  // int? | The User ID of the UserForManagement you want to get
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Get a particular user in your organisation
+                // Get a particular user in your organisation.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationGroups' permissions.
                 CSApiResponseUserForManagement result = apiInstance.UsersGetTimesheetUser(userId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -114,7 +114,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **int?**|  | 
+ **userId** | **int?**| The User ID of the UserForManagement you want to get | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -136,7 +136,7 @@ No authorization required
 # **UsersGetTimesheetUsers**
 > CSApiResponseListUserForManagement UsersGetTimesheetUsers (string xChronosheetsAuth)
 
-Get users for your organisation
+Get users accounts in your organisation.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationGroups' permissions.
 
 ### Example
 ```csharp
@@ -157,7 +157,7 @@ namespace Example
 
             try
             {
-                // Get users for your organisation
+                // Get users accounts in your organisation.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationGroups' permissions.
                 CSApiResponseListUserForManagement result = apiInstance.UsersGetTimesheetUsers(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -195,7 +195,7 @@ No authorization required
 # **UsersUpdateTimesheetUser**
 > CSApiResponseUpdateUserResponse UsersUpdateTimesheetUser (CSUpdateUserRequest request, string xChronosheetsAuth)
 
-Update a user
+Update a user account.  Requires the 'ManageOrganisationUsers' permission.
 
 ### Example
 ```csharp
@@ -212,12 +212,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new UsersApi();
-            var request = new CSUpdateUserRequest(); // CSUpdateUserRequest | 
+            var request = new CSUpdateUserRequest(); // CSUpdateUserRequest | A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Update a user
+                // Update a user account.  Requires the 'ManageOrganisationUsers' permission.
                 CSApiResponseUpdateUserResponse result = apiInstance.UsersUpdateTimesheetUser(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -234,7 +234,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateUserRequest**](CSUpdateUserRequest.md)|  | 
+ **request** | [**CSUpdateUserRequest**](CSUpdateUserRequest.md)| A Update User Request object containing updated fields.  Make sure to specify the User Id in the request object so that ChronoSheets knows which User to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type

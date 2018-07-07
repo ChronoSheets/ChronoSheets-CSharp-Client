@@ -25,53 +25,53 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Inserts a single timesheet record
+        /// Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
+        /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         CSApiResponseInt32 TimesheetsCreateSingleTimesheet (CSTimesheet request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Inserts a single timesheet record
+        /// Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
+        /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> TimesheetsCreateSingleTimesheetWithHttpInfo (CSTimesheet request, string xChronosheetsAuth);
         /// <summary>
-        /// Delete a timesheet
+        /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timesheetId">The ID of the timesheet to delete</param>
+        /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         CSApiResponseBoolean TimesheetsDeleteTimesheet (int? timesheetId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a timesheet
+        /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timesheetId">The ID of the timesheet to delete</param>
+        /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> TimesheetsDeleteTimesheetWithHttpInfo (int? timesheetId, string xChronosheetsAuth);
         /// <summary>
-        /// Get timesheets between start and end dates
+        /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -84,7 +84,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListTimesheet TimesheetsGetTimesheets (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get timesheets between start and end dates
+        /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -96,78 +96,78 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListTimesheet</returns>
         ApiResponse<CSApiResponseListTimesheet> TimesheetsGetTimesheetsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
-        /// Batch update timesheets
+        /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The batch update timesheets request</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListInt32</returns>
         CSApiResponseListInt32 TimesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Batch update timesheets
+        /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The batch update timesheets request</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListInt32</returns>
         ApiResponse<CSApiResponseListInt32> TimesheetsUpdateTimesheetsWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Inserts a single timesheet record
+        /// Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
+        /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (CSTimesheet request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Inserts a single timesheet record
+        /// Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
+        /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (CSTimesheet request, string xChronosheetsAuth);
         /// <summary>
-        /// Delete a timesheet
+        /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timesheetId">The ID of the timesheet to delete</param>
+        /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         System.Threading.Tasks.Task<CSApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int? timesheetId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a timesheet
+        /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timesheetId">The ID of the timesheet to delete</param>
+        /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> TimesheetsDeleteTimesheetAsyncWithHttpInfo (int? timesheetId, string xChronosheetsAuth);
         /// <summary>
-        /// Get timesheets between start and end dates
+        /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -180,7 +180,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListTimesheet> TimesheetsGetTimesheetsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get timesheets between start and end dates
+        /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -192,25 +192,25 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListTimesheet)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListTimesheet>> TimesheetsGetTimesheetsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
-        /// Batch update timesheets
+        /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The batch update timesheets request</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Batch update timesheets
+        /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The batch update timesheets request</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
@@ -315,10 +315,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Inserts a single timesheet record 
+        /// Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
+        /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         public CSApiResponseInt32 TimesheetsCreateSingleTimesheet (CSTimesheet request, string xChronosheetsAuth)
@@ -328,10 +328,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Inserts a single timesheet record 
+        /// Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
+        /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         public ApiResponse< CSApiResponseInt32 > TimesheetsCreateSingleTimesheetWithHttpInfo (CSTimesheet request, string xChronosheetsAuth)
@@ -404,10 +404,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Inserts a single timesheet record 
+        /// Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
+        /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (CSTimesheet request, string xChronosheetsAuth)
@@ -418,10 +418,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Inserts a single timesheet record 
+        /// Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The timesheet request object</param>
+        /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (CSTimesheet request, string xChronosheetsAuth)
@@ -494,10 +494,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a timesheet 
+        /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timesheetId">The ID of the timesheet to delete</param>
+        /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         public CSApiResponseBoolean TimesheetsDeleteTimesheet (int? timesheetId, string xChronosheetsAuth)
@@ -507,10 +507,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a timesheet 
+        /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timesheetId">The ID of the timesheet to delete</param>
+        /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         public ApiResponse< CSApiResponseBoolean > TimesheetsDeleteTimesheetWithHttpInfo (int? timesheetId, string xChronosheetsAuth)
@@ -570,10 +570,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a timesheet 
+        /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timesheetId">The ID of the timesheet to delete</param>
+        /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         public async System.Threading.Tasks.Task<CSApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int? timesheetId, string xChronosheetsAuth)
@@ -584,10 +584,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a timesheet 
+        /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="timesheetId">The ID of the timesheet to delete</param>
+        /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> TimesheetsDeleteTimesheetAsyncWithHttpInfo (int? timesheetId, string xChronosheetsAuth)
@@ -647,7 +647,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get timesheets between start and end dates 
+        /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date of the date range</param>
@@ -661,7 +661,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get timesheets between start and end dates 
+        /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date of the date range</param>
@@ -729,7 +729,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get timesheets between start and end dates 
+        /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date of the date range</param>
@@ -744,7 +744,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get timesheets between start and end dates 
+        /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date of the date range</param>
@@ -812,10 +812,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Batch update timesheets 
+        /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The batch update timesheets request</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListInt32</returns>
         public CSApiResponseListInt32 TimesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
@@ -825,10 +825,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Batch update timesheets 
+        /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The batch update timesheets request</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListInt32</returns>
         public ApiResponse< CSApiResponseListInt32 > TimesheetsUpdateTimesheetsWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
@@ -901,10 +901,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Batch update timesheets 
+        /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The batch update timesheets request</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
@@ -915,10 +915,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Batch update timesheets 
+        /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The batch update timesheets request</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)

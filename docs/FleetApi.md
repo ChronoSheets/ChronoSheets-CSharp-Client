@@ -4,17 +4,17 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FleetCreateVehicle**](FleetApi.md#fleetcreatevehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
-[**FleetGetVehicleById**](FleetApi.md#fleetgetvehiclebyid) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle
-[**FleetGetVehicles**](FleetApi.md#fleetgetvehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation
-[**FleetUpdateVehicle**](FleetApi.md#fleetupdatevehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+[**FleetCreateVehicle**](FleetApi.md#fleetcreatevehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
+[**FleetGetVehicleById**](FleetApi.md#fleetgetvehiclebyid) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
+[**FleetGetVehicles**](FleetApi.md#fleetgetvehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
+[**FleetUpdateVehicle**](FleetApi.md#fleetupdatevehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 
 <a name="fleetcreatevehicle"></a>
 # **FleetCreateVehicle**
 > CSApiResponseInt32 FleetCreateVehicle (CSInsertVehicleRequest request, string xChronosheetsAuth)
 
-Create a vehicle.  Requires the 'ManageFleet' permission.
+Create a vehicle.    Requires the 'ManageFleet' permission.
 
 ### Example
 ```csharp
@@ -36,7 +36,7 @@ namespace Example
 
             try
             {
-                // Create a vehicle.  Requires the 'ManageFleet' permission.
+                // Create a vehicle.    Requires the 'ManageFleet' permission.
                 CSApiResponseInt32 result = apiInstance.FleetCreateVehicle(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -75,7 +75,7 @@ No authorization required
 # **FleetGetVehicleById**
 > CSApiResponseFleetVehicle FleetGetVehicleById (int? vehicleId, string xChronosheetsAuth)
 
-Get a particular vehicle
+Get a particular vehicle.  Does not require any special permission.
 
 ### Example
 ```csharp
@@ -97,7 +97,7 @@ namespace Example
 
             try
             {
-                // Get a particular vehicle
+                // Get a particular vehicle.  Does not require any special permission.
                 CSApiResponseFleetVehicle result = apiInstance.FleetGetVehicleById(vehicleId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -136,7 +136,7 @@ No authorization required
 # **FleetGetVehicles**
 > CSApiResponseListFleetVehicle FleetGetVehicles (bool? includeDeleted, string xChronosheetsAuth)
 
-Get a collection of vehicles that are under your organisation
+Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 
 ### Example
 ```csharp
@@ -158,7 +158,7 @@ namespace Example
 
             try
             {
-                // Get a collection of vehicles that are under your organisation
+                // Get a collection of vehicles that are under your organisation.    Does not require any special permission.
                 CSApiResponseListFleetVehicle result = apiInstance.FleetGetVehicles(includeDeleted, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -197,7 +197,7 @@ No authorization required
 # **FleetUpdateVehicle**
 > CSApiResponseBoolean FleetUpdateVehicle (CSSaveVehicleRequest request, string xChronosheetsAuth)
 
-Update a vehicle.  Requires the 'ManageFleet' permission.
+Update a vehicle.    Requires the 'ManageFleet' permission.
 
 ### Example
 ```csharp
@@ -219,7 +219,7 @@ namespace Example
 
             try
             {
-                // Update a vehicle.  Requires the 'ManageFleet' permission.
+                // Update a vehicle.    Requires the 'ManageFleet' permission.
                 CSApiResponseBoolean result = apiInstance.FleetUpdateVehicle(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

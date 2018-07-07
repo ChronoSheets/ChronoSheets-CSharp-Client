@@ -4,17 +4,17 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ClientsCreateClient**](ClientsApi.md#clientscreateclient) | **PUT** /api/Clients/CreateClient | Create a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
-[**ClientsGetClient**](ClientsApi.md#clientsgetclient) | **GET** /api/Clients/GetClient | Get a particular client.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
-[**ClientsGetClients**](ClientsApi.md#clientsgetclients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.  Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
-[**ClientsUpdateClient**](ClientsApi.md#clientsupdateclient) | **POST** /api/Clients/UpdateClient | Update a client.  Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**ClientsCreateClient**](ClientsApi.md#clientscreateclient) | **PUT** /api/Clients/CreateClient | Create a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**ClientsGetClient**](ClientsApi.md#clientsgetclient) | **GET** /api/Clients/GetClient | Get a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**ClientsGetClients**](ClientsApi.md#clientsgetclients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**ClientsUpdateClient**](ClientsApi.md#clientsupdateclient) | **POST** /api/Clients/UpdateClient | Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
 <a name="clientscreateclient"></a>
 # **ClientsCreateClient**
 > CSApiResponseInt32 ClientsCreateClient (CSInsertClientRequest request, string xChronosheetsAuth)
 
-Create a client.  Requires the 'ManageClientsAndProjects' permission.
+Create a client.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
 ```csharp
@@ -36,7 +36,7 @@ namespace Example
 
             try
             {
-                // Create a client.  Requires the 'ManageClientsAndProjects' permission.
+                // Create a client.    Requires the 'ManageClientsAndProjects' permission.
                 CSApiResponseInt32 result = apiInstance.ClientsCreateClient(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -75,7 +75,7 @@ No authorization required
 # **ClientsGetClient**
 > CSApiResponseClient ClientsGetClient (int? clientId, string xChronosheetsAuth)
 
-Get a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
 ```csharp
@@ -97,7 +97,7 @@ namespace Example
 
             try
             {
-                // Get a particular client.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+                // Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
                 CSApiResponseClient result = apiInstance.ClientsGetClient(clientId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -136,7 +136,7 @@ No authorization required
 # **ClientsGetClients**
 > CSApiResponseListClient ClientsGetClients (string xChronosheetsAuth)
 
-Get a collection of clients that are under your organisation.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
 ```csharp
@@ -157,7 +157,7 @@ namespace Example
 
             try
             {
-                // Get a collection of clients that are under your organisation.  Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
+                // Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
                 CSApiResponseListClient result = apiInstance.ClientsGetClients(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -195,7 +195,7 @@ No authorization required
 # **ClientsUpdateClient**
 > CSApiResponseBoolean ClientsUpdateClient (CSSaveClientRequest request, string xChronosheetsAuth)
 
-Update a client.  Requires the 'ManageClientsAndProjects' permission.
+Update a client.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
 ```csharp
@@ -217,7 +217,7 @@ namespace Example
 
             try
             {
-                // Update a client.  Requires the 'ManageClientsAndProjects' permission.
+                // Update a client.    Requires the 'ManageClientsAndProjects' permission.
                 CSApiResponseBoolean result = apiInstance.ClientsUpdateClient(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

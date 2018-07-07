@@ -4,14 +4,14 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**AggregateJobTasksGetAggregateJobTasks**](AggregateJobTasksApi.md#aggregatejobtasksgetaggregatejobtasks) | **GET** /api/AggregateJobTasks/GetAggregateJobTasks | Get jobs and tasks information, aggregated.  Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
+[**AggregateJobTasksGetAggregateJobTasks**](AggregateJobTasksApi.md#aggregatejobtasksgetaggregatejobtasks) | **GET** /api/AggregateJobTasks/GetAggregateJobTasks | Get jobs and tasks information, aggregated.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
 
 
 <a name="aggregatejobtasksgetaggregatejobtasks"></a>
 # **AggregateJobTasksGetAggregateJobTasks**
 > CSApiResponseListAggregateJobCode AggregateJobTasksGetAggregateJobTasks (string xChronosheetsAuth)
 
-Get jobs and tasks information, aggregated.  Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
+Get jobs and tasks information, aggregated.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 
 ### Example
 ```csharp
@@ -32,7 +32,7 @@ namespace Example
 
             try
             {
-                // Get jobs and tasks information, aggregated.  Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
+                // Get jobs and tasks information, aggregated.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
                 CSApiResponseListAggregateJobCode result = apiInstance.AggregateJobTasksGetAggregateJobTasks(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

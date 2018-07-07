@@ -4,18 +4,18 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**JobCodesCreateJobCode**](JobCodesApi.md#jobcodescreatejobcode) | **PUT** /api/JobCodes/CreateJobCode | Create a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
-[**JobCodesDeleteJobCode**](JobCodesApi.md#jobcodesdeletejobcode) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
-[**JobCodesGetJobCodeById**](JobCodesApi.md#jobcodesgetjobcodebyid) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
-[**JobCodesGetJobCodes**](JobCodesApi.md#jobcodesgetjobcodes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation.  Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
-[**JobCodesUpdateJobCode**](JobCodesApi.md#jobcodesupdatejobcode) | **POST** /api/JobCodes/UpdateJobCode | Update a job code.  Requires the &#39;ManageJobsAndTask&#39; permission.
+[**JobCodesCreateJobCode**](JobCodesApi.md#jobcodescreatejobcode) | **PUT** /api/JobCodes/CreateJobCode | Create a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
+[**JobCodesDeleteJobCode**](JobCodesApi.md#jobcodesdeletejobcode) | **DELETE** /api/JobCodes/DeleteJobCode | Delete a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
+[**JobCodesGetJobCodeById**](JobCodesApi.md#jobcodesgetjobcodebyid) | **GET** /api/JobCodes/GetJobCodeById | Get a particular job code by job code id.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+[**JobCodesGetJobCodes**](JobCodesApi.md#jobcodesgetjobcodes) | **GET** /api/JobCodes/GetJobCodes | Get job codes for your organisation.    Requires &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTasks&#39; permissions.
+[**JobCodesUpdateJobCode**](JobCodesApi.md#jobcodesupdatejobcode) | **POST** /api/JobCodes/UpdateJobCode | Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 
 <a name="jobcodescreatejobcode"></a>
 # **JobCodesCreateJobCode**
 > CSApiResponseInt32 JobCodesCreateJobCode (CSInsertJobCodeRequest request, string xChronosheetsAuth)
 
-Create a job code.  Requires the 'ManageJobsAndTask' permission.
+Create a job code.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
 ```csharp
@@ -37,7 +37,7 @@ namespace Example
 
             try
             {
-                // Create a job code.  Requires the 'ManageJobsAndTask' permission.
+                // Create a job code.    Requires the 'ManageJobsAndTask' permission.
                 CSApiResponseInt32 result = apiInstance.JobCodesCreateJobCode(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -76,7 +76,7 @@ No authorization required
 # **JobCodesDeleteJobCode**
 > CSApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth)
 
-Delete a job code.  Requires the 'ManageJobsAndTask' permission.
+Delete a job code.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
 ```csharp
@@ -98,7 +98,7 @@ namespace Example
 
             try
             {
-                // Delete a job code.  Requires the 'ManageJobsAndTask' permission.
+                // Delete a job code.    Requires the 'ManageJobsAndTask' permission.
                 CSApiResponseBoolean result = apiInstance.JobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -137,7 +137,7 @@ No authorization required
 # **JobCodesGetJobCodeById**
 > CSApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth)
 
-Get a particular job code by job code id.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
 ### Example
 ```csharp
@@ -159,7 +159,7 @@ namespace Example
 
             try
             {
-                // Get a particular job code by job code id.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+                // Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
                 CSApiResponseJobCode result = apiInstance.JobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -198,7 +198,7 @@ No authorization required
 # **JobCodesGetJobCodes**
 > CSApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth)
 
-Get job codes for your organisation.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+Get job codes for your organisation.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
 ### Example
 ```csharp
@@ -219,7 +219,7 @@ namespace Example
 
             try
             {
-                // Get job codes for your organisation.  Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
+                // Get job codes for your organisation.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
                 CSApiResponseListJobCode result = apiInstance.JobCodesGetJobCodes(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -257,7 +257,7 @@ No authorization required
 # **JobCodesUpdateJobCode**
 > CSApiResponseBoolean JobCodesUpdateJobCode (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
 
-Update a job code.  Requires the 'ManageJobsAndTask' permission.
+Update a job code.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
 ```csharp
@@ -279,7 +279,7 @@ namespace Example
 
             try
             {
-                // Update a job code.  Requires the 'ManageJobsAndTask' permission.
+                // Update a job code.    Requires the 'ManageJobsAndTask' permission.
                 CSApiResponseBoolean result = apiInstance.JobCodesUpdateJobCode(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

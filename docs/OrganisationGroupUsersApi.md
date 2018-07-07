@@ -4,15 +4,15 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**OrganisationGroupUsersGetOrganisationGroupUsers**](OrganisationGroupUsersApi.md#organisationgroupusersgetorganisationgroupusers) | **GET** /api/OrganisationGroupUsers/GetOrganisationGroupUsers | Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
-[**OrganisationGroupUsersUpdateOrganisationGroupUsers**](OrganisationGroupUsersApi.md#organisationgroupusersupdateorganisationgroupusers) | **POST** /api/OrganisationGroupUsers/UpdateOrganisationGroupUsers | Set the users who belong to an organisation group
+[**OrganisationGroupUsersGetOrganisationGroupUsers**](OrganisationGroupUsersApi.md#organisationgroupusersgetorganisationgroupusers) | **GET** /api/OrganisationGroupUsers/GetOrganisationGroupUsers | Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+[**OrganisationGroupUsersUpdateOrganisationGroupUsers**](OrganisationGroupUsersApi.md#organisationgroupusersupdateorganisationgroupusers) | **POST** /api/OrganisationGroupUsers/UpdateOrganisationGroupUsers | Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
 
 
 <a name="organisationgroupusersgetorganisationgroupusers"></a>
 # **OrganisationGroupUsersGetOrganisationGroupUsers**
 > CSApiResponseListUserForManagement OrganisationGroupUsersGetOrganisationGroupUsers (int? orgGroupId, string xChronosheetsAuth)
 
-Get a collection of organisation group users that belong to an organisation group.  Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
+Get a collection of organisation group users that belong to an organisation group.    Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
 
 ### Example
 ```csharp
@@ -34,7 +34,7 @@ namespace Example
 
             try
             {
-                // Get a collection of organisation group users that belong to an organisation group.  Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
+                // Get a collection of organisation group users that belong to an organisation group.    Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
                 CSApiResponseListUserForManagement result = apiInstance.OrganisationGroupUsersGetOrganisationGroupUsers(orgGroupId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -73,7 +73,7 @@ No authorization required
 # **OrganisationGroupUsersUpdateOrganisationGroupUsers**
 > CSApiResponseBoolean OrganisationGroupUsersUpdateOrganisationGroupUsers (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth)
 
-Set the users who belong to an organisation group
+Set the users who belong to an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
 
 ### Example
 ```csharp
@@ -95,7 +95,7 @@ namespace Example
 
             try
             {
-                // Set the users who belong to an organisation group
+                // Set the users who belong to an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
                 CSApiResponseBoolean result = apiInstance.OrganisationGroupUsersUpdateOrganisationGroupUsers(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

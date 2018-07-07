@@ -25,28 +25,28 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// 
+        /// Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A request object containing your username/email and password.</param>
         /// <returns>CSApiResponseDoLoginResponse</returns>
         CSApiResponseDoLoginResponse UserProfileDoLogin (CSDoLoginRequest request);
 
         /// <summary>
-        /// 
+        /// Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A request object containing your username/email and password.</param>
         /// <returns>ApiResponse of CSApiResponseDoLoginResponse</returns>
         ApiResponse<CSApiResponseDoLoginResponse> UserProfileDoLoginWithHttpInfo (CSDoLoginRequest request);
         /// <summary>
-        /// 
+        /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -57,7 +57,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseBoolean UserProfileDoLogout (string xChronosheetsAuth);
 
         /// <summary>
-        /// 
+        /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -67,7 +67,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> UserProfileDoLogoutWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// 
+        /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -78,7 +78,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseUserProfile UserProfileGetMyProfile (string xChronosheetsAuth);
 
         /// <summary>
-        /// 
+        /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -88,7 +88,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseUserProfile</returns>
         ApiResponse<CSApiResponseUserProfile> UserProfileGetMyProfileWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// 
+        /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -99,7 +99,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseBoolean UserProfileKeepSessionAlive (string xChronosheetsAuth);
 
         /// <summary>
-        /// 
+        /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -109,53 +109,53 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> UserProfileKeepSessionAliveWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// 
+        /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseUpdateProfileResponse</returns>
         CSApiResponseUpdateProfileResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// 
+        /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseUpdateProfileResponse</returns>
         ApiResponse<CSApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// 
+        /// Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A request object containing your username/email and password.</param>
         /// <returns>Task of CSApiResponseDoLoginResponse</returns>
         System.Threading.Tasks.Task<CSApiResponseDoLoginResponse> UserProfileDoLoginAsync (CSDoLoginRequest request);
 
         /// <summary>
-        /// 
+        /// Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A request object containing your username/email and password.</param>
         /// <returns>Task of ApiResponse (CSApiResponseDoLoginResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseDoLoginResponse>> UserProfileDoLoginAsyncWithHttpInfo (CSDoLoginRequest request);
         /// <summary>
-        /// 
+        /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -166,7 +166,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseBoolean> UserProfileDoLogoutAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// 
+        /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -176,7 +176,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> UserProfileDoLogoutAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// 
+        /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -187,7 +187,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseUserProfile> UserProfileGetMyProfileAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// 
+        /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -197,7 +197,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseUserProfile)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseUserProfile>> UserProfileGetMyProfileAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// 
+        /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -208,7 +208,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseBoolean> UserProfileKeepSessionAliveAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// 
+        /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -218,25 +218,25 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> UserProfileKeepSessionAliveAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// 
+        /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseUpdateProfileResponse</returns>
         System.Threading.Tasks.Task<CSApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileAsync (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// 
+        /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseUpdateProfileResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateProfileResponse>> UserProfileUpdateMyProfileAsyncWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth);
@@ -341,10 +341,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A request object containing your username/email and password.</param>
         /// <returns>CSApiResponseDoLoginResponse</returns>
         public CSApiResponseDoLoginResponse UserProfileDoLogin (CSDoLoginRequest request)
         {
@@ -353,10 +353,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A request object containing your username/email and password.</param>
         /// <returns>ApiResponse of CSApiResponseDoLoginResponse</returns>
         public ApiResponse< CSApiResponseDoLoginResponse > UserProfileDoLoginWithHttpInfo (CSDoLoginRequest request)
         {
@@ -424,10 +424,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A request object containing your username/email and password.</param>
         /// <returns>Task of CSApiResponseDoLoginResponse</returns>
         public async System.Threading.Tasks.Task<CSApiResponseDoLoginResponse> UserProfileDoLoginAsync (CSDoLoginRequest request)
         {
@@ -437,10 +437,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">A request object containing your username/email and password.</param>
         /// <returns>Task of ApiResponse (CSApiResponseDoLoginResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseDoLoginResponse>> UserProfileDoLoginAsyncWithHttpInfo (CSDoLoginRequest request)
         {
@@ -508,7 +508,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -520,7 +520,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -578,7 +578,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -591,7 +591,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -649,7 +649,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -661,7 +661,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -719,7 +719,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -732,7 +732,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -790,7 +790,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -802,7 +802,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -860,7 +860,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -873,7 +873,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -931,10 +931,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseUpdateProfileResponse</returns>
         public CSApiResponseUpdateProfileResponse UserProfileUpdateMyProfile (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
@@ -944,10 +944,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseUpdateProfileResponse</returns>
         public ApiResponse< CSApiResponseUpdateProfileResponse > UserProfileUpdateMyProfileWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
@@ -1020,10 +1020,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseUpdateProfileResponse</returns>
         public async System.Threading.Tasks.Task<CSApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileAsync (CSUpdateMyProfileRequest request, string xChronosheetsAuth)
@@ -1034,10 +1034,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        ///  
+        /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseUpdateProfileResponse)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseUpdateProfileResponse>> UserProfileUpdateMyProfileAsyncWithHttpInfo (CSUpdateMyProfileRequest request, string xChronosheetsAuth)

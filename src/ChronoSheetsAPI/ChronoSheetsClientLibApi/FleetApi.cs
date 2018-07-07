@@ -25,7 +25,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+        /// Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -37,7 +37,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseInt32 FleetCreateVehicle (CSInsertVehicleRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+        /// Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -48,7 +48,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> FleetCreateVehicleWithHttpInfo (CSInsertVehicleRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular vehicle
+        /// Get a particular vehicle.  Does not require any special permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -60,7 +60,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseFleetVehicle FleetGetVehicleById (int? vehicleId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular vehicle
+        /// Get a particular vehicle.  Does not require any special permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -71,7 +71,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseFleetVehicle</returns>
         ApiResponse<CSApiResponseFleetVehicle> FleetGetVehicleByIdWithHttpInfo (int? vehicleId, string xChronosheetsAuth);
         /// <summary>
-        /// Get a collection of vehicles that are under your organisation
+        /// Get a collection of vehicles that are under your organisation.    Does not require any special permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -83,7 +83,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListFleetVehicle FleetGetVehicles (bool? includeDeleted, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a collection of vehicles that are under your organisation
+        /// Get a collection of vehicles that are under your organisation.    Does not require any special permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -94,7 +94,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListFleetVehicle</returns>
         ApiResponse<CSApiResponseListFleetVehicle> FleetGetVehiclesWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth);
         /// <summary>
-        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+        /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -106,7 +106,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseBoolean FleetUpdateVehicle (CSSaveVehicleRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+        /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -119,7 +119,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+        /// Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -131,7 +131,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseInt32> FleetCreateVehicleAsync (CSInsertVehicleRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+        /// Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -142,7 +142,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> FleetCreateVehicleAsyncWithHttpInfo (CSInsertVehicleRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular vehicle
+        /// Get a particular vehicle.  Does not require any special permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -154,7 +154,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseFleetVehicle> FleetGetVehicleByIdAsync (int? vehicleId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular vehicle
+        /// Get a particular vehicle.  Does not require any special permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -165,7 +165,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseFleetVehicle)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseFleetVehicle>> FleetGetVehicleByIdAsyncWithHttpInfo (int? vehicleId, string xChronosheetsAuth);
         /// <summary>
-        /// Get a collection of vehicles that are under your organisation
+        /// Get a collection of vehicles that are under your organisation.    Does not require any special permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -177,7 +177,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListFleetVehicle> FleetGetVehiclesAsync (bool? includeDeleted, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a collection of vehicles that are under your organisation
+        /// Get a collection of vehicles that are under your organisation.    Does not require any special permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -188,7 +188,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListFleetVehicle)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListFleetVehicle>> FleetGetVehiclesAsyncWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth);
         /// <summary>
-        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+        /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -200,7 +200,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseBoolean> FleetUpdateVehicleAsync (CSSaveVehicleRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission.
+        /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -311,7 +311,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
+        /// Create a vehicle.    Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
@@ -324,7 +324,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
+        /// Create a vehicle.    Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
@@ -400,7 +400,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
+        /// Create a vehicle.    Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
@@ -414,7 +414,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
+        /// Create a vehicle.    Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
@@ -490,7 +490,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular vehicle 
+        /// Get a particular vehicle.  Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
@@ -503,7 +503,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular vehicle 
+        /// Get a particular vehicle.  Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
@@ -566,7 +566,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular vehicle 
+        /// Get a particular vehicle.  Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
@@ -580,7 +580,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular vehicle 
+        /// Get a particular vehicle.  Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
@@ -643,7 +643,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of vehicles that are under your organisation 
+        /// Get a collection of vehicles that are under your organisation.    Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
@@ -656,7 +656,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of vehicles that are under your organisation 
+        /// Get a collection of vehicles that are under your organisation.    Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
@@ -719,7 +719,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of vehicles that are under your organisation 
+        /// Get a collection of vehicles that are under your organisation.    Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
@@ -733,7 +733,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of vehicles that are under your organisation 
+        /// Get a collection of vehicles that are under your organisation.    Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
@@ -796,7 +796,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
+        /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
@@ -809,7 +809,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
+        /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
@@ -885,7 +885,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
+        /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
@@ -899,7 +899,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a vehicle.  Requires the &#39;ManageFleet&#39; permission. 
+        /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>

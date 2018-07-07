@@ -25,76 +25,76 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a task
+        /// Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         CSApiResponseInt32 TasksCreateTask (CSInsertTaskRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a task
+        /// Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> TasksCreateTaskWithHttpInfo (CSInsertTaskRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Delete a task
+        /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         CSApiResponseBoolean TasksDeleteTask (int? taskId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a task
+        /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> TasksDeleteTaskWithHttpInfo (int? taskId, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular task by id
+        /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseTimesheetTask</returns>
         CSApiResponseTimesheetTask TasksGetTaskById (int? taskId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular task by id
+        /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseTimesheetTask</returns>
         ApiResponse<CSApiResponseTimesheetTask> TasksGetTaskByIdWithHttpInfo (int? taskId, string xChronosheetsAuth);
         /// <summary>
-        /// Get tasks in your organisation
+        /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -105,7 +105,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListTimesheetTask TasksGetTasks (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get tasks in your organisation
+        /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -115,7 +115,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListTimesheetTask</returns>
         ApiResponse<CSApiResponseListTimesheetTask> TasksGetTasksWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Get tasks for a particular job
+        /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -127,7 +127,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListTimesheetTask TasksGetTasksForJob (int? jobId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get tasks for a particular job
+        /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -138,101 +138,101 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListTimesheetTask</returns>
         ApiResponse<CSApiResponseListTimesheetTask> TasksGetTasksForJobWithHttpInfo (int? jobId, string xChronosheetsAuth);
         /// <summary>
-        /// Update a task
+        /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         CSApiResponseBoolean TasksUpdateTask (CSUpdateTaskRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a task
+        /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> TasksUpdateTaskWithHttpInfo (CSUpdateTaskRequest request, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a task
+        /// Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseInt32> TasksCreateTaskAsync (CSInsertTaskRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a task
+        /// Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TasksCreateTaskAsyncWithHttpInfo (CSInsertTaskRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Delete a task
+        /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         System.Threading.Tasks.Task<CSApiResponseBoolean> TasksDeleteTaskAsync (int? taskId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a task
+        /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> TasksDeleteTaskAsyncWithHttpInfo (int? taskId, string xChronosheetsAuth);
         /// <summary>
-        /// Get a particular task by id
+        /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseTimesheetTask</returns>
         System.Threading.Tasks.Task<CSApiResponseTimesheetTask> TasksGetTaskByIdAsync (int? taskId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a particular task by id
+        /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseTimesheetTask)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseTimesheetTask>> TasksGetTaskByIdAsyncWithHttpInfo (int? taskId, string xChronosheetsAuth);
         /// <summary>
-        /// Get tasks in your organisation
+        /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -243,7 +243,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListTimesheetTask> TasksGetTasksAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get tasks in your organisation
+        /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -253,7 +253,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListTimesheetTask)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListTimesheetTask>> TasksGetTasksAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Get tasks for a particular job
+        /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -265,7 +265,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListTimesheetTask> TasksGetTasksForJobAsync (int? jobId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get tasks for a particular job
+        /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -276,25 +276,25 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListTimesheetTask)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListTimesheetTask>> TasksGetTasksForJobAsyncWithHttpInfo (int? jobId, string xChronosheetsAuth);
         /// <summary>
-        /// Update a task
+        /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         System.Threading.Tasks.Task<CSApiResponseBoolean> TasksUpdateTaskAsync (CSUpdateTaskRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update a task
+        /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> TasksUpdateTaskAsyncWithHttpInfo (CSUpdateTaskRequest request, string xChronosheetsAuth);
@@ -399,10 +399,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a task 
+        /// Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         public CSApiResponseInt32 TasksCreateTask (CSInsertTaskRequest request, string xChronosheetsAuth)
@@ -412,10 +412,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a task 
+        /// Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         public ApiResponse< CSApiResponseInt32 > TasksCreateTaskWithHttpInfo (CSInsertTaskRequest request, string xChronosheetsAuth)
@@ -488,10 +488,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a task 
+        /// Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInt32> TasksCreateTaskAsync (CSInsertTaskRequest request, string xChronosheetsAuth)
@@ -502,10 +502,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a task 
+        /// Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TasksCreateTaskAsyncWithHttpInfo (CSInsertTaskRequest request, string xChronosheetsAuth)
@@ -578,10 +578,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a task 
+        /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         public CSApiResponseBoolean TasksDeleteTask (int? taskId, string xChronosheetsAuth)
@@ -591,10 +591,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a task 
+        /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         public ApiResponse< CSApiResponseBoolean > TasksDeleteTaskWithHttpInfo (int? taskId, string xChronosheetsAuth)
@@ -654,10 +654,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a task 
+        /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         public async System.Threading.Tasks.Task<CSApiResponseBoolean> TasksDeleteTaskAsync (int? taskId, string xChronosheetsAuth)
@@ -668,10 +668,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a task 
+        /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> TasksDeleteTaskAsyncWithHttpInfo (int? taskId, string xChronosheetsAuth)
@@ -731,10 +731,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular task by id 
+        /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseTimesheetTask</returns>
         public CSApiResponseTimesheetTask TasksGetTaskById (int? taskId, string xChronosheetsAuth)
@@ -744,10 +744,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular task by id 
+        /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseTimesheetTask</returns>
         public ApiResponse< CSApiResponseTimesheetTask > TasksGetTaskByIdWithHttpInfo (int? taskId, string xChronosheetsAuth)
@@ -807,10 +807,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular task by id 
+        /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseTimesheetTask</returns>
         public async System.Threading.Tasks.Task<CSApiResponseTimesheetTask> TasksGetTaskByIdAsync (int? taskId, string xChronosheetsAuth)
@@ -821,10 +821,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a particular task by id 
+        /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="taskId"></param>
+        /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseTimesheetTask)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseTimesheetTask>> TasksGetTaskByIdAsyncWithHttpInfo (int? taskId, string xChronosheetsAuth)
@@ -884,7 +884,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get tasks in your organisation 
+        /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -896,7 +896,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get tasks in your organisation 
+        /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -954,7 +954,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get tasks in your organisation 
+        /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -967,7 +967,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get tasks in your organisation 
+        /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -1025,7 +1025,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get tasks for a particular job 
+        /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
@@ -1038,7 +1038,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get tasks for a particular job 
+        /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
@@ -1101,7 +1101,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get tasks for a particular job 
+        /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
@@ -1115,7 +1115,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get tasks for a particular job 
+        /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
@@ -1178,10 +1178,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a task 
+        /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         public CSApiResponseBoolean TasksUpdateTask (CSUpdateTaskRequest request, string xChronosheetsAuth)
@@ -1191,10 +1191,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a task 
+        /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         public ApiResponse< CSApiResponseBoolean > TasksUpdateTaskWithHttpInfo (CSUpdateTaskRequest request, string xChronosheetsAuth)
@@ -1267,10 +1267,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a task 
+        /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         public async System.Threading.Tasks.Task<CSApiResponseBoolean> TasksUpdateTaskAsync (CSUpdateTaskRequest request, string xChronosheetsAuth)
@@ -1281,10 +1281,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update a task 
+        /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> TasksUpdateTaskAsyncWithHttpInfo (CSUpdateTaskRequest request, string xChronosheetsAuth)

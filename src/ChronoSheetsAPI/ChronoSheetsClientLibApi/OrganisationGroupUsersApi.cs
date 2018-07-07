@@ -25,7 +25,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -37,7 +37,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListUserForManagement OrganisationGroupUsersGetOrganisationGroupUsers (int? orgGroupId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -48,7 +48,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListUserForManagement</returns>
         ApiResponse<CSApiResponseListUserForManagement> OrganisationGroupUsersGetOrganisationGroupUsersWithHttpInfo (int? orgGroupId, string xChronosheetsAuth);
         /// <summary>
-        /// Set the users who belong to an organisation group
+        /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -60,7 +60,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseBoolean OrganisationGroupUsersUpdateOrganisationGroupUsers (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Set the users who belong to an organisation group
+        /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -73,7 +73,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -85,7 +85,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListUserForManagement> OrganisationGroupUsersGetOrganisationGroupUsersAsync (int? orgGroupId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+        /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -96,7 +96,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListUserForManagement)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserForManagement>> OrganisationGroupUsersGetOrganisationGroupUsersAsyncWithHttpInfo (int? orgGroupId, string xChronosheetsAuth);
         /// <summary>
-        /// Set the users who belong to an organisation group
+        /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -108,7 +108,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseBoolean> OrganisationGroupUsersUpdateOrganisationGroupUsersAsync (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Set the users who belong to an organisation group
+        /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
         /// <remarks>
         /// 
@@ -219,7 +219,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orgGroupId">An OrganisatioGroup Id</param>
@@ -232,7 +232,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orgGroupId">An OrganisatioGroup Id</param>
@@ -295,7 +295,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orgGroupId">An OrganisatioGroup Id</param>
@@ -309,7 +309,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of organisation group users that belong to an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
+        /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orgGroupId">An OrganisatioGroup Id</param>
@@ -372,7 +372,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Set the users who belong to an organisation group 
+        /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
@@ -385,7 +385,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Set the users who belong to an organisation group 
+        /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
@@ -461,7 +461,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Set the users who belong to an organisation group 
+        /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
@@ -475,7 +475,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Set the users who belong to an organisation group 
+        /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>

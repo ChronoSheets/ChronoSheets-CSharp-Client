@@ -4,19 +4,19 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**OrganisationGroupsCreateOrganisationGroup**](OrganisationGroupsApi.md#organisationgroupscreateorganisationgroup) | **PUT** /api/OrganisationGroups/CreateOrganisationGroup | Create an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
-[**OrganisationGroupsGetOrganisationGroup**](OrganisationGroupsApi.md#organisationgroupsgetorganisationgroup) | **GET** /api/OrganisationGroups/GetOrganisationGroup | Get a particular organisation group.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
-[**OrganisationGroupsGetOrganisationGroups**](OrganisationGroupsApi.md#organisationgroupsgetorganisationgroups) | **GET** /api/OrganisationGroups/GetOrganisationGroups | Get a collection of organisation groups that are under your organisation.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
-[**OrganisationGroupsGetOrganisationGroupsForJob**](OrganisationGroupsApi.md#organisationgroupsgetorganisationgroupsforjob) | **GET** /api/OrganisationGroups/GetOrganisationGroupsForJob | Get org groups for a particular job.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
-[**OrganisationGroupsGetOrganisationGroupsForVehicle**](OrganisationGroupsApi.md#organisationgroupsgetorganisationgroupsforvehicle) | **GET** /api/OrganisationGroups/GetOrganisationGroupsForVehicle | Get org groups for a particular vehicle.  Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
-[**OrganisationGroupsUpdateOrganisationGroup**](OrganisationGroupsApi.md#organisationgroupsupdateorganisationgroup) | **POST** /api/OrganisationGroups/UpdateOrganisationGroup | Update an organisation group.  Requires the &#39;ManageOrganisationGroups&#39; permissions.
+[**OrganisationGroupsCreateOrganisationGroup**](OrganisationGroupsApi.md#organisationgroupscreateorganisationgroup) | **PUT** /api/OrganisationGroups/CreateOrganisationGroup | Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
+[**OrganisationGroupsGetOrganisationGroup**](OrganisationGroupsApi.md#organisationgroupsgetorganisationgroup) | **GET** /api/OrganisationGroups/GetOrganisationGroup | Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+[**OrganisationGroupsGetOrganisationGroups**](OrganisationGroupsApi.md#organisationgroupsgetorganisationgroups) | **GET** /api/OrganisationGroups/GetOrganisationGroups | Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+[**OrganisationGroupsGetOrganisationGroupsForJob**](OrganisationGroupsApi.md#organisationgroupsgetorganisationgroupsforjob) | **GET** /api/OrganisationGroups/GetOrganisationGroupsForJob | Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+[**OrganisationGroupsGetOrganisationGroupsForVehicle**](OrganisationGroupsApi.md#organisationgroupsgetorganisationgroupsforvehicle) | **GET** /api/OrganisationGroups/GetOrganisationGroupsForVehicle | Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+[**OrganisationGroupsUpdateOrganisationGroup**](OrganisationGroupsApi.md#organisationgroupsupdateorganisationgroup) | **POST** /api/OrganisationGroups/UpdateOrganisationGroup | Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
 
 
 <a name="organisationgroupscreateorganisationgroup"></a>
 # **OrganisationGroupsCreateOrganisationGroup**
 > CSApiResponseInt32 OrganisationGroupsCreateOrganisationGroup (CSInsertOrganisationGroupRequest request, string xChronosheetsAuth)
 
-Create an organisation group.  Requires the 'ManageOrganisationGroups' permissions.
+Create an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
 
 ### Example
 ```csharp
@@ -38,7 +38,7 @@ namespace Example
 
             try
             {
-                // Create an organisation group.  Requires the 'ManageOrganisationGroups' permissions.
+                // Create an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
                 CSApiResponseInt32 result = apiInstance.OrganisationGroupsCreateOrganisationGroup(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -77,7 +77,7 @@ No authorization required
 # **OrganisationGroupsGetOrganisationGroup**
 > CSApiResponseOrganisationGroup OrganisationGroupsGetOrganisationGroup (int? organisationGroupId, string xChronosheetsAuth)
 
-Get a particular organisation group.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
+Get a particular organisation group.    Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
 
 ### Example
 ```csharp
@@ -99,7 +99,7 @@ namespace Example
 
             try
             {
-                // Get a particular organisation group.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
+                // Get a particular organisation group.    Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
                 CSApiResponseOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroup(organisationGroupId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -138,7 +138,7 @@ No authorization required
 # **OrganisationGroupsGetOrganisationGroups**
 > CSApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroups (string xChronosheetsAuth)
 
-Get a collection of organisation groups that are under your organisation.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
+Get a collection of organisation groups that are under your organisation.    Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
 
 ### Example
 ```csharp
@@ -159,7 +159,7 @@ namespace Example
 
             try
             {
-                // Get a collection of organisation groups that are under your organisation.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
+                // Get a collection of organisation groups that are under your organisation.    Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
                 CSApiResponseListOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroups(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -197,7 +197,7 @@ No authorization required
 # **OrganisationGroupsGetOrganisationGroupsForJob**
 > CSApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroupsForJob (int? jobId, string xChronosheetsAuth)
 
-Get org groups for a particular job.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
+Get org groups for a particular job.    Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
 
 ### Example
 ```csharp
@@ -219,7 +219,7 @@ namespace Example
 
             try
             {
-                // Get org groups for a particular job.  Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
+                // Get org groups for a particular job.    Requires the 'ManageOrganisationGroups', 'ManageJobsAndTask', 'ManageClientsAndProjects' or 'ManageOrganisationUsers' permissions.
                 CSApiResponseListOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroupsForJob(jobId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -258,7 +258,7 @@ No authorization required
 # **OrganisationGroupsGetOrganisationGroupsForVehicle**
 > CSApiResponseListOrganisationGroup OrganisationGroupsGetOrganisationGroupsForVehicle (int? vehicleId, string xChronosheetsAuth)
 
-Get org groups for a particular vehicle.  Requires the 'ManageOrganisationGroups', 'ManageFleet' or 'ManageOrganisationUsers' permissions.
+Get org groups for a particular vehicle.    Requires the 'ManageOrganisationGroups', 'ManageFleet' or 'ManageOrganisationUsers' permissions.
 
 ### Example
 ```csharp
@@ -280,7 +280,7 @@ namespace Example
 
             try
             {
-                // Get org groups for a particular vehicle.  Requires the 'ManageOrganisationGroups', 'ManageFleet' or 'ManageOrganisationUsers' permissions.
+                // Get org groups for a particular vehicle.    Requires the 'ManageOrganisationGroups', 'ManageFleet' or 'ManageOrganisationUsers' permissions.
                 CSApiResponseListOrganisationGroup result = apiInstance.OrganisationGroupsGetOrganisationGroupsForVehicle(vehicleId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -319,7 +319,7 @@ No authorization required
 # **OrganisationGroupsUpdateOrganisationGroup**
 > CSApiResponseBoolean OrganisationGroupsUpdateOrganisationGroup (CSSaveOrganisationGroupRequest request, string xChronosheetsAuth)
 
-Update an organisation group.  Requires the 'ManageOrganisationGroups' permissions.
+Update an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
 
 ### Example
 ```csharp
@@ -341,7 +341,7 @@ namespace Example
 
             try
             {
-                // Update an organisation group.  Requires the 'ManageOrganisationGroups' permissions.
+                // Update an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
                 CSApiResponseBoolean result = apiInstance.OrganisationGroupsUpdateOrganisationGroup(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

@@ -25,96 +25,96 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a new pay rate for a particular user, archiving the previous pay rate
+        /// Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         CSApiResponseInt32 UserPayRatesCreatePayRate (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a new pay rate for a particular user, archiving the previous pay rate
+        /// Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> UserPayRatesCreatePayRateWithHttpInfo (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get a collection of pay rates for a particular user, specified by user id
+        /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListUserHourlyRate</returns>
         CSApiResponseListUserHourlyRate UserPayRatesGetPayRates (int? userId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a collection of pay rates for a particular user, specified by user id
+        /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListUserHourlyRate</returns>
         ApiResponse<CSApiResponseListUserHourlyRate> UserPayRatesGetPayRatesWithHttpInfo (int? userId, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a new pay rate for a particular user, archiving the previous pay rate
+        /// Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseInt32> UserPayRatesCreatePayRateAsync (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a new pay rate for a particular user, archiving the previous pay rate
+        /// Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> UserPayRatesCreatePayRateAsyncWithHttpInfo (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get a collection of pay rates for a particular user, specified by user id
+        /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListUserHourlyRate</returns>
         System.Threading.Tasks.Task<CSApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int? userId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get a collection of pay rates for a particular user, specified by user id
+        /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListUserHourlyRate)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesAsyncWithHttpInfo (int? userId, string xChronosheetsAuth);
@@ -219,10 +219,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a new pay rate for a particular user, archiving the previous pay rate 
+        /// Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         public CSApiResponseInt32 UserPayRatesCreatePayRate (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth)
@@ -232,10 +232,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a new pay rate for a particular user, archiving the previous pay rate 
+        /// Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         public ApiResponse< CSApiResponseInt32 > UserPayRatesCreatePayRateWithHttpInfo (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth)
@@ -308,10 +308,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a new pay rate for a particular user, archiving the previous pay rate 
+        /// Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInt32> UserPayRatesCreatePayRateAsync (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth)
@@ -322,10 +322,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a new pay rate for a particular user, archiving the previous pay rate 
+        /// Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request"></param>
+        /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> UserPayRatesCreatePayRateAsyncWithHttpInfo (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth)
@@ -398,10 +398,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of pay rates for a particular user, specified by user id 
+        /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListUserHourlyRate</returns>
         public CSApiResponseListUserHourlyRate UserPayRatesGetPayRates (int? userId, string xChronosheetsAuth)
@@ -411,10 +411,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of pay rates for a particular user, specified by user id 
+        /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListUserHourlyRate</returns>
         public ApiResponse< CSApiResponseListUserHourlyRate > UserPayRatesGetPayRatesWithHttpInfo (int? userId, string xChronosheetsAuth)
@@ -474,10 +474,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of pay rates for a particular user, specified by user id 
+        /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListUserHourlyRate</returns>
         public async System.Threading.Tasks.Task<CSApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int? userId, string xChronosheetsAuth)
@@ -488,10 +488,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get a collection of pay rates for a particular user, specified by user id 
+        /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="userId"></param>
+        /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListUserHourlyRate)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesAsyncWithHttpInfo (int? userId, string xChronosheetsAuth)

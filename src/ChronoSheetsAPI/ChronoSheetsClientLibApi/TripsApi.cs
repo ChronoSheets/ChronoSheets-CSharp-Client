@@ -25,158 +25,158 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The create trip request</param>
+        /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         CSApiResponseInt32 TripsCreateTrip (CSCreateTripRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The create trip request</param>
+        /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> TripsCreateTripWithHttpInfo (CSCreateTripRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get trip by Id
+        /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tripId">The ID of the trip</param>
+        /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseTrip</returns>
         CSApiResponseTrip TripsGetMyTripById (int? tripId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get trip by Id
+        /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tripId">The ID of the trip</param>
+        /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseTrip</returns>
         ApiResponse<CSApiResponseTrip> TripsGetMyTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
-        /// Get my trips
+        /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="skip"></param>
-        /// <param name="take"></param>
-        /// <param name="vehicleId"></param>
+        /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
+        /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
+        /// <param name="skip">Skip this many Trips</param>
+        /// <param name="take">Take this many Trips</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseForPaginatedListTrip</returns>
         CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get my trips
+        /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="skip"></param>
-        /// <param name="take"></param>
-        /// <param name="vehicleId"></param>
+        /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
+        /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
+        /// <param name="skip">Skip this many Trips</param>
+        /// <param name="take">Take this many Trips</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseForPaginatedListTrip</returns>
         ApiResponse<CSApiResponseForPaginatedListTrip> TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The create trip request</param>
+        /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseInt32> TripsCreateTripAsync (CSCreateTripRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.
+        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The create trip request</param>
+        /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TripsCreateTripAsyncWithHttpInfo (CSCreateTripRequest request, string xChronosheetsAuth);
         /// <summary>
-        /// Get trip by Id
+        /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tripId">The ID of the trip</param>
+        /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseTrip</returns>
         System.Threading.Tasks.Task<CSApiResponseTrip> TripsGetMyTripByIdAsync (int? tripId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get trip by Id
+        /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tripId">The ID of the trip</param>
+        /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseTrip)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseTrip>> TripsGetMyTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
-        /// Get my trips
+        /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="skip"></param>
-        /// <param name="take"></param>
-        /// <param name="vehicleId"></param>
+        /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
+        /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
+        /// <param name="skip">Skip this many Trips</param>
+        /// <param name="take">Take this many Trips</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseForPaginatedListTrip</returns>
         System.Threading.Tasks.Task<CSApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get my trips
+        /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="skip"></param>
-        /// <param name="take"></param>
-        /// <param name="vehicleId"></param>
+        /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
+        /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
+        /// <param name="skip">Skip this many Trips</param>
+        /// <param name="take">Take this many Trips</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTrip)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
@@ -281,10 +281,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference. 
+        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The create trip request</param>
+        /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         public CSApiResponseInt32 TripsCreateTrip (CSCreateTripRequest request, string xChronosheetsAuth)
@@ -294,10 +294,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference. 
+        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The create trip request</param>
+        /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         public ApiResponse< CSApiResponseInt32 > TripsCreateTripWithHttpInfo (CSCreateTripRequest request, string xChronosheetsAuth)
@@ -370,10 +370,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference. 
+        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The create trip request</param>
+        /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInt32> TripsCreateTripAsync (CSCreateTripRequest request, string xChronosheetsAuth)
@@ -384,10 +384,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference. 
+        /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">The create trip request</param>
+        /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TripsCreateTripAsyncWithHttpInfo (CSCreateTripRequest request, string xChronosheetsAuth)
@@ -460,10 +460,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get trip by Id 
+        /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tripId">The ID of the trip</param>
+        /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseTrip</returns>
         public CSApiResponseTrip TripsGetMyTripById (int? tripId, string xChronosheetsAuth)
@@ -473,10 +473,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get trip by Id 
+        /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tripId">The ID of the trip</param>
+        /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseTrip</returns>
         public ApiResponse< CSApiResponseTrip > TripsGetMyTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth)
@@ -536,10 +536,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get trip by Id 
+        /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tripId">The ID of the trip</param>
+        /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseTrip</returns>
         public async System.Threading.Tasks.Task<CSApiResponseTrip> TripsGetMyTripByIdAsync (int? tripId, string xChronosheetsAuth)
@@ -550,10 +550,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get trip by Id 
+        /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="tripId">The ID of the trip</param>
+        /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseTrip)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseTrip>> TripsGetMyTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth)
@@ -613,14 +613,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get my trips 
+        /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="skip"></param>
-        /// <param name="take"></param>
-        /// <param name="vehicleId"></param>
+        /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
+        /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
+        /// <param name="skip">Skip this many Trips</param>
+        /// <param name="take">Take this many Trips</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseForPaginatedListTrip</returns>
         public CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
@@ -630,14 +630,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get my trips 
+        /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="skip"></param>
-        /// <param name="take"></param>
-        /// <param name="vehicleId"></param>
+        /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
+        /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
+        /// <param name="skip">Skip this many Trips</param>
+        /// <param name="take">Take this many Trips</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseForPaginatedListTrip</returns>
         public ApiResponse< CSApiResponseForPaginatedListTrip > TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
@@ -713,14 +713,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get my trips 
+        /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="skip"></param>
-        /// <param name="take"></param>
-        /// <param name="vehicleId"></param>
+        /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
+        /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
+        /// <param name="skip">Skip this many Trips</param>
+        /// <param name="take">Take this many Trips</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseForPaginatedListTrip</returns>
         public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
@@ -731,14 +731,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get my trips 
+        /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="startDate"></param>
-        /// <param name="endDate"></param>
-        /// <param name="skip"></param>
-        /// <param name="take"></param>
-        /// <param name="vehicleId"></param>
+        /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
+        /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
+        /// <param name="skip">Skip this many Trips</param>
+        /// <param name="take">Take this many Trips</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTrip)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)

@@ -25,7 +25,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+        /// Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -36,7 +36,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+        /// Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -46,7 +46,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseOrganisation</returns>
         ApiResponse<CSApiResponseOrganisation> OrganisationGetOrganisationWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+        /// Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -58,7 +58,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+        /// Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -71,7 +71,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+        /// Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -82,7 +82,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseOrganisation> OrganisationGetOrganisationAsync (string xChronosheetsAuth);
 
         /// <summary>
-        /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+        /// Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -92,7 +92,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseOrganisation)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseOrganisation>> OrganisationGetOrganisationAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
-        /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+        /// Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -104,7 +104,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseUpdateOrganisationResponse> OrganisationUpdateOrganisationAsync (CSUpdateOrganisationRequest request, string xChronosheetsAuth);
 
         /// <summary>
-        /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission.
+        /// Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -215,7 +215,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
+        /// Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -227,7 +227,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
+        /// Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -285,7 +285,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
+        /// Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -298,7 +298,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get your organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
+        /// Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
@@ -356,7 +356,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
+        /// Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
@@ -369,7 +369,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
+        /// Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
@@ -445,7 +445,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
+        /// Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>
@@ -459,7 +459,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Update an organisation.  Requires &#39;OrganisationAdmin&#39; permission. 
+        /// Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update</param>

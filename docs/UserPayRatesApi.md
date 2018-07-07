@@ -4,15 +4,15 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UserPayRatesCreatePayRate**](UserPayRatesApi.md#userpayratescreatepayrate) | **PUT** /api/UserPayRates/CreatePayRate | Create a new pay rate for a particular user, archiving the previous pay rate
-[**UserPayRatesGetPayRates**](UserPayRatesApi.md#userpayratesgetpayrates) | **GET** /api/UserPayRates/GetPayRates | Get a collection of pay rates for a particular user, specified by user id
+[**UserPayRatesCreatePayRate**](UserPayRatesApi.md#userpayratescreatepayrate) | **PUT** /api/UserPayRates/CreatePayRate | Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
+[**UserPayRatesGetPayRates**](UserPayRatesApi.md#userpayratesgetpayrates) | **GET** /api/UserPayRates/GetPayRates | Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
 
 
 <a name="userpayratescreatepayrate"></a>
 # **UserPayRatesCreatePayRate**
 > CSApiResponseInt32 UserPayRatesCreatePayRate (CSInsertUserHourlyRateRequest request, string xChronosheetsAuth)
 
-Create a new pay rate for a particular user, archiving the previous pay rate
+Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the 'ManageOrganisationUsers' permission.
 
 ### Example
 ```csharp
@@ -29,12 +29,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new UserPayRatesApi();
-            var request = new CSInsertUserHourlyRateRequest(); // CSInsertUserHourlyRateRequest | 
+            var request = new CSInsertUserHourlyRateRequest(); // CSInsertUserHourlyRateRequest | An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Create a new pay rate for a particular user, archiving the previous pay rate
+                // Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the 'ManageOrganisationUsers' permission.
                 CSApiResponseInt32 result = apiInstance.UserPayRatesCreatePayRate(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -51,7 +51,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertUserHourlyRateRequest**](CSInsertUserHourlyRateRequest.md)|  | 
+ **request** | [**CSInsertUserHourlyRateRequest**](CSInsertUserHourlyRateRequest.md)| An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
@@ -73,7 +73,7 @@ No authorization required
 # **UserPayRatesGetPayRates**
 > CSApiResponseListUserHourlyRate UserPayRatesGetPayRates (int? userId, string xChronosheetsAuth)
 
-Get a collection of pay rates for a particular user, specified by user id
+Get a collection of pay rates for a particular user, specified by user id.    Requires the 'ManageOrganisationUsers' permission.
 
 ### Example
 ```csharp
@@ -90,12 +90,12 @@ namespace Example
         public void main()
         {
             var apiInstance = new UserPayRatesApi();
-            var userId = 56;  // int? | 
+            var userId = 56;  // int? | The ID of the User for which you want to get UserHourlyRate objects
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
-                // Get a collection of pay rates for a particular user, specified by user id
+                // Get a collection of pay rates for a particular user, specified by user id.    Requires the 'ManageOrganisationUsers' permission.
                 CSApiResponseListUserHourlyRate result = apiInstance.UserPayRatesGetPayRates(userId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -112,7 +112,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **int?**|  | 
+ **userId** | **int?**| The ID of the User for which you want to get UserHourlyRate objects | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type

@@ -25,7 +25,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -39,7 +39,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -52,7 +52,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseCombinedReportsData</returns>
         ApiResponse<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
         /// <summary>
-        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
+        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -65,7 +65,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseCombinedReportsData ReportsGetAllChartsDataUser (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
+        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -77,7 +77,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseCombinedReportsData</returns>
         ApiResponse<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataUserWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
-        /// Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -89,7 +89,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseTrip ReportsGetOrgTripById (int? tripId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -100,7 +100,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseTrip</returns>
         ApiResponse<CSApiResponseTrip> ReportsGetOrgTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -116,7 +116,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment ReportsGetOrganisationTimesheetFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -131,7 +131,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
         ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
         /// <summary>
-        /// Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -147,7 +147,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseForPaginatedListOrgReportTrip ReportsGetOrganisationTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -162,7 +162,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTrip</returns>
         ApiResponse<CSApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
         /// <summary>
-        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -180,7 +180,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseForPaginatedListRawReportItem ReportsGetRawDataAdmin (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -197,7 +197,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseForPaginatedListRawReportItem</returns>
         ApiResponse<CSApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
         /// <summary>
-        /// Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -211,7 +211,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListProjectCostingReportItem ReportsProjectCostingsAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -224,7 +224,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseListProjectCostingReportItem</returns>
         ApiResponse<CSApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
         /// <summary>
-        /// Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
+        /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
         /// </summary>
         /// <remarks>
         /// 
@@ -237,7 +237,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseListJobSeriesReportItem ReportsUserJobsOverTime (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
-        /// Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
+        /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
         /// </summary>
         /// <remarks>
         /// 
@@ -251,7 +251,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -265,7 +265,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -278,7 +278,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseCombinedReportsData)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
         /// <summary>
-        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
+        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -291,7 +291,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataUserAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission.
+        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -303,7 +303,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseCombinedReportsData)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
-        /// Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -315,7 +315,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseTrip> ReportsGetOrgTripByIdAsync (int? tripId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -326,7 +326,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseTrip)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseTrip>> ReportsGetOrgTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -342,7 +342,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -357,7 +357,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
         /// <summary>
-        /// Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -373,7 +373,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -388,7 +388,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTrip)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTrip>> ReportsGetOrganisationTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
         /// <summary>
-        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -406,7 +406,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
 
         /// <summary>
-        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -423,7 +423,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListRawReportItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string sort, string order, int? skip, int? take, string xChronosheetsAuth);
         /// <summary>
-        /// Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -437,7 +437,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission.
+        /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -450,7 +450,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseListProjectCostingReportItem)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListProjectCostingReportItem>> ReportsProjectCostingsAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
         /// <summary>
-        /// Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
+        /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
         /// </summary>
         /// <remarks>
         /// 
@@ -463,7 +463,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
 
         /// <summary>
-        /// Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
+        /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
         /// </summary>
         /// <remarks>
         /// 
@@ -575,7 +575,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -590,7 +590,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -663,7 +663,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -679,7 +679,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -752,7 +752,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission. 
+        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -766,7 +766,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission. 
+        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -834,7 +834,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission. 
+        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -849,7 +849,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.  Requires the &#39;ViewOwnReports&#39; permission. 
+        /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -917,7 +917,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
@@ -930,7 +930,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
@@ -993,7 +993,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
@@ -1007,7 +1007,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get trip by Id, for reporting purposes.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
@@ -1070,7 +1070,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1087,7 +1087,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1170,7 +1170,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1188,7 +1188,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1271,7 +1271,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1288,7 +1288,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1371,7 +1371,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1389,7 +1389,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation trips (GPS tracking from whole organisation).  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1472,7 +1472,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1491,7 +1491,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1584,7 +1584,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1604,7 +1604,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1697,7 +1697,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1712,7 +1712,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1785,7 +1785,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1801,7 +1801,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Gets project cost estimations VS actual cost for date range and users.  Requires the &#39;ReportAdmin&#39; permission. 
+        /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1874,7 +1874,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;. 
+        /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1888,7 +1888,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;. 
+        /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1956,7 +1956,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;. 
+        /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1971,7 +1971,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Timeseries jobs data for the logged in user.  Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;. 
+        /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
