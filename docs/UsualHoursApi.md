@@ -5,7 +5,7 @@ All URIs are relative to *https://www.chronosheets.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**UsualHoursGetUsualHours**](UsualHoursApi.md#usualhoursgetusualhours) | **GET** /api/UsualHours/GetUsualHours | Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
-[**UsualHoursSetUsualHours**](UsualHoursApi.md#usualhourssetusualhours) | **POST** /api/UsualHours/SetUsualHours | Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+[**UsualHoursSetUsualHours**](UsualHoursApi.md#usualhourssetusualhours) | **PUT** /api/UsualHours/SetUsualHours | Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
 
 
 <a name="usualhoursgetusualhours"></a>

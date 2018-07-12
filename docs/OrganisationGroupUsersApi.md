@@ -5,7 +5,7 @@ All URIs are relative to *https://www.chronosheets.com*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**OrganisationGroupUsersGetOrganisationGroupUsers**](OrganisationGroupUsersApi.md#organisationgroupusersgetorganisationgroupusers) | **GET** /api/OrganisationGroupUsers/GetOrganisationGroupUsers | Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
-[**OrganisationGroupUsersUpdateOrganisationGroupUsers**](OrganisationGroupUsersApi.md#organisationgroupusersupdateorganisationgroupusers) | **POST** /api/OrganisationGroupUsers/UpdateOrganisationGroupUsers | Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
+[**OrganisationGroupUsersUpdateOrganisationGroupUsers**](OrganisationGroupUsersApi.md#organisationgroupusersupdateorganisationgroupusers) | **PUT** /api/OrganisationGroupUsers/UpdateOrganisationGroupUsers | Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
 
 
 <a name="organisationgroupusersgetorganisationgroupusers"></a>

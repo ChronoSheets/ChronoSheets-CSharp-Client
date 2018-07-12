@@ -4,10 +4,10 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FleetCreateVehicle**](FleetApi.md#fleetcreatevehicle) | **PUT** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
+[**FleetCreateVehicle**](FleetApi.md#fleetcreatevehicle) | **POST** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 [**FleetGetVehicleById**](FleetApi.md#fleetgetvehiclebyid) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
 [**FleetGetVehicles**](FleetApi.md#fleetgetvehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
-[**FleetUpdateVehicle**](FleetApi.md#fleetupdatevehicle) | **POST** /api/Fleet/UpdateVehicle | Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
+[**FleetUpdateVehicle**](FleetApi.md#fleetupdatevehicle) | **PUT** /api/Fleet/UpdateVehicle | Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 
 <a name="fleetcreatevehicle"></a>

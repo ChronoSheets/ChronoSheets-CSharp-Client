@@ -4,10 +4,10 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**ClientsCreateClient**](ClientsApi.md#clientscreateclient) | **PUT** /api/Clients/CreateClient | Create a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**ClientsCreateClient**](ClientsApi.md#clientscreateclient) | **POST** /api/Clients/CreateClient | Create a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 [**ClientsGetClient**](ClientsApi.md#clientsgetclient) | **GET** /api/Clients/GetClient | Get a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
 [**ClientsGetClients**](ClientsApi.md#clientsgetclients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
-[**ClientsUpdateClient**](ClientsApi.md#clientsupdateclient) | **POST** /api/Clients/UpdateClient | Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
+[**ClientsUpdateClient**](ClientsApi.md#clientsupdateclient) | **PUT** /api/Clients/UpdateClient | Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
 <a name="clientscreateclient"></a>

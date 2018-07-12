@@ -4,12 +4,12 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**TasksCreateTask**](TasksApi.md#taskscreatetask) | **PUT** /api/Tasks/CreateTask | Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
+[**TasksCreateTask**](TasksApi.md#taskscreatetask) | **POST** /api/Tasks/CreateTask | Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
 [**TasksDeleteTask**](TasksApi.md#tasksdeletetask) | **DELETE** /api/Tasks/DeleteTask | Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
 [**TasksGetTaskById**](TasksApi.md#tasksgettaskbyid) | **GET** /api/Tasks/GetTaskById | Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
 [**TasksGetTasks**](TasksApi.md#tasksgettasks) | **GET** /api/Tasks/GetTasks | Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
 [**TasksGetTasksForJob**](TasksApi.md#tasksgettasksforjob) | **GET** /api/Tasks/GetTasksForJob | Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
-[**TasksUpdateTask**](TasksApi.md#tasksupdatetask) | **POST** /api/Tasks/UpdateTask | Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
+[**TasksUpdateTask**](TasksApi.md#tasksupdatetask) | **PUT** /api/Tasks/UpdateTask | Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 
 <a name="taskscreatetask"></a>
