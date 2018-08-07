@@ -25,11 +25,91 @@ using SwaggerDateConverter = ChronoSheetsAPI.Client.SwaggerDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// CSOrgReportTimesheetFileAttachment
+    /// CSOrgReportTranscript
     /// </summary>
     [DataContract]
-    public partial class CSOrgReportTimesheetFileAttachment :  IEquatable<CSOrgReportTimesheetFileAttachment>, IValidatableObject
+    public partial class CSOrgReportTranscript :  IEquatable<CSOrgReportTranscript>, IValidatableObject
     {
+        /// <summary>
+        /// Defines MediaType
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum MediaTypeEnum
+        {
+            
+            /// <summary>
+            /// Enum Other for value: Other
+            /// </summary>
+            [EnumMember(Value = "Other")]
+            Other = 1,
+            
+            /// <summary>
+            /// Enum Mp3 for value: Mp3
+            /// </summary>
+            [EnumMember(Value = "Mp3")]
+            Mp3 = 2,
+            
+            /// <summary>
+            /// Enum Mp4 for value: Mp4
+            /// </summary>
+            [EnumMember(Value = "Mp4")]
+            Mp4 = 3,
+            
+            /// <summary>
+            /// Enum Wav for value: Wav
+            /// </summary>
+            [EnumMember(Value = "Wav")]
+            Wav = 4,
+            
+            /// <summary>
+            /// Enum Flac for value: Flac
+            /// </summary>
+            [EnumMember(Value = "Flac")]
+            Flac = 5
+        }
+
+        /// <summary>
+        /// Gets or Sets MediaType
+        /// </summary>
+        [DataMember(Name="MediaType", EmitDefaultValue=false)]
+        public MediaTypeEnum? MediaType { get; set; }
+        /// <summary>
+        /// Defines TranscriptionStatus
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum TranscriptionStatusEnum
+        {
+            
+            /// <summary>
+            /// Enum Saved for value: Saved
+            /// </summary>
+            [EnumMember(Value = "Saved")]
+            Saved = 1,
+            
+            /// <summary>
+            /// Enum Processing for value: Processing
+            /// </summary>
+            [EnumMember(Value = "Processing")]
+            Processing = 2,
+            
+            /// <summary>
+            /// Enum Completed for value: Completed
+            /// </summary>
+            [EnumMember(Value = "Completed")]
+            Completed = 3,
+            
+            /// <summary>
+            /// Enum FailedWithError for value: FailedWithError
+            /// </summary>
+            [EnumMember(Value = "FailedWithError")]
+            FailedWithError = 4
+        }
+
+        /// <summary>
+        /// Gets or Sets TranscriptionStatus
+        /// </summary>
+        [DataMember(Name="TranscriptionStatus", EmitDefaultValue=false)]
+        public TranscriptionStatusEnum? TranscriptionStatus { get; set; }
         /// <summary>
         /// Defines MobilePlatform
         /// </summary>
@@ -129,8 +209,17 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         [DataMember(Name="AttachmentType", EmitDefaultValue=false)]
         public AttachmentTypeEnum? AttachmentType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CSOrgReportTimesheetFileAttachment" /> class.
+        /// Initializes a new instance of the <see cref="CSOrgReportTranscript" /> class.
         /// </summary>
+        /// <param name="FinishedJob">FinishedJob.</param>
+        /// <param name="CompletedProcessing">CompletedProcessing.</param>
+        /// <param name="Created">Created.</param>
+        /// <param name="StartedProcessing">StartedProcessing.</param>
+        /// <param name="TranscriptionId">TranscriptionId.</param>
+        /// <param name="JobName">JobName.</param>
+        /// <param name="Contents">Contents.</param>
+        /// <param name="MediaType">MediaType.</param>
+        /// <param name="TranscriptionStatus">TranscriptionStatus.</param>
         /// <param name="Username">Username.</param>
         /// <param name="EmailAddress">EmailAddress.</param>
         /// <param name="FirstName">FirstName.</param>
@@ -158,8 +247,17 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="DateUploaded">DateUploaded.</param>
         /// <param name="DateImageCaptured">DateImageCaptured.</param>
         /// <param name="StorageAllocationBytes">StorageAllocationBytes.</param>
-        public CSOrgReportTimesheetFileAttachment(string Username = default(string), string EmailAddress = default(string), string FirstName = default(string), string LastName = default(string), int? TimesheetId = default(int?), string DocumentS3SignedUrl = default(string), string ImageLargeS3SignedUrl = default(string), string ImageMediumS3SignedUrl = default(string), string ImageSmallS3SignedUrl = default(string), DateTime? TimesheetStart = default(DateTime?), DateTime? TimesheetEnd = default(DateTime?), int? FileAttachmentId = default(int?), int? UserId = default(int?), int? OrgId = default(int?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?), AttachmentTypeEnum? AttachmentType = default(AttachmentTypeEnum?), string Notes = default(string), string NonImageFilePath = default(string), string ImageLargeFilePath = default(string), string ImageMediumFilePath = default(string), string ImageSmallFilePath = default(string), string OriginalFileName = default(string), double? Latitude = default(double?), double? Longitude = default(double?), DateTime? DateUploaded = default(DateTime?), DateTime? DateImageCaptured = default(DateTime?), long? StorageAllocationBytes = default(long?))
+        public CSOrgReportTranscript(bool? FinishedJob = default(bool?), DateTime? CompletedProcessing = default(DateTime?), DateTime? Created = default(DateTime?), DateTime? StartedProcessing = default(DateTime?), int? TranscriptionId = default(int?), string JobName = default(string), string Contents = default(string), MediaTypeEnum? MediaType = default(MediaTypeEnum?), TranscriptionStatusEnum? TranscriptionStatus = default(TranscriptionStatusEnum?), string Username = default(string), string EmailAddress = default(string), string FirstName = default(string), string LastName = default(string), int? TimesheetId = default(int?), string DocumentS3SignedUrl = default(string), string ImageLargeS3SignedUrl = default(string), string ImageMediumS3SignedUrl = default(string), string ImageSmallS3SignedUrl = default(string), DateTime? TimesheetStart = default(DateTime?), DateTime? TimesheetEnd = default(DateTime?), int? FileAttachmentId = default(int?), int? UserId = default(int?), int? OrgId = default(int?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?), AttachmentTypeEnum? AttachmentType = default(AttachmentTypeEnum?), string Notes = default(string), string NonImageFilePath = default(string), string ImageLargeFilePath = default(string), string ImageMediumFilePath = default(string), string ImageSmallFilePath = default(string), string OriginalFileName = default(string), double? Latitude = default(double?), double? Longitude = default(double?), DateTime? DateUploaded = default(DateTime?), DateTime? DateImageCaptured = default(DateTime?), long? StorageAllocationBytes = default(long?))
         {
+            this.FinishedJob = FinishedJob;
+            this.CompletedProcessing = CompletedProcessing;
+            this.Created = Created;
+            this.StartedProcessing = StartedProcessing;
+            this.TranscriptionId = TranscriptionId;
+            this.JobName = JobName;
+            this.Contents = Contents;
+            this.MediaType = MediaType;
+            this.TranscriptionStatus = TranscriptionStatus;
             this.Username = Username;
             this.EmailAddress = EmailAddress;
             this.FirstName = FirstName;
@@ -189,6 +287,50 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             this.StorageAllocationBytes = StorageAllocationBytes;
         }
         
+        /// <summary>
+        /// Gets or Sets FinishedJob
+        /// </summary>
+        [DataMember(Name="FinishedJob", EmitDefaultValue=false)]
+        public bool? FinishedJob { get; set; }
+
+        /// <summary>
+        /// Gets or Sets CompletedProcessing
+        /// </summary>
+        [DataMember(Name="CompletedProcessing", EmitDefaultValue=false)]
+        public DateTime? CompletedProcessing { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Created
+        /// </summary>
+        [DataMember(Name="Created", EmitDefaultValue=false)]
+        public DateTime? Created { get; set; }
+
+        /// <summary>
+        /// Gets or Sets StartedProcessing
+        /// </summary>
+        [DataMember(Name="StartedProcessing", EmitDefaultValue=false)]
+        public DateTime? StartedProcessing { get; set; }
+
+        /// <summary>
+        /// Gets or Sets TranscriptionId
+        /// </summary>
+        [DataMember(Name="TranscriptionId", EmitDefaultValue=false)]
+        public int? TranscriptionId { get; set; }
+
+        /// <summary>
+        /// Gets or Sets JobName
+        /// </summary>
+        [DataMember(Name="JobName", EmitDefaultValue=false)]
+        public string JobName { get; set; }
+
+        /// <summary>
+        /// Gets or Sets Contents
+        /// </summary>
+        [DataMember(Name="Contents", EmitDefaultValue=false)]
+        public string Contents { get; set; }
+
+
+
         /// <summary>
         /// Gets or Sets Username
         /// </summary>
@@ -348,7 +490,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CSOrgReportTimesheetFileAttachment {\n");
+            sb.Append("class CSOrgReportTranscript {\n");
+            sb.Append("  FinishedJob: ").Append(FinishedJob).Append("\n");
+            sb.Append("  CompletedProcessing: ").Append(CompletedProcessing).Append("\n");
+            sb.Append("  Created: ").Append(Created).Append("\n");
+            sb.Append("  StartedProcessing: ").Append(StartedProcessing).Append("\n");
+            sb.Append("  TranscriptionId: ").Append(TranscriptionId).Append("\n");
+            sb.Append("  JobName: ").Append(JobName).Append("\n");
+            sb.Append("  Contents: ").Append(Contents).Append("\n");
+            sb.Append("  MediaType: ").Append(MediaType).Append("\n");
+            sb.Append("  TranscriptionStatus: ").Append(TranscriptionStatus).Append("\n");
             sb.Append("  Username: ").Append(Username).Append("\n");
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  FirstName: ").Append(FirstName).Append("\n");
@@ -396,20 +547,65 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CSOrgReportTimesheetFileAttachment);
+            return this.Equals(input as CSOrgReportTranscript);
         }
 
         /// <summary>
-        /// Returns true if CSOrgReportTimesheetFileAttachment instances are equal
+        /// Returns true if CSOrgReportTranscript instances are equal
         /// </summary>
-        /// <param name="input">Instance of CSOrgReportTimesheetFileAttachment to be compared</param>
+        /// <param name="input">Instance of CSOrgReportTranscript to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CSOrgReportTimesheetFileAttachment input)
+        public bool Equals(CSOrgReportTranscript input)
         {
             if (input == null)
                 return false;
 
             return 
+                (
+                    this.FinishedJob == input.FinishedJob ||
+                    (this.FinishedJob != null &&
+                    this.FinishedJob.Equals(input.FinishedJob))
+                ) && 
+                (
+                    this.CompletedProcessing == input.CompletedProcessing ||
+                    (this.CompletedProcessing != null &&
+                    this.CompletedProcessing.Equals(input.CompletedProcessing))
+                ) && 
+                (
+                    this.Created == input.Created ||
+                    (this.Created != null &&
+                    this.Created.Equals(input.Created))
+                ) && 
+                (
+                    this.StartedProcessing == input.StartedProcessing ||
+                    (this.StartedProcessing != null &&
+                    this.StartedProcessing.Equals(input.StartedProcessing))
+                ) && 
+                (
+                    this.TranscriptionId == input.TranscriptionId ||
+                    (this.TranscriptionId != null &&
+                    this.TranscriptionId.Equals(input.TranscriptionId))
+                ) && 
+                (
+                    this.JobName == input.JobName ||
+                    (this.JobName != null &&
+                    this.JobName.Equals(input.JobName))
+                ) && 
+                (
+                    this.Contents == input.Contents ||
+                    (this.Contents != null &&
+                    this.Contents.Equals(input.Contents))
+                ) && 
+                (
+                    this.MediaType == input.MediaType ||
+                    (this.MediaType != null &&
+                    this.MediaType.Equals(input.MediaType))
+                ) && 
+                (
+                    this.TranscriptionStatus == input.TranscriptionStatus ||
+                    (this.TranscriptionStatus != null &&
+                    this.TranscriptionStatus.Equals(input.TranscriptionStatus))
+                ) && 
                 (
                     this.Username == input.Username ||
                     (this.Username != null &&
@@ -556,6 +752,24 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
+                if (this.FinishedJob != null)
+                    hashCode = hashCode * 59 + this.FinishedJob.GetHashCode();
+                if (this.CompletedProcessing != null)
+                    hashCode = hashCode * 59 + this.CompletedProcessing.GetHashCode();
+                if (this.Created != null)
+                    hashCode = hashCode * 59 + this.Created.GetHashCode();
+                if (this.StartedProcessing != null)
+                    hashCode = hashCode * 59 + this.StartedProcessing.GetHashCode();
+                if (this.TranscriptionId != null)
+                    hashCode = hashCode * 59 + this.TranscriptionId.GetHashCode();
+                if (this.JobName != null)
+                    hashCode = hashCode * 59 + this.JobName.GetHashCode();
+                if (this.Contents != null)
+                    hashCode = hashCode * 59 + this.Contents.GetHashCode();
+                if (this.MediaType != null)
+                    hashCode = hashCode * 59 + this.MediaType.GetHashCode();
+                if (this.TranscriptionStatus != null)
+                    hashCode = hashCode * 59 + this.TranscriptionStatus.GetHashCode();
                 if (this.Username != null)
                     hashCode = hashCode * 59 + this.Username.GetHashCode();
                 if (this.EmailAddress != null)

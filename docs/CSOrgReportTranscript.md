@@ -1,8 +1,17 @@
-# ChronoSheetsAPI.ChronoSheetsClientLibModel.CSOrgReportTimesheetFileAttachment
+# ChronoSheetsAPI.ChronoSheetsClientLibModel.CSOrgReportTranscript
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**FinishedJob** | **bool?** |  | [optional] 
+**CompletedProcessing** | **DateTime?** |  | [optional] 
+**Created** | **DateTime?** |  | [optional] 
+**StartedProcessing** | **DateTime?** |  | [optional] 
+**TranscriptionId** | **int?** |  | [optional] 
+**JobName** | **string** |  | [optional] 
+**Contents** | **string** |  | [optional] 
+**MediaType** | **string** |  | [optional] 
+**TranscriptionStatus** | **string** |  | [optional] 
 **Username** | **string** |  | [optional] 
 **EmailAddress** | **string** |  | [optional] 
 **FirstName** | **string** |  | [optional] 

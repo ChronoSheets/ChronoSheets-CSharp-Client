@@ -1,16 +1,15 @@
-# ChronoSheetsAPI.ChronoSheetsClientLibModel.CSProjectCostingReportItem
+# ChronoSheetsAPI.ChronoSheetsClientLibModel.CSAggregateProject
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ProjectId** | **int?** |  | [optional] 
-**ProjectName** | **string** |  | [optional] 
+**Id** | **int?** |  | [optional] 
 **ClientId** | **int?** |  | [optional] 
 **OrganisationId** | **int?** |  | [optional] 
-**ClientName** | **string** |  | [optional] 
-**EstimatedCost** | **double?** |  | [optional] 
-**ActualCostFiltered** | **double?** |  | [optional] 
-**ActualCost** | **double?** |  | [optional] 
+**ProjectName** | **string** |  | [optional] 
+**CostEstimation** | **double?** |  | [optional] 
+**StartDate** | **DateTime?** |  | [optional] 
+**EndDate** | **DateTime?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

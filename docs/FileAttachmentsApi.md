@@ -1,0 +1,76 @@
+# ChronoSheetsAPI.ChronoSheetsClientLibApi.FileAttachmentsApi
+
+All URIs are relative to *https://www.chronosheets.com*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**FileAttachmentsGetMyFileAttachments**](FileAttachmentsApi.md#fileattachmentsgetmyfileattachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
+
+
+<a name="fileattachmentsgetmyfileattachments"></a>
+# **FileAttachmentsGetMyFileAttachments**
+> CSApiResponseForPaginatedListTimesheetFileAttachment FileAttachmentsGetMyFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth)
+
+Get my file attachments.  Get files you've attached to timesheets.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class FileAttachmentsGetMyFileAttachmentsExample
+    {
+        public void main()
+        {
+            var apiInstance = new FileAttachmentsApi();
+            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The Start date of the date range.  File attachments after this date will be obtained.
+            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The End date of the date range.  File attachments before this date will be obtained.
+            var skip = 56;  // int? | Skip this many File attachments
+            var take = 56;  // int? | Take this many File attachments
+            var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+
+            try
+            {
+                // Get my file attachments.  Get files you've attached to timesheets.
+                CSApiResponseForPaginatedListTimesheetFileAttachment result = apiInstance.FileAttachmentsGetMyFileAttachments(startDate, endDate, skip, take, xChronosheetsAuth);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FileAttachmentsApi.FileAttachmentsGetMyFileAttachments: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **startDate** | **DateTime?**| The Start date of the date range.  File attachments after this date will be obtained. | 
+ **endDate** | **DateTime?**| The End date of the date range.  File attachments before this date will be obtained. | 
+ **skip** | **int?**| Skip this many File attachments | 
+ **take** | **int?**| Take this many File attachments | 
+ **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**CSApiResponseForPaginatedListTimesheetFileAttachment**](CSApiResponseForPaginatedListTimesheetFileAttachment.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+

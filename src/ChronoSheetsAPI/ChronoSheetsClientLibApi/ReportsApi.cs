@@ -77,6 +77,33 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseCombinedReportsData</returns>
         ApiResponse<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataUserWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
+        /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseListFleetSummaryReportItem</returns>
+        CSApiResponseListFleetSummaryReportItem ReportsGetFleetSummaryAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseListFleetSummaryReportItem</returns>
+        ApiResponse<CSApiResponseListFleetSummaryReportItem> ReportsGetFleetSummaryAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <summary>
         /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
@@ -100,7 +127,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of CSApiResponseTrip</returns>
         ApiResponse<CSApiResponseTrip> ReportsGetOrgTripByIdWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -116,7 +143,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment ReportsGetOrganisationTimesheetFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -130,6 +157,39 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
         ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <summary>
+        /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="skip">Skip this many items</param>
+        /// <param name="take">Take this many items</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="keywords">Search the transcripts by keyword(s)</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseForPaginatedListOrgReportTranscript</returns>
+        CSApiResponseForPaginatedListOrgReportTranscript ReportsGetOrganisationTranscripts (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string keywords, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="skip">Skip this many items</param>
+        /// <param name="take">Take this many items</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="keywords">Search the transcripts by keyword(s)</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTranscript</returns>
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> ReportsGetOrganisationTranscriptsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string keywords, string xChronosheetsAuth);
         /// <summary>
         /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
@@ -303,6 +363,33 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseCombinedReportsData)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth);
         /// <summary>
+        /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseListFleetSummaryReportItem</returns>
+        System.Threading.Tasks.Task<CSApiResponseListFleetSummaryReportItem> ReportsGetFleetSummaryAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseListFleetSummaryReportItem)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListFleetSummaryReportItem>> ReportsGetFleetSummaryAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth);
+        /// <summary>
         /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
@@ -326,7 +413,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>Task of ApiResponse (CSApiResponseTrip)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseTrip>> ReportsGetOrgTripByIdAsyncWithHttpInfo (int? tripId, string xChronosheetsAuth);
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -342,7 +429,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission.
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -356,6 +443,39 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string xChronosheetsAuth);
+        /// <summary>
+        /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="skip">Skip this many items</param>
+        /// <param name="take">Take this many items</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="keywords">Search the transcripts by keyword(s)</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseForPaginatedListOrgReportTranscript</returns>
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTranscript> ReportsGetOrganisationTranscriptsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string keywords, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="skip">Skip this many items</param>
+        /// <param name="take">Take this many items</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="keywords">Search the transcripts by keyword(s)</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTranscript)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript>> ReportsGetOrganisationTranscriptsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string keywords, string xChronosheetsAuth);
         /// <summary>
         /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
@@ -917,6 +1037,183 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
+        /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseListFleetSummaryReportItem</returns>
+        public CSApiResponseListFleetSummaryReportItem ReportsGetFleetSummaryAdmin (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseListFleetSummaryReportItem> localVarResponse = ReportsGetFleetSummaryAdminWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseListFleetSummaryReportItem</returns>
+        public ApiResponse< CSApiResponseListFleetSummaryReportItem > ReportsGetFleetSummaryAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'startDate' is set
+            if (startDate == null)
+                throw new ApiException(400, "Missing required parameter 'startDate' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
+            // verify the required parameter 'endDate' is set
+            if (endDate == null)
+                throw new ApiException(400, "Missing required parameter 'endDate' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
+            // verify the required parameter 'userIds' is set
+            if (userIds == null)
+                throw new ApiException(400, "Missing required parameter 'userIds' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
+
+            var localVarPath = "/api/Reports/GetFleetSummaryAdmin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
+            if (userIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "UserIds", userIds)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportsGetFleetSummaryAdmin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseListFleetSummaryReportItem>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseListFleetSummaryReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListFleetSummaryReportItem)));
+        }
+
+        /// <summary>
+        /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseListFleetSummaryReportItem</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseListFleetSummaryReportItem> ReportsGetFleetSummaryAdminAsync (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseListFleetSummaryReportItem> localVarResponse = await ReportsGetFleetSummaryAdminAsyncWithHttpInfo(startDate, endDate, userIds, xChronosheetsAuth);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseListFleetSummaryReportItem)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListFleetSummaryReportItem>> ReportsGetFleetSummaryAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string userIds, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'startDate' is set
+            if (startDate == null)
+                throw new ApiException(400, "Missing required parameter 'startDate' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
+            // verify the required parameter 'endDate' is set
+            if (endDate == null)
+                throw new ApiException(400, "Missing required parameter 'endDate' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
+            // verify the required parameter 'userIds' is set
+            if (userIds == null)
+                throw new ApiException(400, "Missing required parameter 'userIds' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
+
+            var localVarPath = "/api/Reports/GetFleetSummaryAdmin";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
+            if (userIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "UserIds", userIds)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportsGetFleetSummaryAdmin", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseListFleetSummaryReportItem>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseListFleetSummaryReportItem) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseListFleetSummaryReportItem)));
+        }
+
+        /// <summary>
         /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
@@ -1070,7 +1367,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1087,7 +1384,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1170,7 +1467,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1188,7 +1485,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records.    Requires the &#39;ReportAdmin&#39; permission. 
+        /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
@@ -1268,6 +1565,219 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             return new ApiResponse<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment)));
+        }
+
+        /// <summary>
+        /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="skip">Skip this many items</param>
+        /// <param name="take">Take this many items</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="keywords">Search the transcripts by keyword(s)</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseForPaginatedListOrgReportTranscript</returns>
+        public CSApiResponseForPaginatedListOrgReportTranscript ReportsGetOrganisationTranscripts (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string keywords, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> localVarResponse = ReportsGetOrganisationTranscriptsWithHttpInfo(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="skip">Skip this many items</param>
+        /// <param name="take">Take this many items</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="keywords">Search the transcripts by keyword(s)</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTranscript</returns>
+        public ApiResponse< CSApiResponseForPaginatedListOrgReportTranscript > ReportsGetOrganisationTranscriptsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string keywords, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'startDate' is set
+            if (startDate == null)
+                throw new ApiException(400, "Missing required parameter 'startDate' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'endDate' is set
+            if (endDate == null)
+                throw new ApiException(400, "Missing required parameter 'endDate' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'skip' is set
+            if (skip == null)
+                throw new ApiException(400, "Missing required parameter 'skip' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'take' is set
+            if (take == null)
+                throw new ApiException(400, "Missing required parameter 'take' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'userIds' is set
+            if (userIds == null)
+                throw new ApiException(400, "Missing required parameter 'userIds' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'keywords' is set
+            if (keywords == null)
+                throw new ApiException(400, "Missing required parameter 'keywords' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+
+            var localVarPath = "/api/Reports/GetOrganisationTranscripts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
+            if (skip != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Skip", skip)); // query parameter
+            if (take != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Take", take)); // query parameter
+            if (userIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "UserIds", userIds)); // query parameter
+            if (keywords != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Keywords", keywords)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportsGetOrganisationTranscripts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseForPaginatedListOrgReportTranscript) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListOrgReportTranscript)));
+        }
+
+        /// <summary>
+        /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="skip">Skip this many items</param>
+        /// <param name="take">Take this many items</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="keywords">Search the transcripts by keyword(s)</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseForPaginatedListOrgReportTranscript</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTranscript> ReportsGetOrganisationTranscriptsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string keywords, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> localVarResponse = await ReportsGetOrganisationTranscriptsAsyncWithHttpInfo(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
+        /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
+        /// <param name="skip">Skip this many items</param>
+        /// <param name="take">Take this many items</param>
+        /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string.</param>
+        /// <param name="keywords">Search the transcripts by keyword(s)</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTranscript)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript>> ReportsGetOrganisationTranscriptsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string userIds, string keywords, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'startDate' is set
+            if (startDate == null)
+                throw new ApiException(400, "Missing required parameter 'startDate' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'endDate' is set
+            if (endDate == null)
+                throw new ApiException(400, "Missing required parameter 'endDate' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'skip' is set
+            if (skip == null)
+                throw new ApiException(400, "Missing required parameter 'skip' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'take' is set
+            if (take == null)
+                throw new ApiException(400, "Missing required parameter 'take' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'userIds' is set
+            if (userIds == null)
+                throw new ApiException(400, "Missing required parameter 'userIds' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'keywords' is set
+            if (keywords == null)
+                throw new ApiException(400, "Missing required parameter 'keywords' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrganisationTranscripts");
+
+            var localVarPath = "/api/Reports/GetOrganisationTranscripts";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
+            if (skip != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Skip", skip)); // query parameter
+            if (take != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Take", take)); // query parameter
+            if (userIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "UserIds", userIds)); // query parameter
+            if (keywords != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Keywords", keywords)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("ReportsGetOrganisationTranscripts", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseForPaginatedListOrgReportTranscript) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListOrgReportTranscript)));
         }
 
         /// <summary>

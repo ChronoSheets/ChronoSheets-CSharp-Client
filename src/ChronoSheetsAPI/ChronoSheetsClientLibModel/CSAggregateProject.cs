@@ -25,45 +25,37 @@ using SwaggerDateConverter = ChronoSheetsAPI.Client.SwaggerDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// CSProjectCostingReportItem
+    /// CSAggregateProject
     /// </summary>
     [DataContract]
-    public partial class CSProjectCostingReportItem :  IEquatable<CSProjectCostingReportItem>, IValidatableObject
+    public partial class CSAggregateProject :  IEquatable<CSAggregateProject>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="CSProjectCostingReportItem" /> class.
+        /// Initializes a new instance of the <see cref="CSAggregateProject" /> class.
         /// </summary>
-        /// <param name="ProjectId">ProjectId.</param>
-        /// <param name="ProjectName">ProjectName.</param>
+        /// <param name="Id">Id.</param>
         /// <param name="ClientId">ClientId.</param>
         /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="ClientName">ClientName.</param>
-        /// <param name="EstimatedCost">EstimatedCost.</param>
-        /// <param name="ActualCostFiltered">ActualCostFiltered.</param>
-        /// <param name="ActualCost">ActualCost.</param>
-        public CSProjectCostingReportItem(int? ProjectId = default(int?), string ProjectName = default(string), int? ClientId = default(int?), int? OrganisationId = default(int?), string ClientName = default(string), double? EstimatedCost = default(double?), double? ActualCostFiltered = default(double?), double? ActualCost = default(double?))
+        /// <param name="ProjectName">ProjectName.</param>
+        /// <param name="CostEstimation">CostEstimation.</param>
+        /// <param name="StartDate">StartDate.</param>
+        /// <param name="EndDate">EndDate.</param>
+        public CSAggregateProject(int? Id = default(int?), int? ClientId = default(int?), int? OrganisationId = default(int?), string ProjectName = default(string), double? CostEstimation = default(double?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?))
         {
-            this.ProjectId = ProjectId;
-            this.ProjectName = ProjectName;
+            this.Id = Id;
             this.ClientId = ClientId;
             this.OrganisationId = OrganisationId;
-            this.ClientName = ClientName;
-            this.EstimatedCost = EstimatedCost;
-            this.ActualCostFiltered = ActualCostFiltered;
-            this.ActualCost = ActualCost;
+            this.ProjectName = ProjectName;
+            this.CostEstimation = CostEstimation;
+            this.StartDate = StartDate;
+            this.EndDate = EndDate;
         }
         
         /// <summary>
-        /// Gets or Sets ProjectId
+        /// Gets or Sets Id
         /// </summary>
-        [DataMember(Name="ProjectId", EmitDefaultValue=false)]
-        public int? ProjectId { get; set; }
-
-        /// <summary>
-        /// Gets or Sets ProjectName
-        /// </summary>
-        [DataMember(Name="ProjectName", EmitDefaultValue=false)]
-        public string ProjectName { get; set; }
+        [DataMember(Name="Id", EmitDefaultValue=false)]
+        public int? Id { get; set; }
 
         /// <summary>
         /// Gets or Sets ClientId
@@ -78,28 +70,28 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public int? OrganisationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientName
+        /// Gets or Sets ProjectName
         /// </summary>
-        [DataMember(Name="ClientName", EmitDefaultValue=false)]
-        public string ClientName { get; set; }
+        [DataMember(Name="ProjectName", EmitDefaultValue=false)]
+        public string ProjectName { get; set; }
 
         /// <summary>
-        /// Gets or Sets EstimatedCost
+        /// Gets or Sets CostEstimation
         /// </summary>
-        [DataMember(Name="EstimatedCost", EmitDefaultValue=false)]
-        public double? EstimatedCost { get; set; }
+        [DataMember(Name="CostEstimation", EmitDefaultValue=false)]
+        public double? CostEstimation { get; set; }
 
         /// <summary>
-        /// Gets or Sets ActualCostFiltered
+        /// Gets or Sets StartDate
         /// </summary>
-        [DataMember(Name="ActualCostFiltered", EmitDefaultValue=false)]
-        public double? ActualCostFiltered { get; set; }
+        [DataMember(Name="StartDate", EmitDefaultValue=false)]
+        public DateTime? StartDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets ActualCost
+        /// Gets or Sets EndDate
         /// </summary>
-        [DataMember(Name="ActualCost", EmitDefaultValue=false)]
-        public double? ActualCost { get; set; }
+        [DataMember(Name="EndDate", EmitDefaultValue=false)]
+        public DateTime? EndDate { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -108,15 +100,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CSProjectCostingReportItem {\n");
-            sb.Append("  ProjectId: ").Append(ProjectId).Append("\n");
-            sb.Append("  ProjectName: ").Append(ProjectName).Append("\n");
+            sb.Append("class CSAggregateProject {\n");
+            sb.Append("  Id: ").Append(Id).Append("\n");
             sb.Append("  ClientId: ").Append(ClientId).Append("\n");
             sb.Append("  OrganisationId: ").Append(OrganisationId).Append("\n");
-            sb.Append("  ClientName: ").Append(ClientName).Append("\n");
-            sb.Append("  EstimatedCost: ").Append(EstimatedCost).Append("\n");
-            sb.Append("  ActualCostFiltered: ").Append(ActualCostFiltered).Append("\n");
-            sb.Append("  ActualCost: ").Append(ActualCost).Append("\n");
+            sb.Append("  ProjectName: ").Append(ProjectName).Append("\n");
+            sb.Append("  CostEstimation: ").Append(CostEstimation).Append("\n");
+            sb.Append("  StartDate: ").Append(StartDate).Append("\n");
+            sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -137,29 +128,24 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CSProjectCostingReportItem);
+            return this.Equals(input as CSAggregateProject);
         }
 
         /// <summary>
-        /// Returns true if CSProjectCostingReportItem instances are equal
+        /// Returns true if CSAggregateProject instances are equal
         /// </summary>
-        /// <param name="input">Instance of CSProjectCostingReportItem to be compared</param>
+        /// <param name="input">Instance of CSAggregateProject to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CSProjectCostingReportItem input)
+        public bool Equals(CSAggregateProject input)
         {
             if (input == null)
                 return false;
 
             return 
                 (
-                    this.ProjectId == input.ProjectId ||
-                    (this.ProjectId != null &&
-                    this.ProjectId.Equals(input.ProjectId))
-                ) && 
-                (
-                    this.ProjectName == input.ProjectName ||
-                    (this.ProjectName != null &&
-                    this.ProjectName.Equals(input.ProjectName))
+                    this.Id == input.Id ||
+                    (this.Id != null &&
+                    this.Id.Equals(input.Id))
                 ) && 
                 (
                     this.ClientId == input.ClientId ||
@@ -172,24 +158,24 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.OrganisationId.Equals(input.OrganisationId))
                 ) && 
                 (
-                    this.ClientName == input.ClientName ||
-                    (this.ClientName != null &&
-                    this.ClientName.Equals(input.ClientName))
+                    this.ProjectName == input.ProjectName ||
+                    (this.ProjectName != null &&
+                    this.ProjectName.Equals(input.ProjectName))
                 ) && 
                 (
-                    this.EstimatedCost == input.EstimatedCost ||
-                    (this.EstimatedCost != null &&
-                    this.EstimatedCost.Equals(input.EstimatedCost))
+                    this.CostEstimation == input.CostEstimation ||
+                    (this.CostEstimation != null &&
+                    this.CostEstimation.Equals(input.CostEstimation))
                 ) && 
                 (
-                    this.ActualCostFiltered == input.ActualCostFiltered ||
-                    (this.ActualCostFiltered != null &&
-                    this.ActualCostFiltered.Equals(input.ActualCostFiltered))
+                    this.StartDate == input.StartDate ||
+                    (this.StartDate != null &&
+                    this.StartDate.Equals(input.StartDate))
                 ) && 
                 (
-                    this.ActualCost == input.ActualCost ||
-                    (this.ActualCost != null &&
-                    this.ActualCost.Equals(input.ActualCost))
+                    this.EndDate == input.EndDate ||
+                    (this.EndDate != null &&
+                    this.EndDate.Equals(input.EndDate))
                 );
         }
 
@@ -202,22 +188,20 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.ProjectId != null)
-                    hashCode = hashCode * 59 + this.ProjectId.GetHashCode();
-                if (this.ProjectName != null)
-                    hashCode = hashCode * 59 + this.ProjectName.GetHashCode();
+                if (this.Id != null)
+                    hashCode = hashCode * 59 + this.Id.GetHashCode();
                 if (this.ClientId != null)
                     hashCode = hashCode * 59 + this.ClientId.GetHashCode();
                 if (this.OrganisationId != null)
                     hashCode = hashCode * 59 + this.OrganisationId.GetHashCode();
-                if (this.ClientName != null)
-                    hashCode = hashCode * 59 + this.ClientName.GetHashCode();
-                if (this.EstimatedCost != null)
-                    hashCode = hashCode * 59 + this.EstimatedCost.GetHashCode();
-                if (this.ActualCostFiltered != null)
-                    hashCode = hashCode * 59 + this.ActualCostFiltered.GetHashCode();
-                if (this.ActualCost != null)
-                    hashCode = hashCode * 59 + this.ActualCost.GetHashCode();
+                if (this.ProjectName != null)
+                    hashCode = hashCode * 59 + this.ProjectName.GetHashCode();
+                if (this.CostEstimation != null)
+                    hashCode = hashCode * 59 + this.CostEstimation.GetHashCode();
+                if (this.StartDate != null)
+                    hashCode = hashCode * 59 + this.StartDate.GetHashCode();
+                if (this.EndDate != null)
+                    hashCode = hashCode * 59 + this.EndDate.GetHashCode();
                 return hashCode;
             }
         }

@@ -94,6 +94,21 @@ namespace ChronoSheetsAPI.Test
         }
         
         /// <summary>
+        /// Test ReportsGetFleetSummaryAdmin
+        /// </summary>
+        [Test]
+        public void ReportsGetFleetSummaryAdminTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //string userIds = null;
+            //string xChronosheetsAuth = null;
+            //var response = instance.ReportsGetFleetSummaryAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+            //Assert.IsInstanceOf<CSApiResponseListFleetSummaryReportItem> (response, "response is CSApiResponseListFleetSummaryReportItem");
+        }
+        
+        /// <summary>
         /// Test ReportsGetOrgTripById
         /// </summary>
         [Test]
@@ -121,6 +136,24 @@ namespace ChronoSheetsAPI.Test
             //string xChronosheetsAuth = null;
             //var response = instance.ReportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
             //Assert.IsInstanceOf<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> (response, "response is CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment");
+        }
+        
+        /// <summary>
+        /// Test ReportsGetOrganisationTranscripts
+        /// </summary>
+        [Test]
+        public void ReportsGetOrganisationTranscriptsTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //DateTime? startDate = null;
+            //DateTime? endDate = null;
+            //int? skip = null;
+            //int? take = null;
+            //string userIds = null;
+            //string keywords = null;
+            //string xChronosheetsAuth = null;
+            //var response = instance.ReportsGetOrganisationTranscripts(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth);
+            //Assert.IsInstanceOf<CSApiResponseForPaginatedListOrgReportTranscript> (response, "response is CSApiResponseForPaginatedListOrgReportTranscript");
         }
         
         /// <summary>

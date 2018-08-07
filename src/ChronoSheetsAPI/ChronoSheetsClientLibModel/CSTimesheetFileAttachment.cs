@@ -25,10 +25,10 @@ using SwaggerDateConverter = ChronoSheetsAPI.Client.SwaggerDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// CSOrgReportTimesheetFileAttachment
+    /// CSTimesheetFileAttachment
     /// </summary>
     [DataContract]
-    public partial class CSOrgReportTimesheetFileAttachment :  IEquatable<CSOrgReportTimesheetFileAttachment>, IValidatableObject
+    public partial class CSTimesheetFileAttachment :  IEquatable<CSTimesheetFileAttachment>, IValidatableObject
     {
         /// <summary>
         /// Defines MobilePlatform
@@ -129,12 +129,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         [DataMember(Name="AttachmentType", EmitDefaultValue=false)]
         public AttachmentTypeEnum? AttachmentType { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CSOrgReportTimesheetFileAttachment" /> class.
+        /// Initializes a new instance of the <see cref="CSTimesheetFileAttachment" /> class.
         /// </summary>
-        /// <param name="Username">Username.</param>
-        /// <param name="EmailAddress">EmailAddress.</param>
-        /// <param name="FirstName">FirstName.</param>
-        /// <param name="LastName">LastName.</param>
         /// <param name="TimesheetId">TimesheetId.</param>
         /// <param name="DocumentS3SignedUrl">DocumentS3SignedUrl.</param>
         /// <param name="ImageLargeS3SignedUrl">ImageLargeS3SignedUrl.</param>
@@ -158,12 +154,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="DateUploaded">DateUploaded.</param>
         /// <param name="DateImageCaptured">DateImageCaptured.</param>
         /// <param name="StorageAllocationBytes">StorageAllocationBytes.</param>
-        public CSOrgReportTimesheetFileAttachment(string Username = default(string), string EmailAddress = default(string), string FirstName = default(string), string LastName = default(string), int? TimesheetId = default(int?), string DocumentS3SignedUrl = default(string), string ImageLargeS3SignedUrl = default(string), string ImageMediumS3SignedUrl = default(string), string ImageSmallS3SignedUrl = default(string), DateTime? TimesheetStart = default(DateTime?), DateTime? TimesheetEnd = default(DateTime?), int? FileAttachmentId = default(int?), int? UserId = default(int?), int? OrgId = default(int?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?), AttachmentTypeEnum? AttachmentType = default(AttachmentTypeEnum?), string Notes = default(string), string NonImageFilePath = default(string), string ImageLargeFilePath = default(string), string ImageMediumFilePath = default(string), string ImageSmallFilePath = default(string), string OriginalFileName = default(string), double? Latitude = default(double?), double? Longitude = default(double?), DateTime? DateUploaded = default(DateTime?), DateTime? DateImageCaptured = default(DateTime?), long? StorageAllocationBytes = default(long?))
+        public CSTimesheetFileAttachment(int? TimesheetId = default(int?), string DocumentS3SignedUrl = default(string), string ImageLargeS3SignedUrl = default(string), string ImageMediumS3SignedUrl = default(string), string ImageSmallS3SignedUrl = default(string), DateTime? TimesheetStart = default(DateTime?), DateTime? TimesheetEnd = default(DateTime?), int? FileAttachmentId = default(int?), int? UserId = default(int?), int? OrgId = default(int?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?), AttachmentTypeEnum? AttachmentType = default(AttachmentTypeEnum?), string Notes = default(string), string NonImageFilePath = default(string), string ImageLargeFilePath = default(string), string ImageMediumFilePath = default(string), string ImageSmallFilePath = default(string), string OriginalFileName = default(string), double? Latitude = default(double?), double? Longitude = default(double?), DateTime? DateUploaded = default(DateTime?), DateTime? DateImageCaptured = default(DateTime?), long? StorageAllocationBytes = default(long?))
         {
-            this.Username = Username;
-            this.EmailAddress = EmailAddress;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
             this.TimesheetId = TimesheetId;
             this.DocumentS3SignedUrl = DocumentS3SignedUrl;
             this.ImageLargeS3SignedUrl = ImageLargeS3SignedUrl;
@@ -189,30 +181,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             this.StorageAllocationBytes = StorageAllocationBytes;
         }
         
-        /// <summary>
-        /// Gets or Sets Username
-        /// </summary>
-        [DataMember(Name="Username", EmitDefaultValue=false)]
-        public string Username { get; set; }
-
-        /// <summary>
-        /// Gets or Sets EmailAddress
-        /// </summary>
-        [DataMember(Name="EmailAddress", EmitDefaultValue=false)]
-        public string EmailAddress { get; set; }
-
-        /// <summary>
-        /// Gets or Sets FirstName
-        /// </summary>
-        [DataMember(Name="FirstName", EmitDefaultValue=false)]
-        public string FirstName { get; set; }
-
-        /// <summary>
-        /// Gets or Sets LastName
-        /// </summary>
-        [DataMember(Name="LastName", EmitDefaultValue=false)]
-        public string LastName { get; set; }
-
         /// <summary>
         /// Gets or Sets TimesheetId
         /// </summary>
@@ -348,11 +316,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CSOrgReportTimesheetFileAttachment {\n");
-            sb.Append("  Username: ").Append(Username).Append("\n");
-            sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
-            sb.Append("  FirstName: ").Append(FirstName).Append("\n");
-            sb.Append("  LastName: ").Append(LastName).Append("\n");
+            sb.Append("class CSTimesheetFileAttachment {\n");
             sb.Append("  TimesheetId: ").Append(TimesheetId).Append("\n");
             sb.Append("  DocumentS3SignedUrl: ").Append(DocumentS3SignedUrl).Append("\n");
             sb.Append("  ImageLargeS3SignedUrl: ").Append(ImageLargeS3SignedUrl).Append("\n");
@@ -396,40 +360,20 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CSOrgReportTimesheetFileAttachment);
+            return this.Equals(input as CSTimesheetFileAttachment);
         }
 
         /// <summary>
-        /// Returns true if CSOrgReportTimesheetFileAttachment instances are equal
+        /// Returns true if CSTimesheetFileAttachment instances are equal
         /// </summary>
-        /// <param name="input">Instance of CSOrgReportTimesheetFileAttachment to be compared</param>
+        /// <param name="input">Instance of CSTimesheetFileAttachment to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CSOrgReportTimesheetFileAttachment input)
+        public bool Equals(CSTimesheetFileAttachment input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.Username == input.Username ||
-                    (this.Username != null &&
-                    this.Username.Equals(input.Username))
-                ) && 
-                (
-                    this.EmailAddress == input.EmailAddress ||
-                    (this.EmailAddress != null &&
-                    this.EmailAddress.Equals(input.EmailAddress))
-                ) && 
-                (
-                    this.FirstName == input.FirstName ||
-                    (this.FirstName != null &&
-                    this.FirstName.Equals(input.FirstName))
-                ) && 
-                (
-                    this.LastName == input.LastName ||
-                    (this.LastName != null &&
-                    this.LastName.Equals(input.LastName))
-                ) && 
                 (
                     this.TimesheetId == input.TimesheetId ||
                     (this.TimesheetId != null &&
@@ -556,14 +500,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.Username != null)
-                    hashCode = hashCode * 59 + this.Username.GetHashCode();
-                if (this.EmailAddress != null)
-                    hashCode = hashCode * 59 + this.EmailAddress.GetHashCode();
-                if (this.FirstName != null)
-                    hashCode = hashCode * 59 + this.FirstName.GetHashCode();
-                if (this.LastName != null)
-                    hashCode = hashCode * 59 + this.LastName.GetHashCode();
                 if (this.TimesheetId != null)
                     hashCode = hashCode * 59 + this.TimesheetId.GetHashCode();
                 if (this.DocumentS3SignedUrl != null)

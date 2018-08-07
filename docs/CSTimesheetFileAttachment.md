@@ -1,12 +1,8 @@
-# ChronoSheetsAPI.ChronoSheetsClientLibModel.CSOrgReportTimesheetFileAttachment
+# ChronoSheetsAPI.ChronoSheetsClientLibModel.CSTimesheetFileAttachment
 ## Properties
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Username** | **string** |  | [optional] 
-**EmailAddress** | **string** |  | [optional] 
-**FirstName** | **string** |  | [optional] 
-**LastName** | **string** |  | [optional] 
 **TimesheetId** | **int?** |  | [optional] 
 **DocumentS3SignedUrl** | **string** |  | [optional] 
 **ImageLargeS3SignedUrl** | **string** |  | [optional] 

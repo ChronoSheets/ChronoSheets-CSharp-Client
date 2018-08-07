@@ -2,7 +2,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 VisualStudioVersion = 12.0.0.0
 MinimumVisualStudioVersion = 10.0.0.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSheetsAPI", "src\ChronoSheetsAPI\ChronoSheetsAPI.csproj", "{0997B903-E7D5-43F5-9D13-1B0A94FC3304}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSheetsAPI", "src\ChronoSheetsAPI\ChronoSheetsAPI.csproj", "{CCB9131E-7070-40CC-A9B3-839738964D83}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChronoSheetsAPI.Test", "src\ChronoSheetsAPI.Test\ChronoSheetsAPI.Test.csproj", "{19F1DEBC-DE5E-4517-8062-F000CD499087}"
 EndProject
@@ -12,10 +12,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0997B903-E7D5-43F5-9D13-1B0A94FC3304}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0997B903-E7D5-43F5-9D13-1B0A94FC3304}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0997B903-E7D5-43F5-9D13-1B0A94FC3304}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0997B903-E7D5-43F5-9D13-1B0A94FC3304}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CCB9131E-7070-40CC-A9B3-839738964D83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CCB9131E-7070-40CC-A9B3-839738964D83}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CCB9131E-7070-40CC-A9B3-839738964D83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CCB9131E-7070-40CC-A9B3-839738964D83}.Release|Any CPU.Build.0 = Release|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F1DEBC-DE5E-4517-8062-F000CD499087}.Release|Any CPU.ActiveCfg = Release|Any CPU
