@@ -65,6 +65,19 @@ namespace ChronoSheetsAPI.Test
 
         
         /// <summary>
+        /// Test FileAttachmentsDeleteTimesheetFileAttachment
+        /// </summary>
+        [Test]
+        public void FileAttachmentsDeleteTimesheetFileAttachmentTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? fileAttachmentId = null;
+            //string xChronosheetsAuth = null;
+            //var response = instance.FileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth);
+            //Assert.IsInstanceOf<CSApiResponseBoolean> (response, "response is CSApiResponseBoolean");
+        }
+        
+        /// <summary>
         /// Test FileAttachmentsGetMyFileAttachments
         /// </summary>
         [Test]

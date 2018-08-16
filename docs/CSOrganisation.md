@@ -15,9 +15,10 @@ Name | Type | Description | Notes
 **EmailAddress** | **string** |  | [optional] 
 **Timezone** | **string** |  | [optional] 
 **SubscriptionCustomerId** | **string** |  | [optional] 
-**SubscriptionPlanId** | **string** |  | [optional] 
 **SignupToken** | **string** |  | [optional] 
-**NumberSeatsAvailable** | **int?** |  | [optional] 
+**SubscriptionCycleStart** | **DateTime?** |  | [optional] 
+**SubscriptionCycleEnd** | **DateTime?** |  | [optional] 
+**PricingPlans** | [**List&lt;CSOrganisationPricingPlan&gt;**](CSOrganisationPricingPlan.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -4,8 +4,70 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**FileAttachmentsDeleteTimesheetFileAttachment**](FileAttachmentsApi.md#fileattachmentsdeletetimesheetfileattachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment
 [**FileAttachmentsGetMyFileAttachments**](FileAttachmentsApi.md#fileattachmentsgetmyfileattachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
+
+<a name="fileattachmentsdeletetimesheetfileattachment"></a>
+# **FileAttachmentsDeleteTimesheetFileAttachment**
+> CSApiResponseBoolean FileAttachmentsDeleteTimesheetFileAttachment (int? fileAttachmentId, string xChronosheetsAuth)
+
+Delete a particular timesheet file attachment
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class FileAttachmentsDeleteTimesheetFileAttachmentExample
+    {
+        public void main()
+        {
+            var apiInstance = new FileAttachmentsApi();
+            var fileAttachmentId = 56;  // int? | The Id of the file attachment to delete
+            var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+
+            try
+            {
+                // Delete a particular timesheet file attachment
+                CSApiResponseBoolean result = apiInstance.FileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FileAttachmentsApi.FileAttachmentsDeleteTimesheetFileAttachment: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileAttachmentId** | **int?**| The Id of the file attachment to delete | 
+ **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="fileattachmentsgetmyfileattachments"></a>
 # **FileAttachmentsGetMyFileAttachments**

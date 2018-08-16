@@ -163,14 +163,6 @@ namespace ChronoSheetsAPI.Test
             // TODO unit test for the property 'SubscriptionCustomerId'
         }
         /// <summary>
-        /// Test the property 'SubscriptionPlanId'
-        /// </summary>
-        [Test]
-        public void SubscriptionPlanIdTest()
-        {
-            // TODO unit test for the property 'SubscriptionPlanId'
-        }
-        /// <summary>
         /// Test the property 'SignupToken'
         /// </summary>
         [Test]
@@ -179,12 +171,28 @@ namespace ChronoSheetsAPI.Test
             // TODO unit test for the property 'SignupToken'
         }
         /// <summary>
-        /// Test the property 'NumberSeatsAvailable'
+        /// Test the property 'SubscriptionCycleStart'
         /// </summary>
         [Test]
-        public void NumberSeatsAvailableTest()
+        public void SubscriptionCycleStartTest()
         {
-            // TODO unit test for the property 'NumberSeatsAvailable'
+            // TODO unit test for the property 'SubscriptionCycleStart'
+        }
+        /// <summary>
+        /// Test the property 'SubscriptionCycleEnd'
+        /// </summary>
+        [Test]
+        public void SubscriptionCycleEndTest()
+        {
+            // TODO unit test for the property 'SubscriptionCycleEnd'
+        }
+        /// <summary>
+        /// Test the property 'PricingPlans'
+        /// </summary>
+        [Test]
+        public void PricingPlansTest()
+        {
+            // TODO unit test for the property 'PricingPlans'
         }
 
     }

@@ -282,6 +282,14 @@ namespace ChronoSheetsAPI.Test
         {
             // TODO unit test for the property 'StorageAllocationBytes'
         }
+        /// <summary>
+        /// Test the property 'AudioDurationSeconds'
+        /// </summary>
+        [Test]
+        public void AudioDurationSecondsTest()
+        {
+            // TODO unit test for the property 'AudioDurationSeconds'
+        }
 
     }
 

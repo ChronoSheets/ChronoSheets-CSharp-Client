@@ -102,6 +102,7 @@ Class | Method | HTTP request | Description
 *ClientsApi* | [**ClientsGetClient**](docs/ClientsApi.md#clientsgetclient) | **GET** /api/Clients/GetClient | Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 *ClientsApi* | [**ClientsGetClients**](docs/ClientsApi.md#clientsgetclients) | **GET** /api/Clients/GetClients | Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 *ClientsApi* | [**ClientsUpdateClient**](docs/ClientsApi.md#clientsupdateclient) | **PUT** /api/Clients/UpdateClient | Update a client.    Requires the 'ManageClientsAndProjects' permission.
+*FileAttachmentsApi* | [**FileAttachmentsDeleteTimesheetFileAttachment**](docs/FileAttachmentsApi.md#fileattachmentsdeletetimesheetfileattachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment
 *FileAttachmentsApi* | [**FileAttachmentsGetMyFileAttachments**](docs/FileAttachmentsApi.md#fileattachmentsgetmyfileattachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you've attached to timesheets.
 *FleetApi* | [**FleetCreateVehicle**](docs/FleetApi.md#fleetcreatevehicle) | **POST** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the 'ManageFleet' permission.
 *FleetApi* | [**FleetGetVehicleById**](docs/FleetApi.md#fleetgetvehiclebyid) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
@@ -245,6 +246,7 @@ Class | Method | HTTP request | Description
  - [ChronoSheetsClientLibModel.CSOrgReportTrip](docs/CSOrgReportTrip.md)
  - [ChronoSheetsClientLibModel.CSOrganisation](docs/CSOrganisation.md)
  - [ChronoSheetsClientLibModel.CSOrganisationGroup](docs/CSOrganisationGroup.md)
+ - [ChronoSheetsClientLibModel.CSOrganisationPricingPlan](docs/CSOrganisationPricingPlan.md)
  - [ChronoSheetsClientLibModel.CSProject](docs/CSProject.md)
  - [ChronoSheetsClientLibModel.CSProjectCostingReportItem](docs/CSProjectCostingReportItem.md)
  - [ChronoSheetsClientLibModel.CSProjectSeriesReportItem](docs/CSProjectSeriesReportItem.md)

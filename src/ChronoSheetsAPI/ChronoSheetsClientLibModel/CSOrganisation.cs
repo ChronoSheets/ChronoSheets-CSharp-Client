@@ -45,10 +45,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="EmailAddress">EmailAddress.</param>
         /// <param name="Timezone">Timezone.</param>
         /// <param name="SubscriptionCustomerId">SubscriptionCustomerId.</param>
-        /// <param name="SubscriptionPlanId">SubscriptionPlanId.</param>
         /// <param name="SignupToken">SignupToken.</param>
-        /// <param name="NumberSeatsAvailable">NumberSeatsAvailable.</param>
-        public CSOrganisation(int? Id = default(int?), string Name = default(string), string AddressLine01 = default(string), string AddressLine02 = default(string), string Suburb = default(string), string State = default(string), string Postcode = default(string), string Country = default(string), string Phone = default(string), string EmailAddress = default(string), string Timezone = default(string), string SubscriptionCustomerId = default(string), string SubscriptionPlanId = default(string), string SignupToken = default(string), int? NumberSeatsAvailable = default(int?))
+        /// <param name="SubscriptionCycleStart">SubscriptionCycleStart.</param>
+        /// <param name="SubscriptionCycleEnd">SubscriptionCycleEnd.</param>
+        /// <param name="PricingPlans">PricingPlans.</param>
+        public CSOrganisation(int? Id = default(int?), string Name = default(string), string AddressLine01 = default(string), string AddressLine02 = default(string), string Suburb = default(string), string State = default(string), string Postcode = default(string), string Country = default(string), string Phone = default(string), string EmailAddress = default(string), string Timezone = default(string), string SubscriptionCustomerId = default(string), string SignupToken = default(string), DateTime? SubscriptionCycleStart = default(DateTime?), DateTime? SubscriptionCycleEnd = default(DateTime?), List<CSOrganisationPricingPlan> PricingPlans = default(List<CSOrganisationPricingPlan>))
         {
             this.Id = Id;
             this.Name = Name;
@@ -62,9 +63,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             this.EmailAddress = EmailAddress;
             this.Timezone = Timezone;
             this.SubscriptionCustomerId = SubscriptionCustomerId;
-            this.SubscriptionPlanId = SubscriptionPlanId;
             this.SignupToken = SignupToken;
-            this.NumberSeatsAvailable = NumberSeatsAvailable;
+            this.SubscriptionCycleStart = SubscriptionCycleStart;
+            this.SubscriptionCycleEnd = SubscriptionCycleEnd;
+            this.PricingPlans = PricingPlans;
         }
         
         /// <summary>
@@ -140,22 +142,28 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public string SubscriptionCustomerId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SubscriptionPlanId
-        /// </summary>
-        [DataMember(Name="SubscriptionPlanId", EmitDefaultValue=false)]
-        public string SubscriptionPlanId { get; set; }
-
-        /// <summary>
         /// Gets or Sets SignupToken
         /// </summary>
         [DataMember(Name="SignupToken", EmitDefaultValue=false)]
         public string SignupToken { get; set; }
 
         /// <summary>
-        /// Gets or Sets NumberSeatsAvailable
+        /// Gets or Sets SubscriptionCycleStart
         /// </summary>
-        [DataMember(Name="NumberSeatsAvailable", EmitDefaultValue=false)]
-        public int? NumberSeatsAvailable { get; set; }
+        [DataMember(Name="SubscriptionCycleStart", EmitDefaultValue=false)]
+        public DateTime? SubscriptionCycleStart { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SubscriptionCycleEnd
+        /// </summary>
+        [DataMember(Name="SubscriptionCycleEnd", EmitDefaultValue=false)]
+        public DateTime? SubscriptionCycleEnd { get; set; }
+
+        /// <summary>
+        /// Gets or Sets PricingPlans
+        /// </summary>
+        [DataMember(Name="PricingPlans", EmitDefaultValue=false)]
+        public List<CSOrganisationPricingPlan> PricingPlans { get; set; }
 
         /// <summary>
         /// Returns the string presentation of the object
@@ -177,9 +185,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  EmailAddress: ").Append(EmailAddress).Append("\n");
             sb.Append("  Timezone: ").Append(Timezone).Append("\n");
             sb.Append("  SubscriptionCustomerId: ").Append(SubscriptionCustomerId).Append("\n");
-            sb.Append("  SubscriptionPlanId: ").Append(SubscriptionPlanId).Append("\n");
             sb.Append("  SignupToken: ").Append(SignupToken).Append("\n");
-            sb.Append("  NumberSeatsAvailable: ").Append(NumberSeatsAvailable).Append("\n");
+            sb.Append("  SubscriptionCycleStart: ").Append(SubscriptionCycleStart).Append("\n");
+            sb.Append("  SubscriptionCycleEnd: ").Append(SubscriptionCycleEnd).Append("\n");
+            sb.Append("  PricingPlans: ").Append(PricingPlans).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -275,19 +284,24 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.SubscriptionCustomerId.Equals(input.SubscriptionCustomerId))
                 ) && 
                 (
-                    this.SubscriptionPlanId == input.SubscriptionPlanId ||
-                    (this.SubscriptionPlanId != null &&
-                    this.SubscriptionPlanId.Equals(input.SubscriptionPlanId))
-                ) && 
-                (
                     this.SignupToken == input.SignupToken ||
                     (this.SignupToken != null &&
                     this.SignupToken.Equals(input.SignupToken))
                 ) && 
                 (
-                    this.NumberSeatsAvailable == input.NumberSeatsAvailable ||
-                    (this.NumberSeatsAvailable != null &&
-                    this.NumberSeatsAvailable.Equals(input.NumberSeatsAvailable))
+                    this.SubscriptionCycleStart == input.SubscriptionCycleStart ||
+                    (this.SubscriptionCycleStart != null &&
+                    this.SubscriptionCycleStart.Equals(input.SubscriptionCycleStart))
+                ) && 
+                (
+                    this.SubscriptionCycleEnd == input.SubscriptionCycleEnd ||
+                    (this.SubscriptionCycleEnd != null &&
+                    this.SubscriptionCycleEnd.Equals(input.SubscriptionCycleEnd))
+                ) && 
+                (
+                    this.PricingPlans == input.PricingPlans ||
+                    this.PricingPlans != null &&
+                    this.PricingPlans.SequenceEqual(input.PricingPlans)
                 );
         }
 
@@ -324,12 +338,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.Timezone.GetHashCode();
                 if (this.SubscriptionCustomerId != null)
                     hashCode = hashCode * 59 + this.SubscriptionCustomerId.GetHashCode();
-                if (this.SubscriptionPlanId != null)
-                    hashCode = hashCode * 59 + this.SubscriptionPlanId.GetHashCode();
                 if (this.SignupToken != null)
                     hashCode = hashCode * 59 + this.SignupToken.GetHashCode();
-                if (this.NumberSeatsAvailable != null)
-                    hashCode = hashCode * 59 + this.NumberSeatsAvailable.GetHashCode();
+                if (this.SubscriptionCycleStart != null)
+                    hashCode = hashCode * 59 + this.SubscriptionCycleStart.GetHashCode();
+                if (this.SubscriptionCycleEnd != null)
+                    hashCode = hashCode * 59 + this.SubscriptionCycleEnd.GetHashCode();
+                if (this.PricingPlans != null)
+                    hashCode = hashCode * 59 + this.PricingPlans.GetHashCode();
                 return hashCode;
             }
         }

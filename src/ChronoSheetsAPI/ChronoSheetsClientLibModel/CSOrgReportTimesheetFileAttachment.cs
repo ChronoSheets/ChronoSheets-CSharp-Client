@@ -158,7 +158,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="DateUploaded">DateUploaded.</param>
         /// <param name="DateImageCaptured">DateImageCaptured.</param>
         /// <param name="StorageAllocationBytes">StorageAllocationBytes.</param>
-        public CSOrgReportTimesheetFileAttachment(string Username = default(string), string EmailAddress = default(string), string FirstName = default(string), string LastName = default(string), int? TimesheetId = default(int?), string DocumentS3SignedUrl = default(string), string ImageLargeS3SignedUrl = default(string), string ImageMediumS3SignedUrl = default(string), string ImageSmallS3SignedUrl = default(string), DateTime? TimesheetStart = default(DateTime?), DateTime? TimesheetEnd = default(DateTime?), int? FileAttachmentId = default(int?), int? UserId = default(int?), int? OrgId = default(int?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?), AttachmentTypeEnum? AttachmentType = default(AttachmentTypeEnum?), string Notes = default(string), string NonImageFilePath = default(string), string ImageLargeFilePath = default(string), string ImageMediumFilePath = default(string), string ImageSmallFilePath = default(string), string OriginalFileName = default(string), double? Latitude = default(double?), double? Longitude = default(double?), DateTime? DateUploaded = default(DateTime?), DateTime? DateImageCaptured = default(DateTime?), long? StorageAllocationBytes = default(long?))
+        /// <param name="AudioDurationSeconds">AudioDurationSeconds.</param>
+        public CSOrgReportTimesheetFileAttachment(string Username = default(string), string EmailAddress = default(string), string FirstName = default(string), string LastName = default(string), int? TimesheetId = default(int?), string DocumentS3SignedUrl = default(string), string ImageLargeS3SignedUrl = default(string), string ImageMediumS3SignedUrl = default(string), string ImageSmallS3SignedUrl = default(string), DateTime? TimesheetStart = default(DateTime?), DateTime? TimesheetEnd = default(DateTime?), int? FileAttachmentId = default(int?), int? UserId = default(int?), int? OrgId = default(int?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?), AttachmentTypeEnum? AttachmentType = default(AttachmentTypeEnum?), string Notes = default(string), string NonImageFilePath = default(string), string ImageLargeFilePath = default(string), string ImageMediumFilePath = default(string), string ImageSmallFilePath = default(string), string OriginalFileName = default(string), double? Latitude = default(double?), double? Longitude = default(double?), DateTime? DateUploaded = default(DateTime?), DateTime? DateImageCaptured = default(DateTime?), long? StorageAllocationBytes = default(long?), int? AudioDurationSeconds = default(int?))
         {
             this.Username = Username;
             this.EmailAddress = EmailAddress;
@@ -187,6 +188,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             this.DateUploaded = DateUploaded;
             this.DateImageCaptured = DateImageCaptured;
             this.StorageAllocationBytes = StorageAllocationBytes;
+            this.AudioDurationSeconds = AudioDurationSeconds;
         }
         
         /// <summary>
@@ -342,6 +344,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public long? StorageAllocationBytes { get; set; }
 
         /// <summary>
+        /// Gets or Sets AudioDurationSeconds
+        /// </summary>
+        [DataMember(Name="AudioDurationSeconds", EmitDefaultValue=false)]
+        public int? AudioDurationSeconds { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -376,6 +384,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  DateUploaded: ").Append(DateUploaded).Append("\n");
             sb.Append("  DateImageCaptured: ").Append(DateImageCaptured).Append("\n");
             sb.Append("  StorageAllocationBytes: ").Append(StorageAllocationBytes).Append("\n");
+            sb.Append("  AudioDurationSeconds: ").Append(AudioDurationSeconds).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -544,6 +553,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.StorageAllocationBytes == input.StorageAllocationBytes ||
                     (this.StorageAllocationBytes != null &&
                     this.StorageAllocationBytes.Equals(input.StorageAllocationBytes))
+                ) && 
+                (
+                    this.AudioDurationSeconds == input.AudioDurationSeconds ||
+                    (this.AudioDurationSeconds != null &&
+                    this.AudioDurationSeconds.Equals(input.AudioDurationSeconds))
                 );
         }
 
@@ -610,6 +624,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.DateImageCaptured.GetHashCode();
                 if (this.StorageAllocationBytes != null)
                     hashCode = hashCode * 59 + this.StorageAllocationBytes.GetHashCode();
+                if (this.AudioDurationSeconds != null)
+                    hashCode = hashCode * 59 + this.AudioDurationSeconds.GetHashCode();
                 return hashCode;
             }
         }

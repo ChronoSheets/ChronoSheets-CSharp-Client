@@ -25,6 +25,29 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
+        /// Delete a particular timesheet file attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseBoolean</returns>
+        CSApiResponseBoolean FileAttachmentsDeleteTimesheetFileAttachment (int? fileAttachmentId, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Delete a particular timesheet file attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        ApiResponse<CSApiResponseBoolean> FileAttachmentsDeleteTimesheetFileAttachmentWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth);
+        /// <summary>
         /// Get my file attachments.  Get files you&#39;ve attached to timesheets.
         /// </summary>
         /// <remarks>
@@ -55,6 +78,29 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Delete a particular timesheet file attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        System.Threading.Tasks.Task<CSApiResponseBoolean> FileAttachmentsDeleteTimesheetFileAttachmentAsync (int? fileAttachmentId, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Delete a particular timesheet file attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> FileAttachmentsDeleteTimesheetFileAttachmentAsyncWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth);
         /// <summary>
         /// Get my file attachments.  Get files you&#39;ve attached to timesheets.
         /// </summary>
@@ -182,6 +228,159 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Delete a particular timesheet file attachment 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseBoolean</returns>
+        public CSApiResponseBoolean FileAttachmentsDeleteTimesheetFileAttachment (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseBoolean> localVarResponse = FileAttachmentsDeleteTimesheetFileAttachmentWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Delete a particular timesheet file attachment 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseBoolean</returns>
+        public ApiResponse< CSApiResponseBoolean > FileAttachmentsDeleteTimesheetFileAttachmentWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'fileAttachmentId' is set
+            if (fileAttachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'fileAttachmentId' when calling FileAttachmentsApi->FileAttachmentsDeleteTimesheetFileAttachment");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsDeleteTimesheetFileAttachment");
+
+            var localVarPath = "/api/FileAttachments/DeleteTimesheetFileAttachment";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileAttachmentId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FileAttachmentsDeleteTimesheetFileAttachment", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
+        }
+
+        /// <summary>
+        /// Delete a particular timesheet file attachment 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseBoolean</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseBoolean> FileAttachmentsDeleteTimesheetFileAttachmentAsync (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseBoolean> localVarResponse = await FileAttachmentsDeleteTimesheetFileAttachmentAsyncWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Delete a particular timesheet file attachment 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> FileAttachmentsDeleteTimesheetFileAttachmentAsyncWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'fileAttachmentId' is set
+            if (fileAttachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'fileAttachmentId' when calling FileAttachmentsApi->FileAttachmentsDeleteTimesheetFileAttachment");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsDeleteTimesheetFileAttachment");
+
+            var localVarPath = "/api/FileAttachments/DeleteTimesheetFileAttachment";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileAttachmentId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FileAttachmentsDeleteTimesheetFileAttachment", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
