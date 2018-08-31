@@ -133,7 +133,7 @@ No authorization required
 
 <a name="tripsgetmytrips"></a>
 # **TripsGetMyTrips**
-> CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+> CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, int? vehicleId = null)
 
 Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
 
@@ -154,15 +154,15 @@ namespace Example
             var apiInstance = new TripsApi();
             var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The Start date of the date range.  Trips after this date will be obtained.
             var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The End date of the date range.  Trips before this date will be obtained.
-            var skip = 56;  // int? | Skip this many Trips
-            var take = 56;  // int? | Take this many Trips
-            var vehicleId = 56;  // int? | Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var skip = 56;  // int? | Skip this many Trips (optional) 
+            var take = 56;  // int? | Take this many Trips (optional) 
+            var vehicleId = 56;  // int? | Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional) 
 
             try
             {
                 // Get my trips.  Get the GPS trips you've recorded and submitted.    Requires the 'ViewMyTrips' permission.
-                CSApiResponseForPaginatedListTrip result = apiInstance.TripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+                CSApiResponseForPaginatedListTrip result = apiInstance.TripsGetMyTrips(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -180,10 +180,10 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startDate** | **DateTime?**| The Start date of the date range.  Trips after this date will be obtained. | 
  **endDate** | **DateTime?**| The End date of the date range.  Trips before this date will be obtained. | 
- **skip** | **int?**| Skip this many Trips | 
- **take** | **int?**| Take this many Trips | 
- **vehicleId** | **int?**| Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **skip** | **int?**| Skip this many Trips | [optional] 
+ **take** | **int?**| Take this many Trips | [optional] 
+ **vehicleId** | **int?**| Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId | [optional] 
 
 ### Return type
 

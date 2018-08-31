@@ -38,15 +38,17 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="OrganisationId">OrganisationId.</param>
         /// <param name="ProjectName">ProjectName.</param>
         /// <param name="CostEstimation">CostEstimation.</param>
+        /// <param name="CostActual">CostActual.</param>
         /// <param name="StartDate">StartDate.</param>
         /// <param name="EndDate">EndDate.</param>
-        public CSProject(int? Id = default(int?), int? ClientId = default(int?), int? OrganisationId = default(int?), string ProjectName = default(string), double? CostEstimation = default(double?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?))
+        public CSProject(int? Id = default(int?), int? ClientId = default(int?), int? OrganisationId = default(int?), string ProjectName = default(string), double? CostEstimation = default(double?), double? CostActual = default(double?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?))
         {
             this.Id = Id;
             this.ClientId = ClientId;
             this.OrganisationId = OrganisationId;
             this.ProjectName = ProjectName;
             this.CostEstimation = CostEstimation;
+            this.CostActual = CostActual;
             this.StartDate = StartDate;
             this.EndDate = EndDate;
         }
@@ -82,6 +84,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public double? CostEstimation { get; set; }
 
         /// <summary>
+        /// Gets or Sets CostActual
+        /// </summary>
+        [DataMember(Name="CostActual", EmitDefaultValue=false)]
+        public double? CostActual { get; set; }
+
+        /// <summary>
         /// Gets or Sets StartDate
         /// </summary>
         [DataMember(Name="StartDate", EmitDefaultValue=false)]
@@ -106,6 +114,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  OrganisationId: ").Append(OrganisationId).Append("\n");
             sb.Append("  ProjectName: ").Append(ProjectName).Append("\n");
             sb.Append("  CostEstimation: ").Append(CostEstimation).Append("\n");
+            sb.Append("  CostActual: ").Append(CostActual).Append("\n");
             sb.Append("  StartDate: ").Append(StartDate).Append("\n");
             sb.Append("  EndDate: ").Append(EndDate).Append("\n");
             sb.Append("}\n");
@@ -168,6 +177,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.CostEstimation.Equals(input.CostEstimation))
                 ) && 
                 (
+                    this.CostActual == input.CostActual ||
+                    (this.CostActual != null &&
+                    this.CostActual.Equals(input.CostActual))
+                ) && 
+                (
                     this.StartDate == input.StartDate ||
                     (this.StartDate != null &&
                     this.StartDate.Equals(input.StartDate))
@@ -198,6 +212,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.ProjectName.GetHashCode();
                 if (this.CostEstimation != null)
                     hashCode = hashCode * 59 + this.CostEstimation.GetHashCode();
+                if (this.CostActual != null)
+                    hashCode = hashCode * 59 + this.CostActual.GetHashCode();
                 if (this.StartDate != null)
                     hashCode = hashCode * 59 + this.StartDate.GetHashCode();
                 if (this.EndDate != null)

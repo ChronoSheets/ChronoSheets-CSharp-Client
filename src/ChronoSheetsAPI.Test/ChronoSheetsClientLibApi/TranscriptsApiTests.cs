@@ -73,11 +73,11 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //string xChronosheetsAuth = null;
             //int? skip = null;
             //int? take = null;
             //string keyword = null;
-            //string xChronosheetsAuth = null;
-            //var response = instance.TranscriptsGetMyTranscripts(startDate, endDate, skip, take, keyword, xChronosheetsAuth);
+            //var response = instance.TranscriptsGetMyTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, keyword);
             //Assert.IsInstanceOf<CSApiResponseForPaginatedListOrgReportTranscript> (response, "response is CSApiResponseForPaginatedListOrgReportTranscript");
         }
         

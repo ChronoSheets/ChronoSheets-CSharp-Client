@@ -77,10 +77,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
         /// <returns>CSApiResponseListFleetVehicle</returns>
-        CSApiResponseListFleetVehicle FleetGetVehicles (bool? includeDeleted, string xChronosheetsAuth);
+        CSApiResponseListFleetVehicle FleetGetVehicles (string xChronosheetsAuth, bool? includeDeleted = null);
 
         /// <summary>
         /// Get a collection of vehicles that are under your organisation.    Does not require any special permission.
@@ -89,10 +89,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
         /// <returns>ApiResponse of CSApiResponseListFleetVehicle</returns>
-        ApiResponse<CSApiResponseListFleetVehicle> FleetGetVehiclesWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth);
+        ApiResponse<CSApiResponseListFleetVehicle> FleetGetVehiclesWithHttpInfo (string xChronosheetsAuth, bool? includeDeleted = null);
         /// <summary>
         /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
@@ -171,10 +171,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
         /// <returns>Task of CSApiResponseListFleetVehicle</returns>
-        System.Threading.Tasks.Task<CSApiResponseListFleetVehicle> FleetGetVehiclesAsync (bool? includeDeleted, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<CSApiResponseListFleetVehicle> FleetGetVehiclesAsync (string xChronosheetsAuth, bool? includeDeleted = null);
 
         /// <summary>
         /// Get a collection of vehicles that are under your organisation.    Does not require any special permission.
@@ -183,10 +183,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseListFleetVehicle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListFleetVehicle>> FleetGetVehiclesAsyncWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseListFleetVehicle>> FleetGetVehiclesAsyncWithHttpInfo (string xChronosheetsAuth, bool? includeDeleted = null);
         /// <summary>
         /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
@@ -646,12 +646,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of vehicles that are under your organisation.    Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
         /// <returns>CSApiResponseListFleetVehicle</returns>
-        public CSApiResponseListFleetVehicle FleetGetVehicles (bool? includeDeleted, string xChronosheetsAuth)
+        public CSApiResponseListFleetVehicle FleetGetVehicles (string xChronosheetsAuth, bool? includeDeleted = null)
         {
-             ApiResponse<CSApiResponseListFleetVehicle> localVarResponse = FleetGetVehiclesWithHttpInfo(includeDeleted, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListFleetVehicle> localVarResponse = FleetGetVehiclesWithHttpInfo(xChronosheetsAuth, includeDeleted);
              return localVarResponse.Data;
         }
 
@@ -659,14 +659,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of vehicles that are under your organisation.    Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
         /// <returns>ApiResponse of CSApiResponseListFleetVehicle</returns>
-        public ApiResponse< CSApiResponseListFleetVehicle > FleetGetVehiclesWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth)
+        public ApiResponse< CSApiResponseListFleetVehicle > FleetGetVehiclesWithHttpInfo (string xChronosheetsAuth, bool? includeDeleted = null)
         {
-            // verify the required parameter 'includeDeleted' is set
-            if (includeDeleted == null)
-                throw new ApiException(400, "Missing required parameter 'includeDeleted' when calling FleetApi->FleetGetVehicles");
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FleetApi->FleetGetVehicles");
@@ -722,12 +719,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of vehicles that are under your organisation.    Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
         /// <returns>Task of CSApiResponseListFleetVehicle</returns>
-        public async System.Threading.Tasks.Task<CSApiResponseListFleetVehicle> FleetGetVehiclesAsync (bool? includeDeleted, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<CSApiResponseListFleetVehicle> FleetGetVehiclesAsync (string xChronosheetsAuth, bool? includeDeleted = null)
         {
-             ApiResponse<CSApiResponseListFleetVehicle> localVarResponse = await FleetGetVehiclesAsyncWithHttpInfo(includeDeleted, xChronosheetsAuth);
+             ApiResponse<CSApiResponseListFleetVehicle> localVarResponse = await FleetGetVehiclesAsyncWithHttpInfo(xChronosheetsAuth, includeDeleted);
              return localVarResponse.Data;
 
         }
@@ -736,14 +733,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of vehicles that are under your organisation.    Does not require any special permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="includeDeleted">Whether or not to include deleted vehicles</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseListFleetVehicle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListFleetVehicle>> FleetGetVehiclesAsyncWithHttpInfo (bool? includeDeleted, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListFleetVehicle>> FleetGetVehiclesAsyncWithHttpInfo (string xChronosheetsAuth, bool? includeDeleted = null)
         {
-            // verify the required parameter 'includeDeleted' is set
-            if (includeDeleted == null)
-                throw new ApiException(400, "Missing required parameter 'includeDeleted' when calling FleetApi->FleetGetVehicles");
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FleetApi->FleetGetVehicles");

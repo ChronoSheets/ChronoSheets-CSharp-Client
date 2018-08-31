@@ -73,9 +73,9 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //string userIds = null;
             //string xChronosheetsAuth = null;
-            //var response = instance.ReportsGetAllChartsDataAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+            //string userIds = null;
+            //var response = instance.ReportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds);
             //Assert.IsInstanceOf<CSApiResponseCombinedReportsData> (response, "response is CSApiResponseCombinedReportsData");
         }
         
@@ -102,9 +102,9 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //string userIds = null;
             //string xChronosheetsAuth = null;
-            //var response = instance.ReportsGetFleetSummaryAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+            //string userIds = null;
+            //var response = instance.ReportsGetFleetSummaryAdmin(startDate, endDate, xChronosheetsAuth, userIds);
             //Assert.IsInstanceOf<CSApiResponseListFleetSummaryReportItem> (response, "response is CSApiResponseListFleetSummaryReportItem");
         }
         
@@ -130,11 +130,11 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //string xChronosheetsAuth = null;
             //int? skip = null;
             //int? take = null;
             //string userIds = null;
-            //string xChronosheetsAuth = null;
-            //var response = instance.ReportsGetOrganisationTimesheetFileAttachments(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+            //var response = instance.ReportsGetOrganisationTimesheetFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
             //Assert.IsInstanceOf<CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment> (response, "response is CSApiResponseForPaginatedListOrgReportTimesheetFileAttachment");
         }
         
@@ -147,12 +147,12 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //string xChronosheetsAuth = null;
             //int? skip = null;
             //int? take = null;
             //string userIds = null;
             //string keywords = null;
-            //string xChronosheetsAuth = null;
-            //var response = instance.ReportsGetOrganisationTranscripts(startDate, endDate, skip, take, userIds, keywords, xChronosheetsAuth);
+            //var response = instance.ReportsGetOrganisationTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords);
             //Assert.IsInstanceOf<CSApiResponseForPaginatedListOrgReportTranscript> (response, "response is CSApiResponseForPaginatedListOrgReportTranscript");
         }
         
@@ -165,11 +165,11 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //string xChronosheetsAuth = null;
             //int? skip = null;
             //int? take = null;
             //string userIds = null;
-            //string xChronosheetsAuth = null;
-            //var response = instance.ReportsGetOrganisationTrips(startDate, endDate, skip, take, userIds, xChronosheetsAuth);
+            //var response = instance.ReportsGetOrganisationTrips(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
             //Assert.IsInstanceOf<CSApiResponseForPaginatedListOrgReportTrip> (response, "response is CSApiResponseForPaginatedListOrgReportTrip");
         }
         
@@ -182,13 +182,13 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //string xChronosheetsAuth = null;
             //string userIds = null;
             //string sort = null;
             //string order = null;
             //int? skip = null;
             //int? take = null;
-            //string xChronosheetsAuth = null;
-            //var response = instance.ReportsGetRawDataAdmin(startDate, endDate, userIds, sort, order, skip, take, xChronosheetsAuth);
+            //var response = instance.ReportsGetRawDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take);
             //Assert.IsInstanceOf<CSApiResponseForPaginatedListRawReportItem> (response, "response is CSApiResponseForPaginatedListRawReportItem");
         }
         
@@ -201,9 +201,9 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
-            //string userIds = null;
             //string xChronosheetsAuth = null;
-            //var response = instance.ReportsProjectCostingsAdmin(startDate, endDate, userIds, xChronosheetsAuth);
+            //string userIds = null;
+            //var response = instance.ReportsProjectCostingsAdmin(startDate, endDate, xChronosheetsAuth, userIds);
             //Assert.IsInstanceOf<CSApiResponseListProjectCostingReportItem> (response, "response is CSApiResponseListProjectCostingReportItem");
         }
         

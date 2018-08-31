@@ -134,7 +134,7 @@ No authorization required
 
 <a name="fleetgetvehicles"></a>
 # **FleetGetVehicles**
-> CSApiResponseListFleetVehicle FleetGetVehicles (bool? includeDeleted, string xChronosheetsAuth)
+> CSApiResponseListFleetVehicle FleetGetVehicles (string xChronosheetsAuth, bool? includeDeleted = null)
 
 Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 
@@ -153,13 +153,13 @@ namespace Example
         public void main()
         {
             var apiInstance = new FleetApi();
-            var includeDeleted = true;  // bool? | Whether or not to include deleted vehicles
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var includeDeleted = true;  // bool? | Whether or not to include deleted vehicles (optional) 
 
             try
             {
                 // Get a collection of vehicles that are under your organisation.    Does not require any special permission.
-                CSApiResponseListFleetVehicle result = apiInstance.FleetGetVehicles(includeDeleted, xChronosheetsAuth);
+                CSApiResponseListFleetVehicle result = apiInstance.FleetGetVehicles(xChronosheetsAuth, includeDeleted);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -175,8 +175,8 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **includeDeleted** | **bool?**| Whether or not to include deleted vehicles | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **includeDeleted** | **bool?**| Whether or not to include deleted vehicles | [optional] 
 
 ### Return type
 

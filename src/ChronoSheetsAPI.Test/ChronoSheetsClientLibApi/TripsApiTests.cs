@@ -99,11 +99,11 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //string xChronosheetsAuth = null;
             //int? skip = null;
             //int? take = null;
             //int? vehicleId = null;
-            //string xChronosheetsAuth = null;
-            //var response = instance.TripsGetMyTrips(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+            //var response = instance.TripsGetMyTrips(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
             //Assert.IsInstanceOf<CSApiResponseForPaginatedListTrip> (response, "response is CSApiResponseForPaginatedListTrip");
         }
         

@@ -86,10 +86,10 @@ namespace ChronoSheetsAPI.Test
             // TODO uncomment below to test the method and replace null with proper value
             //DateTime? startDate = null;
             //DateTime? endDate = null;
+            //string xChronosheetsAuth = null;
             //int? skip = null;
             //int? take = null;
-            //string xChronosheetsAuth = null;
-            //var response = instance.FileAttachmentsGetMyFileAttachments(startDate, endDate, skip, take, xChronosheetsAuth);
+            //var response = instance.FileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take);
             //Assert.IsInstanceOf<CSApiResponseForPaginatedListTimesheetFileAttachment> (response, "response is CSApiResponseForPaginatedListTimesheetFileAttachment");
         }
         

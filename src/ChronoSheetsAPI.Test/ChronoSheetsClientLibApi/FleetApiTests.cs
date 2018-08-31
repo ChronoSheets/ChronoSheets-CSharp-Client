@@ -97,9 +97,9 @@ namespace ChronoSheetsAPI.Test
         public void FleetGetVehiclesTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //bool? includeDeleted = null;
             //string xChronosheetsAuth = null;
-            //var response = instance.FleetGetVehicles(includeDeleted, xChronosheetsAuth);
+            //bool? includeDeleted = null;
+            //var response = instance.FleetGetVehicles(xChronosheetsAuth, includeDeleted);
             //Assert.IsInstanceOf<CSApiResponseListFleetVehicle> (response, "response is CSApiResponseListFleetVehicle");
         }
         

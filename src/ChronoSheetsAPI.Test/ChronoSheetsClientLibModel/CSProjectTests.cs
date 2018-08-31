@@ -107,6 +107,14 @@ namespace ChronoSheetsAPI.Test
             // TODO unit test for the property 'CostEstimation'
         }
         /// <summary>
+        /// Test the property 'CostActual'
+        /// </summary>
+        [Test]
+        public void CostActualTest()
+        {
+            // TODO unit test for the property 'CostActual'
+        }
+        /// <summary>
         /// Test the property 'StartDate'
         /// </summary>
         [Test]

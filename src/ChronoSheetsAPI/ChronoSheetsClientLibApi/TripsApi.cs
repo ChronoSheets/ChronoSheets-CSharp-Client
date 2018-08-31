@@ -79,12 +79,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
-        /// <param name="skip">Skip this many Trips</param>
-        /// <param name="take">Take this many Trips</param>
-        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many Trips (optional)</param>
+        /// <param name="take">Take this many Trips (optional)</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
         /// <returns>CSApiResponseForPaginatedListTrip</returns>
-        CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
+        CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, int? vehicleId = null);
 
         /// <summary>
         /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
@@ -95,12 +95,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
-        /// <param name="skip">Skip this many Trips</param>
-        /// <param name="take">Take this many Trips</param>
-        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many Trips (optional)</param>
+        /// <param name="take">Take this many Trips (optional)</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
         /// <returns>ApiResponse of CSApiResponseForPaginatedListTrip</returns>
-        ApiResponse<CSApiResponseForPaginatedListTrip> TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
+        ApiResponse<CSApiResponseForPaginatedListTrip> TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, int? vehicleId = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -158,12 +158,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
-        /// <param name="skip">Skip this many Trips</param>
-        /// <param name="take">Take this many Trips</param>
-        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many Trips (optional)</param>
+        /// <param name="take">Take this many Trips (optional)</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
         /// <returns>Task of CSApiResponseForPaginatedListTrip</returns>
-        System.Threading.Tasks.Task<CSApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, int? vehicleId = null);
 
         /// <summary>
         /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
@@ -174,12 +174,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
-        /// <param name="skip">Skip this many Trips</param>
-        /// <param name="take">Take this many Trips</param>
-        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many Trips (optional)</param>
+        /// <param name="take">Take this many Trips (optional)</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTrip)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, int? vehicleId = null);
         #endregion Asynchronous Operations
     }
 
@@ -618,14 +618,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
-        /// <param name="skip">Skip this many Trips</param>
-        /// <param name="take">Take this many Trips</param>
-        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many Trips (optional)</param>
+        /// <param name="take">Take this many Trips (optional)</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
         /// <returns>CSApiResponseForPaginatedListTrip</returns>
-        public CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+        public CSApiResponseForPaginatedListTrip TripsGetMyTrips (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, int? vehicleId = null)
         {
-             ApiResponse<CSApiResponseForPaginatedListTrip> localVarResponse = TripsGetMyTripsWithHttpInfo(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListTrip> localVarResponse = TripsGetMyTripsWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
              return localVarResponse.Data;
         }
 
@@ -635,12 +635,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
-        /// <param name="skip">Skip this many Trips</param>
-        /// <param name="take">Take this many Trips</param>
-        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many Trips (optional)</param>
+        /// <param name="take">Take this many Trips (optional)</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
         /// <returns>ApiResponse of CSApiResponseForPaginatedListTrip</returns>
-        public ApiResponse< CSApiResponseForPaginatedListTrip > TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+        public ApiResponse< CSApiResponseForPaginatedListTrip > TripsGetMyTripsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, int? vehicleId = null)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -648,15 +648,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // verify the required parameter 'endDate' is set
             if (endDate == null)
                 throw new ApiException(400, "Missing required parameter 'endDate' when calling TripsApi->TripsGetMyTrips");
-            // verify the required parameter 'skip' is set
-            if (skip == null)
-                throw new ApiException(400, "Missing required parameter 'skip' when calling TripsApi->TripsGetMyTrips");
-            // verify the required parameter 'take' is set
-            if (take == null)
-                throw new ApiException(400, "Missing required parameter 'take' when calling TripsApi->TripsGetMyTrips");
-            // verify the required parameter 'vehicleId' is set
-            if (vehicleId == null)
-                throw new ApiException(400, "Missing required parameter 'vehicleId' when calling TripsApi->TripsGetMyTrips");
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TripsApi->TripsGetMyTrips");
@@ -718,14 +709,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
-        /// <param name="skip">Skip this many Trips</param>
-        /// <param name="take">Take this many Trips</param>
-        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many Trips (optional)</param>
+        /// <param name="take">Take this many Trips (optional)</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
         /// <returns>Task of CSApiResponseForPaginatedListTrip</returns>
-        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, int? vehicleId = null)
         {
-             ApiResponse<CSApiResponseForPaginatedListTrip> localVarResponse = await TripsGetMyTripsAsyncWithHttpInfo(startDate, endDate, skip, take, vehicleId, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListTrip> localVarResponse = await TripsGetMyTripsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
              return localVarResponse.Data;
 
         }
@@ -736,12 +727,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Trips after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Trips before this date will be obtained.</param>
-        /// <param name="skip">Skip this many Trips</param>
-        /// <param name="take">Take this many Trips</param>
-        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many Trips (optional)</param>
+        /// <param name="take">Take this many Trips (optional)</param>
+        /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTrip)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, int? vehicleId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, int? vehicleId = null)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -749,15 +740,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // verify the required parameter 'endDate' is set
             if (endDate == null)
                 throw new ApiException(400, "Missing required parameter 'endDate' when calling TripsApi->TripsGetMyTrips");
-            // verify the required parameter 'skip' is set
-            if (skip == null)
-                throw new ApiException(400, "Missing required parameter 'skip' when calling TripsApi->TripsGetMyTrips");
-            // verify the required parameter 'take' is set
-            if (take == null)
-                throw new ApiException(400, "Missing required parameter 'take' when calling TripsApi->TripsGetMyTrips");
-            // verify the required parameter 'vehicleId' is set
-            if (vehicleId == null)
-                throw new ApiException(400, "Missing required parameter 'vehicleId' when calling TripsApi->TripsGetMyTrips");
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TripsApi->TripsGetMyTrips");

@@ -71,7 +71,7 @@ No authorization required
 
 <a name="fileattachmentsgetmyfileattachments"></a>
 # **FileAttachmentsGetMyFileAttachments**
-> CSApiResponseForPaginatedListTimesheetFileAttachment FileAttachmentsGetMyFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth)
+> CSApiResponseForPaginatedListTimesheetFileAttachment FileAttachmentsGetMyFileAttachments (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null)
 
 Get my file attachments.  Get files you've attached to timesheets.
 
@@ -92,14 +92,14 @@ namespace Example
             var apiInstance = new FileAttachmentsApi();
             var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The Start date of the date range.  File attachments after this date will be obtained.
             var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The End date of the date range.  File attachments before this date will be obtained.
-            var skip = 56;  // int? | Skip this many File attachments
-            var take = 56;  // int? | Take this many File attachments
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var skip = 56;  // int? | Skip this many File attachments (optional) 
+            var take = 56;  // int? | Take this many File attachments (optional) 
 
             try
             {
                 // Get my file attachments.  Get files you've attached to timesheets.
-                CSApiResponseForPaginatedListTimesheetFileAttachment result = apiInstance.FileAttachmentsGetMyFileAttachments(startDate, endDate, skip, take, xChronosheetsAuth);
+                CSApiResponseForPaginatedListTimesheetFileAttachment result = apiInstance.FileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -117,9 +117,9 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **startDate** | **DateTime?**| The Start date of the date range.  File attachments after this date will be obtained. | 
  **endDate** | **DateTime?**| The End date of the date range.  File attachments before this date will be obtained. | 
- **skip** | **int?**| Skip this many File attachments | 
- **take** | **int?**| Take this many File attachments | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **skip** | **int?**| Skip this many File attachments | [optional] 
+ **take** | **int?**| Take this many File attachments | [optional] 
 
 ### Return type
 

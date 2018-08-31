@@ -56,11 +56,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  File attachments after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  File attachments before this date will be obtained.</param>
-        /// <param name="skip">Skip this many File attachments</param>
-        /// <param name="take">Take this many File attachments</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many File attachments (optional)</param>
+        /// <param name="take">Take this many File attachments (optional)</param>
         /// <returns>CSApiResponseForPaginatedListTimesheetFileAttachment</returns>
-        CSApiResponseForPaginatedListTimesheetFileAttachment FileAttachmentsGetMyFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth);
+        CSApiResponseForPaginatedListTimesheetFileAttachment FileAttachmentsGetMyFileAttachments (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null);
 
         /// <summary>
         /// Get my file attachments.  Get files you&#39;ve attached to timesheets.
@@ -71,11 +71,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  File attachments after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  File attachments before this date will be obtained.</param>
-        /// <param name="skip">Skip this many File attachments</param>
-        /// <param name="take">Take this many File attachments</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many File attachments (optional)</param>
+        /// <param name="take">Take this many File attachments (optional)</param>
         /// <returns>ApiResponse of CSApiResponseForPaginatedListTimesheetFileAttachment</returns>
-        ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth);
+        ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -110,11 +110,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  File attachments after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  File attachments before this date will be obtained.</param>
-        /// <param name="skip">Skip this many File attachments</param>
-        /// <param name="take">Take this many File attachments</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many File attachments (optional)</param>
+        /// <param name="take">Take this many File attachments (optional)</param>
         /// <returns>Task of CSApiResponseForPaginatedListTimesheetFileAttachment</returns>
-        System.Threading.Tasks.Task<CSApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null);
 
         /// <summary>
         /// Get my file attachments.  Get files you&#39;ve attached to timesheets.
@@ -125,11 +125,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  File attachments after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  File attachments before this date will be obtained.</param>
-        /// <param name="skip">Skip this many File attachments</param>
-        /// <param name="take">Take this many File attachments</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many File attachments (optional)</param>
+        /// <param name="take">Take this many File attachments (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTimesheetFileAttachment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment>> FileAttachmentsGetMyFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment>> FileAttachmentsGetMyFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null);
         #endregion Asynchronous Operations
     }
 
@@ -389,13 +389,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  File attachments after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  File attachments before this date will be obtained.</param>
-        /// <param name="skip">Skip this many File attachments</param>
-        /// <param name="take">Take this many File attachments</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many File attachments (optional)</param>
+        /// <param name="take">Take this many File attachments (optional)</param>
         /// <returns>CSApiResponseForPaginatedListTimesheetFileAttachment</returns>
-        public CSApiResponseForPaginatedListTimesheetFileAttachment FileAttachmentsGetMyFileAttachments (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth)
+        public CSApiResponseForPaginatedListTimesheetFileAttachment FileAttachmentsGetMyFileAttachments (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null)
         {
-             ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> localVarResponse = FileAttachmentsGetMyFileAttachmentsWithHttpInfo(startDate, endDate, skip, take, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> localVarResponse = FileAttachmentsGetMyFileAttachmentsWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take);
              return localVarResponse.Data;
         }
 
@@ -405,11 +405,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  File attachments after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  File attachments before this date will be obtained.</param>
-        /// <param name="skip">Skip this many File attachments</param>
-        /// <param name="take">Take this many File attachments</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many File attachments (optional)</param>
+        /// <param name="take">Take this many File attachments (optional)</param>
         /// <returns>ApiResponse of CSApiResponseForPaginatedListTimesheetFileAttachment</returns>
-        public ApiResponse< CSApiResponseForPaginatedListTimesheetFileAttachment > FileAttachmentsGetMyFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth)
+        public ApiResponse< CSApiResponseForPaginatedListTimesheetFileAttachment > FileAttachmentsGetMyFileAttachmentsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -417,12 +417,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // verify the required parameter 'endDate' is set
             if (endDate == null)
                 throw new ApiException(400, "Missing required parameter 'endDate' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");
-            // verify the required parameter 'skip' is set
-            if (skip == null)
-                throw new ApiException(400, "Missing required parameter 'skip' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");
-            // verify the required parameter 'take' is set
-            if (take == null)
-                throw new ApiException(400, "Missing required parameter 'take' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");
@@ -483,13 +477,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  File attachments after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  File attachments before this date will be obtained.</param>
-        /// <param name="skip">Skip this many File attachments</param>
-        /// <param name="take">Take this many File attachments</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many File attachments (optional)</param>
+        /// <param name="take">Take this many File attachments (optional)</param>
         /// <returns>Task of CSApiResponseForPaginatedListTimesheetFileAttachment</returns>
-        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null)
         {
-             ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> localVarResponse = await FileAttachmentsGetMyFileAttachmentsAsyncWithHttpInfo(startDate, endDate, skip, take, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment> localVarResponse = await FileAttachmentsGetMyFileAttachmentsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take);
              return localVarResponse.Data;
 
         }
@@ -500,11 +494,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  File attachments after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  File attachments before this date will be obtained.</param>
-        /// <param name="skip">Skip this many File attachments</param>
-        /// <param name="take">Take this many File attachments</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many File attachments (optional)</param>
+        /// <param name="take">Take this many File attachments (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTimesheetFileAttachment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment>> FileAttachmentsGetMyFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment>> FileAttachmentsGetMyFileAttachmentsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -512,12 +506,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // verify the required parameter 'endDate' is set
             if (endDate == null)
                 throw new ApiException(400, "Missing required parameter 'endDate' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");
-            // verify the required parameter 'skip' is set
-            if (skip == null)
-                throw new ApiException(400, "Missing required parameter 'skip' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");
-            // verify the required parameter 'take' is set
-            if (take == null)
-                throw new ApiException(400, "Missing required parameter 'take' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");

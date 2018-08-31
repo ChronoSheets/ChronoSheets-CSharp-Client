@@ -33,12 +33,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Transcripts after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Transcripts before this date will be obtained.</param>
-        /// <param name="skip">Skip this many transcripts</param>
-        /// <param name="take">Take this many transcripts</param>
-        /// <param name="keyword">Search the text content of the transcript keywords</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many transcripts (optional)</param>
+        /// <param name="take">Take this many transcripts (optional)</param>
+        /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
         /// <returns>CSApiResponseForPaginatedListOrgReportTranscript</returns>
-        CSApiResponseForPaginatedListOrgReportTranscript TranscriptsGetMyTranscripts (DateTime? startDate, DateTime? endDate, int? skip, int? take, string keyword, string xChronosheetsAuth);
+        CSApiResponseForPaginatedListOrgReportTranscript TranscriptsGetMyTranscripts (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null);
 
         /// <summary>
         /// Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
@@ -49,12 +49,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Transcripts after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Transcripts before this date will be obtained.</param>
-        /// <param name="skip">Skip this many transcripts</param>
-        /// <param name="take">Take this many transcripts</param>
-        /// <param name="keyword">Search the text content of the transcript keywords</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many transcripts (optional)</param>
+        /// <param name="take">Take this many transcripts (optional)</param>
+        /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
         /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTranscript</returns>
-        ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string keyword, string xChronosheetsAuth);
+        ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -66,12 +66,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Transcripts after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Transcripts before this date will be obtained.</param>
-        /// <param name="skip">Skip this many transcripts</param>
-        /// <param name="take">Take this many transcripts</param>
-        /// <param name="keyword">Search the text content of the transcript keywords</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many transcripts (optional)</param>
+        /// <param name="take">Take this many transcripts (optional)</param>
+        /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
         /// <returns>Task of CSApiResponseForPaginatedListOrgReportTranscript</returns>
-        System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string keyword, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null);
 
         /// <summary>
         /// Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
@@ -82,12 +82,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Transcripts after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Transcripts before this date will be obtained.</param>
-        /// <param name="skip">Skip this many transcripts</param>
-        /// <param name="take">Take this many transcripts</param>
-        /// <param name="keyword">Search the text content of the transcript keywords</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many transcripts (optional)</param>
+        /// <param name="take">Take this many transcripts (optional)</param>
+        /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTranscript)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript>> TranscriptsGetMyTranscriptsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string keyword, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript>> TranscriptsGetMyTranscriptsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null);
         #endregion Asynchronous Operations
     }
 
@@ -194,14 +194,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Transcripts after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Transcripts before this date will be obtained.</param>
-        /// <param name="skip">Skip this many transcripts</param>
-        /// <param name="take">Take this many transcripts</param>
-        /// <param name="keyword">Search the text content of the transcript keywords</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many transcripts (optional)</param>
+        /// <param name="take">Take this many transcripts (optional)</param>
+        /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
         /// <returns>CSApiResponseForPaginatedListOrgReportTranscript</returns>
-        public CSApiResponseForPaginatedListOrgReportTranscript TranscriptsGetMyTranscripts (DateTime? startDate, DateTime? endDate, int? skip, int? take, string keyword, string xChronosheetsAuth)
+        public CSApiResponseForPaginatedListOrgReportTranscript TranscriptsGetMyTranscripts (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null)
         {
-             ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> localVarResponse = TranscriptsGetMyTranscriptsWithHttpInfo(startDate, endDate, skip, take, keyword, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> localVarResponse = TranscriptsGetMyTranscriptsWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, keyword);
              return localVarResponse.Data;
         }
 
@@ -211,12 +211,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Transcripts after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Transcripts before this date will be obtained.</param>
-        /// <param name="skip">Skip this many transcripts</param>
-        /// <param name="take">Take this many transcripts</param>
-        /// <param name="keyword">Search the text content of the transcript keywords</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many transcripts (optional)</param>
+        /// <param name="take">Take this many transcripts (optional)</param>
+        /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
         /// <returns>ApiResponse of CSApiResponseForPaginatedListOrgReportTranscript</returns>
-        public ApiResponse< CSApiResponseForPaginatedListOrgReportTranscript > TranscriptsGetMyTranscriptsWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string keyword, string xChronosheetsAuth)
+        public ApiResponse< CSApiResponseForPaginatedListOrgReportTranscript > TranscriptsGetMyTranscriptsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -224,15 +224,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // verify the required parameter 'endDate' is set
             if (endDate == null)
                 throw new ApiException(400, "Missing required parameter 'endDate' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
-            // verify the required parameter 'skip' is set
-            if (skip == null)
-                throw new ApiException(400, "Missing required parameter 'skip' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
-            // verify the required parameter 'take' is set
-            if (take == null)
-                throw new ApiException(400, "Missing required parameter 'take' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
-            // verify the required parameter 'keyword' is set
-            if (keyword == null)
-                throw new ApiException(400, "Missing required parameter 'keyword' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
@@ -294,14 +285,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Transcripts after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Transcripts before this date will be obtained.</param>
-        /// <param name="skip">Skip this many transcripts</param>
-        /// <param name="take">Take this many transcripts</param>
-        /// <param name="keyword">Search the text content of the transcript keywords</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many transcripts (optional)</param>
+        /// <param name="take">Take this many transcripts (optional)</param>
+        /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
         /// <returns>Task of CSApiResponseForPaginatedListOrgReportTranscript</returns>
-        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsAsync (DateTime? startDate, DateTime? endDate, int? skip, int? take, string keyword, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null)
         {
-             ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> localVarResponse = await TranscriptsGetMyTranscriptsAsyncWithHttpInfo(startDate, endDate, skip, take, keyword, xChronosheetsAuth);
+             ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> localVarResponse = await TranscriptsGetMyTranscriptsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, keyword);
              return localVarResponse.Data;
 
         }
@@ -312,12 +303,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="startDate">The Start date of the date range.  Transcripts after this date will be obtained.</param>
         /// <param name="endDate">The End date of the date range.  Transcripts before this date will be obtained.</param>
-        /// <param name="skip">Skip this many transcripts</param>
-        /// <param name="take">Take this many transcripts</param>
-        /// <param name="keyword">Search the text content of the transcript keywords</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many transcripts (optional)</param>
+        /// <param name="take">Take this many transcripts (optional)</param>
+        /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListOrgReportTranscript)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript>> TranscriptsGetMyTranscriptsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, int? skip, int? take, string keyword, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript>> TranscriptsGetMyTranscriptsAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -325,15 +316,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // verify the required parameter 'endDate' is set
             if (endDate == null)
                 throw new ApiException(400, "Missing required parameter 'endDate' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
-            // verify the required parameter 'skip' is set
-            if (skip == null)
-                throw new ApiException(400, "Missing required parameter 'skip' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
-            // verify the required parameter 'take' is set
-            if (take == null)
-                throw new ApiException(400, "Missing required parameter 'take' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
-            // verify the required parameter 'keyword' is set
-            if (keyword == null)
-                throw new ApiException(400, "Missing required parameter 'keyword' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
