@@ -31,7 +31,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         CSApiResponseInt32 ProjectsCreateProject (CSInsertProjectRequest request, string xChronosheetsAuth);
@@ -43,7 +43,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> ProjectsCreateProjectWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth);
@@ -125,7 +125,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseInt32> ProjectsCreateProjectAsync (CSInsertProjectRequest request, string xChronosheetsAuth);
@@ -137,7 +137,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth);
@@ -314,7 +314,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseInt32</returns>
         public CSApiResponseInt32 ProjectsCreateProject (CSInsertProjectRequest request, string xChronosheetsAuth)
@@ -327,7 +327,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         public ApiResponse< CSApiResponseInt32 > ProjectsCreateProjectWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth)
@@ -403,7 +403,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseInt32> ProjectsCreateProjectAsync (CSInsertProjectRequest request, string xChronosheetsAuth)
@@ -417,7 +417,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">An Insert Project Request object containing values for the new Project to create</param>
+        /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (CSInsertProjectRequest request, string xChronosheetsAuth)

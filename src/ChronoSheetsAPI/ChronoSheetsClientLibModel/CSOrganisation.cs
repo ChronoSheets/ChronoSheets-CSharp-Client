@@ -46,10 +46,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="Timezone">Timezone.</param>
         /// <param name="SubscriptionCustomerId">SubscriptionCustomerId.</param>
         /// <param name="SignupToken">SignupToken.</param>
+        /// <param name="IsActive">IsActive.</param>
         /// <param name="SubscriptionCycleStart">SubscriptionCycleStart.</param>
         /// <param name="SubscriptionCycleEnd">SubscriptionCycleEnd.</param>
         /// <param name="PricingPlans">PricingPlans.</param>
-        public CSOrganisation(int? Id = default(int?), string Name = default(string), string AddressLine01 = default(string), string AddressLine02 = default(string), string Suburb = default(string), string State = default(string), string Postcode = default(string), string Country = default(string), string Phone = default(string), string EmailAddress = default(string), string Timezone = default(string), string SubscriptionCustomerId = default(string), string SignupToken = default(string), DateTime? SubscriptionCycleStart = default(DateTime?), DateTime? SubscriptionCycleEnd = default(DateTime?), List<CSOrganisationPricingPlan> PricingPlans = default(List<CSOrganisationPricingPlan>))
+        public CSOrganisation(int? Id = default(int?), string Name = default(string), string AddressLine01 = default(string), string AddressLine02 = default(string), string Suburb = default(string), string State = default(string), string Postcode = default(string), string Country = default(string), string Phone = default(string), string EmailAddress = default(string), string Timezone = default(string), string SubscriptionCustomerId = default(string), string SignupToken = default(string), bool? IsActive = default(bool?), DateTime? SubscriptionCycleStart = default(DateTime?), DateTime? SubscriptionCycleEnd = default(DateTime?), List<CSOrganisationPricingPlan> PricingPlans = default(List<CSOrganisationPricingPlan>))
         {
             this.Id = Id;
             this.Name = Name;
@@ -64,6 +65,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             this.Timezone = Timezone;
             this.SubscriptionCustomerId = SubscriptionCustomerId;
             this.SignupToken = SignupToken;
+            this.IsActive = IsActive;
             this.SubscriptionCycleStart = SubscriptionCycleStart;
             this.SubscriptionCycleEnd = SubscriptionCycleEnd;
             this.PricingPlans = PricingPlans;
@@ -148,6 +150,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public string SignupToken { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsActive
+        /// </summary>
+        [DataMember(Name="IsActive", EmitDefaultValue=false)]
+        public bool? IsActive { get; set; }
+
+        /// <summary>
         /// Gets or Sets SubscriptionCycleStart
         /// </summary>
         [DataMember(Name="SubscriptionCycleStart", EmitDefaultValue=false)]
@@ -186,6 +194,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  Timezone: ").Append(Timezone).Append("\n");
             sb.Append("  SubscriptionCustomerId: ").Append(SubscriptionCustomerId).Append("\n");
             sb.Append("  SignupToken: ").Append(SignupToken).Append("\n");
+            sb.Append("  IsActive: ").Append(IsActive).Append("\n");
             sb.Append("  SubscriptionCycleStart: ").Append(SubscriptionCycleStart).Append("\n");
             sb.Append("  SubscriptionCycleEnd: ").Append(SubscriptionCycleEnd).Append("\n");
             sb.Append("  PricingPlans: ").Append(PricingPlans).Append("\n");
@@ -289,6 +298,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.SignupToken.Equals(input.SignupToken))
                 ) && 
                 (
+                    this.IsActive == input.IsActive ||
+                    (this.IsActive != null &&
+                    this.IsActive.Equals(input.IsActive))
+                ) && 
+                (
                     this.SubscriptionCycleStart == input.SubscriptionCycleStart ||
                     (this.SubscriptionCycleStart != null &&
                     this.SubscriptionCycleStart.Equals(input.SubscriptionCycleStart))
@@ -340,6 +354,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.SubscriptionCustomerId.GetHashCode();
                 if (this.SignupToken != null)
                     hashCode = hashCode * 59 + this.SignupToken.GetHashCode();
+                if (this.IsActive != null)
+                    hashCode = hashCode * 59 + this.IsActive.GetHashCode();
                 if (this.SubscriptionCycleStart != null)
                     hashCode = hashCode * 59 + this.SubscriptionCycleStart.GetHashCode();
                 if (this.SubscriptionCycleEnd != null)

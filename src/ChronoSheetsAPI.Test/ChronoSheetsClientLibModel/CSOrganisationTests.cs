@@ -171,6 +171,14 @@ namespace ChronoSheetsAPI.Test
             // TODO unit test for the property 'SignupToken'
         }
         /// <summary>
+        /// Test the property 'IsActive'
+        /// </summary>
+        [Test]
+        public void IsActiveTest()
+        {
+            // TODO unit test for the property 'IsActive'
+        }
+        /// <summary>
         /// Test the property 'SubscriptionCycleStart'
         /// </summary>
         [Test]

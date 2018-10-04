@@ -102,7 +102,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListInt32</returns>
         CSApiResponseListInt32 TimesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
@@ -114,7 +114,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListInt32</returns>
         ApiResponse<CSApiResponseListInt32> TimesheetsUpdateTimesheetsWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
@@ -198,7 +198,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListInt32</returns>
         System.Threading.Tasks.Task<CSApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
@@ -210,7 +210,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth);
@@ -815,7 +815,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListInt32</returns>
         public CSApiResponseListInt32 TimesheetsUpdateTimesheets (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
@@ -828,7 +828,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListInt32</returns>
         public ApiResponse< CSApiResponseListInt32 > TimesheetsUpdateTimesheetsWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
@@ -904,7 +904,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListInt32</returns>
         public async System.Threading.Tasks.Task<CSApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)
@@ -918,7 +918,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create</param>
+        /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListInt32)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (CSBatchUpdateTimesheetRequest request, string xChronosheetsAuth)

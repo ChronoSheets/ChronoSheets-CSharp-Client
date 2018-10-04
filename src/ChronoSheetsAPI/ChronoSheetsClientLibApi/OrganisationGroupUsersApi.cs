@@ -31,7 +31,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orgGroupId">An OrganisatioGroup Id</param>
+        /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListUserForManagement</returns>
         CSApiResponseListUserForManagement OrganisationGroupUsersGetOrganisationGroupUsers (int? orgGroupId, string xChronosheetsAuth);
@@ -43,7 +43,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orgGroupId">An OrganisatioGroup Id</param>
+        /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListUserForManagement</returns>
         ApiResponse<CSApiResponseListUserForManagement> OrganisationGroupUsersGetOrganisationGroupUsersWithHttpInfo (int? orgGroupId, string xChronosheetsAuth);
@@ -54,7 +54,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         CSApiResponseBoolean OrganisationGroupUsersUpdateOrganisationGroupUsers (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth);
@@ -66,7 +66,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> OrganisationGroupUsersUpdateOrganisationGroupUsersWithHttpInfo (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth);
@@ -79,7 +79,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orgGroupId">An OrganisatioGroup Id</param>
+        /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListUserForManagement</returns>
         System.Threading.Tasks.Task<CSApiResponseListUserForManagement> OrganisationGroupUsersGetOrganisationGroupUsersAsync (int? orgGroupId, string xChronosheetsAuth);
@@ -91,7 +91,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orgGroupId">An OrganisatioGroup Id</param>
+        /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListUserForManagement)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserForManagement>> OrganisationGroupUsersGetOrganisationGroupUsersAsyncWithHttpInfo (int? orgGroupId, string xChronosheetsAuth);
@@ -102,7 +102,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         System.Threading.Tasks.Task<CSApiResponseBoolean> OrganisationGroupUsersUpdateOrganisationGroupUsersAsync (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth);
@@ -114,7 +114,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// 
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> OrganisationGroupUsersUpdateOrganisationGroupUsersAsyncWithHttpInfo (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth);
@@ -222,7 +222,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orgGroupId">An OrganisatioGroup Id</param>
+        /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseListUserForManagement</returns>
         public CSApiResponseListUserForManagement OrganisationGroupUsersGetOrganisationGroupUsers (int? orgGroupId, string xChronosheetsAuth)
@@ -235,7 +235,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orgGroupId">An OrganisatioGroup Id</param>
+        /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseListUserForManagement</returns>
         public ApiResponse< CSApiResponseListUserForManagement > OrganisationGroupUsersGetOrganisationGroupUsersWithHttpInfo (int? orgGroupId, string xChronosheetsAuth)
@@ -298,7 +298,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orgGroupId">An OrganisatioGroup Id</param>
+        /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseListUserForManagement</returns>
         public async System.Threading.Tasks.Task<CSApiResponseListUserForManagement> OrganisationGroupUsersGetOrganisationGroupUsersAsync (int? orgGroupId, string xChronosheetsAuth)
@@ -312,7 +312,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="orgGroupId">An OrganisatioGroup Id</param>
+        /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseListUserForManagement)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseListUserForManagement>> OrganisationGroupUsersGetOrganisationGroupUsersAsyncWithHttpInfo (int? orgGroupId, string xChronosheetsAuth)
@@ -375,7 +375,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>CSApiResponseBoolean</returns>
         public CSApiResponseBoolean OrganisationGroupUsersUpdateOrganisationGroupUsers (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth)
@@ -388,7 +388,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         public ApiResponse< CSApiResponseBoolean > OrganisationGroupUsersUpdateOrganisationGroupUsersWithHttpInfo (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth)
@@ -464,7 +464,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of CSApiResponseBoolean</returns>
         public async System.Threading.Tasks.Task<CSApiResponseBoolean> OrganisationGroupUsersUpdateOrganisationGroupUsersAsync (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth)
@@ -478,7 +478,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> OrganisationGroupUsersUpdateOrganisationGroupUsersAsyncWithHttpInfo (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth)
