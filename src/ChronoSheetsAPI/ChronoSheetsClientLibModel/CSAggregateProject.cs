@@ -33,13 +33,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSAggregateProject" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="ClientId">ClientId.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="ProjectName">ProjectName.</param>
-        /// <param name="CostEstimation">CostEstimation.</param>
-        /// <param name="StartDate">StartDate.</param>
-        /// <param name="EndDate">EndDate.</param>
+        /// <param name="Id">The ID of the project.</param>
+        /// <param name="ClientId">The ID of the client that this project is assigned to.</param>
+        /// <param name="OrganisationId">The ID of your organisation.</param>
+        /// <param name="ProjectName">The name of the project (can be viewed in PROJECT TIMELINES).</param>
+        /// <param name="CostEstimation">The estimated cost of the project (can be viewed in PROJECT TIMELINES).</param>
+        /// <param name="StartDate">The start date of the project (can be viewed in PROJECT TIMELINES).</param>
+        /// <param name="EndDate">The end date of the project (can be viewed in PROJECT TIMELINES).</param>
         public CSAggregateProject(int? Id = default(int?), int? ClientId = default(int?), int? OrganisationId = default(int?), string ProjectName = default(string), double? CostEstimation = default(double?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?))
         {
             this.Id = Id;
@@ -52,44 +52,51 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the project
         /// </summary>
+        /// <value>The ID of the project</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientId
+        /// The ID of the client that this project is assigned to
         /// </summary>
+        /// <value>The ID of the client that this project is assigned to</value>
         [DataMember(Name="ClientId", EmitDefaultValue=false)]
         public int? ClientId { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrganisationId
+        /// The ID of your organisation
         /// </summary>
+        /// <value>The ID of your organisation</value>
         [DataMember(Name="OrganisationId", EmitDefaultValue=false)]
         public int? OrganisationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProjectName
+        /// The name of the project (can be viewed in PROJECT TIMELINES)
         /// </summary>
+        /// <value>The name of the project (can be viewed in PROJECT TIMELINES)</value>
         [DataMember(Name="ProjectName", EmitDefaultValue=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// Gets or Sets CostEstimation
+        /// The estimated cost of the project (can be viewed in PROJECT TIMELINES)
         /// </summary>
+        /// <value>The estimated cost of the project (can be viewed in PROJECT TIMELINES)</value>
         [DataMember(Name="CostEstimation", EmitDefaultValue=false)]
         public double? CostEstimation { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartDate
+        /// The start date of the project (can be viewed in PROJECT TIMELINES)
         /// </summary>
+        /// <value>The start date of the project (can be viewed in PROJECT TIMELINES)</value>
         [DataMember(Name="StartDate", EmitDefaultValue=false)]
         public DateTime? StartDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndDate
+        /// The end date of the project (can be viewed in PROJECT TIMELINES)
         /// </summary>
+        /// <value>The end date of the project (can be viewed in PROJECT TIMELINES)</value>
         [DataMember(Name="EndDate", EmitDefaultValue=false)]
         public DateTime? EndDate { get; set; }
 

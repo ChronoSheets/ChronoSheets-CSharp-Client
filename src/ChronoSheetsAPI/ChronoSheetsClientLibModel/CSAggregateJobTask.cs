@@ -33,9 +33,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSAggregateJobTask" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Label">Label.</param>
-        /// <param name="IsDeleted">IsDeleted.</param>
+        /// <param name="Id">The Id of the task.</param>
+        /// <param name="Label">The label of the task.</param>
+        /// <param name="IsDeleted">A flag indicating that this task has been marked as deleted.</param>
         public CSAggregateJobTask(int? Id = default(int?), string Label = default(string), bool? IsDeleted = default(bool?))
         {
             this.Id = Id;
@@ -44,20 +44,23 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The Id of the task
         /// </summary>
+        /// <value>The Id of the task</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Label
+        /// The label of the task
         /// </summary>
+        /// <value>The label of the task</value>
         [DataMember(Name="Label", EmitDefaultValue=false)]
         public string Label { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsDeleted
+        /// A flag indicating that this task has been marked as deleted
         /// </summary>
+        /// <value>A flag indicating that this task has been marked as deleted</value>
         [DataMember(Name="IsDeleted", EmitDefaultValue=false)]
         public bool? IsDeleted { get; set; }
 

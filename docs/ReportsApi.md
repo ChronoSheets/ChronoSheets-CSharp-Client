@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 <a name="reportsgetallchartsdataadmin"></a>
 # **ReportsGetAllChartsDataAdmin**
-> CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null)
+> CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null, string forceOnlyThisChart = null)
 
 Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
 
@@ -41,11 +41,12 @@ namespace Example
             var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The end date for the date range.  Report data in the response is before this date
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
             var userIds = userIds_example;  // string | A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional) 
+            var forceOnlyThisChart = forceOnlyThisChart_example;  // string | A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the 'NotForced' option. (optional) 
 
             try
             {
                 // Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the 'ReportAdmin' permission.
-                CSApiResponseCombinedReportsData result = apiInstance.ReportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds);
+                CSApiResponseCombinedReportsData result = apiInstance.ReportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -65,6 +66,7 @@ Name | Type | Description  | Notes
  **endDate** | **DateTime?**| The end date for the date range.  Report data in the response is before this date | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
  **userIds** | **string**| A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. | [optional] 
+ **forceOnlyThisChart** | **string**| A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. | [optional] 
 
 ### Return type
 

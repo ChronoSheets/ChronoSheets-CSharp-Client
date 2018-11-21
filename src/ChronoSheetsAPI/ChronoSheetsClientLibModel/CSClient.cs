@@ -33,20 +33,20 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSClient" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="ClientName">ClientName.</param>
-        /// <param name="ClientAddressLine1">ClientAddressLine1.</param>
-        /// <param name="ClientAddressLine2">ClientAddressLine2.</param>
-        /// <param name="ClientSuburb">ClientSuburb.</param>
-        /// <param name="ClientState">ClientState.</param>
-        /// <param name="ClientPostCode">ClientPostCode.</param>
-        /// <param name="PersonOfContact">PersonOfContact.</param>
-        /// <param name="ClientPhoneNumber">ClientPhoneNumber.</param>
-        /// <param name="ClientMobileNumber">ClientMobileNumber.</param>
-        /// <param name="ClientEmailAddress">ClientEmailAddress.</param>
-        /// <param name="ClientWebURL">ClientWebURL.</param>
-        /// <param name="ProjectCount">ProjectCount.</param>
+        /// <param name="Id">The ID of the client.</param>
+        /// <param name="OrganisationId">The ID of your organisation.</param>
+        /// <param name="ClientName">The name of the client.</param>
+        /// <param name="ClientAddressLine1">The address line 1 of the client.</param>
+        /// <param name="ClientAddressLine2">The address line 2 of the client.</param>
+        /// <param name="ClientSuburb">The address suburb of the client.</param>
+        /// <param name="ClientState">The address state of the client.</param>
+        /// <param name="ClientPostCode">The postcode of the client.</param>
+        /// <param name="PersonOfContact">The contact person working under the client.</param>
+        /// <param name="ClientPhoneNumber">The phone number of the client.</param>
+        /// <param name="ClientMobileNumber">The mobile phone number of the client.</param>
+        /// <param name="ClientEmailAddress">The email address of the client.</param>
+        /// <param name="ClientWebURL">The website URL of the client.</param>
+        /// <param name="ProjectCount">The number of projects under the client.</param>
         public CSClient(int? Id = default(int?), int? OrganisationId = default(int?), string ClientName = default(string), string ClientAddressLine1 = default(string), string ClientAddressLine2 = default(string), string ClientSuburb = default(string), string ClientState = default(string), string ClientPostCode = default(string), string PersonOfContact = default(string), string ClientPhoneNumber = default(string), string ClientMobileNumber = default(string), string ClientEmailAddress = default(string), string ClientWebURL = default(string), int? ProjectCount = default(int?))
         {
             this.Id = Id;
@@ -66,86 +66,100 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the client
         /// </summary>
+        /// <value>The ID of the client</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrganisationId
+        /// The ID of your organisation
         /// </summary>
+        /// <value>The ID of your organisation</value>
         [DataMember(Name="OrganisationId", EmitDefaultValue=false)]
         public int? OrganisationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientName
+        /// The name of the client
         /// </summary>
+        /// <value>The name of the client</value>
         [DataMember(Name="ClientName", EmitDefaultValue=false)]
         public string ClientName { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientAddressLine1
+        /// The address line 1 of the client
         /// </summary>
+        /// <value>The address line 1 of the client</value>
         [DataMember(Name="ClientAddressLine1", EmitDefaultValue=false)]
         public string ClientAddressLine1 { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientAddressLine2
+        /// The address line 2 of the client
         /// </summary>
+        /// <value>The address line 2 of the client</value>
         [DataMember(Name="ClientAddressLine2", EmitDefaultValue=false)]
         public string ClientAddressLine2 { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientSuburb
+        /// The address suburb of the client
         /// </summary>
+        /// <value>The address suburb of the client</value>
         [DataMember(Name="ClientSuburb", EmitDefaultValue=false)]
         public string ClientSuburb { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientState
+        /// The address state of the client
         /// </summary>
+        /// <value>The address state of the client</value>
         [DataMember(Name="ClientState", EmitDefaultValue=false)]
         public string ClientState { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientPostCode
+        /// The postcode of the client
         /// </summary>
+        /// <value>The postcode of the client</value>
         [DataMember(Name="ClientPostCode", EmitDefaultValue=false)]
         public string ClientPostCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets PersonOfContact
+        /// The contact person working under the client
         /// </summary>
+        /// <value>The contact person working under the client</value>
         [DataMember(Name="PersonOfContact", EmitDefaultValue=false)]
         public string PersonOfContact { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientPhoneNumber
+        /// The phone number of the client
         /// </summary>
+        /// <value>The phone number of the client</value>
         [DataMember(Name="ClientPhoneNumber", EmitDefaultValue=false)]
         public string ClientPhoneNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientMobileNumber
+        /// The mobile phone number of the client
         /// </summary>
+        /// <value>The mobile phone number of the client</value>
         [DataMember(Name="ClientMobileNumber", EmitDefaultValue=false)]
         public string ClientMobileNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientEmailAddress
+        /// The email address of the client
         /// </summary>
+        /// <value>The email address of the client</value>
         [DataMember(Name="ClientEmailAddress", EmitDefaultValue=false)]
         public string ClientEmailAddress { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientWebURL
+        /// The website URL of the client
         /// </summary>
+        /// <value>The website URL of the client</value>
         [DataMember(Name="ClientWebURL", EmitDefaultValue=false)]
         public string ClientWebURL { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProjectCount
+        /// The number of projects under the client
         /// </summary>
+        /// <value>The number of projects under the client</value>
         [DataMember(Name="ProjectCount", EmitDefaultValue=false)]
         public int? ProjectCount { get; set; }
 

@@ -35,8 +35,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
         /// <returns>CSApiResponseCombinedReportsData</returns>
-        CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null);
+        CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null, string forceOnlyThisChart = null);
 
         /// <summary>
         /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
@@ -49,8 +50,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
         /// <returns>ApiResponse of CSApiResponseCombinedReportsData</returns>
-        ApiResponse<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null);
+        ApiResponse<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null, string forceOnlyThisChart = null);
         /// <summary>
         /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
         /// </summary>
@@ -321,8 +323,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
         /// <returns>Task of CSApiResponseCombinedReportsData</returns>
-        System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null);
+        System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null, string forceOnlyThisChart = null);
 
         /// <summary>
         /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
@@ -335,8 +338,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseCombinedReportsData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null);
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null, string forceOnlyThisChart = null);
         /// <summary>
         /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
         /// </summary>
@@ -702,10 +706,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
         /// <returns>CSApiResponseCombinedReportsData</returns>
-        public CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null)
+        public CSApiResponseCombinedReportsData ReportsGetAllChartsDataAdmin (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null, string forceOnlyThisChart = null)
         {
-             ApiResponse<CSApiResponseCombinedReportsData> localVarResponse = ReportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds);
+             ApiResponse<CSApiResponseCombinedReportsData> localVarResponse = ReportsGetAllChartsDataAdminWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
              return localVarResponse.Data;
         }
 
@@ -717,8 +722,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
         /// <returns>ApiResponse of CSApiResponseCombinedReportsData</returns>
-        public ApiResponse< CSApiResponseCombinedReportsData > ReportsGetAllChartsDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null)
+        public ApiResponse< CSApiResponseCombinedReportsData > ReportsGetAllChartsDataAdminWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null, string forceOnlyThisChart = null)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -758,6 +764,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
             if (userIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "UserIds", userIds)); // query parameter
+            if (forceOnlyThisChart != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ForceOnlyThisChart", forceOnlyThisChart)); // query parameter
             if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
 
 
@@ -787,10 +794,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
         /// <returns>Task of CSApiResponseCombinedReportsData</returns>
-        public async System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null)
+        public async System.Threading.Tasks.Task<CSApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null, string forceOnlyThisChart = null)
         {
-             ApiResponse<CSApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataAdminAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds);
+             ApiResponse<CSApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataAdminAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
              return localVarResponse.Data;
 
         }
@@ -803,8 +811,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
         /// <returns>Task of ApiResponse (CSApiResponseCombinedReportsData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null)
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, string userIds = null, string forceOnlyThisChart = null)
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -844,6 +853,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
             if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
             if (userIds != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "UserIds", userIds)); // query parameter
+            if (forceOnlyThisChart != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "ForceOnlyThisChart", forceOnlyThisChart)); // query parameter
             if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
 
 

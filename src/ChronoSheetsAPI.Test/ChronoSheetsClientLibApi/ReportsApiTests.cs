@@ -75,7 +75,8 @@ namespace ChronoSheetsAPI.Test
             //DateTime? endDate = null;
             //string xChronosheetsAuth = null;
             //string userIds = null;
-            //var response = instance.ReportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds);
+            //string forceOnlyThisChart = null;
+            //var response = instance.ReportsGetAllChartsDataAdmin(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
             //Assert.IsInstanceOf<CSApiResponseCombinedReportsData> (response, "response is CSApiResponseCombinedReportsData");
         }
         

@@ -33,16 +33,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSAggregateJobCode" /> class.
         /// </summary>
-        /// <param name="AvailableTasks">AvailableTasks.</param>
-        /// <param name="PermittedEmployees">PermittedEmployees.</param>
-        /// <param name="Id">Id.</param>
-        /// <param name="Code">Code.</param>
-        /// <param name="_Client">_Client.</param>
-        /// <param name="ClientId">ClientId.</param>
-        /// <param name="Project">Project.</param>
-        /// <param name="ProjectId">ProjectId.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="IsDeleted">IsDeleted.</param>
+        /// <param name="AvailableTasks">The list of available tasks under this job code.</param>
+        /// <param name="PermittedEmployees">The list of employee IDs that are permitted to record timesheets with this job code (empty means everyone).</param>
+        /// <param name="Id">The ID of the job code (not the code itself).</param>
+        /// <param name="Code">The job code itself.</param>
+        /// <param name="_Client">The name of the client.</param>
+        /// <param name="ClientId">The ID of the client.</param>
+        /// <param name="Project">The name of the project.</param>
+        /// <param name="ProjectId">The ID of the project.</param>
+        /// <param name="OrganisationId">Your organisation ID.</param>
+        /// <param name="IsDeleted">A flag indicating whether or not the job code has been marked as deleted.</param>
         public CSAggregateJobCode(List<CSAggregateJobTask> AvailableTasks = default(List<CSAggregateJobTask>), List<int?> PermittedEmployees = default(List<int?>), int? Id = default(int?), string Code = default(string), string _Client = default(string), int? ClientId = default(int?), string Project = default(string), int? ProjectId = default(int?), int? OrganisationId = default(int?), bool? IsDeleted = default(bool?))
         {
             this.AvailableTasks = AvailableTasks;
@@ -58,62 +58,72 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets AvailableTasks
+        /// The list of available tasks under this job code
         /// </summary>
+        /// <value>The list of available tasks under this job code</value>
         [DataMember(Name="AvailableTasks", EmitDefaultValue=false)]
         public List<CSAggregateJobTask> AvailableTasks { get; set; }
 
         /// <summary>
-        /// Gets or Sets PermittedEmployees
+        /// The list of employee IDs that are permitted to record timesheets with this job code (empty means everyone)
         /// </summary>
+        /// <value>The list of employee IDs that are permitted to record timesheets with this job code (empty means everyone)</value>
         [DataMember(Name="PermittedEmployees", EmitDefaultValue=false)]
         public List<int?> PermittedEmployees { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the job code (not the code itself)
         /// </summary>
+        /// <value>The ID of the job code (not the code itself)</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int? Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Code
+        /// The job code itself
         /// </summary>
+        /// <value>The job code itself</value>
         [DataMember(Name="Code", EmitDefaultValue=false)]
         public string Code { get; set; }
 
         /// <summary>
-        /// Gets or Sets _Client
+        /// The name of the client
         /// </summary>
+        /// <value>The name of the client</value>
         [DataMember(Name="Client", EmitDefaultValue=false)]
         public string _Client { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientId
+        /// The ID of the client
         /// </summary>
+        /// <value>The ID of the client</value>
         [DataMember(Name="ClientId", EmitDefaultValue=false)]
         public int? ClientId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Project
+        /// The name of the project
         /// </summary>
+        /// <value>The name of the project</value>
         [DataMember(Name="Project", EmitDefaultValue=false)]
         public string Project { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProjectId
+        /// The ID of the project
         /// </summary>
+        /// <value>The ID of the project</value>
         [DataMember(Name="ProjectId", EmitDefaultValue=false)]
         public int? ProjectId { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrganisationId
+        /// Your organisation ID
         /// </summary>
+        /// <value>Your organisation ID</value>
         [DataMember(Name="OrganisationId", EmitDefaultValue=false)]
         public int? OrganisationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsDeleted
+        /// A flag indicating whether or not the job code has been marked as deleted
         /// </summary>
+        /// <value>A flag indicating whether or not the job code has been marked as deleted</value>
         [DataMember(Name="IsDeleted", EmitDefaultValue=false)]
         public bool? IsDeleted { get; set; }
 
