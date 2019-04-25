@@ -65,6 +65,19 @@ namespace ChronoSheetsAPI.Test
 
         
         /// <summary>
+        /// Test TranscriptsGetMyTranscript
+        /// </summary>
+        [Test]
+        public void TranscriptsGetMyTranscriptTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? fileAttachmentId = null;
+            //string xChronosheetsAuth = null;
+            //var response = instance.TranscriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
+            //Assert.IsInstanceOf<CSApiResponseForPaginatedTranscription> (response, "response is CSApiResponseForPaginatedTranscription");
+        }
+        
+        /// <summary>
         /// Test TranscriptsGetMyTranscripts
         /// </summary>
         [Test]

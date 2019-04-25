@@ -179,6 +179,38 @@ namespace ChronoSheetsAPI.Test
             // TODO unit test for the property 'IsActive'
         }
         /// <summary>
+        /// Test the property 'StripeCouponCode'
+        /// </summary>
+        [Test]
+        public void StripeCouponCodeTest()
+        {
+            // TODO unit test for the property 'StripeCouponCode'
+        }
+        /// <summary>
+        /// Test the property 'SubscriptionSource'
+        /// </summary>
+        [Test]
+        public void SubscriptionSourceTest()
+        {
+            // TODO unit test for the property 'SubscriptionSource'
+        }
+        /// <summary>
+        /// Test the property 'SignUpSource'
+        /// </summary>
+        [Test]
+        public void SignUpSourceTest()
+        {
+            // TODO unit test for the property 'SignUpSource'
+        }
+        /// <summary>
+        /// Test the property 'MobileSignUpCode'
+        /// </summary>
+        [Test]
+        public void MobileSignUpCodeTest()
+        {
+            // TODO unit test for the property 'MobileSignUpCode'
+        }
+        /// <summary>
         /// Test the property 'SubscriptionCycleStart'
         /// </summary>
         [Test]

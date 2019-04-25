@@ -162,6 +162,14 @@ namespace ChronoSheetsAPI.Test
         {
             // TODO unit test for the property 'Organisation'
         }
+        /// <summary>
+        /// Test the property 'IsPrimaryAccount'
+        /// </summary>
+        [Test]
+        public void IsPrimaryAccountTest()
+        {
+            // TODO unit test for the property 'IsPrimaryAccount'
+        }
 
     }
 

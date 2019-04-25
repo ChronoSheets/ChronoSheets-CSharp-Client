@@ -25,6 +25,29 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
+        /// Get an audio to text transcript for a particular audio file attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseForPaginatedTranscription</returns>
+        CSApiResponseForPaginatedTranscription TranscriptsGetMyTranscript (int? fileAttachmentId, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Get an audio to text transcript for a particular audio file attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseForPaginatedTranscription</returns>
+        ApiResponse<CSApiResponseForPaginatedTranscription> TranscriptsGetMyTranscriptWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth);
+        /// <summary>
         /// Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
         /// </summary>
         /// <remarks>
@@ -57,6 +80,29 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         ApiResponse<CSApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsWithHttpInfo (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Get an audio to text transcript for a particular audio file attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseForPaginatedTranscription</returns>
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedTranscription> TranscriptsGetMyTranscriptAsync (int? fileAttachmentId, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Get an audio to text transcript for a particular audio file attachment
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedTranscription)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedTranscription>> TranscriptsGetMyTranscriptAsyncWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth);
         /// <summary>
         /// Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
         /// </summary>
@@ -186,6 +232,159 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Get an audio to text transcript for a particular audio file attachment 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseForPaginatedTranscription</returns>
+        public CSApiResponseForPaginatedTranscription TranscriptsGetMyTranscript (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseForPaginatedTranscription> localVarResponse = TranscriptsGetMyTranscriptWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get an audio to text transcript for a particular audio file attachment 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseForPaginatedTranscription</returns>
+        public ApiResponse< CSApiResponseForPaginatedTranscription > TranscriptsGetMyTranscriptWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'fileAttachmentId' is set
+            if (fileAttachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'fileAttachmentId' when calling TranscriptsApi->TranscriptsGetMyTranscript");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TranscriptsApi->TranscriptsGetMyTranscript");
+
+            var localVarPath = "/api/Transcripts/GetMyTranscript";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileAttachmentId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TranscriptsGetMyTranscript", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseForPaginatedTranscription>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseForPaginatedTranscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedTranscription)));
+        }
+
+        /// <summary>
+        /// Get an audio to text transcript for a particular audio file attachment 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseForPaginatedTranscription</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedTranscription> TranscriptsGetMyTranscriptAsync (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseForPaginatedTranscription> localVarResponse = await TranscriptsGetMyTranscriptAsyncWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get an audio to text transcript for a particular audio file attachment 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedTranscription)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedTranscription>> TranscriptsGetMyTranscriptAsyncWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'fileAttachmentId' is set
+            if (fileAttachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'fileAttachmentId' when calling TranscriptsApi->TranscriptsGetMyTranscript");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TranscriptsApi->TranscriptsGetMyTranscript");
+
+            var localVarPath = "/api/Transcripts/GetMyTranscript";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileAttachmentId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TranscriptsGetMyTranscript", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseForPaginatedTranscription>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseForPaginatedTranscription) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedTranscription)));
         }
 
         /// <summary>

@@ -4,8 +4,70 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**TranscriptsGetMyTranscript**](TranscriptsApi.md#transcriptsgetmytranscript) | **GET** /api/Transcripts/GetMyTranscript | Get an audio to text transcript for a particular audio file attachment
 [**TranscriptsGetMyTranscripts**](TranscriptsApi.md#transcriptsgetmytranscripts) | **GET** /api/Transcripts/GetMyTranscripts | Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
 
+
+<a name="transcriptsgetmytranscript"></a>
+# **TranscriptsGetMyTranscript**
+> CSApiResponseForPaginatedTranscription TranscriptsGetMyTranscript (int? fileAttachmentId, string xChronosheetsAuth)
+
+Get an audio to text transcript for a particular audio file attachment
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class TranscriptsGetMyTranscriptExample
+    {
+        public void main()
+        {
+            var apiInstance = new TranscriptsApi();
+            var fileAttachmentId = 56;  // int? | The ID of the file attachment that has a transcript.  It should be an audio file attachment.
+            var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+
+            try
+            {
+                // Get an audio to text transcript for a particular audio file attachment
+                CSApiResponseForPaginatedTranscription result = apiInstance.TranscriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling TranscriptsApi.TranscriptsGetMyTranscript: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileAttachmentId** | **int?**| The ID of the file attachment that has a transcript.  It should be an audio file attachment. | 
+ **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**CSApiResponseForPaginatedTranscription**](CSApiResponseForPaginatedTranscription.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 <a name="transcriptsgetmytranscripts"></a>
 # **TranscriptsGetMyTranscripts**

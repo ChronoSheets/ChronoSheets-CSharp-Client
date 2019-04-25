@@ -45,7 +45,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="SetupWizardRequired">SetupWizardRequired.</param>
         /// <param name="IsSubscribedToNewsletter">IsSubscribedToNewsletter.</param>
         /// <param name="Organisation">Organisation.</param>
-        public CSUserForManagement(bool? IsAccountActive = default(bool?), int? Id = default(int?), int? OrganisationId = default(int?), string UserName = default(string), string FirstName = default(string), string LastName = default(string), string EmailAddress = default(string), long? Roles = default(long?), long? AlertSettings = default(long?), bool? SetupWizardRequired = default(bool?), bool? IsSubscribedToNewsletter = default(bool?), CSOrganisation Organisation = default(CSOrganisation))
+        /// <param name="IsPrimaryAccount">IsPrimaryAccount.</param>
+        public CSUserForManagement(bool? IsAccountActive = default(bool?), int? Id = default(int?), int? OrganisationId = default(int?), string UserName = default(string), string FirstName = default(string), string LastName = default(string), string EmailAddress = default(string), long? Roles = default(long?), long? AlertSettings = default(long?), bool? SetupWizardRequired = default(bool?), bool? IsSubscribedToNewsletter = default(bool?), CSOrganisation Organisation = default(CSOrganisation), bool? IsPrimaryAccount = default(bool?))
         {
             this.IsAccountActive = IsAccountActive;
             this.Id = Id;
@@ -59,6 +60,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             this.SetupWizardRequired = SetupWizardRequired;
             this.IsSubscribedToNewsletter = IsSubscribedToNewsletter;
             this.Organisation = Organisation;
+            this.IsPrimaryAccount = IsPrimaryAccount;
         }
         
         /// <summary>
@@ -134,6 +136,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public CSOrganisation Organisation { get; set; }
 
         /// <summary>
+        /// Gets or Sets IsPrimaryAccount
+        /// </summary>
+        [DataMember(Name="IsPrimaryAccount", EmitDefaultValue=false)]
+        public bool? IsPrimaryAccount { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -153,6 +161,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  SetupWizardRequired: ").Append(SetupWizardRequired).Append("\n");
             sb.Append("  IsSubscribedToNewsletter: ").Append(IsSubscribedToNewsletter).Append("\n");
             sb.Append("  Organisation: ").Append(Organisation).Append("\n");
+            sb.Append("  IsPrimaryAccount: ").Append(IsPrimaryAccount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -246,6 +255,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.Organisation == input.Organisation ||
                     (this.Organisation != null &&
                     this.Organisation.Equals(input.Organisation))
+                ) && 
+                (
+                    this.IsPrimaryAccount == input.IsPrimaryAccount ||
+                    (this.IsPrimaryAccount != null &&
+                    this.IsPrimaryAccount.Equals(input.IsPrimaryAccount))
                 );
         }
 
@@ -282,6 +296,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.IsSubscribedToNewsletter.GetHashCode();
                 if (this.Organisation != null)
                     hashCode = hashCode * 59 + this.Organisation.GetHashCode();
+                if (this.IsPrimaryAccount != null)
+                    hashCode = hashCode * 59 + this.IsPrimaryAccount.GetHashCode();
                 return hashCode;
             }
         }

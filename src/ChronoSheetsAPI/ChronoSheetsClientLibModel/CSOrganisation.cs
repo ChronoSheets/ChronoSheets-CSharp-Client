@@ -31,6 +31,74 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class CSOrganisation :  IEquatable<CSOrganisation>, IValidatableObject
     {
         /// <summary>
+        /// Defines SubscriptionSource
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SubscriptionSourceEnum
+        {
+            
+            /// <summary>
+            /// Enum None for value: None
+            /// </summary>
+            [EnumMember(Value = "None")]
+            None = 1,
+            
+            /// <summary>
+            /// Enum Stripe for value: Stripe
+            /// </summary>
+            [EnumMember(Value = "Stripe")]
+            Stripe = 2,
+            
+            /// <summary>
+            /// Enum AppleInApp for value: AppleInApp
+            /// </summary>
+            [EnumMember(Value = "AppleInApp")]
+            AppleInApp = 3,
+            
+            /// <summary>
+            /// Enum GoogleInApp for value: GoogleInApp
+            /// </summary>
+            [EnumMember(Value = "GoogleInApp")]
+            GoogleInApp = 4
+        }
+
+        /// <summary>
+        /// Gets or Sets SubscriptionSource
+        /// </summary>
+        [DataMember(Name="SubscriptionSource", EmitDefaultValue=false)]
+        public SubscriptionSourceEnum? SubscriptionSource { get; set; }
+        /// <summary>
+        /// Defines SignUpSource
+        /// </summary>
+        [JsonConverter(typeof(StringEnumConverter))]
+        public enum SignUpSourceEnum
+        {
+            
+            /// <summary>
+            /// Enum Desktop for value: Desktop
+            /// </summary>
+            [EnumMember(Value = "Desktop")]
+            Desktop = 1,
+            
+            /// <summary>
+            /// Enum MobileiOS for value: MobileiOS
+            /// </summary>
+            [EnumMember(Value = "MobileiOS")]
+            MobileiOS = 2,
+            
+            /// <summary>
+            /// Enum MobileAndroid for value: MobileAndroid
+            /// </summary>
+            [EnumMember(Value = "MobileAndroid")]
+            MobileAndroid = 3
+        }
+
+        /// <summary>
+        /// Gets or Sets SignUpSource
+        /// </summary>
+        [DataMember(Name="SignUpSource", EmitDefaultValue=false)]
+        public SignUpSourceEnum? SignUpSource { get; set; }
+        /// <summary>
         /// Initializes a new instance of the <see cref="CSOrganisation" /> class.
         /// </summary>
         /// <param name="Id">Id.</param>
@@ -47,10 +115,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="SubscriptionCustomerId">SubscriptionCustomerId.</param>
         /// <param name="SignupToken">SignupToken.</param>
         /// <param name="IsActive">IsActive.</param>
+        /// <param name="StripeCouponCode">StripeCouponCode.</param>
+        /// <param name="SubscriptionSource">SubscriptionSource.</param>
+        /// <param name="SignUpSource">SignUpSource.</param>
+        /// <param name="MobileSignUpCode">MobileSignUpCode.</param>
         /// <param name="SubscriptionCycleStart">SubscriptionCycleStart.</param>
         /// <param name="SubscriptionCycleEnd">SubscriptionCycleEnd.</param>
         /// <param name="PricingPlans">PricingPlans.</param>
-        public CSOrganisation(int? Id = default(int?), string Name = default(string), string AddressLine01 = default(string), string AddressLine02 = default(string), string Suburb = default(string), string State = default(string), string Postcode = default(string), string Country = default(string), string Phone = default(string), string EmailAddress = default(string), string Timezone = default(string), string SubscriptionCustomerId = default(string), string SignupToken = default(string), bool? IsActive = default(bool?), DateTime? SubscriptionCycleStart = default(DateTime?), DateTime? SubscriptionCycleEnd = default(DateTime?), List<CSOrganisationPricingPlan> PricingPlans = default(List<CSOrganisationPricingPlan>))
+        public CSOrganisation(int? Id = default(int?), string Name = default(string), string AddressLine01 = default(string), string AddressLine02 = default(string), string Suburb = default(string), string State = default(string), string Postcode = default(string), string Country = default(string), string Phone = default(string), string EmailAddress = default(string), string Timezone = default(string), string SubscriptionCustomerId = default(string), string SignupToken = default(string), bool? IsActive = default(bool?), string StripeCouponCode = default(string), SubscriptionSourceEnum? SubscriptionSource = default(SubscriptionSourceEnum?), SignUpSourceEnum? SignUpSource = default(SignUpSourceEnum?), string MobileSignUpCode = default(string), DateTime? SubscriptionCycleStart = default(DateTime?), DateTime? SubscriptionCycleEnd = default(DateTime?), List<CSOrganisationPricingPlan> PricingPlans = default(List<CSOrganisationPricingPlan>))
         {
             this.Id = Id;
             this.Name = Name;
@@ -66,6 +138,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             this.SubscriptionCustomerId = SubscriptionCustomerId;
             this.SignupToken = SignupToken;
             this.IsActive = IsActive;
+            this.StripeCouponCode = StripeCouponCode;
+            this.SubscriptionSource = SubscriptionSource;
+            this.SignUpSource = SignUpSource;
+            this.MobileSignUpCode = MobileSignUpCode;
             this.SubscriptionCycleStart = SubscriptionCycleStart;
             this.SubscriptionCycleEnd = SubscriptionCycleEnd;
             this.PricingPlans = PricingPlans;
@@ -156,6 +232,20 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public bool? IsActive { get; set; }
 
         /// <summary>
+        /// Gets or Sets StripeCouponCode
+        /// </summary>
+        [DataMember(Name="StripeCouponCode", EmitDefaultValue=false)]
+        public string StripeCouponCode { get; set; }
+
+
+
+        /// <summary>
+        /// Gets or Sets MobileSignUpCode
+        /// </summary>
+        [DataMember(Name="MobileSignUpCode", EmitDefaultValue=false)]
+        public string MobileSignUpCode { get; set; }
+
+        /// <summary>
         /// Gets or Sets SubscriptionCycleStart
         /// </summary>
         [DataMember(Name="SubscriptionCycleStart", EmitDefaultValue=false)]
@@ -195,6 +285,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  SubscriptionCustomerId: ").Append(SubscriptionCustomerId).Append("\n");
             sb.Append("  SignupToken: ").Append(SignupToken).Append("\n");
             sb.Append("  IsActive: ").Append(IsActive).Append("\n");
+            sb.Append("  StripeCouponCode: ").Append(StripeCouponCode).Append("\n");
+            sb.Append("  SubscriptionSource: ").Append(SubscriptionSource).Append("\n");
+            sb.Append("  SignUpSource: ").Append(SignUpSource).Append("\n");
+            sb.Append("  MobileSignUpCode: ").Append(MobileSignUpCode).Append("\n");
             sb.Append("  SubscriptionCycleStart: ").Append(SubscriptionCycleStart).Append("\n");
             sb.Append("  SubscriptionCycleEnd: ").Append(SubscriptionCycleEnd).Append("\n");
             sb.Append("  PricingPlans: ").Append(PricingPlans).Append("\n");
@@ -303,6 +397,26 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.IsActive.Equals(input.IsActive))
                 ) && 
                 (
+                    this.StripeCouponCode == input.StripeCouponCode ||
+                    (this.StripeCouponCode != null &&
+                    this.StripeCouponCode.Equals(input.StripeCouponCode))
+                ) && 
+                (
+                    this.SubscriptionSource == input.SubscriptionSource ||
+                    (this.SubscriptionSource != null &&
+                    this.SubscriptionSource.Equals(input.SubscriptionSource))
+                ) && 
+                (
+                    this.SignUpSource == input.SignUpSource ||
+                    (this.SignUpSource != null &&
+                    this.SignUpSource.Equals(input.SignUpSource))
+                ) && 
+                (
+                    this.MobileSignUpCode == input.MobileSignUpCode ||
+                    (this.MobileSignUpCode != null &&
+                    this.MobileSignUpCode.Equals(input.MobileSignUpCode))
+                ) && 
+                (
                     this.SubscriptionCycleStart == input.SubscriptionCycleStart ||
                     (this.SubscriptionCycleStart != null &&
                     this.SubscriptionCycleStart.Equals(input.SubscriptionCycleStart))
@@ -356,6 +470,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.SignupToken.GetHashCode();
                 if (this.IsActive != null)
                     hashCode = hashCode * 59 + this.IsActive.GetHashCode();
+                if (this.StripeCouponCode != null)
+                    hashCode = hashCode * 59 + this.StripeCouponCode.GetHashCode();
+                if (this.SubscriptionSource != null)
+                    hashCode = hashCode * 59 + this.SubscriptionSource.GetHashCode();
+                if (this.SignUpSource != null)
+                    hashCode = hashCode * 59 + this.SignUpSource.GetHashCode();
+                if (this.MobileSignUpCode != null)
+                    hashCode = hashCode * 59 + this.MobileSignUpCode.GetHashCode();
                 if (this.SubscriptionCycleStart != null)
                     hashCode = hashCode * 59 + this.SubscriptionCycleStart.GetHashCode();
                 if (this.SubscriptionCycleEnd != null)
