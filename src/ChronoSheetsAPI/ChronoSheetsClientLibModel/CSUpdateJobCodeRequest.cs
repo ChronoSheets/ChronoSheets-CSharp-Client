@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,22 +33,22 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSUpdateJobCodeRequest" /> class.
         /// </summary>
-        /// <param name="Id">The Id of the JobCode to be updated.</param>
-        /// <param name="Code">The new JobCode to be set.</param>
-        /// <param name="ProjectId">The Id of the Project to be associated to.</param>
-        /// <param name="ClientId">The Id of the Client to be associated to.</param>
-        /// <param name="LinkedTaskIds">A collection of Task Ids to be available when choosing this JobCode.</param>
-        /// <param name="LinkedOrgGroupIds">Restrict the access to this JobCode by specifying which Organisation Groups can have access.  Only employees in these Organisation Groups will be able to access this JobCode.</param>
-        /// <param name="IsDeleted">Whether or not this JobCode is to be marked as deleted.</param>
-        public CSUpdateJobCodeRequest(int? Id = default(int?), string Code = default(string), int? ProjectId = default(int?), int? ClientId = default(int?), List<int?> LinkedTaskIds = default(List<int?>), List<int?> LinkedOrgGroupIds = default(List<int?>), bool? IsDeleted = default(bool?))
+        /// <param name="id">The Id of the JobCode to be updated.</param>
+        /// <param name="code">The new JobCode to be set.</param>
+        /// <param name="projectId">The Id of the Project to be associated to.</param>
+        /// <param name="clientId">The Id of the Client to be associated to.</param>
+        /// <param name="linkedTaskIds">A collection of Task Ids to be available when choosing this JobCode.</param>
+        /// <param name="linkedOrgGroupIds">Restrict the access to this JobCode by specifying which Organisation Groups can have access.  Only employees in these Organisation Groups will be able to access this JobCode.</param>
+        /// <param name="isDeleted">Whether or not this JobCode is to be marked as deleted.</param>
+        public CSUpdateJobCodeRequest(int? id = default(int?), string code = default(string), int? projectId = default(int?), int? clientId = default(int?), List<int?> linkedTaskIds = default(List<int?>), List<int?> linkedOrgGroupIds = default(List<int?>), bool? isDeleted = default(bool?))
         {
-            this.Id = Id;
-            this.Code = Code;
-            this.ProjectId = ProjectId;
-            this.ClientId = ClientId;
-            this.LinkedTaskIds = LinkedTaskIds;
-            this.LinkedOrgGroupIds = LinkedOrgGroupIds;
-            this.IsDeleted = IsDeleted;
+            this.Id = id;
+            this.Code = code;
+            this.ProjectId = projectId;
+            this.ClientId = clientId;
+            this.LinkedTaskIds = linkedTaskIds;
+            this.LinkedOrgGroupIds = linkedOrgGroupIds;
+            this.IsDeleted = isDeleted;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

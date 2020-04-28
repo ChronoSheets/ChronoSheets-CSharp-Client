@@ -25,10 +25,10 @@ using SwaggerDateConverter = ChronoSheetsAPI.Client.SwaggerDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// CSApiResponseProject
+    /// CSApiResponseTimesheetFileAttachment
     /// </summary>
     [DataContract]
-    public partial class CSApiResponseProject :  IEquatable<CSApiResponseProject>, IValidatableObject
+    public partial class CSApiResponseTimesheetFileAttachment :  IEquatable<CSApiResponseTimesheetFileAttachment>, IValidatableObject
     {
         /// <summary>
         /// Defines Status
@@ -80,12 +80,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CSApiResponseProject" /> class.
+        /// Initializes a new instance of the <see cref="CSApiResponseTimesheetFileAttachment" /> class.
         /// </summary>
         /// <param name="data">data.</param>
         /// <param name="status">status.</param>
         /// <param name="message">message.</param>
-        public CSApiResponseProject(CSProject data = default(CSProject), StatusEnum? status = default(StatusEnum?), string message = default(string))
+        public CSApiResponseTimesheetFileAttachment(CSTimesheetFileAttachment data = default(CSTimesheetFileAttachment), StatusEnum? status = default(StatusEnum?), string message = default(string))
         {
             this.Data = data;
             this.Status = status;
@@ -96,7 +96,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Gets or Sets Data
         /// </summary>
         [DataMember(Name="Data", EmitDefaultValue=false)]
-        public CSProject Data { get; set; }
+        public CSTimesheetFileAttachment Data { get; set; }
 
 
         /// <summary>
@@ -112,7 +112,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CSApiResponseProject {\n");
+            sb.Append("class CSApiResponseTimesheetFileAttachment {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
@@ -136,15 +136,15 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CSApiResponseProject);
+            return this.Equals(input as CSApiResponseTimesheetFileAttachment);
         }
 
         /// <summary>
-        /// Returns true if CSApiResponseProject instances are equal
+        /// Returns true if CSApiResponseTimesheetFileAttachment instances are equal
         /// </summary>
-        /// <param name="input">Instance of CSApiResponseProject to be compared</param>
+        /// <param name="input">Instance of CSApiResponseTimesheetFileAttachment to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CSApiResponseProject input)
+        public bool Equals(CSApiResponseTimesheetFileAttachment input)
         {
             if (input == null)
                 return false;

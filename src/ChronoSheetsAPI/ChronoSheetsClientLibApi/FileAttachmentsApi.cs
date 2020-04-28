@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -25,7 +25,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
     {
         #region Synchronous Operations
         /// <summary>
-        /// Delete a particular timesheet file attachment
+        /// Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -37,7 +37,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         CSApiResponseBoolean FileAttachmentsDeleteTimesheetFileAttachment (int? fileAttachmentId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a particular timesheet file attachment
+        /// Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -47,6 +47,29 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseBoolean</returns>
         ApiResponse<CSApiResponseBoolean> FileAttachmentsDeleteTimesheetFileAttachmentWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth);
+        /// <summary>
+        /// Get a particular file attachment by ID.  User must own the file attachment for access.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseTimesheetFileAttachment</returns>
+        CSApiResponseTimesheetFileAttachment FileAttachmentsGetFileAttachmentById (int? fileAttachmentId, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Get a particular file attachment by ID.  User must own the file attachment for access.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseTimesheetFileAttachment</returns>
+        ApiResponse<CSApiResponseTimesheetFileAttachment> FileAttachmentsGetFileAttachmentByIdWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth);
         /// <summary>
         /// Get my file attachments.  Get files you&#39;ve attached to timesheets.
         /// </summary>
@@ -79,7 +102,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Delete a particular timesheet file attachment
+        /// Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -91,7 +114,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         System.Threading.Tasks.Task<CSApiResponseBoolean> FileAttachmentsDeleteTimesheetFileAttachmentAsync (int? fileAttachmentId, string xChronosheetsAuth);
 
         /// <summary>
-        /// Delete a particular timesheet file attachment
+        /// Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
         /// <remarks>
         /// 
@@ -101,6 +124,29 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseBoolean)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseBoolean>> FileAttachmentsDeleteTimesheetFileAttachmentAsyncWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth);
+        /// <summary>
+        /// Get a particular file attachment by ID.  User must own the file attachment for access.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseTimesheetFileAttachment</returns>
+        System.Threading.Tasks.Task<CSApiResponseTimesheetFileAttachment> FileAttachmentsGetFileAttachmentByIdAsync (int? fileAttachmentId, string xChronosheetsAuth);
+
+        /// <summary>
+        /// Get a particular file attachment by ID.  User must own the file attachment for access.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseTimesheetFileAttachment)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseTimesheetFileAttachment>> FileAttachmentsGetFileAttachmentByIdAsyncWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth);
         /// <summary>
         /// Get my file attachments.  Get files you&#39;ve attached to timesheets.
         /// </summary>
@@ -146,7 +192,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns></returns>
         public FileAttachmentsApi(String basePath)
         {
-            this.Configuration = new Configuration { BasePath = basePath };
+            this.Configuration = new ChronoSheetsAPI.Client.Configuration { BasePath = basePath };
 
             ExceptionFactory = ChronoSheetsAPI.Client.Configuration.DefaultExceptionFactory;
         }
@@ -157,10 +203,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public FileAttachmentsApi(Configuration configuration = null)
+        public FileAttachmentsApi(ChronoSheetsAPI.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
-                this.Configuration = Configuration.Default;
+                this.Configuration = ChronoSheetsAPI.Client.Configuration.Default;
             else
                 this.Configuration = configuration;
 
@@ -190,7 +236,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// Gets or sets the configuration object
         /// </summary>
         /// <value>An instance of the Configuration</value>
-        public Configuration Configuration {get; set;}
+        public ChronoSheetsAPI.Client.Configuration Configuration {get; set;}
 
         /// <summary>
         /// Provides a factory method hook for the creation of exceptions.
@@ -231,7 +277,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a particular timesheet file attachment 
+        /// Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
@@ -244,7 +290,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a particular timesheet file attachment 
+        /// Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
@@ -262,7 +308,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             var localVarPath = "/api/FileAttachments/DeleteTimesheetFileAttachment";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -270,7 +316,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -280,16 +326,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 "text/xml",
                 "multipart/form-data"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (fileAttachmentId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
-            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+            if (fileAttachmentId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -303,11 +349,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
 
             return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
+                (CSApiResponseBoolean) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
         }
 
         /// <summary>
-        /// Delete a particular timesheet file attachment 
+        /// Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
@@ -321,7 +367,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         }
 
         /// <summary>
-        /// Delete a particular timesheet file attachment 
+        /// Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission. 
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
@@ -339,7 +385,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             var localVarPath = "/api/FileAttachments/DeleteTimesheetFileAttachment";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -347,7 +393,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -357,16 +403,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 "text/xml",
                 "multipart/form-data"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (fileAttachmentId != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
-            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+            if (fileAttachmentId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -380,7 +426,160 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
 
             return new ApiResponse<CSApiResponseBoolean>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CSApiResponseBoolean) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
+                (CSApiResponseBoolean) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseBoolean)));
+        }
+
+        /// <summary>
+        /// Get a particular file attachment by ID.  User must own the file attachment for access. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>CSApiResponseTimesheetFileAttachment</returns>
+        public CSApiResponseTimesheetFileAttachment FileAttachmentsGetFileAttachmentById (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseTimesheetFileAttachment> localVarResponse = FileAttachmentsGetFileAttachmentByIdWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Get a particular file attachment by ID.  User must own the file attachment for access. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of CSApiResponseTimesheetFileAttachment</returns>
+        public ApiResponse< CSApiResponseTimesheetFileAttachment > FileAttachmentsGetFileAttachmentByIdWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'fileAttachmentId' is set
+            if (fileAttachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'fileAttachmentId' when calling FileAttachmentsApi->FileAttachmentsGetFileAttachmentById");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsGetFileAttachmentById");
+
+            var localVarPath = "/api/FileAttachments/GetFileAttachmentById";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileAttachmentId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FileAttachmentsGetFileAttachmentById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseTimesheetFileAttachment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseTimesheetFileAttachment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseTimesheetFileAttachment)));
+        }
+
+        /// <summary>
+        /// Get a particular file attachment by ID.  User must own the file attachment for access. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of CSApiResponseTimesheetFileAttachment</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseTimesheetFileAttachment> FileAttachmentsGetFileAttachmentByIdAsync (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+             ApiResponse<CSApiResponseTimesheetFileAttachment> localVarResponse = await FileAttachmentsGetFileAttachmentByIdAsyncWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Get a particular file attachment by ID.  User must own the file attachment for access. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="fileAttachmentId">The ID of the file attachment</param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (CSApiResponseTimesheetFileAttachment)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseTimesheetFileAttachment>> FileAttachmentsGetFileAttachmentByIdAsyncWithHttpInfo (int? fileAttachmentId, string xChronosheetsAuth)
+        {
+            // verify the required parameter 'fileAttachmentId' is set
+            if (fileAttachmentId == null)
+                throw new ApiException(400, "Missing required parameter 'fileAttachmentId' when calling FileAttachmentsApi->FileAttachmentsGetFileAttachmentById");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsGetFileAttachmentById");
+
+            var localVarPath = "/api/FileAttachments/GetFileAttachmentById";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (fileAttachmentId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "FileAttachmentId", fileAttachmentId)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("FileAttachmentsGetFileAttachmentById", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseTimesheetFileAttachment>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseTimesheetFileAttachment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseTimesheetFileAttachment)));
         }
 
         /// <summary>
@@ -424,7 +623,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             var localVarPath = "/api/FileAttachments/GetMyFileAttachments";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -432,7 +631,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -442,19 +641,19 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 "text/xml",
                 "multipart/form-data"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
-            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
-            if (skip != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Skip", skip)); // query parameter
-            if (take != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Take", take)); // query parameter
-            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
+            if (skip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Skip", skip)); // query parameter
+            if (take != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Take", take)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) Configuration.ApiClient.CallApi(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -468,7 +667,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
 
             return new ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CSApiResponseForPaginatedListTimesheetFileAttachment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListTimesheetFileAttachment)));
+                (CSApiResponseForPaginatedListTimesheetFileAttachment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListTimesheetFileAttachment)));
         }
 
         /// <summary>
@@ -513,7 +712,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             var localVarPath = "/api/FileAttachments/GetMyFileAttachments";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(Configuration.DefaultHeader);
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
             var localVarFormParams = new Dictionary<String, String>();
             var localVarFileParams = new Dictionary<String, FileParameter>();
             Object localVarPostBody = null;
@@ -521,7 +720,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // to determine the Content-Type header
             String[] localVarHttpContentTypes = new String[] {
             };
-            String localVarHttpContentType = Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
@@ -531,19 +730,19 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 "text/xml",
                 "multipart/form-data"
             };
-            String localVarHttpHeaderAccept = Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (startDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
-            if (endDate != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
-            if (skip != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Skip", skip)); // query parameter
-            if (take != null) localVarQueryParams.AddRange(Configuration.ApiClient.ParameterToKeyValuePairs("", "Take", take)); // query parameter
-            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+            if (startDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "StartDate", startDate)); // query parameter
+            if (endDate != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "EndDate", endDate)); // query parameter
+            if (skip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Skip", skip)); // query parameter
+            if (take != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Take", take)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
 
 
             // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await Configuration.ApiClient.CallApiAsync(localVarPath,
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
                 localVarPathParams, localVarHttpContentType);
 
@@ -557,7 +756,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
 
             return new ApiResponse<CSApiResponseForPaginatedListTimesheetFileAttachment>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CSApiResponseForPaginatedListTimesheetFileAttachment) Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListTimesheetFileAttachment)));
+                (CSApiResponseForPaginatedListTimesheetFileAttachment) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListTimesheetFileAttachment)));
         }
 
     }

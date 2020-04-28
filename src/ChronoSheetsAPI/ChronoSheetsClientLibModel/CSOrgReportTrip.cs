@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -64,54 +64,54 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSOrgReportTrip" /> class.
         /// </summary>
-        /// <param name="Username">Username.</param>
-        /// <param name="EmailAddress">EmailAddress.</param>
-        /// <param name="FirstName">FirstName.</param>
-        /// <param name="LastName">LastName.</param>
-        /// <param name="TripId">TripId.</param>
-        /// <param name="TimesheetId">TimesheetId.</param>
-        /// <param name="VehicleId">VehicleId.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="OrgId">OrgId.</param>
-        /// <param name="MobilePlatform">MobilePlatform.</param>
-        /// <param name="StartDate">StartDate.</param>
-        /// <param name="EndDate">EndDate.</param>
-        /// <param name="VehicleName">VehicleName.</param>
-        /// <param name="VehicleMake">VehicleMake.</param>
-        /// <param name="VehicleModel">VehicleModel.</param>
-        /// <param name="VehicleYear">VehicleYear.</param>
-        /// <param name="CostPerKilometer">CostPerKilometer.</param>
-        /// <param name="TripTotalCost">TripTotalCost.</param>
-        /// <param name="TotalTripDistanceMeters">TotalTripDistanceMeters.</param>
-        /// <param name="StartAddress">StartAddress.</param>
-        /// <param name="EndAddress">EndAddress.</param>
-        /// <param name="PathCoordinates">PathCoordinates.</param>
-        /// <param name="CacheExpiryDate">CacheExpiryDate.</param>
-        public CSOrgReportTrip(string Username = default(string), string EmailAddress = default(string), string FirstName = default(string), string LastName = default(string), int? TripId = default(int?), int? TimesheetId = default(int?), int? VehicleId = default(int?), int? UserId = default(int?), int? OrgId = default(int?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), string VehicleName = default(string), string VehicleMake = default(string), string VehicleModel = default(string), string VehicleYear = default(string), double? CostPerKilometer = default(double?), double? TripTotalCost = default(double?), double? TotalTripDistanceMeters = default(double?), string StartAddress = default(string), string EndAddress = default(string), List<CSTripCoordinate> PathCoordinates = default(List<CSTripCoordinate>), DateTime? CacheExpiryDate = default(DateTime?))
+        /// <param name="username">username.</param>
+        /// <param name="emailAddress">emailAddress.</param>
+        /// <param name="firstName">firstName.</param>
+        /// <param name="lastName">lastName.</param>
+        /// <param name="tripId">tripId.</param>
+        /// <param name="timesheetId">timesheetId.</param>
+        /// <param name="vehicleId">vehicleId.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="orgId">orgId.</param>
+        /// <param name="mobilePlatform">mobilePlatform.</param>
+        /// <param name="startDate">startDate.</param>
+        /// <param name="endDate">endDate.</param>
+        /// <param name="vehicleName">vehicleName.</param>
+        /// <param name="vehicleMake">vehicleMake.</param>
+        /// <param name="vehicleModel">vehicleModel.</param>
+        /// <param name="vehicleYear">vehicleYear.</param>
+        /// <param name="costPerKilometer">costPerKilometer.</param>
+        /// <param name="tripTotalCost">tripTotalCost.</param>
+        /// <param name="totalTripDistanceMeters">totalTripDistanceMeters.</param>
+        /// <param name="startAddress">startAddress.</param>
+        /// <param name="endAddress">endAddress.</param>
+        /// <param name="pathCoordinates">pathCoordinates.</param>
+        /// <param name="cacheExpiryDate">cacheExpiryDate.</param>
+        public CSOrgReportTrip(string username = default(string), string emailAddress = default(string), string firstName = default(string), string lastName = default(string), int? tripId = default(int?), int? timesheetId = default(int?), int? vehicleId = default(int?), int? userId = default(int?), int? orgId = default(int?), MobilePlatformEnum? mobilePlatform = default(MobilePlatformEnum?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), string vehicleName = default(string), string vehicleMake = default(string), string vehicleModel = default(string), string vehicleYear = default(string), double? costPerKilometer = default(double?), double? tripTotalCost = default(double?), double? totalTripDistanceMeters = default(double?), string startAddress = default(string), string endAddress = default(string), List<CSTripCoordinate> pathCoordinates = default(List<CSTripCoordinate>), DateTime? cacheExpiryDate = default(DateTime?))
         {
-            this.Username = Username;
-            this.EmailAddress = EmailAddress;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.TripId = TripId;
-            this.TimesheetId = TimesheetId;
-            this.VehicleId = VehicleId;
-            this.UserId = UserId;
-            this.OrgId = OrgId;
-            this.MobilePlatform = MobilePlatform;
-            this.StartDate = StartDate;
-            this.EndDate = EndDate;
-            this.VehicleName = VehicleName;
-            this.VehicleMake = VehicleMake;
-            this.VehicleModel = VehicleModel;
-            this.VehicleYear = VehicleYear;
-            this.CostPerKilometer = CostPerKilometer;
-            this.TripTotalCost = TripTotalCost;
-            this.TotalTripDistanceMeters = TotalTripDistanceMeters;
-            this.StartAddress = StartAddress;
-            this.EndAddress = EndAddress;
-            this.PathCoordinates = PathCoordinates;
-            this.CacheExpiryDate = CacheExpiryDate;
+            this.Username = username;
+            this.EmailAddress = emailAddress;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.TripId = tripId;
+            this.TimesheetId = timesheetId;
+            this.VehicleId = vehicleId;
+            this.UserId = userId;
+            this.OrgId = orgId;
+            this.MobilePlatform = mobilePlatform;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.VehicleName = vehicleName;
+            this.VehicleMake = vehicleMake;
+            this.VehicleModel = vehicleModel;
+            this.VehicleYear = vehicleYear;
+            this.CostPerKilometer = costPerKilometer;
+            this.TripTotalCost = tripTotalCost;
+            this.TotalTripDistanceMeters = totalTripDistanceMeters;
+            this.StartAddress = startAddress;
+            this.EndAddress = endAddress;
+            this.PathCoordinates = pathCoordinates;
+            this.CacheExpiryDate = cacheExpiryDate;
         }
         
         /// <summary>
@@ -286,7 +286,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,24 +33,24 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSCombinedReportsData" /> class.
         /// </summary>
-        /// <param name="SeriesJobCodes">SeriesJobCodes.</param>
-        /// <param name="SeriesTasks">SeriesTasks.</param>
-        /// <param name="SeriesClients">SeriesClients.</param>
-        /// <param name="SeriesProjects">SeriesProjects.</param>
-        /// <param name="TotalsJobCodes">TotalsJobCodes.</param>
-        /// <param name="TotalsTasks">TotalsTasks.</param>
-        /// <param name="TotalsClients">TotalsClients.</param>
-        /// <param name="TotalsProjects">TotalsProjects.</param>
-        public CSCombinedReportsData(List<CSJobSeriesReportItem> SeriesJobCodes = default(List<CSJobSeriesReportItem>), List<CSTaskSeriesReportItem> SeriesTasks = default(List<CSTaskSeriesReportItem>), List<CSClientSeriesReportItem> SeriesClients = default(List<CSClientSeriesReportItem>), List<CSProjectSeriesReportItem> SeriesProjects = default(List<CSProjectSeriesReportItem>), List<CSJobTotalsReportItem> TotalsJobCodes = default(List<CSJobTotalsReportItem>), List<CSTaskTotalsReportItem> TotalsTasks = default(List<CSTaskTotalsReportItem>), List<CSClientTotalsReportItem> TotalsClients = default(List<CSClientTotalsReportItem>), List<CSProjectTotalsReportItem> TotalsProjects = default(List<CSProjectTotalsReportItem>))
+        /// <param name="seriesJobCodes">seriesJobCodes.</param>
+        /// <param name="seriesTasks">seriesTasks.</param>
+        /// <param name="seriesClients">seriesClients.</param>
+        /// <param name="seriesProjects">seriesProjects.</param>
+        /// <param name="totalsJobCodes">totalsJobCodes.</param>
+        /// <param name="totalsTasks">totalsTasks.</param>
+        /// <param name="totalsClients">totalsClients.</param>
+        /// <param name="totalsProjects">totalsProjects.</param>
+        public CSCombinedReportsData(List<CSJobSeriesReportItem> seriesJobCodes = default(List<CSJobSeriesReportItem>), List<CSTaskSeriesReportItem> seriesTasks = default(List<CSTaskSeriesReportItem>), List<CSClientSeriesReportItem> seriesClients = default(List<CSClientSeriesReportItem>), List<CSProjectSeriesReportItem> seriesProjects = default(List<CSProjectSeriesReportItem>), List<CSJobTotalsReportItem> totalsJobCodes = default(List<CSJobTotalsReportItem>), List<CSTaskTotalsReportItem> totalsTasks = default(List<CSTaskTotalsReportItem>), List<CSClientTotalsReportItem> totalsClients = default(List<CSClientTotalsReportItem>), List<CSProjectTotalsReportItem> totalsProjects = default(List<CSProjectTotalsReportItem>))
         {
-            this.SeriesJobCodes = SeriesJobCodes;
-            this.SeriesTasks = SeriesTasks;
-            this.SeriesClients = SeriesClients;
-            this.SeriesProjects = SeriesProjects;
-            this.TotalsJobCodes = TotalsJobCodes;
-            this.TotalsTasks = TotalsTasks;
-            this.TotalsClients = TotalsClients;
-            this.TotalsProjects = TotalsProjects;
+            this.SeriesJobCodes = seriesJobCodes;
+            this.SeriesTasks = seriesTasks;
+            this.SeriesClients = seriesClients;
+            this.SeriesProjects = seriesProjects;
+            this.TotalsJobCodes = totalsJobCodes;
+            this.TotalsTasks = totalsTasks;
+            this.TotalsClients = totalsClients;
+            this.TotalsProjects = totalsProjects;
         }
         
         /// <summary>
@@ -125,7 +125,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

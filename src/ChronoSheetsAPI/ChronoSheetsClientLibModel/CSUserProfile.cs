@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,32 +33,32 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSUserProfile" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="UserName">UserName.</param>
-        /// <param name="FirstName">FirstName.</param>
-        /// <param name="LastName">LastName.</param>
-        /// <param name="EmailAddress">EmailAddress.</param>
-        /// <param name="IsSubscribedToNewsletter">IsSubscribedToNewsletter.</param>
-        /// <param name="Roles">Roles.</param>
-        /// <param name="AlertSettings">AlertSettings.</param>
-        /// <param name="OrganisationName">OrganisationName.</param>
-        /// <param name="OrganisationSuburb">OrganisationSuburb.</param>
-        /// <param name="OrganisationCountry">OrganisationCountry.</param>
-        public CSUserProfile(int? Id = default(int?), int? OrganisationId = default(int?), string UserName = default(string), string FirstName = default(string), string LastName = default(string), string EmailAddress = default(string), bool? IsSubscribedToNewsletter = default(bool?), long? Roles = default(long?), long? AlertSettings = default(long?), string OrganisationName = default(string), string OrganisationSuburb = default(string), string OrganisationCountry = default(string))
+        /// <param name="id">id.</param>
+        /// <param name="organisationId">organisationId.</param>
+        /// <param name="userName">userName.</param>
+        /// <param name="firstName">firstName.</param>
+        /// <param name="lastName">lastName.</param>
+        /// <param name="emailAddress">emailAddress.</param>
+        /// <param name="isSubscribedToNewsletter">isSubscribedToNewsletter.</param>
+        /// <param name="roles">roles.</param>
+        /// <param name="alertSettings">alertSettings.</param>
+        /// <param name="organisationName">organisationName.</param>
+        /// <param name="organisationSuburb">organisationSuburb.</param>
+        /// <param name="organisationCountry">organisationCountry.</param>
+        public CSUserProfile(int? id = default(int?), int? organisationId = default(int?), string userName = default(string), string firstName = default(string), string lastName = default(string), string emailAddress = default(string), bool? isSubscribedToNewsletter = default(bool?), long? roles = default(long?), long? alertSettings = default(long?), string organisationName = default(string), string organisationSuburb = default(string), string organisationCountry = default(string))
         {
-            this.Id = Id;
-            this.OrganisationId = OrganisationId;
-            this.UserName = UserName;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.EmailAddress = EmailAddress;
-            this.IsSubscribedToNewsletter = IsSubscribedToNewsletter;
-            this.Roles = Roles;
-            this.AlertSettings = AlertSettings;
-            this.OrganisationName = OrganisationName;
-            this.OrganisationSuburb = OrganisationSuburb;
-            this.OrganisationCountry = OrganisationCountry;
+            this.Id = id;
+            this.OrganisationId = organisationId;
+            this.UserName = userName;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.EmailAddress = emailAddress;
+            this.IsSubscribedToNewsletter = isSubscribedToNewsletter;
+            this.Roles = roles;
+            this.AlertSettings = alertSettings;
+            this.OrganisationName = organisationName;
+            this.OrganisationSuburb = organisationSuburb;
+            this.OrganisationCountry = organisationCountry;
         }
         
         /// <summary>
@@ -161,7 +161,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

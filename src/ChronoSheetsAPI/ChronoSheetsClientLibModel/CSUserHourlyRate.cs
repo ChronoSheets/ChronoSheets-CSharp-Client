@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,24 +33,24 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSUserHourlyRate" /> class.
         /// </summary>
-        /// <param name="RateId">RateId.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="IsCurrent">IsCurrent.</param>
-        /// <param name="HourlyRate">HourlyRate.</param>
-        /// <param name="HourlyOvertimeRate">HourlyOvertimeRate.</param>
-        /// <param name="StartDateTime">StartDateTime.</param>
-        /// <param name="EndDateTime">EndDateTime.</param>
-        public CSUserHourlyRate(int? RateId = default(int?), int? UserId = default(int?), int? OrganisationId = default(int?), bool? IsCurrent = default(bool?), double? HourlyRate = default(double?), double? HourlyOvertimeRate = default(double?), DateTime? StartDateTime = default(DateTime?), DateTime? EndDateTime = default(DateTime?))
+        /// <param name="rateId">rateId.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="organisationId">organisationId.</param>
+        /// <param name="isCurrent">isCurrent.</param>
+        /// <param name="hourlyRate">hourlyRate.</param>
+        /// <param name="hourlyOvertimeRate">hourlyOvertimeRate.</param>
+        /// <param name="startDateTime">startDateTime.</param>
+        /// <param name="endDateTime">endDateTime.</param>
+        public CSUserHourlyRate(int? rateId = default(int?), int? userId = default(int?), int? organisationId = default(int?), bool? isCurrent = default(bool?), double? hourlyRate = default(double?), double? hourlyOvertimeRate = default(double?), DateTime? startDateTime = default(DateTime?), DateTime? endDateTime = default(DateTime?))
         {
-            this.RateId = RateId;
-            this.UserId = UserId;
-            this.OrganisationId = OrganisationId;
-            this.IsCurrent = IsCurrent;
-            this.HourlyRate = HourlyRate;
-            this.HourlyOvertimeRate = HourlyOvertimeRate;
-            this.StartDateTime = StartDateTime;
-            this.EndDateTime = EndDateTime;
+            this.RateId = rateId;
+            this.UserId = userId;
+            this.OrganisationId = organisationId;
+            this.IsCurrent = isCurrent;
+            this.HourlyRate = hourlyRate;
+            this.HourlyOvertimeRate = hourlyOvertimeRate;
+            this.StartDateTime = startDateTime;
+            this.EndDateTime = endDateTime;
         }
         
         /// <summary>
@@ -125,7 +125,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

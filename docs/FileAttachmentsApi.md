@@ -4,7 +4,8 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FileAttachmentsDeleteTimesheetFileAttachment**](FileAttachmentsApi.md#fileattachmentsdeletetimesheetfileattachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment
+[**FileAttachmentsDeleteTimesheetFileAttachment**](FileAttachmentsApi.md#fileattachmentsdeletetimesheetfileattachment) | **DELETE** /api/FileAttachments/DeleteTimesheetFileAttachment | Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
+[**FileAttachmentsGetFileAttachmentById**](FileAttachmentsApi.md#fileattachmentsgetfileattachmentbyid) | **GET** /api/FileAttachments/GetFileAttachmentById | Get a particular file attachment by ID.  User must own the file attachment for access.
 [**FileAttachmentsGetMyFileAttachments**](FileAttachmentsApi.md#fileattachmentsgetmyfileattachments) | **GET** /api/FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
 
@@ -12,7 +13,7 @@ Method | HTTP request | Description
 # **FileAttachmentsDeleteTimesheetFileAttachment**
 > CSApiResponseBoolean FileAttachmentsDeleteTimesheetFileAttachment (int? fileAttachmentId, string xChronosheetsAuth)
 
-Delete a particular timesheet file attachment
+Delete a particular timesheet file attachment  Requires the 'SubmitTimesheets' permission.
 
 ### Example
 ```csharp
@@ -34,7 +35,7 @@ namespace Example
 
             try
             {
-                // Delete a particular timesheet file attachment
+                // Delete a particular timesheet file attachment  Requires the 'SubmitTimesheets' permission.
                 CSApiResponseBoolean result = apiInstance.FileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -57,6 +58,67 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="fileattachmentsgetfileattachmentbyid"></a>
+# **FileAttachmentsGetFileAttachmentById**
+> CSApiResponseTimesheetFileAttachment FileAttachmentsGetFileAttachmentById (int? fileAttachmentId, string xChronosheetsAuth)
+
+Get a particular file attachment by ID.  User must own the file attachment for access.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class FileAttachmentsGetFileAttachmentByIdExample
+    {
+        public void main()
+        {
+            var apiInstance = new FileAttachmentsApi();
+            var fileAttachmentId = 56;  // int? | The ID of the file attachment
+            var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+
+            try
+            {
+                // Get a particular file attachment by ID.  User must own the file attachment for access.
+                CSApiResponseTimesheetFileAttachment result = apiInstance.FileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling FileAttachmentsApi.FileAttachmentsGetFileAttachmentById: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fileAttachmentId** | **int?**| The ID of the file attachment | 
+ **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**CSApiResponseTimesheetFileAttachment**](CSApiResponseTimesheetFileAttachment.md)
 
 ### Authorization
 

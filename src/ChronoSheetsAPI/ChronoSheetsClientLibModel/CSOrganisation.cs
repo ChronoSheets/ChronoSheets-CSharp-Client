@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -101,50 +101,50 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSOrganisation" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="AddressLine01">AddressLine01.</param>
-        /// <param name="AddressLine02">AddressLine02.</param>
-        /// <param name="Suburb">Suburb.</param>
-        /// <param name="State">State.</param>
-        /// <param name="Postcode">Postcode.</param>
-        /// <param name="Country">Country.</param>
-        /// <param name="Phone">Phone.</param>
-        /// <param name="EmailAddress">EmailAddress.</param>
-        /// <param name="Timezone">Timezone.</param>
-        /// <param name="SubscriptionCustomerId">SubscriptionCustomerId.</param>
-        /// <param name="SignupToken">SignupToken.</param>
-        /// <param name="IsActive">IsActive.</param>
-        /// <param name="StripeCouponCode">StripeCouponCode.</param>
-        /// <param name="SubscriptionSource">SubscriptionSource.</param>
-        /// <param name="SignUpSource">SignUpSource.</param>
-        /// <param name="MobileSignUpCode">MobileSignUpCode.</param>
-        /// <param name="SubscriptionCycleStart">SubscriptionCycleStart.</param>
-        /// <param name="SubscriptionCycleEnd">SubscriptionCycleEnd.</param>
-        /// <param name="PricingPlans">PricingPlans.</param>
-        public CSOrganisation(int? Id = default(int?), string Name = default(string), string AddressLine01 = default(string), string AddressLine02 = default(string), string Suburb = default(string), string State = default(string), string Postcode = default(string), string Country = default(string), string Phone = default(string), string EmailAddress = default(string), string Timezone = default(string), string SubscriptionCustomerId = default(string), string SignupToken = default(string), bool? IsActive = default(bool?), string StripeCouponCode = default(string), SubscriptionSourceEnum? SubscriptionSource = default(SubscriptionSourceEnum?), SignUpSourceEnum? SignUpSource = default(SignUpSourceEnum?), string MobileSignUpCode = default(string), DateTime? SubscriptionCycleStart = default(DateTime?), DateTime? SubscriptionCycleEnd = default(DateTime?), List<CSOrganisationPricingPlan> PricingPlans = default(List<CSOrganisationPricingPlan>))
+        /// <param name="id">id.</param>
+        /// <param name="name">name.</param>
+        /// <param name="addressLine01">addressLine01.</param>
+        /// <param name="addressLine02">addressLine02.</param>
+        /// <param name="suburb">suburb.</param>
+        /// <param name="state">state.</param>
+        /// <param name="postcode">postcode.</param>
+        /// <param name="country">country.</param>
+        /// <param name="phone">phone.</param>
+        /// <param name="emailAddress">emailAddress.</param>
+        /// <param name="timezone">timezone.</param>
+        /// <param name="subscriptionCustomerId">subscriptionCustomerId.</param>
+        /// <param name="signupToken">signupToken.</param>
+        /// <param name="isActive">isActive.</param>
+        /// <param name="stripeCouponCode">stripeCouponCode.</param>
+        /// <param name="subscriptionSource">subscriptionSource.</param>
+        /// <param name="signUpSource">signUpSource.</param>
+        /// <param name="mobileSignUpCode">mobileSignUpCode.</param>
+        /// <param name="subscriptionCycleStart">subscriptionCycleStart.</param>
+        /// <param name="subscriptionCycleEnd">subscriptionCycleEnd.</param>
+        /// <param name="pricingPlans">pricingPlans.</param>
+        public CSOrganisation(int? id = default(int?), string name = default(string), string addressLine01 = default(string), string addressLine02 = default(string), string suburb = default(string), string state = default(string), string postcode = default(string), string country = default(string), string phone = default(string), string emailAddress = default(string), string timezone = default(string), string subscriptionCustomerId = default(string), string signupToken = default(string), bool? isActive = default(bool?), string stripeCouponCode = default(string), SubscriptionSourceEnum? subscriptionSource = default(SubscriptionSourceEnum?), SignUpSourceEnum? signUpSource = default(SignUpSourceEnum?), string mobileSignUpCode = default(string), DateTime? subscriptionCycleStart = default(DateTime?), DateTime? subscriptionCycleEnd = default(DateTime?), List<CSOrganisationPricingPlan> pricingPlans = default(List<CSOrganisationPricingPlan>))
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.AddressLine01 = AddressLine01;
-            this.AddressLine02 = AddressLine02;
-            this.Suburb = Suburb;
-            this.State = State;
-            this.Postcode = Postcode;
-            this.Country = Country;
-            this.Phone = Phone;
-            this.EmailAddress = EmailAddress;
-            this.Timezone = Timezone;
-            this.SubscriptionCustomerId = SubscriptionCustomerId;
-            this.SignupToken = SignupToken;
-            this.IsActive = IsActive;
-            this.StripeCouponCode = StripeCouponCode;
-            this.SubscriptionSource = SubscriptionSource;
-            this.SignUpSource = SignUpSource;
-            this.MobileSignUpCode = MobileSignUpCode;
-            this.SubscriptionCycleStart = SubscriptionCycleStart;
-            this.SubscriptionCycleEnd = SubscriptionCycleEnd;
-            this.PricingPlans = PricingPlans;
+            this.Id = id;
+            this.Name = name;
+            this.AddressLine01 = addressLine01;
+            this.AddressLine02 = addressLine02;
+            this.Suburb = suburb;
+            this.State = state;
+            this.Postcode = postcode;
+            this.Country = country;
+            this.Phone = phone;
+            this.EmailAddress = emailAddress;
+            this.Timezone = timezone;
+            this.SubscriptionCustomerId = subscriptionCustomerId;
+            this.SignupToken = signupToken;
+            this.IsActive = isActive;
+            this.StripeCouponCode = stripeCouponCode;
+            this.SubscriptionSource = subscriptionSource;
+            this.SignUpSource = signUpSource;
+            this.MobileSignUpCode = mobileSignUpCode;
+            this.SubscriptionCycleStart = subscriptionCycleStart;
+            this.SubscriptionCycleEnd = subscriptionCycleEnd;
+            this.PricingPlans = pricingPlans;
         }
         
         /// <summary>
@@ -300,7 +300,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

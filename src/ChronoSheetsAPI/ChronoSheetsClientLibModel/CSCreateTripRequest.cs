@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -66,18 +66,18 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSCreateTripRequest" /> class.
         /// </summary>
-        /// <param name="TimesheetId">The associated Timesheet record Id.  The Trip will be linked to the Timesheet with this TimesheetId.</param>
-        /// <param name="VehicleId">The associated Vehicle Id.  The Trip will show that this Vehicle was used.</param>
-        /// <param name="PathCoordsStringCsv">A CSV of GPS path co-ordinates.  Format example: -37.8433562,144.7226188;[Lat1],[Long1];........[LatN],[LongN].</param>
-        /// <param name="DistanceMeters">The total distance of the Trip.</param>
-        /// <param name="MobilePlatform">The Mobile platform that the Trip was recorded on.</param>
-        public CSCreateTripRequest(int? TimesheetId = default(int?), int? VehicleId = default(int?), string PathCoordsStringCsv = default(string), double? DistanceMeters = default(double?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?))
+        /// <param name="timesheetId">The associated Timesheet record Id.  The Trip will be linked to the Timesheet with this TimesheetId.</param>
+        /// <param name="vehicleId">The associated Vehicle Id.  The Trip will show that this Vehicle was used.</param>
+        /// <param name="pathCoordsStringCsv">A CSV of GPS path co-ordinates.  Format example: -37.8433562,144.7226188;[Lat1],[Long1];........[LatN],[LongN].</param>
+        /// <param name="distanceMeters">The total distance of the Trip.</param>
+        /// <param name="mobilePlatform">The Mobile platform that the Trip was recorded on.</param>
+        public CSCreateTripRequest(int? timesheetId = default(int?), int? vehicleId = default(int?), string pathCoordsStringCsv = default(string), double? distanceMeters = default(double?), MobilePlatformEnum? mobilePlatform = default(MobilePlatformEnum?))
         {
-            this.TimesheetId = TimesheetId;
-            this.VehicleId = VehicleId;
-            this.PathCoordsStringCsv = PathCoordsStringCsv;
-            this.DistanceMeters = DistanceMeters;
-            this.MobilePlatform = MobilePlatform;
+            this.TimesheetId = timesheetId;
+            this.VehicleId = vehicleId;
+            this.PathCoordsStringCsv = pathCoordsStringCsv;
+            this.DistanceMeters = distanceMeters;
+            this.MobilePlatform = mobilePlatform;
         }
         
         /// <summary>
@@ -130,7 +130,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

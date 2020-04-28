@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -131,56 +131,56 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSTimesheetFileAttachment" /> class.
         /// </summary>
-        /// <param name="TimesheetId">TimesheetId.</param>
-        /// <param name="DocumentS3SignedUrl">DocumentS3SignedUrl.</param>
-        /// <param name="ImageLargeS3SignedUrl">ImageLargeS3SignedUrl.</param>
-        /// <param name="ImageMediumS3SignedUrl">ImageMediumS3SignedUrl.</param>
-        /// <param name="ImageSmallS3SignedUrl">ImageSmallS3SignedUrl.</param>
-        /// <param name="TimesheetStart">TimesheetStart.</param>
-        /// <param name="TimesheetEnd">TimesheetEnd.</param>
-        /// <param name="FileAttachmentId">FileAttachmentId.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="OrgId">OrgId.</param>
-        /// <param name="MobilePlatform">MobilePlatform.</param>
-        /// <param name="AttachmentType">AttachmentType.</param>
-        /// <param name="Notes">Notes.</param>
-        /// <param name="NonImageFilePath">NonImageFilePath.</param>
-        /// <param name="ImageLargeFilePath">ImageLargeFilePath.</param>
-        /// <param name="ImageMediumFilePath">ImageMediumFilePath.</param>
-        /// <param name="ImageSmallFilePath">ImageSmallFilePath.</param>
-        /// <param name="OriginalFileName">OriginalFileName.</param>
-        /// <param name="Latitude">Latitude.</param>
-        /// <param name="Longitude">Longitude.</param>
-        /// <param name="DateUploaded">DateUploaded.</param>
-        /// <param name="DateImageCaptured">DateImageCaptured.</param>
-        /// <param name="StorageAllocationBytes">StorageAllocationBytes.</param>
-        /// <param name="AudioDurationSeconds">AudioDurationSeconds.</param>
-        public CSTimesheetFileAttachment(int? TimesheetId = default(int?), string DocumentS3SignedUrl = default(string), string ImageLargeS3SignedUrl = default(string), string ImageMediumS3SignedUrl = default(string), string ImageSmallS3SignedUrl = default(string), DateTime? TimesheetStart = default(DateTime?), DateTime? TimesheetEnd = default(DateTime?), int? FileAttachmentId = default(int?), int? UserId = default(int?), int? OrgId = default(int?), MobilePlatformEnum? MobilePlatform = default(MobilePlatformEnum?), AttachmentTypeEnum? AttachmentType = default(AttachmentTypeEnum?), string Notes = default(string), string NonImageFilePath = default(string), string ImageLargeFilePath = default(string), string ImageMediumFilePath = default(string), string ImageSmallFilePath = default(string), string OriginalFileName = default(string), double? Latitude = default(double?), double? Longitude = default(double?), DateTime? DateUploaded = default(DateTime?), DateTime? DateImageCaptured = default(DateTime?), long? StorageAllocationBytes = default(long?), int? AudioDurationSeconds = default(int?))
+        /// <param name="timesheetId">timesheetId.</param>
+        /// <param name="documentS3SignedUrl">documentS3SignedUrl.</param>
+        /// <param name="imageLargeS3SignedUrl">imageLargeS3SignedUrl.</param>
+        /// <param name="imageMediumS3SignedUrl">imageMediumS3SignedUrl.</param>
+        /// <param name="imageSmallS3SignedUrl">imageSmallS3SignedUrl.</param>
+        /// <param name="timesheetStart">timesheetStart.</param>
+        /// <param name="timesheetEnd">timesheetEnd.</param>
+        /// <param name="fileAttachmentId">fileAttachmentId.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="orgId">orgId.</param>
+        /// <param name="mobilePlatform">mobilePlatform.</param>
+        /// <param name="attachmentType">attachmentType.</param>
+        /// <param name="notes">notes.</param>
+        /// <param name="nonImageFilePath">nonImageFilePath.</param>
+        /// <param name="imageLargeFilePath">imageLargeFilePath.</param>
+        /// <param name="imageMediumFilePath">imageMediumFilePath.</param>
+        /// <param name="imageSmallFilePath">imageSmallFilePath.</param>
+        /// <param name="originalFileName">originalFileName.</param>
+        /// <param name="latitude">latitude.</param>
+        /// <param name="longitude">longitude.</param>
+        /// <param name="dateUploaded">dateUploaded.</param>
+        /// <param name="dateImageCaptured">dateImageCaptured.</param>
+        /// <param name="storageAllocationBytes">storageAllocationBytes.</param>
+        /// <param name="audioDurationSeconds">audioDurationSeconds.</param>
+        public CSTimesheetFileAttachment(int? timesheetId = default(int?), string documentS3SignedUrl = default(string), string imageLargeS3SignedUrl = default(string), string imageMediumS3SignedUrl = default(string), string imageSmallS3SignedUrl = default(string), DateTime? timesheetStart = default(DateTime?), DateTime? timesheetEnd = default(DateTime?), int? fileAttachmentId = default(int?), int? userId = default(int?), int? orgId = default(int?), MobilePlatformEnum? mobilePlatform = default(MobilePlatformEnum?), AttachmentTypeEnum? attachmentType = default(AttachmentTypeEnum?), string notes = default(string), string nonImageFilePath = default(string), string imageLargeFilePath = default(string), string imageMediumFilePath = default(string), string imageSmallFilePath = default(string), string originalFileName = default(string), double? latitude = default(double?), double? longitude = default(double?), DateTime? dateUploaded = default(DateTime?), DateTime? dateImageCaptured = default(DateTime?), long? storageAllocationBytes = default(long?), int? audioDurationSeconds = default(int?))
         {
-            this.TimesheetId = TimesheetId;
-            this.DocumentS3SignedUrl = DocumentS3SignedUrl;
-            this.ImageLargeS3SignedUrl = ImageLargeS3SignedUrl;
-            this.ImageMediumS3SignedUrl = ImageMediumS3SignedUrl;
-            this.ImageSmallS3SignedUrl = ImageSmallS3SignedUrl;
-            this.TimesheetStart = TimesheetStart;
-            this.TimesheetEnd = TimesheetEnd;
-            this.FileAttachmentId = FileAttachmentId;
-            this.UserId = UserId;
-            this.OrgId = OrgId;
-            this.MobilePlatform = MobilePlatform;
-            this.AttachmentType = AttachmentType;
-            this.Notes = Notes;
-            this.NonImageFilePath = NonImageFilePath;
-            this.ImageLargeFilePath = ImageLargeFilePath;
-            this.ImageMediumFilePath = ImageMediumFilePath;
-            this.ImageSmallFilePath = ImageSmallFilePath;
-            this.OriginalFileName = OriginalFileName;
-            this.Latitude = Latitude;
-            this.Longitude = Longitude;
-            this.DateUploaded = DateUploaded;
-            this.DateImageCaptured = DateImageCaptured;
-            this.StorageAllocationBytes = StorageAllocationBytes;
-            this.AudioDurationSeconds = AudioDurationSeconds;
+            this.TimesheetId = timesheetId;
+            this.DocumentS3SignedUrl = documentS3SignedUrl;
+            this.ImageLargeS3SignedUrl = imageLargeS3SignedUrl;
+            this.ImageMediumS3SignedUrl = imageMediumS3SignedUrl;
+            this.ImageSmallS3SignedUrl = imageSmallS3SignedUrl;
+            this.TimesheetStart = timesheetStart;
+            this.TimesheetEnd = timesheetEnd;
+            this.FileAttachmentId = fileAttachmentId;
+            this.UserId = userId;
+            this.OrgId = orgId;
+            this.MobilePlatform = mobilePlatform;
+            this.AttachmentType = attachmentType;
+            this.Notes = notes;
+            this.NonImageFilePath = nonImageFilePath;
+            this.ImageLargeFilePath = imageLargeFilePath;
+            this.ImageMediumFilePath = imageMediumFilePath;
+            this.ImageSmallFilePath = imageSmallFilePath;
+            this.OriginalFileName = originalFileName;
+            this.Latitude = latitude;
+            this.Longitude = longitude;
+            this.DateUploaded = dateUploaded;
+            this.DateImageCaptured = dateImageCaptured;
+            this.StorageAllocationBytes = storageAllocationBytes;
+            this.AudioDurationSeconds = audioDurationSeconds;
         }
         
         /// <summary>
@@ -357,7 +357,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

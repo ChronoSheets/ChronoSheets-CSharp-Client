@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,18 +33,18 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSClientTotalsReportItem" /> class.
         /// </summary>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="ClientId">ClientId.</param>
-        /// <param name="ClientName">ClientName.</param>
-        /// <param name="SpanSeconds">SpanSeconds.</param>
-        public CSClientTotalsReportItem(int? OrganisationId = default(int?), int? UserId = default(int?), int? ClientId = default(int?), string ClientName = default(string), int? SpanSeconds = default(int?))
+        /// <param name="organisationId">organisationId.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="clientId">clientId.</param>
+        /// <param name="clientName">clientName.</param>
+        /// <param name="spanSeconds">spanSeconds.</param>
+        public CSClientTotalsReportItem(int? organisationId = default(int?), int? userId = default(int?), int? clientId = default(int?), string clientName = default(string), int? spanSeconds = default(int?))
         {
-            this.OrganisationId = OrganisationId;
-            this.UserId = UserId;
-            this.ClientId = ClientId;
-            this.ClientName = ClientName;
-            this.SpanSeconds = SpanSeconds;
+            this.OrganisationId = organisationId;
+            this.UserId = userId;
+            this.ClientId = clientId;
+            this.ClientName = clientName;
+            this.SpanSeconds = spanSeconds;
         }
         
         /// <summary>
@@ -98,7 +98,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,28 +33,28 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSUpdateOrganisationRequest" /> class.
         /// </summary>
-        /// <param name="OrgansationId">The Id of your Organisation.  This is validated based on your current Auth Token.</param>
-        /// <param name="OrganisationName">The updated organisation name.</param>
-        /// <param name="AddressLine01">The updated Address Line 1 value.</param>
-        /// <param name="AddressLine02">The updated Address Line 2 value.</param>
-        /// <param name="OrganisationSuburb">The updated address suburb.</param>
-        /// <param name="OrganisationState">The updated address state.</param>
-        /// <param name="OrganisationPostcode">The updated address postcode.</param>
-        /// <param name="OrganisationCountry">The updated address country.</param>
-        /// <param name="OrganisationPhone">The updated contact phone number.</param>
-        /// <param name="OrganisationEmailAddress">The update organisation email address.</param>
-        public CSUpdateOrganisationRequest(int? OrgansationId = default(int?), string OrganisationName = default(string), string AddressLine01 = default(string), string AddressLine02 = default(string), string OrganisationSuburb = default(string), string OrganisationState = default(string), string OrganisationPostcode = default(string), string OrganisationCountry = default(string), string OrganisationPhone = default(string), string OrganisationEmailAddress = default(string))
+        /// <param name="organsationId">The Id of your Organisation.  This is validated based on your current Auth Token.</param>
+        /// <param name="organisationName">The updated organisation name.</param>
+        /// <param name="addressLine01">The updated Address Line 1 value.</param>
+        /// <param name="addressLine02">The updated Address Line 2 value.</param>
+        /// <param name="organisationSuburb">The updated address suburb.</param>
+        /// <param name="organisationState">The updated address state.</param>
+        /// <param name="organisationPostcode">The updated address postcode.</param>
+        /// <param name="organisationCountry">The updated address country.</param>
+        /// <param name="organisationPhone">The updated contact phone number.</param>
+        /// <param name="organisationEmailAddress">The update organisation email address.</param>
+        public CSUpdateOrganisationRequest(int? organsationId = default(int?), string organisationName = default(string), string addressLine01 = default(string), string addressLine02 = default(string), string organisationSuburb = default(string), string organisationState = default(string), string organisationPostcode = default(string), string organisationCountry = default(string), string organisationPhone = default(string), string organisationEmailAddress = default(string))
         {
-            this.OrgansationId = OrgansationId;
-            this.OrganisationName = OrganisationName;
-            this.AddressLine01 = AddressLine01;
-            this.AddressLine02 = AddressLine02;
-            this.OrganisationSuburb = OrganisationSuburb;
-            this.OrganisationState = OrganisationState;
-            this.OrganisationPostcode = OrganisationPostcode;
-            this.OrganisationCountry = OrganisationCountry;
-            this.OrganisationPhone = OrganisationPhone;
-            this.OrganisationEmailAddress = OrganisationEmailAddress;
+            this.OrgansationId = organsationId;
+            this.OrganisationName = organisationName;
+            this.AddressLine01 = addressLine01;
+            this.AddressLine02 = addressLine02;
+            this.OrganisationSuburb = organisationSuburb;
+            this.OrganisationState = organisationState;
+            this.OrganisationPostcode = organisationPostcode;
+            this.OrganisationCountry = organisationCountry;
+            this.OrganisationPhone = organisationPhone;
+            this.OrganisationEmailAddress = organisationEmailAddress;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -4,15 +4,15 @@ All URIs are relative to *https://www.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UsualHoursGetUsualHours**](UsualHoursApi.md#usualhoursgetusualhours) | **GET** /api/UsualHours/GetUsualHours | Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
-[**UsualHoursSetUsualHours**](UsualHoursApi.md#usualhourssetusualhours) | **PUT** /api/UsualHours/SetUsualHours | Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationUsers&#39; permissions.
+[**UsualHoursGetUsualHours**](UsualHoursApi.md#usualhoursgetusualhours) | **GET** /api/UsualHours/GetUsualHours | Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; permission.
+[**UsualHoursSetUsualHours**](UsualHoursApi.md#usualhourssetusualhours) | **PUT** /api/UsualHours/SetUsualHours | Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; permission.
 
 
 <a name="usualhoursgetusualhours"></a>
 # **UsualHoursGetUsualHours**
 > CSApiResponseListUsualHoursDay UsualHoursGetUsualHours (int? userId, string xChronosheetsAuth)
 
-Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
+Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' permission.
 
 ### Example
 ```csharp
@@ -34,7 +34,7 @@ namespace Example
 
             try
             {
-                // Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
+                // Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' permission.
                 CSApiResponseListUsualHoursDay result = apiInstance.UsualHoursGetUsualHours(userId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
@@ -73,7 +73,7 @@ No authorization required
 # **UsualHoursSetUsualHours**
 > CSApiResponseBoolean UsualHoursSetUsualHours (CSSetUsualHoursRequest request, string xChronosheetsAuth)
 
-Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
+Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' permission.
 
 ### Example
 ```csharp
@@ -95,7 +95,7 @@ namespace Example
 
             try
             {
-                // Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' or 'ManageOrganisationUsers' permissions.
+                // Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' permission.
                 CSApiResponseBoolean result = apiInstance.UsualHoursSetUsualHours(request, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }

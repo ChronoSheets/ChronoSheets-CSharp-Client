@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,18 +33,18 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSTimesheetTask" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="TaskName">TaskName.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="IsDeleted">IsDeleted.</param>
-        /// <param name="TripEnabled">TripEnabled.</param>
-        public CSTimesheetTask(int? Id = default(int?), string TaskName = default(string), int? OrganisationId = default(int?), bool? IsDeleted = default(bool?), bool? TripEnabled = default(bool?))
+        /// <param name="id">id.</param>
+        /// <param name="taskName">taskName.</param>
+        /// <param name="organisationId">organisationId.</param>
+        /// <param name="isDeleted">isDeleted.</param>
+        /// <param name="tripEnabled">tripEnabled.</param>
+        public CSTimesheetTask(int? id = default(int?), string taskName = default(string), int? organisationId = default(int?), bool? isDeleted = default(bool?), bool? tripEnabled = default(bool?))
         {
-            this.Id = Id;
-            this.TaskName = TaskName;
-            this.OrganisationId = OrganisationId;
-            this.IsDeleted = IsDeleted;
-            this.TripEnabled = TripEnabled;
+            this.Id = id;
+            this.TaskName = taskName;
+            this.OrganisationId = organisationId;
+            this.IsDeleted = isDeleted;
+            this.TripEnabled = tripEnabled;
         }
         
         /// <summary>
@@ -98,7 +98,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

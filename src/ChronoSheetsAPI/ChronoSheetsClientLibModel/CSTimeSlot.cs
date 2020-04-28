@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -88,22 +88,22 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSTimeSlot" /> class.
         /// </summary>
-        /// <param name="DayType">DayType.</param>
-        /// <param name="UsualHourId">UsualHourId.</param>
-        /// <param name="StartHour">StartHour.</param>
-        /// <param name="StartMinute">StartMinute.</param>
-        /// <param name="EndHour">EndHour.</param>
-        /// <param name="EndMinute">EndMinute.</param>
-        /// <param name="IsValid">IsValid.</param>
-        public CSTimeSlot(DayTypeEnum? DayType = default(DayTypeEnum?), int? UsualHourId = default(int?), int? StartHour = default(int?), int? StartMinute = default(int?), int? EndHour = default(int?), int? EndMinute = default(int?), bool? IsValid = default(bool?))
+        /// <param name="dayType">dayType.</param>
+        /// <param name="usualHourId">usualHourId.</param>
+        /// <param name="startHour">startHour.</param>
+        /// <param name="startMinute">startMinute.</param>
+        /// <param name="endHour">endHour.</param>
+        /// <param name="endMinute">endMinute.</param>
+        /// <param name="isValid">isValid.</param>
+        public CSTimeSlot(DayTypeEnum? dayType = default(DayTypeEnum?), int? usualHourId = default(int?), int? startHour = default(int?), int? startMinute = default(int?), int? endHour = default(int?), int? endMinute = default(int?), bool? isValid = default(bool?))
         {
-            this.DayType = DayType;
-            this.UsualHourId = UsualHourId;
-            this.StartHour = StartHour;
-            this.StartMinute = StartMinute;
-            this.EndHour = EndHour;
-            this.EndMinute = EndMinute;
-            this.IsValid = IsValid;
+            this.DayType = dayType;
+            this.UsualHourId = usualHourId;
+            this.StartHour = startHour;
+            this.StartMinute = startMinute;
+            this.EndHour = endHour;
+            this.EndMinute = endMinute;
+            this.IsValid = isValid;
         }
         
 
@@ -166,7 +166,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

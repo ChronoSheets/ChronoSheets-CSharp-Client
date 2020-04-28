@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,30 +33,30 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSInsertClientRequest" /> class.
         /// </summary>
-        /// <param name="ClientName">The name of the Client.</param>
-        /// <param name="ClientAddressLine1">Address line 1 of the Client.</param>
-        /// <param name="ClientAddressLine2">Address line 2 of the Client.</param>
-        /// <param name="ClientSuburb">The suburb of the Client&#39;s address.</param>
-        /// <param name="ClientState">The state of the Client&#39;s address.</param>
-        /// <param name="ClientPostCode">The post code of the Client&#39;s address.</param>
-        /// <param name="PersonOfContact">The name of the contact working with the Client.</param>
-        /// <param name="ClientPhoneNumber">The phone number of the Client.</param>
-        /// <param name="ClientMobileNumber">The mobile phone number of the Client.</param>
-        /// <param name="ClientEmailAddress">The email address of the Client.</param>
-        /// <param name="ClientWebURL">The Client&#39;s website URL.</param>
-        public CSInsertClientRequest(string ClientName = default(string), string ClientAddressLine1 = default(string), string ClientAddressLine2 = default(string), string ClientSuburb = default(string), string ClientState = default(string), string ClientPostCode = default(string), string PersonOfContact = default(string), string ClientPhoneNumber = default(string), string ClientMobileNumber = default(string), string ClientEmailAddress = default(string), string ClientWebURL = default(string))
+        /// <param name="clientName">The name of the Client.</param>
+        /// <param name="clientAddressLine1">Address line 1 of the Client.</param>
+        /// <param name="clientAddressLine2">Address line 2 of the Client.</param>
+        /// <param name="clientSuburb">The suburb of the Client&#39;s address.</param>
+        /// <param name="clientState">The state of the Client&#39;s address.</param>
+        /// <param name="clientPostCode">The post code of the Client&#39;s address.</param>
+        /// <param name="personOfContact">The name of the contact working with the Client.</param>
+        /// <param name="clientPhoneNumber">The phone number of the Client.</param>
+        /// <param name="clientMobileNumber">The mobile phone number of the Client.</param>
+        /// <param name="clientEmailAddress">The email address of the Client.</param>
+        /// <param name="clientWebURL">The Client&#39;s website URL.</param>
+        public CSInsertClientRequest(string clientName = default(string), string clientAddressLine1 = default(string), string clientAddressLine2 = default(string), string clientSuburb = default(string), string clientState = default(string), string clientPostCode = default(string), string personOfContact = default(string), string clientPhoneNumber = default(string), string clientMobileNumber = default(string), string clientEmailAddress = default(string), string clientWebURL = default(string))
         {
-            this.ClientName = ClientName;
-            this.ClientAddressLine1 = ClientAddressLine1;
-            this.ClientAddressLine2 = ClientAddressLine2;
-            this.ClientSuburb = ClientSuburb;
-            this.ClientState = ClientState;
-            this.ClientPostCode = ClientPostCode;
-            this.PersonOfContact = PersonOfContact;
-            this.ClientPhoneNumber = ClientPhoneNumber;
-            this.ClientMobileNumber = ClientMobileNumber;
-            this.ClientEmailAddress = ClientEmailAddress;
-            this.ClientWebURL = ClientWebURL;
+            this.ClientName = clientName;
+            this.ClientAddressLine1 = clientAddressLine1;
+            this.ClientAddressLine2 = clientAddressLine2;
+            this.ClientSuburb = clientSuburb;
+            this.ClientState = clientState;
+            this.ClientPostCode = clientPostCode;
+            this.PersonOfContact = personOfContact;
+            this.ClientPhoneNumber = clientPhoneNumber;
+            this.ClientMobileNumber = clientMobileNumber;
+            this.ClientEmailAddress = clientEmailAddress;
+            this.ClientWebURL = clientWebURL;
         }
         
         /// <summary>
@@ -163,7 +163,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

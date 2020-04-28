@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -113,22 +113,22 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSTranscription" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="OrgId">OrgId.</param>
-        /// <param name="FileAttachmentId">FileAttachmentId.</param>
-        /// <param name="Created">Created.</param>
-        /// <param name="Status">Status.</param>
-        /// <param name="MediaType">MediaType.</param>
-        /// <param name="Contents">Contents.</param>
-        public CSTranscription(int? Id = default(int?), int? OrgId = default(int?), int? FileAttachmentId = default(int?), DateTime? Created = default(DateTime?), StatusEnum? Status = default(StatusEnum?), MediaTypeEnum? MediaType = default(MediaTypeEnum?), string Contents = default(string))
+        /// <param name="id">id.</param>
+        /// <param name="orgId">orgId.</param>
+        /// <param name="fileAttachmentId">fileAttachmentId.</param>
+        /// <param name="created">created.</param>
+        /// <param name="status">status.</param>
+        /// <param name="mediaType">mediaType.</param>
+        /// <param name="contents">contents.</param>
+        public CSTranscription(int? id = default(int?), int? orgId = default(int?), int? fileAttachmentId = default(int?), DateTime? created = default(DateTime?), StatusEnum? status = default(StatusEnum?), MediaTypeEnum? mediaType = default(MediaTypeEnum?), string contents = default(string))
         {
-            this.Id = Id;
-            this.OrgId = OrgId;
-            this.FileAttachmentId = FileAttachmentId;
-            this.Created = Created;
-            this.Status = Status;
-            this.MediaType = MediaType;
-            this.Contents = Contents;
+            this.Id = id;
+            this.OrgId = orgId;
+            this.FileAttachmentId = fileAttachmentId;
+            this.Created = created;
+            this.Status = status;
+            this.MediaType = mediaType;
+            this.Contents = contents;
         }
         
         /// <summary>
@@ -186,7 +186,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

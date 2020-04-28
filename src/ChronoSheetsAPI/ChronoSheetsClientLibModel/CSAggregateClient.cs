@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,38 +33,38 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSAggregateClient" /> class.
         /// </summary>
-        /// <param name="ClientProjects">A list of projects that are under this client.</param>
-        /// <param name="Id">The ID of the client.</param>
-        /// <param name="OrganisationId">The ID of your organisation.</param>
-        /// <param name="ClientName">The name of the client.</param>
-        /// <param name="ClientAddressLine1">The address line 1 of the client.</param>
-        /// <param name="ClientAddressLine2">The address line 2 of the client.</param>
-        /// <param name="ClientSuburb">The address suburb of the client.</param>
-        /// <param name="ClientState">The address state of the client.</param>
-        /// <param name="ClientPostCode">The postcode of the client.</param>
-        /// <param name="PersonOfContact">The contact person working under the client.</param>
-        /// <param name="ClientPhoneNumber">The phone number of the client.</param>
-        /// <param name="ClientMobileNumber">The mobile phone number of the client.</param>
-        /// <param name="ClientEmailAddress">The email address of the client.</param>
-        /// <param name="ClientWebURL">The website URL of the client.</param>
-        /// <param name="ProjectCount">The number of projects under the client.</param>
-        public CSAggregateClient(List<CSAggregateProject> ClientProjects = default(List<CSAggregateProject>), int? Id = default(int?), int? OrganisationId = default(int?), string ClientName = default(string), string ClientAddressLine1 = default(string), string ClientAddressLine2 = default(string), string ClientSuburb = default(string), string ClientState = default(string), string ClientPostCode = default(string), string PersonOfContact = default(string), string ClientPhoneNumber = default(string), string ClientMobileNumber = default(string), string ClientEmailAddress = default(string), string ClientWebURL = default(string), int? ProjectCount = default(int?))
+        /// <param name="clientProjects">A list of projects that are under this client.</param>
+        /// <param name="id">The ID of the client.</param>
+        /// <param name="organisationId">The ID of your organisation.</param>
+        /// <param name="clientName">The name of the client.</param>
+        /// <param name="clientAddressLine1">The address line 1 of the client.</param>
+        /// <param name="clientAddressLine2">The address line 2 of the client.</param>
+        /// <param name="clientSuburb">The address suburb of the client.</param>
+        /// <param name="clientState">The address state of the client.</param>
+        /// <param name="clientPostCode">The postcode of the client.</param>
+        /// <param name="personOfContact">The contact person working under the client.</param>
+        /// <param name="clientPhoneNumber">The phone number of the client.</param>
+        /// <param name="clientMobileNumber">The mobile phone number of the client.</param>
+        /// <param name="clientEmailAddress">The email address of the client.</param>
+        /// <param name="clientWebURL">The website URL of the client.</param>
+        /// <param name="projectCount">The number of projects under the client.</param>
+        public CSAggregateClient(List<CSAggregateProject> clientProjects = default(List<CSAggregateProject>), int? id = default(int?), int? organisationId = default(int?), string clientName = default(string), string clientAddressLine1 = default(string), string clientAddressLine2 = default(string), string clientSuburb = default(string), string clientState = default(string), string clientPostCode = default(string), string personOfContact = default(string), string clientPhoneNumber = default(string), string clientMobileNumber = default(string), string clientEmailAddress = default(string), string clientWebURL = default(string), int? projectCount = default(int?))
         {
-            this.ClientProjects = ClientProjects;
-            this.Id = Id;
-            this.OrganisationId = OrganisationId;
-            this.ClientName = ClientName;
-            this.ClientAddressLine1 = ClientAddressLine1;
-            this.ClientAddressLine2 = ClientAddressLine2;
-            this.ClientSuburb = ClientSuburb;
-            this.ClientState = ClientState;
-            this.ClientPostCode = ClientPostCode;
-            this.PersonOfContact = PersonOfContact;
-            this.ClientPhoneNumber = ClientPhoneNumber;
-            this.ClientMobileNumber = ClientMobileNumber;
-            this.ClientEmailAddress = ClientEmailAddress;
-            this.ClientWebURL = ClientWebURL;
-            this.ProjectCount = ProjectCount;
+            this.ClientProjects = clientProjects;
+            this.Id = id;
+            this.OrganisationId = organisationId;
+            this.ClientName = clientName;
+            this.ClientAddressLine1 = clientAddressLine1;
+            this.ClientAddressLine2 = clientAddressLine2;
+            this.ClientSuburb = clientSuburb;
+            this.ClientState = clientState;
+            this.ClientPostCode = clientPostCode;
+            this.PersonOfContact = personOfContact;
+            this.ClientPhoneNumber = clientPhoneNumber;
+            this.ClientMobileNumber = clientMobileNumber;
+            this.ClientEmailAddress = clientEmailAddress;
+            this.ClientWebURL = clientWebURL;
+            this.ProjectCount = projectCount;
         }
         
         /// <summary>
@@ -203,7 +203,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,24 +33,24 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSProjectCostingReportItem" /> class.
         /// </summary>
-        /// <param name="ProjectId">ProjectId.</param>
-        /// <param name="ProjectName">ProjectName.</param>
-        /// <param name="ClientId">ClientId.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="ClientName">ClientName.</param>
-        /// <param name="EstimatedCost">EstimatedCost.</param>
-        /// <param name="ActualCostFiltered">ActualCostFiltered.</param>
-        /// <param name="ActualCost">ActualCost.</param>
-        public CSProjectCostingReportItem(int? ProjectId = default(int?), string ProjectName = default(string), int? ClientId = default(int?), int? OrganisationId = default(int?), string ClientName = default(string), double? EstimatedCost = default(double?), double? ActualCostFiltered = default(double?), double? ActualCost = default(double?))
+        /// <param name="projectId">projectId.</param>
+        /// <param name="projectName">projectName.</param>
+        /// <param name="clientId">clientId.</param>
+        /// <param name="organisationId">organisationId.</param>
+        /// <param name="clientName">clientName.</param>
+        /// <param name="estimatedCost">estimatedCost.</param>
+        /// <param name="actualCostFiltered">actualCostFiltered.</param>
+        /// <param name="actualCost">actualCost.</param>
+        public CSProjectCostingReportItem(int? projectId = default(int?), string projectName = default(string), int? clientId = default(int?), int? organisationId = default(int?), string clientName = default(string), double? estimatedCost = default(double?), double? actualCostFiltered = default(double?), double? actualCost = default(double?))
         {
-            this.ProjectId = ProjectId;
-            this.ProjectName = ProjectName;
-            this.ClientId = ClientId;
-            this.OrganisationId = OrganisationId;
-            this.ClientName = ClientName;
-            this.EstimatedCost = EstimatedCost;
-            this.ActualCostFiltered = ActualCostFiltered;
-            this.ActualCost = ActualCost;
+            this.ProjectId = projectId;
+            this.ProjectName = projectName;
+            this.ClientId = clientId;
+            this.OrganisationId = organisationId;
+            this.ClientName = clientName;
+            this.EstimatedCost = estimatedCost;
+            this.ActualCostFiltered = actualCostFiltered;
+            this.ActualCost = actualCost;
         }
         
         /// <summary>
@@ -125,7 +125,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

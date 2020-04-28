@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,18 +33,18 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSInsertJobCodeRequest" /> class.
         /// </summary>
-        /// <param name="Code">A short code for the Job.  This is referred to as a Job Code.</param>
-        /// <param name="ProjectId">The linked Project.  Time spent with this JobCode is on this Project.</param>
-        /// <param name="ClientId">The linked Client.  Time spent with this JobCode is for this Client.</param>
-        /// <param name="LinkedTaskIds">A list of Task Ids.  This are the Tasks that become available to the employee when they select this JobCode.</param>
-        /// <param name="LinkedOrgGroupIds">Optionally restrict access to the JobCode by specifying which Organisation Groups can use it.</param>
-        public CSInsertJobCodeRequest(string Code = default(string), int? ProjectId = default(int?), int? ClientId = default(int?), List<int?> LinkedTaskIds = default(List<int?>), List<int?> LinkedOrgGroupIds = default(List<int?>))
+        /// <param name="code">A short code for the Job.  This is referred to as a Job Code.</param>
+        /// <param name="projectId">The linked Project.  Time spent with this JobCode is on this Project.</param>
+        /// <param name="clientId">The linked Client.  Time spent with this JobCode is for this Client.</param>
+        /// <param name="linkedTaskIds">A list of Task Ids.  This are the Tasks that become available to the employee when they select this JobCode.</param>
+        /// <param name="linkedOrgGroupIds">Optionally restrict access to the JobCode by specifying which Organisation Groups can use it.</param>
+        public CSInsertJobCodeRequest(string code = default(string), int? projectId = default(int?), int? clientId = default(int?), List<int?> linkedTaskIds = default(List<int?>), List<int?> linkedOrgGroupIds = default(List<int?>))
         {
-            this.Code = Code;
-            this.ProjectId = ProjectId;
-            this.ClientId = ClientId;
-            this.LinkedTaskIds = LinkedTaskIds;
-            this.LinkedOrgGroupIds = LinkedOrgGroupIds;
+            this.Code = code;
+            this.ProjectId = projectId;
+            this.ClientId = clientId;
+            this.LinkedTaskIds = linkedTaskIds;
+            this.LinkedOrgGroupIds = linkedOrgGroupIds;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,22 +33,22 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSAggregateProject" /> class.
         /// </summary>
-        /// <param name="Id">The ID of the project.</param>
-        /// <param name="ClientId">The ID of the client that this project is assigned to.</param>
-        /// <param name="OrganisationId">The ID of your organisation.</param>
-        /// <param name="ProjectName">The name of the project (can be viewed in PROJECT TIMELINES).</param>
-        /// <param name="CostEstimation">The estimated cost of the project (can be viewed in PROJECT TIMELINES).</param>
-        /// <param name="StartDate">The start date of the project (can be viewed in PROJECT TIMELINES).</param>
-        /// <param name="EndDate">The end date of the project (can be viewed in PROJECT TIMELINES).</param>
-        public CSAggregateProject(int? Id = default(int?), int? ClientId = default(int?), int? OrganisationId = default(int?), string ProjectName = default(string), double? CostEstimation = default(double?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?))
+        /// <param name="id">The ID of the project.</param>
+        /// <param name="clientId">The ID of the client that this project is assigned to.</param>
+        /// <param name="organisationId">The ID of your organisation.</param>
+        /// <param name="projectName">The name of the project (can be viewed in PROJECT TIMELINES).</param>
+        /// <param name="costEstimation">The estimated cost of the project (can be viewed in PROJECT TIMELINES).</param>
+        /// <param name="startDate">The start date of the project (can be viewed in PROJECT TIMELINES).</param>
+        /// <param name="endDate">The end date of the project (can be viewed in PROJECT TIMELINES).</param>
+        public CSAggregateProject(int? id = default(int?), int? clientId = default(int?), int? organisationId = default(int?), string projectName = default(string), double? costEstimation = default(double?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
-            this.Id = Id;
-            this.ClientId = ClientId;
-            this.OrganisationId = OrganisationId;
-            this.ProjectName = ProjectName;
-            this.CostEstimation = CostEstimation;
-            this.StartDate = StartDate;
-            this.EndDate = EndDate;
+            this.Id = id;
+            this.ClientId = clientId;
+            this.OrganisationId = organisationId;
+            this.ProjectName = projectName;
+            this.CostEstimation = costEstimation;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
         }
         
         /// <summary>
@@ -123,7 +123,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

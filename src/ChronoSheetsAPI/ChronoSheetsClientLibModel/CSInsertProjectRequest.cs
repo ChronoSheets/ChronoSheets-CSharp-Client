@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,18 +33,18 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSInsertProjectRequest" /> class.
         /// </summary>
-        /// <param name="ClientId">The Id of the Client that is associated with the new project.</param>
-        /// <param name="ProjectName">The name of the new Project.</param>
-        /// <param name="CostEstimation">The estimated cost of work to complete the project.  This value is used in the Organisation Reports view &#39;Project Costs&#39;.</param>
-        /// <param name="StartDate">The start date of the project.  When the project is due to start.</param>
-        /// <param name="EndDate">The end date of the project.  When the project is due to end.</param>
-        public CSInsertProjectRequest(int? ClientId = default(int?), string ProjectName = default(string), double? CostEstimation = default(double?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?))
+        /// <param name="clientId">The Id of the Client that is associated with the new project.</param>
+        /// <param name="projectName">The name of the new Project.</param>
+        /// <param name="costEstimation">The estimated cost of work to complete the project.  This value is used in the Organisation Reports view &#39;Project Costs&#39;.</param>
+        /// <param name="startDate">The start date of the project.  When the project is due to start.</param>
+        /// <param name="endDate">The end date of the project.  When the project is due to end.</param>
+        public CSInsertProjectRequest(int? clientId = default(int?), string projectName = default(string), double? costEstimation = default(double?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
-            this.ClientId = ClientId;
-            this.ProjectName = ProjectName;
-            this.CostEstimation = CostEstimation;
-            this.StartDate = StartDate;
-            this.EndDate = EndDate;
+            this.ClientId = clientId;
+            this.ProjectName = projectName;
+            this.CostEstimation = costEstimation;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

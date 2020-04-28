@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,28 +33,28 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSAggregateJobCode" /> class.
         /// </summary>
-        /// <param name="AvailableTasks">The list of available tasks under this job code.</param>
-        /// <param name="PermittedEmployees">The list of employee IDs that are permitted to record timesheets with this job code (empty means everyone).</param>
-        /// <param name="Id">The ID of the job code (not the code itself).</param>
-        /// <param name="Code">The job code itself.</param>
-        /// <param name="_Client">The name of the client.</param>
-        /// <param name="ClientId">The ID of the client.</param>
-        /// <param name="Project">The name of the project.</param>
-        /// <param name="ProjectId">The ID of the project.</param>
-        /// <param name="OrganisationId">Your organisation ID.</param>
-        /// <param name="IsDeleted">A flag indicating whether or not the job code has been marked as deleted.</param>
-        public CSAggregateJobCode(List<CSAggregateJobTask> AvailableTasks = default(List<CSAggregateJobTask>), List<int?> PermittedEmployees = default(List<int?>), int? Id = default(int?), string Code = default(string), string _Client = default(string), int? ClientId = default(int?), string Project = default(string), int? ProjectId = default(int?), int? OrganisationId = default(int?), bool? IsDeleted = default(bool?))
+        /// <param name="availableTasks">The list of available tasks under this job code.</param>
+        /// <param name="permittedEmployees">The list of employee IDs that are permitted to record timesheets with this job code (empty means everyone).</param>
+        /// <param name="id">The ID of the job code (not the code itself).</param>
+        /// <param name="code">The job code itself.</param>
+        /// <param name="_client">The name of the client.</param>
+        /// <param name="clientId">The ID of the client.</param>
+        /// <param name="project">The name of the project.</param>
+        /// <param name="projectId">The ID of the project.</param>
+        /// <param name="organisationId">Your organisation ID.</param>
+        /// <param name="isDeleted">A flag indicating whether or not the job code has been marked as deleted.</param>
+        public CSAggregateJobCode(List<CSAggregateJobTask> availableTasks = default(List<CSAggregateJobTask>), List<int?> permittedEmployees = default(List<int?>), int? id = default(int?), string code = default(string), string _client = default(string), int? clientId = default(int?), string project = default(string), int? projectId = default(int?), int? organisationId = default(int?), bool? isDeleted = default(bool?))
         {
-            this.AvailableTasks = AvailableTasks;
-            this.PermittedEmployees = PermittedEmployees;
-            this.Id = Id;
-            this.Code = Code;
-            this._Client = _Client;
-            this.ClientId = ClientId;
-            this.Project = Project;
-            this.ProjectId = ProjectId;
-            this.OrganisationId = OrganisationId;
-            this.IsDeleted = IsDeleted;
+            this.AvailableTasks = availableTasks;
+            this.PermittedEmployees = permittedEmployees;
+            this.Id = id;
+            this.Code = code;
+            this._Client = _client;
+            this.ClientId = clientId;
+            this.Project = project;
+            this.ProjectId = projectId;
+            this.OrganisationId = organisationId;
+            this.IsDeleted = isDeleted;
         }
         
         /// <summary>
@@ -153,7 +153,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

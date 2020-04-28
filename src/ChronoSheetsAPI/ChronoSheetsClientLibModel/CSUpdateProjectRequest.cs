@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,18 +33,18 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSUpdateProjectRequest" /> class.
         /// </summary>
-        /// <param name="ProjectId">The Id of the Project that is to be updated.</param>
-        /// <param name="ProjectName">The new name of the Project.</param>
-        /// <param name="CostEstimation">The updated estimated cost of the Project.</param>
-        /// <param name="StartDate">The updated project start date.</param>
-        /// <param name="EndDate">The update project end date.</param>
-        public CSUpdateProjectRequest(int? ProjectId = default(int?), string ProjectName = default(string), double? CostEstimation = default(double?), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?))
+        /// <param name="projectId">The Id of the Project that is to be updated.</param>
+        /// <param name="projectName">The new name of the Project.</param>
+        /// <param name="costEstimation">The updated estimated cost of the Project.</param>
+        /// <param name="startDate">The updated project start date.</param>
+        /// <param name="endDate">The update project end date.</param>
+        public CSUpdateProjectRequest(int? projectId = default(int?), string projectName = default(string), double? costEstimation = default(double?), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?))
         {
-            this.ProjectId = ProjectId;
-            this.ProjectName = ProjectName;
-            this.CostEstimation = CostEstimation;
-            this.StartDate = StartDate;
-            this.EndDate = EndDate;
+            this.ProjectId = projectId;
+            this.ProjectName = projectName;
+            this.CostEstimation = costEstimation;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
         }
         
         /// <summary>
@@ -103,7 +103,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

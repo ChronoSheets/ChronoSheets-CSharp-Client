@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,24 +33,24 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSUpdateMyProfileRequest" /> class.
         /// </summary>
-        /// <param name="EmailAddress">EmailAddress.</param>
-        /// <param name="FirstName">FirstName.</param>
-        /// <param name="LastName">LastName.</param>
-        /// <param name="OldPassword">OldPassword.</param>
-        /// <param name="NewPassword">NewPassword.</param>
-        /// <param name="ConfirmNewPassword">ConfirmNewPassword.</param>
-        /// <param name="IsSubscribedToNewsletter">IsSubscribedToNewsletter.</param>
-        /// <param name="WantsToChangePassword">WantsToChangePassword.</param>
-        public CSUpdateMyProfileRequest(string EmailAddress = default(string), string FirstName = default(string), string LastName = default(string), string OldPassword = default(string), string NewPassword = default(string), string ConfirmNewPassword = default(string), bool? IsSubscribedToNewsletter = default(bool?), bool? WantsToChangePassword = default(bool?))
+        /// <param name="emailAddress">emailAddress.</param>
+        /// <param name="firstName">firstName.</param>
+        /// <param name="lastName">lastName.</param>
+        /// <param name="oldPassword">oldPassword.</param>
+        /// <param name="newPassword">newPassword.</param>
+        /// <param name="confirmNewPassword">confirmNewPassword.</param>
+        /// <param name="isSubscribedToNewsletter">isSubscribedToNewsletter.</param>
+        /// <param name="wantsToChangePassword">wantsToChangePassword.</param>
+        public CSUpdateMyProfileRequest(string emailAddress = default(string), string firstName = default(string), string lastName = default(string), string oldPassword = default(string), string newPassword = default(string), string confirmNewPassword = default(string), bool? isSubscribedToNewsletter = default(bool?), bool? wantsToChangePassword = default(bool?))
         {
-            this.EmailAddress = EmailAddress;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.OldPassword = OldPassword;
-            this.NewPassword = NewPassword;
-            this.ConfirmNewPassword = ConfirmNewPassword;
-            this.IsSubscribedToNewsletter = IsSubscribedToNewsletter;
-            this.WantsToChangePassword = WantsToChangePassword;
+            this.EmailAddress = emailAddress;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.OldPassword = oldPassword;
+            this.NewPassword = newPassword;
+            this.ConfirmNewPassword = confirmNewPassword;
+            this.IsSubscribedToNewsletter = isSubscribedToNewsletter;
+            this.WantsToChangePassword = wantsToChangePassword;
         }
         
         /// <summary>
@@ -125,7 +125,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

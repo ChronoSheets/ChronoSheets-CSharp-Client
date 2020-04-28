@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,16 +33,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSOrganisationGroup" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="OrganisationGroupName">OrganisationGroupName.</param>
-        /// <param name="IsDeleted">IsDeleted.</param>
-        public CSOrganisationGroup(int? Id = default(int?), int? OrganisationId = default(int?), string OrganisationGroupName = default(string), bool? IsDeleted = default(bool?))
+        /// <param name="id">id.</param>
+        /// <param name="organisationId">organisationId.</param>
+        /// <param name="organisationGroupName">organisationGroupName.</param>
+        /// <param name="isDeleted">isDeleted.</param>
+        public CSOrganisationGroup(int? id = default(int?), int? organisationId = default(int?), string organisationGroupName = default(string), bool? isDeleted = default(bool?))
         {
-            this.Id = Id;
-            this.OrganisationId = OrganisationId;
-            this.OrganisationGroupName = OrganisationGroupName;
-            this.IsDeleted = IsDeleted;
+            this.Id = id;
+            this.OrganisationId = organisationId;
+            this.OrganisationGroupName = organisationGroupName;
+            this.IsDeleted = isDeleted;
         }
         
         /// <summary>
@@ -89,7 +89,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

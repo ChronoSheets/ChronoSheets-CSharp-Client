@@ -19,6 +19,8 @@ Name | Type | Description | Notes
 **PayOvertimeAmount** | **double?** |  | [optional] 
 **TripCost** | **double?** |  | [optional] 
 **TripDistanceMeters** | **double?** |  | [optional] 
+**SpanSecondsNormalTime** | **int?** |  | [optional] 
+**SpanSecondsOvertime** | **int?** |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

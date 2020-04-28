@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,40 +33,44 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSRawReportItem" /> class.
         /// </summary>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="Username">Username.</param>
-        /// <param name="EmailAddress">EmailAddress.</param>
-        /// <param name="JobCode">JobCode.</param>
-        /// <param name="TaskName">TaskName.</param>
-        /// <param name="ClientName">ClientName.</param>
-        /// <param name="ProjectName">ProjectName.</param>
-        /// <param name="StartDate">StartDate.</param>
-        /// <param name="EndDate">EndDate.</param>
-        /// <param name="SpanSeconds">SpanSeconds.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="PayAmount">PayAmount.</param>
-        /// <param name="PayOvertimeAmount">PayOvertimeAmount.</param>
-        /// <param name="TripCost">TripCost.</param>
-        /// <param name="TripDistanceMeters">TripDistanceMeters.</param>
-        public CSRawReportItem(int? OrganisationId = default(int?), int? UserId = default(int?), string Username = default(string), string EmailAddress = default(string), string JobCode = default(string), string TaskName = default(string), string ClientName = default(string), string ProjectName = default(string), DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), int? SpanSeconds = default(int?), string Description = default(string), double? PayAmount = default(double?), double? PayOvertimeAmount = default(double?), double? TripCost = default(double?), double? TripDistanceMeters = default(double?))
+        /// <param name="organisationId">organisationId.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="username">username.</param>
+        /// <param name="emailAddress">emailAddress.</param>
+        /// <param name="jobCode">jobCode.</param>
+        /// <param name="taskName">taskName.</param>
+        /// <param name="clientName">clientName.</param>
+        /// <param name="projectName">projectName.</param>
+        /// <param name="startDate">startDate.</param>
+        /// <param name="endDate">endDate.</param>
+        /// <param name="spanSeconds">spanSeconds.</param>
+        /// <param name="description">description.</param>
+        /// <param name="payAmount">payAmount.</param>
+        /// <param name="payOvertimeAmount">payOvertimeAmount.</param>
+        /// <param name="tripCost">tripCost.</param>
+        /// <param name="tripDistanceMeters">tripDistanceMeters.</param>
+        /// <param name="spanSecondsNormalTime">spanSecondsNormalTime.</param>
+        /// <param name="spanSecondsOvertime">spanSecondsOvertime.</param>
+        public CSRawReportItem(int? organisationId = default(int?), int? userId = default(int?), string username = default(string), string emailAddress = default(string), string jobCode = default(string), string taskName = default(string), string clientName = default(string), string projectName = default(string), DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int? spanSeconds = default(int?), string description = default(string), double? payAmount = default(double?), double? payOvertimeAmount = default(double?), double? tripCost = default(double?), double? tripDistanceMeters = default(double?), int? spanSecondsNormalTime = default(int?), int? spanSecondsOvertime = default(int?))
         {
-            this.OrganisationId = OrganisationId;
-            this.UserId = UserId;
-            this.Username = Username;
-            this.EmailAddress = EmailAddress;
-            this.JobCode = JobCode;
-            this.TaskName = TaskName;
-            this.ClientName = ClientName;
-            this.ProjectName = ProjectName;
-            this.StartDate = StartDate;
-            this.EndDate = EndDate;
-            this.SpanSeconds = SpanSeconds;
-            this.Description = Description;
-            this.PayAmount = PayAmount;
-            this.PayOvertimeAmount = PayOvertimeAmount;
-            this.TripCost = TripCost;
-            this.TripDistanceMeters = TripDistanceMeters;
+            this.OrganisationId = organisationId;
+            this.UserId = userId;
+            this.Username = username;
+            this.EmailAddress = emailAddress;
+            this.JobCode = jobCode;
+            this.TaskName = taskName;
+            this.ClientName = clientName;
+            this.ProjectName = projectName;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.SpanSeconds = spanSeconds;
+            this.Description = description;
+            this.PayAmount = payAmount;
+            this.PayOvertimeAmount = payOvertimeAmount;
+            this.TripCost = tripCost;
+            this.TripDistanceMeters = tripDistanceMeters;
+            this.SpanSecondsNormalTime = spanSecondsNormalTime;
+            this.SpanSecondsOvertime = spanSecondsOvertime;
         }
         
         /// <summary>
@@ -166,6 +170,18 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public double? TripDistanceMeters { get; set; }
 
         /// <summary>
+        /// Gets or Sets SpanSecondsNormalTime
+        /// </summary>
+        [DataMember(Name="SpanSecondsNormalTime", EmitDefaultValue=false)]
+        public int? SpanSecondsNormalTime { get; set; }
+
+        /// <summary>
+        /// Gets or Sets SpanSecondsOvertime
+        /// </summary>
+        [DataMember(Name="SpanSecondsOvertime", EmitDefaultValue=false)]
+        public int? SpanSecondsOvertime { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -189,6 +205,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  PayOvertimeAmount: ").Append(PayOvertimeAmount).Append("\n");
             sb.Append("  TripCost: ").Append(TripCost).Append("\n");
             sb.Append("  TripDistanceMeters: ").Append(TripDistanceMeters).Append("\n");
+            sb.Append("  SpanSecondsNormalTime: ").Append(SpanSecondsNormalTime).Append("\n");
+            sb.Append("  SpanSecondsOvertime: ").Append(SpanSecondsOvertime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -197,7 +215,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
@@ -302,6 +320,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.TripDistanceMeters == input.TripDistanceMeters ||
                     (this.TripDistanceMeters != null &&
                     this.TripDistanceMeters.Equals(input.TripDistanceMeters))
+                ) && 
+                (
+                    this.SpanSecondsNormalTime == input.SpanSecondsNormalTime ||
+                    (this.SpanSecondsNormalTime != null &&
+                    this.SpanSecondsNormalTime.Equals(input.SpanSecondsNormalTime))
+                ) && 
+                (
+                    this.SpanSecondsOvertime == input.SpanSecondsOvertime ||
+                    (this.SpanSecondsOvertime != null &&
+                    this.SpanSecondsOvertime.Equals(input.SpanSecondsOvertime))
                 );
         }
 
@@ -346,6 +374,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.TripCost.GetHashCode();
                 if (this.TripDistanceMeters != null)
                     hashCode = hashCode * 59 + this.TripDistanceMeters.GetHashCode();
+                if (this.SpanSecondsNormalTime != null)
+                    hashCode = hashCode * 59 + this.SpanSecondsNormalTime.GetHashCode();
+                if (this.SpanSecondsOvertime != null)
+                    hashCode = hashCode * 59 + this.SpanSecondsOvertime.GetHashCode();
                 return hashCode;
             }
         }

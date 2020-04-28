@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,32 +33,32 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSTimesheet" /> class.
         /// </summary>
-        /// <param name="TimesheetId">TimesheetId.</param>
-        /// <param name="UserId">UserId.</param>
-        /// <param name="JobId">JobId.</param>
-        /// <param name="TaskId">TaskId.</param>
-        /// <param name="StartDateTime">StartDateTime.</param>
-        /// <param name="EndDateTime">EndDateTime.</param>
-        /// <param name="Description">Description.</param>
-        /// <param name="TripId">TripId.</param>
-        /// <param name="FileAttachmentCount">FileAttachmentCount.</param>
-        /// <param name="PayAmount">PayAmount.</param>
-        /// <param name="OvertimePayAmount">OvertimePayAmount.</param>
-        /// <param name="IncludesOvertime">IncludesOvertime.</param>
-        public CSTimesheet(int? TimesheetId = default(int?), int? UserId = default(int?), int? JobId = default(int?), int? TaskId = default(int?), DateTime? StartDateTime = default(DateTime?), DateTime? EndDateTime = default(DateTime?), string Description = default(string), int? TripId = default(int?), int? FileAttachmentCount = default(int?), double? PayAmount = default(double?), double? OvertimePayAmount = default(double?), bool? IncludesOvertime = default(bool?))
+        /// <param name="timesheetId">timesheetId.</param>
+        /// <param name="userId">userId.</param>
+        /// <param name="jobId">jobId.</param>
+        /// <param name="taskId">taskId.</param>
+        /// <param name="startDateTime">startDateTime.</param>
+        /// <param name="endDateTime">endDateTime.</param>
+        /// <param name="description">description.</param>
+        /// <param name="tripId">tripId.</param>
+        /// <param name="fileAttachmentCount">fileAttachmentCount.</param>
+        /// <param name="payAmount">payAmount.</param>
+        /// <param name="overtimePayAmount">overtimePayAmount.</param>
+        /// <param name="includesOvertime">includesOvertime.</param>
+        public CSTimesheet(int? timesheetId = default(int?), int? userId = default(int?), int? jobId = default(int?), int? taskId = default(int?), DateTime? startDateTime = default(DateTime?), DateTime? endDateTime = default(DateTime?), string description = default(string), int? tripId = default(int?), int? fileAttachmentCount = default(int?), double? payAmount = default(double?), double? overtimePayAmount = default(double?), bool? includesOvertime = default(bool?))
         {
-            this.TimesheetId = TimesheetId;
-            this.UserId = UserId;
-            this.JobId = JobId;
-            this.TaskId = TaskId;
-            this.StartDateTime = StartDateTime;
-            this.EndDateTime = EndDateTime;
-            this.Description = Description;
-            this.TripId = TripId;
-            this.FileAttachmentCount = FileAttachmentCount;
-            this.PayAmount = PayAmount;
-            this.OvertimePayAmount = OvertimePayAmount;
-            this.IncludesOvertime = IncludesOvertime;
+            this.TimesheetId = timesheetId;
+            this.UserId = userId;
+            this.JobId = jobId;
+            this.TaskId = taskId;
+            this.StartDateTime = startDateTime;
+            this.EndDateTime = endDateTime;
+            this.Description = description;
+            this.TripId = tripId;
+            this.FileAttachmentCount = fileAttachmentCount;
+            this.PayAmount = payAmount;
+            this.OvertimePayAmount = overtimePayAmount;
+            this.IncludesOvertime = includesOvertime;
         }
         
         /// <summary>
@@ -161,7 +161,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

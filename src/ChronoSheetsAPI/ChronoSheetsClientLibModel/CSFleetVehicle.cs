@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,28 +33,28 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSFleetVehicle" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="Name">Name.</param>
-        /// <param name="CostPerKilometer">CostPerKilometer.</param>
-        /// <param name="Make">Make.</param>
-        /// <param name="Model">Model.</param>
-        /// <param name="Year">Year.</param>
-        /// <param name="LicencePlateNumber">LicencePlateNumber.</param>
-        /// <param name="IsDeleted">IsDeleted.</param>
-        /// <param name="PermittedEmployees">PermittedEmployees.</param>
-        public CSFleetVehicle(int? Id = default(int?), int? OrganisationId = default(int?), string Name = default(string), double? CostPerKilometer = default(double?), string Make = default(string), string Model = default(string), string Year = default(string), string LicencePlateNumber = default(string), bool? IsDeleted = default(bool?), List<int?> PermittedEmployees = default(List<int?>))
+        /// <param name="id">id.</param>
+        /// <param name="organisationId">organisationId.</param>
+        /// <param name="name">name.</param>
+        /// <param name="costPerKilometer">costPerKilometer.</param>
+        /// <param name="make">make.</param>
+        /// <param name="model">model.</param>
+        /// <param name="year">year.</param>
+        /// <param name="licencePlateNumber">licencePlateNumber.</param>
+        /// <param name="isDeleted">isDeleted.</param>
+        /// <param name="permittedEmployees">permittedEmployees.</param>
+        public CSFleetVehicle(int? id = default(int?), int? organisationId = default(int?), string name = default(string), double? costPerKilometer = default(double?), string make = default(string), string model = default(string), string year = default(string), string licencePlateNumber = default(string), bool? isDeleted = default(bool?), List<int?> permittedEmployees = default(List<int?>))
         {
-            this.Id = Id;
-            this.OrganisationId = OrganisationId;
-            this.Name = Name;
-            this.CostPerKilometer = CostPerKilometer;
-            this.Make = Make;
-            this.Model = Model;
-            this.Year = Year;
-            this.LicencePlateNumber = LicencePlateNumber;
-            this.IsDeleted = IsDeleted;
-            this.PermittedEmployees = PermittedEmployees;
+            this.Id = id;
+            this.OrganisationId = organisationId;
+            this.Name = name;
+            this.CostPerKilometer = costPerKilometer;
+            this.Make = make;
+            this.Model = model;
+            this.Year = year;
+            this.LicencePlateNumber = licencePlateNumber;
+            this.IsDeleted = isDeleted;
+            this.PermittedEmployees = permittedEmployees;
         }
         
         /// <summary>
@@ -143,7 +143,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

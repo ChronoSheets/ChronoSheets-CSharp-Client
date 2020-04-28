@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,16 +33,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSInsertUserHourlyRateRequest" /> class.
         /// </summary>
-        /// <param name="UserId">The Id of the User that is getting the new set of Pay Rates.</param>
-        /// <param name="HourlyRate">The Hourly Rate the employee should receive during their usual rostered hours.</param>
-        /// <param name="HourlyOvertimeRate">The Hourly Rate the employee should receive during outside of their usual rostered hours.</param>
-        /// <param name="CurrentDate">The current date time.</param>
-        public CSInsertUserHourlyRateRequest(int? UserId = default(int?), double? HourlyRate = default(double?), double? HourlyOvertimeRate = default(double?), DateTime? CurrentDate = default(DateTime?))
+        /// <param name="userId">The Id of the User that is getting the new set of Pay Rates.</param>
+        /// <param name="hourlyRate">The Hourly Rate the employee should receive during their usual rostered hours.</param>
+        /// <param name="hourlyOvertimeRate">The Hourly Rate the employee should receive during outside of their usual rostered hours.</param>
+        /// <param name="currentDate">The current date time.</param>
+        public CSInsertUserHourlyRateRequest(int? userId = default(int?), double? hourlyRate = default(double?), double? hourlyOvertimeRate = default(double?), DateTime? currentDate = default(DateTime?))
         {
-            this.UserId = UserId;
-            this.HourlyRate = HourlyRate;
-            this.HourlyOvertimeRate = HourlyOvertimeRate;
-            this.CurrentDate = CurrentDate;
+            this.UserId = userId;
+            this.HourlyRate = hourlyRate;
+            this.HourlyOvertimeRate = hourlyOvertimeRate;
+            this.CurrentDate = currentDate;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

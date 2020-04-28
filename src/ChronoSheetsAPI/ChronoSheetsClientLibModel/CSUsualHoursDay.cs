@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -90,14 +90,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSUsualHoursDay" /> class.
         /// </summary>
-        /// <param name="DayType">Specify which day this collection of Roster timeslots is for (Monday-Sunday).</param>
-        /// <param name="TimeSlots">A collection of TimeSlots within this day.</param>
-        /// <param name="DeleteUsualHours">Mark here which existing UsualHours are to be deleted.</param>
-        public CSUsualHoursDay(DayTypeEnum? DayType = default(DayTypeEnum?), List<CSTimeSlot> TimeSlots = default(List<CSTimeSlot>), List<int?> DeleteUsualHours = default(List<int?>))
+        /// <param name="dayType">Specify which day this collection of Roster timeslots is for (Monday-Sunday).</param>
+        /// <param name="timeSlots">A collection of TimeSlots within this day.</param>
+        /// <param name="deleteUsualHours">Mark here which existing UsualHours are to be deleted.</param>
+        public CSUsualHoursDay(DayTypeEnum? dayType = default(DayTypeEnum?), List<CSTimeSlot> timeSlots = default(List<CSTimeSlot>), List<int?> deleteUsualHours = default(List<int?>))
         {
-            this.DayType = DayType;
-            this.TimeSlots = TimeSlots;
-            this.DeleteUsualHours = DeleteUsualHours;
+            this.DayType = dayType;
+            this.TimeSlots = timeSlots;
+            this.DeleteUsualHours = deleteUsualHours;
         }
         
 
@@ -134,7 +134,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

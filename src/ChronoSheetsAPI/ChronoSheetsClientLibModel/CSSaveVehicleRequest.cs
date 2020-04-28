@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,26 +33,26 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSSaveVehicleRequest" /> class.
         /// </summary>
-        /// <param name="Id">The Id of the Vehicle that is being updated.</param>
-        /// <param name="Name">The Name of the Vehicle.</param>
-        /// <param name="CostPerKilometer">The fuel cost / running cost of the Vehicle, measured per kilometer.</param>
-        /// <param name="Make">The make of the Vehicle.</param>
-        /// <param name="Model">The model of the Vehicle.</param>
-        /// <param name="Year">The year the Vehicle was made.</param>
-        /// <param name="LicencePlateNumber">The Licence Plate Number of the Vehicle.</param>
-        /// <param name="LinkedOrgGroupIds">Optionally restrict this Vehicle to only be available to employees within these Organisation Groups.</param>
-        /// <param name="IsDeleted">Whether or not this Vehicle is to be marked as deleted.</param>
-        public CSSaveVehicleRequest(int? Id = default(int?), string Name = default(string), double? CostPerKilometer = default(double?), string Make = default(string), string Model = default(string), string Year = default(string), string LicencePlateNumber = default(string), List<int?> LinkedOrgGroupIds = default(List<int?>), bool? IsDeleted = default(bool?))
+        /// <param name="id">The Id of the Vehicle that is being updated.</param>
+        /// <param name="name">The Name of the Vehicle.</param>
+        /// <param name="costPerKilometer">The fuel cost / running cost of the Vehicle, measured per kilometer.</param>
+        /// <param name="make">The make of the Vehicle.</param>
+        /// <param name="model">The model of the Vehicle.</param>
+        /// <param name="year">The year the Vehicle was made.</param>
+        /// <param name="licencePlateNumber">The Licence Plate Number of the Vehicle.</param>
+        /// <param name="linkedOrgGroupIds">Optionally restrict this Vehicle to only be available to employees within these Organisation Groups.</param>
+        /// <param name="isDeleted">Whether or not this Vehicle is to be marked as deleted.</param>
+        public CSSaveVehicleRequest(int? id = default(int?), string name = default(string), double? costPerKilometer = default(double?), string make = default(string), string model = default(string), string year = default(string), string licencePlateNumber = default(string), List<int?> linkedOrgGroupIds = default(List<int?>), bool? isDeleted = default(bool?))
         {
-            this.Id = Id;
-            this.Name = Name;
-            this.CostPerKilometer = CostPerKilometer;
-            this.Make = Make;
-            this.Model = Model;
-            this.Year = Year;
-            this.LicencePlateNumber = LicencePlateNumber;
-            this.LinkedOrgGroupIds = LinkedOrgGroupIds;
-            this.IsDeleted = IsDeleted;
+            this.Id = id;
+            this.Name = name;
+            this.CostPerKilometer = costPerKilometer;
+            this.Make = make;
+            this.Model = model;
+            this.Year = year;
+            this.LicencePlateNumber = licencePlateNumber;
+            this.LinkedOrgGroupIds = linkedOrgGroupIds;
+            this.IsDeleted = isDeleted;
         }
         
         /// <summary>
@@ -143,7 +143,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

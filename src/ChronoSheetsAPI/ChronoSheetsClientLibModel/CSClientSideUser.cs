@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,32 +33,32 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSClientSideUser" /> class.
         /// </summary>
-        /// <param name="Id">Id.</param>
-        /// <param name="OrganisationId">OrganisationId.</param>
-        /// <param name="UserName">UserName.</param>
-        /// <param name="FirstName">FirstName.</param>
-        /// <param name="LastName">LastName.</param>
-        /// <param name="EmailAddress">EmailAddress.</param>
-        /// <param name="Roles">Roles.</param>
-        /// <param name="AlertSettings">AlertSettings.</param>
-        /// <param name="SetupWizardRequired">SetupWizardRequired.</param>
-        /// <param name="IsSubscribedToNewsletter">IsSubscribedToNewsletter.</param>
-        /// <param name="Organisation">Organisation.</param>
-        /// <param name="IsPrimaryAccount">IsPrimaryAccount.</param>
-        public CSClientSideUser(int? Id = default(int?), int? OrganisationId = default(int?), string UserName = default(string), string FirstName = default(string), string LastName = default(string), string EmailAddress = default(string), long? Roles = default(long?), long? AlertSettings = default(long?), bool? SetupWizardRequired = default(bool?), bool? IsSubscribedToNewsletter = default(bool?), CSOrganisation Organisation = default(CSOrganisation), bool? IsPrimaryAccount = default(bool?))
+        /// <param name="id">id.</param>
+        /// <param name="organisationId">organisationId.</param>
+        /// <param name="userName">userName.</param>
+        /// <param name="firstName">firstName.</param>
+        /// <param name="lastName">lastName.</param>
+        /// <param name="emailAddress">emailAddress.</param>
+        /// <param name="roles">roles.</param>
+        /// <param name="alertSettings">alertSettings.</param>
+        /// <param name="setupWizardRequired">setupWizardRequired.</param>
+        /// <param name="isSubscribedToNewsletter">isSubscribedToNewsletter.</param>
+        /// <param name="organisation">organisation.</param>
+        /// <param name="isPrimaryAccount">isPrimaryAccount.</param>
+        public CSClientSideUser(int? id = default(int?), int? organisationId = default(int?), string userName = default(string), string firstName = default(string), string lastName = default(string), string emailAddress = default(string), long? roles = default(long?), long? alertSettings = default(long?), bool? setupWizardRequired = default(bool?), bool? isSubscribedToNewsletter = default(bool?), CSOrganisation organisation = default(CSOrganisation), bool? isPrimaryAccount = default(bool?))
         {
-            this.Id = Id;
-            this.OrganisationId = OrganisationId;
-            this.UserName = UserName;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.EmailAddress = EmailAddress;
-            this.Roles = Roles;
-            this.AlertSettings = AlertSettings;
-            this.SetupWizardRequired = SetupWizardRequired;
-            this.IsSubscribedToNewsletter = IsSubscribedToNewsletter;
-            this.Organisation = Organisation;
-            this.IsPrimaryAccount = IsPrimaryAccount;
+            this.Id = id;
+            this.OrganisationId = organisationId;
+            this.UserName = userName;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.EmailAddress = emailAddress;
+            this.Roles = roles;
+            this.AlertSettings = alertSettings;
+            this.SetupWizardRequired = setupWizardRequired;
+            this.IsSubscribedToNewsletter = isSubscribedToNewsletter;
+            this.Organisation = organisation;
+            this.IsPrimaryAccount = isPrimaryAccount;
         }
         
         /// <summary>
@@ -161,7 +161,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

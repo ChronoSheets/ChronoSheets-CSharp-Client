@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,26 +33,26 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSJobSeriesReportItem" /> class.
         /// </summary>
-        /// <param name="StartDate">StartDate.</param>
-        /// <param name="EndDate">EndDate.</param>
-        /// <param name="JobId">JobId.</param>
-        /// <param name="ClientId">ClientId.</param>
-        /// <param name="ClientName">ClientName.</param>
-        /// <param name="ProjectId">ProjectId.</param>
-        /// <param name="ProjectName">ProjectName.</param>
-        /// <param name="SpanSeconds">SpanSeconds.</param>
-        /// <param name="JobCode">JobCode.</param>
-        public CSJobSeriesReportItem(DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), int? JobId = default(int?), int? ClientId = default(int?), string ClientName = default(string), int? ProjectId = default(int?), string ProjectName = default(string), int? SpanSeconds = default(int?), string JobCode = default(string))
+        /// <param name="startDate">startDate.</param>
+        /// <param name="endDate">endDate.</param>
+        /// <param name="jobId">jobId.</param>
+        /// <param name="clientId">clientId.</param>
+        /// <param name="clientName">clientName.</param>
+        /// <param name="projectId">projectId.</param>
+        /// <param name="projectName">projectName.</param>
+        /// <param name="spanSeconds">spanSeconds.</param>
+        /// <param name="jobCode">jobCode.</param>
+        public CSJobSeriesReportItem(DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int? jobId = default(int?), int? clientId = default(int?), string clientName = default(string), int? projectId = default(int?), string projectName = default(string), int? spanSeconds = default(int?), string jobCode = default(string))
         {
-            this.StartDate = StartDate;
-            this.EndDate = EndDate;
-            this.JobId = JobId;
-            this.ClientId = ClientId;
-            this.ClientName = ClientName;
-            this.ProjectId = ProjectId;
-            this.ProjectName = ProjectName;
-            this.SpanSeconds = SpanSeconds;
-            this.JobCode = JobCode;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.JobId = jobId;
+            this.ClientId = clientId;
+            this.ClientName = clientName;
+            this.ProjectId = projectId;
+            this.ProjectName = projectName;
+            this.SpanSeconds = spanSeconds;
+            this.JobCode = jobCode;
         }
         
         /// <summary>
@@ -134,7 +134,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,16 +33,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSUpdateTaskRequest" /> class.
         /// </summary>
-        /// <param name="Id">The Id of the Task that is to be updated.</param>
-        /// <param name="TaskName">The updated Task Name.</param>
-        /// <param name="IsDeleted">Whether or not this Task should be marked as deleted.</param>
-        /// <param name="TripEnabled">Whether or not this Task should have GPS Trip Recording enabled.</param>
-        public CSUpdateTaskRequest(int? Id = default(int?), string TaskName = default(string), bool? IsDeleted = default(bool?), bool? TripEnabled = default(bool?))
+        /// <param name="id">The Id of the Task that is to be updated.</param>
+        /// <param name="taskName">The updated Task Name.</param>
+        /// <param name="isDeleted">Whether or not this Task should be marked as deleted.</param>
+        /// <param name="tripEnabled">Whether or not this Task should have GPS Trip Recording enabled.</param>
+        public CSUpdateTaskRequest(int? id = default(int?), string taskName = default(string), bool? isDeleted = default(bool?), bool? tripEnabled = default(bool?))
         {
-            this.Id = Id;
-            this.TaskName = TaskName;
-            this.IsDeleted = IsDeleted;
-            this.TripEnabled = TripEnabled;
+            this.Id = id;
+            this.TaskName = taskName;
+            this.IsDeleted = isDeleted;
+            this.TripEnabled = tripEnabled;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

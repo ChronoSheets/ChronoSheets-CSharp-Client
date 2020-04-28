@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,24 +33,24 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSUpdateUserRequest" /> class.
         /// </summary>
-        /// <param name="UserId">The Id of the User that is to be updated.</param>
-        /// <param name="EmailAddress">The Email Address of the employee.</param>
-        /// <param name="FirstName">The First Name of the employee.</param>
-        /// <param name="LastName">The Last Name of the employee.</param>
-        /// <param name="IsSubscribedToNewsletter">Whether or not the employee is subscribed to ChronoSheets newsletters.</param>
-        /// <param name="IsAccountActive">Whether or not the employee account is active.</param>
-        /// <param name="Roles">A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details.</param>
-        /// <param name="AlertSettings">A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details.</param>
-        public CSUpdateUserRequest(int? UserId = default(int?), string EmailAddress = default(string), string FirstName = default(string), string LastName = default(string), bool? IsSubscribedToNewsletter = default(bool?), bool? IsAccountActive = default(bool?), long? Roles = default(long?), long? AlertSettings = default(long?))
+        /// <param name="userId">The Id of the User that is to be updated.</param>
+        /// <param name="emailAddress">The Email Address of the employee.</param>
+        /// <param name="firstName">The First Name of the employee.</param>
+        /// <param name="lastName">The Last Name of the employee.</param>
+        /// <param name="isSubscribedToNewsletter">Whether or not the employee is subscribed to ChronoSheets newsletters.</param>
+        /// <param name="isAccountActive">Whether or not the employee account is active.</param>
+        /// <param name="roles">A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details.</param>
+        /// <param name="alertSettings">A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details.</param>
+        public CSUpdateUserRequest(int? userId = default(int?), string emailAddress = default(string), string firstName = default(string), string lastName = default(string), bool? isSubscribedToNewsletter = default(bool?), bool? isAccountActive = default(bool?), long? roles = default(long?), long? alertSettings = default(long?))
         {
-            this.UserId = UserId;
-            this.EmailAddress = EmailAddress;
-            this.FirstName = FirstName;
-            this.LastName = LastName;
-            this.IsSubscribedToNewsletter = IsSubscribedToNewsletter;
-            this.IsAccountActive = IsAccountActive;
-            this.Roles = Roles;
-            this.AlertSettings = AlertSettings;
+            this.UserId = userId;
+            this.EmailAddress = emailAddress;
+            this.FirstName = firstName;
+            this.LastName = lastName;
+            this.IsSubscribedToNewsletter = isSubscribedToNewsletter;
+            this.IsAccountActive = isAccountActive;
+            this.Roles = roles;
+            this.AlertSettings = alertSettings;
         }
         
         /// <summary>
@@ -133,7 +133,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

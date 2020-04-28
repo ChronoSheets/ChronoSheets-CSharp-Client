@@ -1,7 +1,7 @@
 /* 
  * ChronoSheets API
  *
- * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 5 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
+ * <div style='font-size: 14px!important;font-family: Open Sans,sans-serif!important;color: #3b4151!important;'><p>      ChronoSheets is a flexible timesheet solution for small to medium businesses, it is free for small teams of up to 3 and there are iOS and Android apps available.  Use the ChronoSheets API to create your own custom integrations.  Before starting, sign up for a ChronoSheets account at <a target='_BLANK' href='http://tsheets.xyz/signup'>http://tsheets.xyz/signup</a>.  </p></div><div id='cs-extra-info'></div>
  *
  * OpenAPI spec version: v1
  * 
@@ -33,18 +33,18 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="CSProjectSeriesReportItem" /> class.
         /// </summary>
-        /// <param name="StartDate">StartDate.</param>
-        /// <param name="EndDate">EndDate.</param>
-        /// <param name="ProjectId">ProjectId.</param>
-        /// <param name="ProjectName">ProjectName.</param>
-        /// <param name="SpanSeconds">SpanSeconds.</param>
-        public CSProjectSeriesReportItem(DateTime? StartDate = default(DateTime?), DateTime? EndDate = default(DateTime?), int? ProjectId = default(int?), string ProjectName = default(string), int? SpanSeconds = default(int?))
+        /// <param name="startDate">startDate.</param>
+        /// <param name="endDate">endDate.</param>
+        /// <param name="projectId">projectId.</param>
+        /// <param name="projectName">projectName.</param>
+        /// <param name="spanSeconds">spanSeconds.</param>
+        public CSProjectSeriesReportItem(DateTime? startDate = default(DateTime?), DateTime? endDate = default(DateTime?), int? projectId = default(int?), string projectName = default(string), int? spanSeconds = default(int?))
         {
-            this.StartDate = StartDate;
-            this.EndDate = EndDate;
-            this.ProjectId = ProjectId;
-            this.ProjectName = ProjectName;
-            this.SpanSeconds = SpanSeconds;
+            this.StartDate = startDate;
+            this.EndDate = endDate;
+            this.ProjectId = projectId;
+            this.ProjectName = projectName;
+            this.SpanSeconds = spanSeconds;
         }
         
         /// <summary>
@@ -98,7 +98,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
