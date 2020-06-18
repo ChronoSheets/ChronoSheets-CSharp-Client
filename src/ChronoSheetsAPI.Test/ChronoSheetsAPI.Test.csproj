@@ -81,7 +81,7 @@ OpenAPI spec version: v1
   <Import Project="$(MsBuildToolsPath)\Microsoft.CSharp.targets" />
   <ItemGroup>
       <ProjectReference Include="..\ChronoSheetsAPI\ChronoSheetsAPI.csproj">
-          <Project>{1D4A681F-CAF5-4613-BCBF-7536A5535C51}</Project>
+          <Project>{0264144A-7E31-4CEE-9664-FF9EB7A8C782}</Project>
           <Name>ChronoSheetsAPI</Name>
       </ProjectReference>
   </ItemGroup>
