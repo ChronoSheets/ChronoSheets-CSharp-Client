@@ -74,7 +74,7 @@ namespace ChronoSheetsAPI.Test
             //int? fileAttachmentId = null;
             //string xChronosheetsAuth = null;
             //var response = instance.TranscriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
-            //Assert.IsInstanceOf<CSApiResponseForPaginatedTranscription> (response, "response is CSApiResponseForPaginatedTranscription");
+            //Assert.IsInstanceOf<CSApiResponseTranscription> (response, "response is CSApiResponseTranscription");
         }
         
         /// <summary>

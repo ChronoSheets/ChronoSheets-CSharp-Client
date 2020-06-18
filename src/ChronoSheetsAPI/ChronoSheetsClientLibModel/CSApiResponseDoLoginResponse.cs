@@ -25,14 +25,15 @@ using SwaggerDateConverter = ChronoSheetsAPI.Client.SwaggerDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// CSApiResponseDoLoginResponse
+    /// A standard API response
     /// </summary>
     [DataContract]
     public partial class CSApiResponseDoLoginResponse :  IEquatable<CSApiResponseDoLoginResponse>, IValidatableObject
     {
         /// <summary>
-        /// Defines Status
+        /// The API response status. Indicates if the request was successful, failed or was unauthorised.
         /// </summary>
+        /// <value>The API response status. Indicates if the request was successful, failed or was unauthorised.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -75,16 +76,17 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
 
         /// <summary>
-        /// Gets or Sets Status
+        /// The API response status. Indicates if the request was successful, failed or was unauthorised.
         /// </summary>
+        /// <value>The API response status. Indicates if the request was successful, failed or was unauthorised.</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="CSApiResponseDoLoginResponse" /> class.
         /// </summary>
-        /// <param name="data">data.</param>
-        /// <param name="status">status.</param>
-        /// <param name="message">message.</param>
+        /// <param name="data">The main Data of the response.</param>
+        /// <param name="status">The API response status. Indicates if the request was successful, failed or was unauthorised..</param>
+        /// <param name="message">A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do..</param>
         public CSApiResponseDoLoginResponse(CSDoLoginResponse data = default(CSDoLoginResponse), StatusEnum? status = default(StatusEnum?), string message = default(string))
         {
             this.Data = data;
@@ -93,15 +95,17 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets Data
+        /// The main Data of the response
         /// </summary>
+        /// <value>The main Data of the response</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
         public CSDoLoginResponse Data { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets Message
+        /// A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.
         /// </summary>
+        /// <value>A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.</value>
         [DataMember(Name="Message", EmitDefaultValue=false)]
         public string Message { get; set; }
 

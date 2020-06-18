@@ -25,14 +25,15 @@ using SwaggerDateConverter = ChronoSheetsAPI.Client.SwaggerDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// CSApiResponseForPaginatedTranscription
+    /// A standard API response
     /// </summary>
     [DataContract]
-    public partial class CSApiResponseForPaginatedTranscription :  IEquatable<CSApiResponseForPaginatedTranscription>, IValidatableObject
+    public partial class CSApiResponseTranscription :  IEquatable<CSApiResponseTranscription>, IValidatableObject
     {
         /// <summary>
-        /// Defines Status
+        /// The API response status. Indicates if the request was successful, failed or was unauthorised.
         /// </summary>
+        /// <value>The API response status. Indicates if the request was successful, failed or was unauthorised.</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum StatusEnum
         {
@@ -75,41 +76,36 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
 
         /// <summary>
-        /// Gets or Sets Status
+        /// The API response status. Indicates if the request was successful, failed or was unauthorised.
         /// </summary>
+        /// <value>The API response status. Indicates if the request was successful, failed or was unauthorised.</value>
         [DataMember(Name="Status", EmitDefaultValue=false)]
         public StatusEnum? Status { get; set; }
         /// <summary>
-        /// Initializes a new instance of the <see cref="CSApiResponseForPaginatedTranscription" /> class.
+        /// Initializes a new instance of the <see cref="CSApiResponseTranscription" /> class.
         /// </summary>
-        /// <param name="totalSetCount">totalSetCount.</param>
-        /// <param name="data">data.</param>
-        /// <param name="status">status.</param>
-        /// <param name="message">message.</param>
-        public CSApiResponseForPaginatedTranscription(int? totalSetCount = default(int?), CSTranscription data = default(CSTranscription), StatusEnum? status = default(StatusEnum?), string message = default(string))
+        /// <param name="data">The main Data of the response.</param>
+        /// <param name="status">The API response status. Indicates if the request was successful, failed or was unauthorised..</param>
+        /// <param name="message">A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do..</param>
+        public CSApiResponseTranscription(CSTranscription data = default(CSTranscription), StatusEnum? status = default(StatusEnum?), string message = default(string))
         {
-            this.TotalSetCount = totalSetCount;
             this.Data = data;
             this.Status = status;
             this.Message = message;
         }
         
         /// <summary>
-        /// Gets or Sets TotalSetCount
+        /// The main Data of the response
         /// </summary>
-        [DataMember(Name="TotalSetCount", EmitDefaultValue=false)]
-        public int? TotalSetCount { get; set; }
-
-        /// <summary>
-        /// Gets or Sets Data
-        /// </summary>
+        /// <value>The main Data of the response</value>
         [DataMember(Name="Data", EmitDefaultValue=false)]
         public CSTranscription Data { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets Message
+        /// A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.
         /// </summary>
+        /// <value>A message to accompany the response status.  If the Status is failed, this message will hint why it failed and what you need to do.</value>
         [DataMember(Name="Message", EmitDefaultValue=false)]
         public string Message { get; set; }
 
@@ -120,8 +116,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class CSApiResponseForPaginatedTranscription {\n");
-            sb.Append("  TotalSetCount: ").Append(TotalSetCount).Append("\n");
+            sb.Append("class CSApiResponseTranscription {\n");
             sb.Append("  Data: ").Append(Data).Append("\n");
             sb.Append("  Status: ").Append(Status).Append("\n");
             sb.Append("  Message: ").Append(Message).Append("\n");
@@ -145,25 +140,20 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as CSApiResponseForPaginatedTranscription);
+            return this.Equals(input as CSApiResponseTranscription);
         }
 
         /// <summary>
-        /// Returns true if CSApiResponseForPaginatedTranscription instances are equal
+        /// Returns true if CSApiResponseTranscription instances are equal
         /// </summary>
-        /// <param name="input">Instance of CSApiResponseForPaginatedTranscription to be compared</param>
+        /// <param name="input">Instance of CSApiResponseTranscription to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(CSApiResponseForPaginatedTranscription input)
+        public bool Equals(CSApiResponseTranscription input)
         {
             if (input == null)
                 return false;
 
             return 
-                (
-                    this.TotalSetCount == input.TotalSetCount ||
-                    (this.TotalSetCount != null &&
-                    this.TotalSetCount.Equals(input.TotalSetCount))
-                ) && 
                 (
                     this.Data == input.Data ||
                     (this.Data != null &&
@@ -190,8 +180,6 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             unchecked // Overflow is fine, just wrap
             {
                 int hashCode = 41;
-                if (this.TotalSetCount != null)
-                    hashCode = hashCode * 59 + this.TotalSetCount.GetHashCode();
                 if (this.Data != null)
                     hashCode = hashCode * 59 + this.Data.GetHashCode();
                 if (this.Status != null)

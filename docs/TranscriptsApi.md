@@ -10,7 +10,7 @@ Method | HTTP request | Description
 
 <a name="transcriptsgetmytranscript"></a>
 # **TranscriptsGetMyTranscript**
-> CSApiResponseForPaginatedTranscription TranscriptsGetMyTranscript (int? fileAttachmentId, string xChronosheetsAuth)
+> CSApiResponseTranscription TranscriptsGetMyTranscript (int? fileAttachmentId, string xChronosheetsAuth)
 
 Get an audio to text transcript for a particular audio file attachment
 
@@ -35,7 +35,7 @@ namespace Example
             try
             {
                 // Get an audio to text transcript for a particular audio file attachment
-                CSApiResponseForPaginatedTranscription result = apiInstance.TranscriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
+                CSApiResponseTranscription result = apiInstance.TranscriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
@@ -56,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseForPaginatedTranscription**](CSApiResponseForPaginatedTranscription.md)
+[**CSApiResponseTranscription**](CSApiResponseTranscription.md)
 
 ### Authorization
 
