@@ -69,13 +69,15 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="automationActionType">automationActionType.</param>
         /// <param name="latitude">latitude.</param>
         /// <param name="longitude">longitude.</param>
-        public CSCreateAutomationStepRequest(int? geofencingId = default(int?), int? nfcId = default(int?), AutomationActionTypeEnum? automationActionType = default(AutomationActionTypeEnum?), double? latitude = default(double?), double? longitude = default(double?))
+        /// <param name="clientTime">clientTime.</param>
+        public CSCreateAutomationStepRequest(int? geofencingId = default(int?), int? nfcId = default(int?), AutomationActionTypeEnum? automationActionType = default(AutomationActionTypeEnum?), double? latitude = default(double?), double? longitude = default(double?), DateTime? clientTime = default(DateTime?))
         {
             this.GeofencingId = geofencingId;
             this.NfcId = nfcId;
             this.AutomationActionType = automationActionType;
             this.Latitude = latitude;
             this.Longitude = longitude;
+            this.ClientTime = clientTime;
         }
         
         /// <summary>
@@ -104,6 +106,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public double? Longitude { get; set; }
 
         /// <summary>
+        /// Gets or Sets ClientTime
+        /// </summary>
+        [DataMember(Name="ClientTime", EmitDefaultValue=false)]
+        public DateTime? ClientTime { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -116,6 +124,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("  AutomationActionType: ").Append(AutomationActionType).Append("\n");
             sb.Append("  Latitude: ").Append(Latitude).Append("\n");
             sb.Append("  Longitude: ").Append(Longitude).Append("\n");
+            sb.Append("  ClientTime: ").Append(ClientTime).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -174,6 +183,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.Longitude == input.Longitude ||
                     (this.Longitude != null &&
                     this.Longitude.Equals(input.Longitude))
+                ) && 
+                (
+                    this.ClientTime == input.ClientTime ||
+                    (this.ClientTime != null &&
+                    this.ClientTime.Equals(input.ClientTime))
                 );
         }
 
@@ -196,6 +210,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.Latitude.GetHashCode();
                 if (this.Longitude != null)
                     hashCode = hashCode * 59 + this.Longitude.GetHashCode();
+                if (this.ClientTime != null)
+                    hashCode = hashCode * 59 + this.ClientTime.GetHashCode();
                 return hashCode;
             }
         }

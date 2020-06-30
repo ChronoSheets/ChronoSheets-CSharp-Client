@@ -381,7 +381,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesCreateJobCode");
 
-            var localVarPath = "/api/JobCodes/CreateJobCode";
+            var localVarPath = "/JobCodes/CreateJobCode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -471,7 +471,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesCreateJobCode");
 
-            var localVarPath = "/api/JobCodes/CreateJobCode";
+            var localVarPath = "/JobCodes/CreateJobCode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -560,7 +560,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesDeleteJobCode");
 
-            var localVarPath = "/api/JobCodes/DeleteJobCode";
+            var localVarPath = "/JobCodes/DeleteJobCode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -637,7 +637,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesDeleteJobCode");
 
-            var localVarPath = "/api/JobCodes/DeleteJobCode";
+            var localVarPath = "/JobCodes/DeleteJobCode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -713,7 +713,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesGetJobCodeById");
 
-            var localVarPath = "/api/JobCodes/GetJobCodeById";
+            var localVarPath = "/JobCodes/GetJobCodeById";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -790,7 +790,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesGetJobCodeById");
 
-            var localVarPath = "/api/JobCodes/GetJobCodeById";
+            var localVarPath = "/JobCodes/GetJobCodeById";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -861,7 +861,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesGetJobCodes");
 
-            var localVarPath = "/api/JobCodes/GetJobCodes";
+            var localVarPath = "/JobCodes/GetJobCodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -932,7 +932,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesGetJobCodes");
 
-            var localVarPath = "/api/JobCodes/GetJobCodes";
+            var localVarPath = "/JobCodes/GetJobCodes";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1007,7 +1007,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesUpdateJobCode");
 
-            var localVarPath = "/api/JobCodes/UpdateJobCode";
+            var localVarPath = "/JobCodes/UpdateJobCode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1097,7 +1097,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling JobCodesApi->JobCodesUpdateJobCode");
 
-            var localVarPath = "/api/JobCodes/UpdateJobCode";
+            var localVarPath = "/JobCodes/UpdateJobCode";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

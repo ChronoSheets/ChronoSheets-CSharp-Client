@@ -263,7 +263,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TranscriptsApi->TranscriptsGetMyTranscript");
 
-            var localVarPath = "/api/Transcripts/GetMyTranscript";
+            var localVarPath = "/Transcripts/GetMyTranscript";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -340,7 +340,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TranscriptsApi->TranscriptsGetMyTranscript");
 
-            var localVarPath = "/api/Transcripts/GetMyTranscript";
+            var localVarPath = "/Transcripts/GetMyTranscript";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -427,7 +427,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
 
-            var localVarPath = "/api/Transcripts/GetMyTranscripts";
+            var localVarPath = "/Transcripts/GetMyTranscripts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -519,7 +519,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TranscriptsApi->TranscriptsGetMyTranscripts");
 
-            var localVarPath = "/api/Transcripts/GetMyTranscripts";
+            var localVarPath = "/Transcripts/GetMyTranscripts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

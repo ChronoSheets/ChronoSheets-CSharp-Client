@@ -53,12 +53,12 @@ namespace ChronoSheetsAPI.Client
         public ApiClient()
         {
             Configuration = ChronoSheetsAPI.Client.Configuration.Default;
-            RestClient = new RestClient("https://www.chronosheets.com");
+            RestClient = new RestClient("https://api.chronosheets.com");
         }
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ApiClient" /> class
-        /// with default base path (https://www.chronosheets.com).
+        /// with default base path (https://api.chronosheets.com).
         /// </summary>
         /// <param name="config">An instance of Configuration.</param>
         public ApiClient(Configuration config)
@@ -73,7 +73,7 @@ namespace ChronoSheetsAPI.Client
         /// with default configuration.
         /// </summary>
         /// <param name="basePath">The base path.</param>
-        public ApiClient(String basePath = "https://www.chronosheets.com")
+        public ApiClient(String basePath = "https://api.chronosheets.com")
         {
            if (String.IsNullOrEmpty(basePath))
                 throw new ArgumentException("basePath cannot be empty");

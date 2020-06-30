@@ -343,7 +343,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsCreateSingleTimesheet");
 
-            var localVarPath = "/api/Timesheets/CreateSingleTimesheet";
+            var localVarPath = "/Timesheets/CreateSingleTimesheet";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -433,7 +433,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsCreateSingleTimesheet");
 
-            var localVarPath = "/api/Timesheets/CreateSingleTimesheet";
+            var localVarPath = "/Timesheets/CreateSingleTimesheet";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -522,7 +522,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsDeleteTimesheet");
 
-            var localVarPath = "/api/Timesheets/DeleteTimesheet";
+            var localVarPath = "/Timesheets/DeleteTimesheet";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -599,7 +599,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsDeleteTimesheet");
 
-            var localVarPath = "/api/Timesheets/DeleteTimesheet";
+            var localVarPath = "/Timesheets/DeleteTimesheet";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -680,7 +680,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsGetTimesheets");
 
-            var localVarPath = "/api/Timesheets/GetTimesheets";
+            var localVarPath = "/Timesheets/GetTimesheets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -763,7 +763,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsGetTimesheets");
 
-            var localVarPath = "/api/Timesheets/GetTimesheets";
+            var localVarPath = "/Timesheets/GetTimesheets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -840,7 +840,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsUpdateTimesheets");
 
-            var localVarPath = "/api/Timesheets/UpdateTimesheets";
+            var localVarPath = "/Timesheets/UpdateTimesheets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -930,7 +930,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetsApi->TimesheetsUpdateTimesheets");
 
-            var localVarPath = "/api/Timesheets/UpdateTimesheets";
+            var localVarPath = "/Timesheets/UpdateTimesheets";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

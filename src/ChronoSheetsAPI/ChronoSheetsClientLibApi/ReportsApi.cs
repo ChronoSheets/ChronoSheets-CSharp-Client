@@ -736,7 +736,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetAllChartsDataAdmin");
 
-            var localVarPath = "/api/Reports/GetAllChartsDataAdmin";
+            var localVarPath = "/Reports/GetAllChartsDataAdmin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -825,7 +825,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetAllChartsDataAdmin");
 
-            var localVarPath = "/api/Reports/GetAllChartsDataAdmin";
+            var localVarPath = "/Reports/GetAllChartsDataAdmin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -909,7 +909,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetAllChartsDataUser");
 
-            var localVarPath = "/api/Reports/GetAllChartsDataUser";
+            var localVarPath = "/Reports/GetAllChartsDataUser";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -992,7 +992,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetAllChartsDataUser");
 
-            var localVarPath = "/api/Reports/GetAllChartsDataUser";
+            var localVarPath = "/Reports/GetAllChartsDataUser";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1076,7 +1076,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
 
-            var localVarPath = "/api/Reports/GetFleetSummaryAdmin";
+            var localVarPath = "/Reports/GetFleetSummaryAdmin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1162,7 +1162,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetFleetSummaryAdmin");
 
-            var localVarPath = "/api/Reports/GetFleetSummaryAdmin";
+            var localVarPath = "/Reports/GetFleetSummaryAdmin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1240,7 +1240,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrgTripById");
 
-            var localVarPath = "/api/Reports/GetOrgTripById";
+            var localVarPath = "/Reports/GetOrgTripById";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1317,7 +1317,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrgTripById");
 
-            var localVarPath = "/api/Reports/GetOrgTripById";
+            var localVarPath = "/Reports/GetOrgTripById";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1404,7 +1404,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrganisationTimesheetFileAttachments");
 
-            var localVarPath = "/api/Reports/GetOrganisationTimesheetFileAttachments";
+            var localVarPath = "/Reports/GetOrganisationTimesheetFileAttachments";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1496,7 +1496,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrganisationTimesheetFileAttachments");
 
-            var localVarPath = "/api/Reports/GetOrganisationTimesheetFileAttachments";
+            var localVarPath = "/Reports/GetOrganisationTimesheetFileAttachments";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1589,7 +1589,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrganisationTranscripts");
 
-            var localVarPath = "/api/Reports/GetOrganisationTranscripts";
+            var localVarPath = "/Reports/GetOrganisationTranscripts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1684,7 +1684,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrganisationTranscripts");
 
-            var localVarPath = "/api/Reports/GetOrganisationTranscripts";
+            var localVarPath = "/Reports/GetOrganisationTranscripts";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1776,7 +1776,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrganisationTrips");
 
-            var localVarPath = "/api/Reports/GetOrganisationTrips";
+            var localVarPath = "/Reports/GetOrganisationTrips";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1868,7 +1868,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetOrganisationTrips");
 
-            var localVarPath = "/api/Reports/GetOrganisationTrips";
+            var localVarPath = "/Reports/GetOrganisationTrips";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1963,7 +1963,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetRawDataAdmin");
 
-            var localVarPath = "/api/Reports/GetRawDataAdmin";
+            var localVarPath = "/Reports/GetRawDataAdmin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2061,7 +2061,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsGetRawDataAdmin");
 
-            var localVarPath = "/api/Reports/GetRawDataAdmin";
+            var localVarPath = "/Reports/GetRawDataAdmin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2150,7 +2150,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsProjectCostingsAdmin");
 
-            var localVarPath = "/api/Reports/ProjectCostingsAdmin";
+            var localVarPath = "/Reports/ProjectCostingsAdmin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2236,7 +2236,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsProjectCostingsAdmin");
 
-            var localVarPath = "/api/Reports/ProjectCostingsAdmin";
+            var localVarPath = "/Reports/ProjectCostingsAdmin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2319,7 +2319,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsUserJobsOverTime");
 
-            var localVarPath = "/api/Reports/UserJobsOverTime";
+            var localVarPath = "/Reports/UserJobsOverTime";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -2402,7 +2402,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling ReportsApi->ReportsUserJobsOverTime");
 
-            var localVarPath = "/api/Reports/UserJobsOverTime";
+            var localVarPath = "/Reports/UserJobsOverTime";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

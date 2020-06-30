@@ -305,7 +305,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsDeleteTimesheetFileAttachment");
 
-            var localVarPath = "/api/FileAttachments/DeleteTimesheetFileAttachment";
+            var localVarPath = "/FileAttachments/DeleteTimesheetFileAttachment";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -382,7 +382,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsDeleteTimesheetFileAttachment");
 
-            var localVarPath = "/api/FileAttachments/DeleteTimesheetFileAttachment";
+            var localVarPath = "/FileAttachments/DeleteTimesheetFileAttachment";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -458,7 +458,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsGetFileAttachmentById");
 
-            var localVarPath = "/api/FileAttachments/GetFileAttachmentById";
+            var localVarPath = "/FileAttachments/GetFileAttachmentById";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -535,7 +535,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsGetFileAttachmentById");
 
-            var localVarPath = "/api/FileAttachments/GetFileAttachmentById";
+            var localVarPath = "/FileAttachments/GetFileAttachmentById";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -620,7 +620,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");
 
-            var localVarPath = "/api/FileAttachments/GetMyFileAttachments";
+            var localVarPath = "/FileAttachments/GetMyFileAttachments";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -709,7 +709,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling FileAttachmentsApi->FileAttachmentsGetMyFileAttachments");
 
-            var localVarPath = "/api/FileAttachments/GetMyFileAttachments";
+            var localVarPath = "/FileAttachments/GetMyFileAttachments";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

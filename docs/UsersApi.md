@@ -1,13 +1,13 @@
 # ChronoSheetsAPI.ChronoSheetsClientLibApi.UsersApi
 
-All URIs are relative to *https://www.chronosheets.com*
+All URIs are relative to *https://api.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UsersCreateTimesheetUser**](UsersApi.md#userscreatetimesheetuser) | **POST** /api/Users/CreateTimesheetUser | Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
-[**UsersGetTimesheetUser**](UsersApi.md#usersgettimesheetuser) | **GET** /api/Users/GetTimesheetUser | Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
-[**UsersGetTimesheetUsers**](UsersApi.md#usersgettimesheetusers) | **GET** /api/Users/GetTimesheetUsers | Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
-[**UsersUpdateTimesheetUser**](UsersApi.md#usersupdatetimesheetuser) | **PUT** /api/Users/UpdateTimesheetUser | Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
+[**UsersCreateTimesheetUser**](UsersApi.md#userscreatetimesheetuser) | **POST** /Users/CreateTimesheetUser | Create a user account in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; permission.
+[**UsersGetTimesheetUser**](UsersApi.md#usersgettimesheetuser) | **GET** /Users/GetTimesheetUser | Get a particular user in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
+[**UsersGetTimesheetUsers**](UsersApi.md#usersgettimesheetusers) | **GET** /Users/GetTimesheetUsers | Get users accounts in your organisation.  Requires the &#39;ManageOrganisationUsers&#39; or &#39;ManageOrganisationGroups&#39; permissions.
+[**UsersUpdateTimesheetUser**](UsersApi.md#usersupdatetimesheetuser) | **PUT** /Users/UpdateTimesheetUser | Update a user account.  Requires the &#39;ManageOrganisationUsers&#39; permission.
 
 
 <a name="userscreatetimesheetuser"></a>

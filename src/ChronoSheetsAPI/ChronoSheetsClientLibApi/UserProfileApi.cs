@@ -364,7 +364,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (request == null)
                 throw new ApiException(400, "Missing required parameter 'request' when calling UserProfileApi->UserProfileDoLogin");
 
-            var localVarPath = "/api/UserProfile/DoLogin";
+            var localVarPath = "/UserProfile/DoLogin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -448,7 +448,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (request == null)
                 throw new ApiException(400, "Missing required parameter 'request' when calling UserProfileApi->UserProfileDoLogin");
 
-            var localVarPath = "/api/UserProfile/DoLogin";
+            var localVarPath = "/UserProfile/DoLogin";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -531,7 +531,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserProfileApi->UserProfileDoLogout");
 
-            var localVarPath = "/api/UserProfile/DoLogout";
+            var localVarPath = "/UserProfile/DoLogout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -602,7 +602,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserProfileApi->UserProfileDoLogout");
 
-            var localVarPath = "/api/UserProfile/DoLogout";
+            var localVarPath = "/UserProfile/DoLogout";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -672,7 +672,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserProfileApi->UserProfileGetMyProfile");
 
-            var localVarPath = "/api/UserProfile/GetMyProfile";
+            var localVarPath = "/UserProfile/GetMyProfile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -743,7 +743,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserProfileApi->UserProfileGetMyProfile");
 
-            var localVarPath = "/api/UserProfile/GetMyProfile";
+            var localVarPath = "/UserProfile/GetMyProfile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -813,7 +813,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserProfileApi->UserProfileKeepSessionAlive");
 
-            var localVarPath = "/api/UserProfile/KeepSessionAlive";
+            var localVarPath = "/UserProfile/KeepSessionAlive";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -884,7 +884,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserProfileApi->UserProfileKeepSessionAlive");
 
-            var localVarPath = "/api/UserProfile/KeepSessionAlive";
+            var localVarPath = "/UserProfile/KeepSessionAlive";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -959,7 +959,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserProfileApi->UserProfileUpdateMyProfile");
 
-            var localVarPath = "/api/UserProfile/UpdateMyProfile";
+            var localVarPath = "/UserProfile/UpdateMyProfile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1049,7 +1049,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserProfileApi->UserProfileUpdateMyProfile");
 
-            var localVarPath = "/api/UserProfile/UpdateMyProfile";
+            var localVarPath = "/UserProfile/UpdateMyProfile";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

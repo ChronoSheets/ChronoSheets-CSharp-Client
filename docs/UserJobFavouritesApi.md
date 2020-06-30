@@ -1,12 +1,12 @@
 # ChronoSheetsAPI.ChronoSheetsClientLibApi.UserJobFavouritesApi
 
-All URIs are relative to *https://www.chronosheets.com*
+All URIs are relative to *https://api.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UserJobFavouritesCreateJobFavourite**](UserJobFavouritesApi.md#userjobfavouritescreatejobfavourite) | **POST** /api/UserJobFavourites/CreateJobFavourite | Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
-[**UserJobFavouritesDeleteJobFavourite**](UserJobFavouritesApi.md#userjobfavouritesdeletejobfavourite) | **DELETE** /api/UserJobFavourites/DeleteJobFavourite | Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
-[**UserJobFavouritesGetJobFavourites**](UserJobFavouritesApi.md#userjobfavouritesgetjobfavourites) | **GET** /api/UserJobFavourites/GetJobFavourites | Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**UserJobFavouritesCreateJobFavourite**](UserJobFavouritesApi.md#userjobfavouritescreatejobfavourite) | **POST** /UserJobFavourites/CreateJobFavourite | Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**UserJobFavouritesDeleteJobFavourite**](UserJobFavouritesApi.md#userjobfavouritesdeletejobfavourite) | **DELETE** /UserJobFavourites/DeleteJobFavourite | Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
+[**UserJobFavouritesGetJobFavourites**](UserJobFavouritesApi.md#userjobfavouritesgetjobfavourites) | **GET** /UserJobFavourites/GetJobFavourites | Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 
 <a name="userjobfavouritescreatejobfavourite"></a>

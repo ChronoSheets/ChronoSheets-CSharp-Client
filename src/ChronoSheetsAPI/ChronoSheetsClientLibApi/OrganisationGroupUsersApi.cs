@@ -247,7 +247,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling OrganisationGroupUsersApi->OrganisationGroupUsersGetOrganisationGroupUsers");
 
-            var localVarPath = "/api/OrganisationGroupUsers/GetOrganisationGroupUsers";
+            var localVarPath = "/OrganisationGroupUsers/GetOrganisationGroupUsers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -324,7 +324,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling OrganisationGroupUsersApi->OrganisationGroupUsersGetOrganisationGroupUsers");
 
-            var localVarPath = "/api/OrganisationGroupUsers/GetOrganisationGroupUsers";
+            var localVarPath = "/OrganisationGroupUsers/GetOrganisationGroupUsers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -400,7 +400,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling OrganisationGroupUsersApi->OrganisationGroupUsersUpdateOrganisationGroupUsers");
 
-            var localVarPath = "/api/OrganisationGroupUsers/UpdateOrganisationGroupUsers";
+            var localVarPath = "/OrganisationGroupUsers/UpdateOrganisationGroupUsers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -490,7 +490,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling OrganisationGroupUsersApi->OrganisationGroupUsersUpdateOrganisationGroupUsers");
 
-            var localVarPath = "/api/OrganisationGroupUsers/UpdateOrganisationGroupUsers";
+            var localVarPath = "/OrganisationGroupUsers/UpdateOrganisationGroupUsers";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

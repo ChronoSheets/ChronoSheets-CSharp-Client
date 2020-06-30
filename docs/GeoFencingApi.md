@@ -1,14 +1,14 @@
 # ChronoSheetsAPI.ChronoSheetsClientLibApi.GeoFencingApi
 
-All URIs are relative to *https://www.chronosheets.com*
+All URIs are relative to *https://api.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GeoFencingCreateGeofence**](GeoFencingApi.md#geofencingcreategeofence) | **POST** /api/GeoFencing/CreateGeofence | Create a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
-[**GeoFencingDeleteGeofence**](GeoFencingApi.md#geofencingdeletegeofence) | **DELETE** /api/GeoFencing/DeleteGeofence | Deletes a geofence.  Requires the &#39;ManageGeofencing&#39; permission.
-[**GeoFencingGetGeofenceById**](GeoFencingApi.md#geofencinggetgeofencebyid) | **GET** /api/GeoFencing/GetGeofenceById | Get a geofence by ID  Requires the &#39;SubmitTimesheets&#39; permission.
-[**GeoFencingGetGeofences**](GeoFencingApi.md#geofencinggetgeofences) | **GET** /api/GeoFencing/GetGeofences | Get geofences belonging to your organisation  Requires the &#39;SubmitTimesheets&#39; permission.
-[**GeoFencingUpdateGeofence**](GeoFencingApi.md#geofencingupdategeofence) | **PUT** /api/GeoFencing/UpdateGeofence | Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
+[**GeoFencingCreateGeofence**](GeoFencingApi.md#geofencingcreategeofence) | **POST** /GeoFencing/CreateGeofence | Create a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
+[**GeoFencingDeleteGeofence**](GeoFencingApi.md#geofencingdeletegeofence) | **DELETE** /GeoFencing/DeleteGeofence | Deletes a geofence.  Requires the &#39;ManageGeofencing&#39; permission.
+[**GeoFencingGetGeofenceById**](GeoFencingApi.md#geofencinggetgeofencebyid) | **GET** /GeoFencing/GetGeofenceById | Get a geofence by ID  Requires the &#39;SubmitTimesheets&#39; permission.
+[**GeoFencingGetGeofences**](GeoFencingApi.md#geofencinggetgeofences) | **GET** /GeoFencing/GetGeofences | Get geofences belonging to your organisation  Requires the &#39;SubmitTimesheets&#39; permission.
+[**GeoFencingUpdateGeofence**](GeoFencingApi.md#geofencingupdategeofence) | **PUT** /GeoFencing/UpdateGeofence | Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
 
 
 <a name="geofencingcreategeofence"></a>

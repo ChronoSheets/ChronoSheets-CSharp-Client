@@ -247,7 +247,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UsualHoursApi->UsualHoursGetUsualHours");
 
-            var localVarPath = "/api/UsualHours/GetUsualHours";
+            var localVarPath = "/UsualHours/GetUsualHours";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -324,7 +324,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UsualHoursApi->UsualHoursGetUsualHours");
 
-            var localVarPath = "/api/UsualHours/GetUsualHours";
+            var localVarPath = "/UsualHours/GetUsualHours";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -400,7 +400,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UsualHoursApi->UsualHoursSetUsualHours");
 
-            var localVarPath = "/api/UsualHours/SetUsualHours";
+            var localVarPath = "/UsualHours/SetUsualHours";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -490,7 +490,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UsualHoursApi->UsualHoursSetUsualHours");
 
-            var localVarPath = "/api/UsualHours/SetUsualHours";
+            var localVarPath = "/UsualHours/SetUsualHours";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

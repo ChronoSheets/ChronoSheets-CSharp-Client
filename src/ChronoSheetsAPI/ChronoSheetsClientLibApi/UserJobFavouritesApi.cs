@@ -289,7 +289,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserJobFavouritesApi->UserJobFavouritesCreateJobFavourite");
 
-            var localVarPath = "/api/UserJobFavourites/CreateJobFavourite";
+            var localVarPath = "/UserJobFavourites/CreateJobFavourite";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -379,7 +379,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserJobFavouritesApi->UserJobFavouritesCreateJobFavourite");
 
-            var localVarPath = "/api/UserJobFavourites/CreateJobFavourite";
+            var localVarPath = "/UserJobFavourites/CreateJobFavourite";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -468,7 +468,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserJobFavouritesApi->UserJobFavouritesDeleteJobFavourite");
 
-            var localVarPath = "/api/UserJobFavourites/DeleteJobFavourite";
+            var localVarPath = "/UserJobFavourites/DeleteJobFavourite";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -545,7 +545,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserJobFavouritesApi->UserJobFavouritesDeleteJobFavourite");
 
-            var localVarPath = "/api/UserJobFavourites/DeleteJobFavourite";
+            var localVarPath = "/UserJobFavourites/DeleteJobFavourite";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -616,7 +616,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserJobFavouritesApi->UserJobFavouritesGetJobFavourites");
 
-            var localVarPath = "/api/UserJobFavourites/GetJobFavourites";
+            var localVarPath = "/UserJobFavourites/GetJobFavourites";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -687,7 +687,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserJobFavouritesApi->UserJobFavouritesGetJobFavourites");
 
-            var localVarPath = "/api/UserJobFavourites/GetJobFavourites";
+            var localVarPath = "/UserJobFavourites/GetJobFavourites";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

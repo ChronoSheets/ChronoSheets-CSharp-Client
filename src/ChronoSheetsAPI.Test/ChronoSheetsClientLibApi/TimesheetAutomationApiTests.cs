@@ -77,6 +77,24 @@ namespace ChronoSheetsAPI.Test
             //Assert.IsInstanceOf<CSApiResponseInt32> (response, "response is CSApiResponseInt32");
         }
         
+        /// <summary>
+        /// Test TimesheetAutomationGetTimesheetAutomationAuditTrail
+        /// </summary>
+        [Test]
+        public void TimesheetAutomationGetTimesheetAutomationAuditTrailTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //int? geofenceId = null;
+            //int? userId = null;
+            //string sort = null;
+            //string order = null;
+            //string xChronosheetsAuth = null;
+            //int? skip = null;
+            //int? take = null;
+            //var response = instance.TimesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+            //Assert.IsInstanceOf<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> (response, "response is CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence");
+        }
+        
     }
 
 }

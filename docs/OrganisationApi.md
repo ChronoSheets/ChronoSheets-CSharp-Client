@@ -1,11 +1,11 @@
 # ChronoSheetsAPI.ChronoSheetsClientLibApi.OrganisationApi
 
-All URIs are relative to *https://www.chronosheets.com*
+All URIs are relative to *https://api.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**OrganisationGetOrganisation**](OrganisationApi.md#organisationgetorganisation) | **GET** /api/Organisation/GetOrganisation | Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
-[**OrganisationUpdateOrganisation**](OrganisationApi.md#organisationupdateorganisation) | **PUT** /api/Organisation/UpdateOrganisation | Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
+[**OrganisationGetOrganisation**](OrganisationApi.md#organisationgetorganisation) | **GET** /Organisation/GetOrganisation | Get your organisation.    Requires &#39;OrganisationAdmin&#39; permission.
+[**OrganisationUpdateOrganisation**](OrganisationApi.md#organisationupdateorganisation) | **PUT** /Organisation/UpdateOrganisation | Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
 
 
 <a name="organisationgetorganisation"></a>

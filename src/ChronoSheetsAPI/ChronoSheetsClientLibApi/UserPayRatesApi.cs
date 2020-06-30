@@ -247,7 +247,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserPayRatesApi->UserPayRatesCreatePayRate");
 
-            var localVarPath = "/api/UserPayRates/CreatePayRate";
+            var localVarPath = "/UserPayRates/CreatePayRate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -337,7 +337,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserPayRatesApi->UserPayRatesCreatePayRate");
 
-            var localVarPath = "/api/UserPayRates/CreatePayRate";
+            var localVarPath = "/UserPayRates/CreatePayRate";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -426,7 +426,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserPayRatesApi->UserPayRatesGetPayRates");
 
-            var localVarPath = "/api/UserPayRates/GetPayRates";
+            var localVarPath = "/UserPayRates/GetPayRates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -503,7 +503,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling UserPayRatesApi->UserPayRatesGetPayRates");
 
-            var localVarPath = "/api/UserPayRates/GetPayRates";
+            var localVarPath = "/UserPayRates/GetPayRates";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

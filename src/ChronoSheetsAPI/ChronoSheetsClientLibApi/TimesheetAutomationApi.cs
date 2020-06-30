@@ -47,6 +47,39 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>ApiResponse of CSApiResponseInt32</returns>
         ApiResponse<CSApiResponseInt32> TimesheetAutomationCreateAutomationStepWithHttpInfo (CSCreateAutomationStepRequest request, string xChronosheetsAuth);
+        /// <summary>
+        /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="userId"></param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many records (optional)</param>
+        /// <param name="take">Take this many records (optional)</param>
+        /// <returns>CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
+        CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int? geofenceId, int? userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null);
+
+        /// <summary>
+        /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="userId"></param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many records (optional)</param>
+        /// <param name="take">Take this many records (optional)</param>
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
+        ApiResponse<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo (int? geofenceId, int? userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -72,6 +105,39 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <returns>Task of ApiResponse (CSApiResponseInt32)</returns>
         System.Threading.Tasks.Task<ApiResponse<CSApiResponseInt32>> TimesheetAutomationCreateAutomationStepAsyncWithHttpInfo (CSCreateAutomationStepRequest request, string xChronosheetsAuth);
+        /// <summary>
+        /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="userId"></param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many records (optional)</param>
+        /// <param name="take">Take this many records (optional)</param>
+        /// <returns>Task of CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
+        System.Threading.Tasks.Task<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int? geofenceId, int? userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null);
+
+        /// <summary>
+        /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="userId"></param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many records (optional)</param>
+        /// <param name="take">Take this many records (optional)</param>
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo (int? geofenceId, int? userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null);
         #endregion Asynchronous Operations
     }
 
@@ -201,7 +267,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetAutomationApi->TimesheetAutomationCreateAutomationStep");
 
-            var localVarPath = "/api/TimesheetAutomation/CreateAutomationStep";
+            var localVarPath = "/TimesheetAutomation/CreateAutomationStep";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -291,7 +357,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetAutomationApi->TimesheetAutomationCreateAutomationStep");
 
-            var localVarPath = "/api/TimesheetAutomation/CreateAutomationStep";
+            var localVarPath = "/TimesheetAutomation/CreateAutomationStep";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -349,6 +415,207 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             return new ApiResponse<CSApiResponseInt32>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (CSApiResponseInt32) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseInt32)));
+        }
+
+        /// <summary>
+        /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="userId"></param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many records (optional)</param>
+        /// <param name="take">Take this many records (optional)</param>
+        /// <returns>CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
+        public CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int? geofenceId, int? userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null)
+        {
+             ApiResponse<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResponse = TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="userId"></param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many records (optional)</param>
+        /// <param name="take">Take this many records (optional)</param>
+        /// <returns>ApiResponse of CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
+        public ApiResponse< CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence > TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo (int? geofenceId, int? userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null)
+        {
+            // verify the required parameter 'geofenceId' is set
+            if (geofenceId == null)
+                throw new ApiException(400, "Missing required parameter 'geofenceId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'sort' is set
+            if (sort == null)
+                throw new ApiException(400, "Missing required parameter 'sort' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'order' is set
+            if (order == null)
+                throw new ApiException(400, "Missing required parameter 'order' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+
+            var localVarPath = "/TimesheetAutomation/GetTimesheetAutomationAuditTrail";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (geofenceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "GeofenceId", geofenceId)); // query parameter
+            if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
+            if (sort != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Sort", sort)); // query parameter
+            if (order != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Order", order)); // query parameter
+            if (skip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Skip", skip)); // query parameter
+            if (take != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Take", take)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TimesheetAutomationGetTimesheetAutomationAuditTrail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence)));
+        }
+
+        /// <summary>
+        /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="userId"></param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many records (optional)</param>
+        /// <param name="take">Take this many records (optional)</param>
+        /// <returns>Task of CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
+        public async System.Threading.Tasks.Task<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int? geofenceId, int? userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null)
+        {
+             ApiResponse<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResponse = await TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="userId"></param>
+        /// <param name="sort"></param>
+        /// <param name="order"></param>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="skip">Skip this many records (optional)</param>
+        /// <param name="take">Take this many records (optional)</param>
+        /// <returns>Task of ApiResponse (CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo (int? geofenceId, int? userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null)
+        {
+            // verify the required parameter 'geofenceId' is set
+            if (geofenceId == null)
+                throw new ApiException(400, "Missing required parameter 'geofenceId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'userId' is set
+            if (userId == null)
+                throw new ApiException(400, "Missing required parameter 'userId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'sort' is set
+            if (sort == null)
+                throw new ApiException(400, "Missing required parameter 'sort' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'order' is set
+            if (order == null)
+                throw new ApiException(400, "Missing required parameter 'order' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+
+            var localVarPath = "/TimesheetAutomation/GetTimesheetAutomationAuditTrail";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (geofenceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "GeofenceId", geofenceId)); // query parameter
+            if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
+            if (sort != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Sort", sort)); // query parameter
+            if (order != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Order", order)); // query parameter
+            if (skip != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Skip", skip)); // query parameter
+            if (take != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Take", take)); // query parameter
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("TimesheetAutomationGetTimesheetAutomationAuditTrail", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence)));
         }
 
     }

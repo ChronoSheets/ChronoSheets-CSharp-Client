@@ -1,11 +1,11 @@
 # ChronoSheetsAPI.ChronoSheetsClientLibApi.UserPayRatesApi
 
-All URIs are relative to *https://www.chronosheets.com*
+All URIs are relative to *https://api.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**UserPayRatesCreatePayRate**](UserPayRatesApi.md#userpayratescreatepayrate) | **POST** /api/UserPayRates/CreatePayRate | Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
-[**UserPayRatesGetPayRates**](UserPayRatesApi.md#userpayratesgetpayrates) | **GET** /api/UserPayRates/GetPayRates | Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
+[**UserPayRatesCreatePayRate**](UserPayRatesApi.md#userpayratescreatepayrate) | **POST** /UserPayRates/CreatePayRate | Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
+[**UserPayRatesGetPayRates**](UserPayRatesApi.md#userpayratesgetpayrates) | **GET** /UserPayRates/GetPayRates | Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
 
 
 <a name="userpayratescreatepayrate"></a>

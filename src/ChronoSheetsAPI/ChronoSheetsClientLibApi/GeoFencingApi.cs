@@ -389,7 +389,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingCreateGeofence");
 
-            var localVarPath = "/api/GeoFencing/CreateGeofence";
+            var localVarPath = "/GeoFencing/CreateGeofence";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -479,7 +479,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingCreateGeofence");
 
-            var localVarPath = "/api/GeoFencing/CreateGeofence";
+            var localVarPath = "/GeoFencing/CreateGeofence";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -568,7 +568,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingDeleteGeofence");
 
-            var localVarPath = "/api/GeoFencing/DeleteGeofence";
+            var localVarPath = "/GeoFencing/DeleteGeofence";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -645,7 +645,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingDeleteGeofence");
 
-            var localVarPath = "/api/GeoFencing/DeleteGeofence";
+            var localVarPath = "/GeoFencing/DeleteGeofence";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -721,7 +721,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingGetGeofenceById");
 
-            var localVarPath = "/api/GeoFencing/GetGeofenceById";
+            var localVarPath = "/GeoFencing/GetGeofenceById";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -798,7 +798,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingGetGeofenceById");
 
-            var localVarPath = "/api/GeoFencing/GetGeofenceById";
+            var localVarPath = "/GeoFencing/GetGeofenceById";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -873,7 +873,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingGetGeofences");
 
-            var localVarPath = "/api/GeoFencing/GetGeofences";
+            var localVarPath = "/GeoFencing/GetGeofences";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -950,7 +950,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingGetGeofences");
 
-            var localVarPath = "/api/GeoFencing/GetGeofences";
+            var localVarPath = "/GeoFencing/GetGeofences";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1027,7 +1027,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingUpdateGeofence");
 
-            var localVarPath = "/api/GeoFencing/UpdateGeofence";
+            var localVarPath = "/GeoFencing/UpdateGeofence";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -1117,7 +1117,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingUpdateGeofence");
 
-            var localVarPath = "/api/GeoFencing/UpdateGeofence";
+            var localVarPath = "/GeoFencing/UpdateGeofence";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

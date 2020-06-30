@@ -192,7 +192,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling AggregateJobTasksApi->AggregateJobTasksGetAggregateJobTasks");
 
-            var localVarPath = "/api/AggregateJobTasks/GetAggregateJobTasks";
+            var localVarPath = "/AggregateJobTasks/GetAggregateJobTasks";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -263,7 +263,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             if (xChronosheetsAuth == null)
                 throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling AggregateJobTasksApi->AggregateJobTasksGetAggregateJobTasks");
 
-            var localVarPath = "/api/AggregateJobTasks/GetAggregateJobTasks";
+            var localVarPath = "/AggregateJobTasks/GetAggregateJobTasks";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

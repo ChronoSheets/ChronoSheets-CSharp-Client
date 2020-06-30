@@ -1,14 +1,14 @@
 # ChronoSheetsAPI.ChronoSheetsClientLibApi.FleetApi
 
-All URIs are relative to *https://www.chronosheets.com*
+All URIs are relative to *https://api.chronosheets.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**FleetCreateVehicle**](FleetApi.md#fleetcreatevehicle) | **POST** /api/Fleet/CreateVehicle | Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
-[**FleetDeleteVehicle**](FleetApi.md#fleetdeletevehicle) | **DELETE** /api/Fleet/DeleteVehicle | Delete a vehicle from the fleet.  Requires the &#39;ManageFleet&#39; permission.
-[**FleetGetVehicleById**](FleetApi.md#fleetgetvehiclebyid) | **GET** /api/Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
-[**FleetGetVehicles**](FleetApi.md#fleetgetvehicles) | **GET** /api/Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
-[**FleetUpdateVehicle**](FleetApi.md#fleetupdatevehicle) | **PUT** /api/Fleet/UpdateVehicle | Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
+[**FleetCreateVehicle**](FleetApi.md#fleetcreatevehicle) | **POST** /Fleet/CreateVehicle | Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
+[**FleetDeleteVehicle**](FleetApi.md#fleetdeletevehicle) | **DELETE** /Fleet/DeleteVehicle | Delete a vehicle from the fleet.  Requires the &#39;ManageFleet&#39; permission.
+[**FleetGetVehicleById**](FleetApi.md#fleetgetvehiclebyid) | **GET** /Fleet/GetVehicleById | Get a particular vehicle.  Does not require any special permission.
+[**FleetGetVehicles**](FleetApi.md#fleetgetvehicles) | **GET** /Fleet/GetVehicles | Get a collection of vehicles that are under your organisation.    Does not require any special permission.
+[**FleetUpdateVehicle**](FleetApi.md#fleetupdatevehicle) | **PUT** /Fleet/UpdateVehicle | Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 
 <a name="fleetcreatevehicle"></a>
