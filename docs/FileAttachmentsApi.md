@@ -9,15 +9,17 @@ Method | HTTP request | Description
 [**FileAttachmentsGetMyFileAttachments**](FileAttachmentsApi.md#fileattachmentsgetmyfileattachments) | **GET** /FileAttachments/GetMyFileAttachments | Get my file attachments.  Get files you&#39;ve attached to timesheets.
 
 
-<a name="fileattachmentsdeletetimesheetfileattachment"></a>
-# **FileAttachmentsDeleteTimesheetFileAttachment**
-> CSApiResponseBoolean FileAttachmentsDeleteTimesheetFileAttachment (int? fileAttachmentId, string xChronosheetsAuth)
+
+## FileAttachmentsDeleteTimesheetFileAttachment
+
+> ApiResponseBoolean FileAttachmentsDeleteTimesheetFileAttachment (int fileAttachmentId, string xChronosheetsAuth)
 
 Delete a particular timesheet file attachment  Requires the 'SubmitTimesheets' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -27,21 +29,24 @@ namespace Example
 {
     public class FileAttachmentsDeleteTimesheetFileAttachmentExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new FileAttachmentsApi();
-            var fileAttachmentId = 56;  // int? | The Id of the file attachment to delete
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new FileAttachmentsApi(Configuration.Default);
+            var fileAttachmentId = 56;  // int | The Id of the file attachment to delete
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Delete a particular timesheet file attachment  Requires the 'SubmitTimesheets' permission.
-                CSApiResponseBoolean result = apiInstance.FileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.FileAttachmentsDeleteTimesheetFileAttachment(fileAttachmentId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling FileAttachmentsApi.FileAttachmentsDeleteTimesheetFileAttachment: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -50,14 +55,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fileAttachmentId** | **int?**| The Id of the file attachment to delete | 
+ **fileAttachmentId** | **int**| The Id of the file attachment to delete | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -65,20 +71,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="fileattachmentsgetfileattachmentbyid"></a>
-# **FileAttachmentsGetFileAttachmentById**
-> CSApiResponseTimesheetFileAttachment FileAttachmentsGetFileAttachmentById (int? fileAttachmentId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## FileAttachmentsGetFileAttachmentById
+
+> ApiResponseTimesheetFileAttachment FileAttachmentsGetFileAttachmentById (int fileAttachmentId, string xChronosheetsAuth)
 
 Get a particular file attachment by ID.  User must own the file attachment for access.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -88,21 +104,24 @@ namespace Example
 {
     public class FileAttachmentsGetFileAttachmentByIdExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new FileAttachmentsApi();
-            var fileAttachmentId = 56;  // int? | The ID of the file attachment
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new FileAttachmentsApi(Configuration.Default);
+            var fileAttachmentId = 56;  // int | The ID of the file attachment
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get a particular file attachment by ID.  User must own the file attachment for access.
-                CSApiResponseTimesheetFileAttachment result = apiInstance.FileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth);
+                ApiResponseTimesheetFileAttachment result = apiInstance.FileAttachmentsGetFileAttachmentById(fileAttachmentId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling FileAttachmentsApi.FileAttachmentsGetFileAttachmentById: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -111,14 +130,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fileAttachmentId** | **int?**| The ID of the file attachment | 
+ **fileAttachmentId** | **int**| The ID of the file attachment | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseTimesheetFileAttachment**](CSApiResponseTimesheetFileAttachment.md)
+[**ApiResponseTimesheetFileAttachment**](ApiResponseTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -126,20 +146,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="fileattachmentsgetmyfileattachments"></a>
-# **FileAttachmentsGetMyFileAttachments**
-> CSApiResponseForPaginatedListTimesheetFileAttachment FileAttachmentsGetMyFileAttachments (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## FileAttachmentsGetMyFileAttachments
+
+> ApiResponseForPaginatedListTimesheetFileAttachment FileAttachmentsGetMyFileAttachments (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = null, int? take = null)
 
 Get my file attachments.  Get files you've attached to timesheets.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -149,11 +179,12 @@ namespace Example
 {
     public class FileAttachmentsGetMyFileAttachmentsExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new FileAttachmentsApi();
-            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The Start date of the date range.  File attachments after this date will be obtained.
-            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The End date of the date range.  File attachments before this date will be obtained.
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new FileAttachmentsApi(Configuration.Default);
+            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime | The Start date of the date range.  File attachments after this date will be obtained.
+            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime | The End date of the date range.  File attachments before this date will be obtained.
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
             var skip = 56;  // int? | Skip this many File attachments (optional) 
             var take = 56;  // int? | Take this many File attachments (optional) 
@@ -161,12 +192,14 @@ namespace Example
             try
             {
                 // Get my file attachments.  Get files you've attached to timesheets.
-                CSApiResponseForPaginatedListTimesheetFileAttachment result = apiInstance.FileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take);
+                ApiResponseForPaginatedListTimesheetFileAttachment result = apiInstance.FileAttachmentsGetMyFileAttachments(startDate, endDate, xChronosheetsAuth, skip, take);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling FileAttachmentsApi.FileAttachmentsGetMyFileAttachments: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -175,17 +208,18 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **DateTime?**| The Start date of the date range.  File attachments after this date will be obtained. | 
- **endDate** | **DateTime?**| The End date of the date range.  File attachments before this date will be obtained. | 
+ **startDate** | **DateTime**| The Start date of the date range.  File attachments after this date will be obtained. | 
+ **endDate** | **DateTime**| The End date of the date range.  File attachments before this date will be obtained. | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
  **skip** | **int?**| Skip this many File attachments | [optional] 
  **take** | **int?**| Take this many File attachments | [optional] 
 
 ### Return type
 
-[**CSApiResponseForPaginatedListTimesheetFileAttachment**](CSApiResponseForPaginatedListTimesheetFileAttachment.md)
+[**ApiResponseForPaginatedListTimesheetFileAttachment**](ApiResponseForPaginatedListTimesheetFileAttachment.md)
 
 ### Authorization
 
@@ -193,8 +227,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

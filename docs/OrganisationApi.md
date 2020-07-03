@@ -8,15 +8,17 @@ Method | HTTP request | Description
 [**OrganisationUpdateOrganisation**](OrganisationApi.md#organisationupdateorganisation) | **PUT** /Organisation/UpdateOrganisation | Update an organisation.    Requires &#39;OrganisationAdmin&#39; permission.
 
 
-<a name="organisationgetorganisation"></a>
-# **OrganisationGetOrganisation**
-> CSApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth)
+
+## OrganisationGetOrganisation
+
+> ApiResponseOrganisation OrganisationGetOrganisation (string xChronosheetsAuth)
 
 Get your organisation.    Requires 'OrganisationAdmin' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -26,20 +28,23 @@ namespace Example
 {
     public class OrganisationGetOrganisationExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new OrganisationApi();
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new OrganisationApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get your organisation.    Requires 'OrganisationAdmin' permission.
-                CSApiResponseOrganisation result = apiInstance.OrganisationGetOrganisation(xChronosheetsAuth);
+                ApiResponseOrganisation result = apiInstance.OrganisationGetOrganisation(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling OrganisationApi.OrganisationGetOrganisation: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -48,13 +53,14 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseOrganisation**](CSApiResponseOrganisation.md)
+[**ApiResponseOrganisation**](ApiResponseOrganisation.md)
 
 ### Authorization
 
@@ -62,20 +68,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="organisationupdateorganisation"></a>
-# **OrganisationUpdateOrganisation**
-> CSApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (CSUpdateOrganisationRequest request, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## OrganisationUpdateOrganisation
+
+> ApiResponseUpdateOrganisationResponse OrganisationUpdateOrganisation (string xChronosheetsAuth, UpdateOrganisationRequest request)
 
 Update an organisation.    Requires 'OrganisationAdmin' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -85,21 +101,24 @@ namespace Example
 {
     public class OrganisationUpdateOrganisationExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new OrganisationApi();
-            var request = new CSUpdateOrganisationRequest(); // CSUpdateOrganisationRequest | An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new OrganisationApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new UpdateOrganisationRequest(); // UpdateOrganisationRequest | An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update
 
             try
             {
                 // Update an organisation.    Requires 'OrganisationAdmin' permission.
-                CSApiResponseUpdateOrganisationResponse result = apiInstance.OrganisationUpdateOrganisation(request, xChronosheetsAuth);
+                ApiResponseUpdateOrganisationResponse result = apiInstance.OrganisationUpdateOrganisation(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling OrganisationApi.OrganisationUpdateOrganisation: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -108,14 +127,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateOrganisationRequest**](CSUpdateOrganisationRequest.md)| An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**UpdateOrganisationRequest**](UpdateOrganisationRequest.md)| An Update Organsation Request object containing updated fields.  Make sure to specify the Organsation Id in the request object so that ChronoSheets knows which Organsation to update | 
 
 ### Return type
 
-[**CSApiResponseUpdateOrganisationResponse**](CSApiResponseUpdateOrganisationResponse.md)
+[**ApiResponseUpdateOrganisationResponse**](ApiResponseUpdateOrganisationResponse.md)
 
 ### Authorization
 
@@ -123,8 +143,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

@@ -8,15 +8,17 @@ Method | HTTP request | Description
 [**UsualHoursSetUsualHours**](UsualHoursApi.md#usualhourssetusualhours) | **PUT** /UsualHours/SetUsualHours | Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; permission.
 
 
-<a name="usualhoursgetusualhours"></a>
-# **UsualHoursGetUsualHours**
-> CSApiResponseListUsualHoursDay UsualHoursGetUsualHours (int? userId, string xChronosheetsAuth)
+
+## UsualHoursGetUsualHours
+
+> ApiResponseListUsualHoursDay UsualHoursGetUsualHours (int userId, string xChronosheetsAuth)
 
 Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -26,21 +28,24 @@ namespace Example
 {
     public class UsualHoursGetUsualHoursExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new UsualHoursApi();
-            var userId = 56;  // int? | The ID of the User for which you want to get UsualHours for
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new UsualHoursApi(Configuration.Default);
+            var userId = 56;  // int | The ID of the User for which you want to get UsualHours for
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' permission.
-                CSApiResponseListUsualHoursDay result = apiInstance.UsualHoursGetUsualHours(userId, xChronosheetsAuth);
+                ApiResponseListUsualHoursDay result = apiInstance.UsualHoursGetUsualHours(userId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling UsualHoursApi.UsualHoursGetUsualHours: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -49,14 +54,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **int?**| The ID of the User for which you want to get UsualHours for | 
+ **userId** | **int**| The ID of the User for which you want to get UsualHours for | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListUsualHoursDay**](CSApiResponseListUsualHoursDay.md)
+[**ApiResponseListUsualHoursDay**](ApiResponseListUsualHoursDay.md)
 
 ### Authorization
 
@@ -64,20 +70,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="usualhourssetusualhours"></a>
-# **UsualHoursSetUsualHours**
-> CSApiResponseBoolean UsualHoursSetUsualHours (CSSetUsualHoursRequest request, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UsualHoursSetUsualHours
+
+> ApiResponseBoolean UsualHoursSetUsualHours (string xChronosheetsAuth, SetUsualHoursRequest request)
 
 Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -87,21 +103,24 @@ namespace Example
 {
     public class UsualHoursSetUsualHoursExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new UsualHoursApi();
-            var request = new CSSetUsualHoursRequest(); // CSSetUsualHoursRequest | A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new UsualHoursApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new SetUsualHoursRequest(); // SetUsualHoursRequest | A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update
 
             try
             {
                 // Set usual hours (rostered hours) for an employee.  Requires the 'ManageOrganisationUsers' permission.
-                CSApiResponseBoolean result = apiInstance.UsualHoursSetUsualHours(request, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.UsualHoursSetUsualHours(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling UsualHoursApi.UsualHoursSetUsualHours: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -110,14 +129,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSetUsualHoursRequest**](CSSetUsualHoursRequest.md)| A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**SetUsualHoursRequest**](SetUsualHoursRequest.md)| A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -125,8 +145,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

@@ -8,15 +8,17 @@ Method | HTTP request | Description
 [**OrganisationGroupUsersUpdateOrganisationGroupUsers**](OrganisationGroupUsersApi.md#organisationgroupusersupdateorganisationgroupusers) | **PUT** /OrganisationGroupUsers/UpdateOrganisationGroupUsers | Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
 
 
-<a name="organisationgroupusersgetorganisationgroupusers"></a>
-# **OrganisationGroupUsersGetOrganisationGroupUsers**
-> CSApiResponseListUserForManagement OrganisationGroupUsersGetOrganisationGroupUsers (int? orgGroupId, string xChronosheetsAuth)
+
+## OrganisationGroupUsersGetOrganisationGroupUsers
+
+> ApiResponseListUserForManagement OrganisationGroupUsersGetOrganisationGroupUsers (int orgGroupId, string xChronosheetsAuth)
 
 Get a collection of organisation group users that belong to an organisation group.    Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -26,21 +28,24 @@ namespace Example
 {
     public class OrganisationGroupUsersGetOrganisationGroupUsersExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new OrganisationGroupUsersApi();
-            var orgGroupId = 56;  // int? | An OrganisationGroup Id
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new OrganisationGroupUsersApi(Configuration.Default);
+            var orgGroupId = 56;  // int | An OrganisationGroup Id
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get a collection of organisation group users that belong to an organisation group.    Requires the 'ManageOrganisationGroups' or 'ManageOrganisationUsers' permissions.
-                CSApiResponseListUserForManagement result = apiInstance.OrganisationGroupUsersGetOrganisationGroupUsers(orgGroupId, xChronosheetsAuth);
+                ApiResponseListUserForManagement result = apiInstance.OrganisationGroupUsersGetOrganisationGroupUsers(orgGroupId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling OrganisationGroupUsersApi.OrganisationGroupUsersGetOrganisationGroupUsers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -49,14 +54,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **orgGroupId** | **int?**| An OrganisationGroup Id | 
+ **orgGroupId** | **int**| An OrganisationGroup Id | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListUserForManagement**](CSApiResponseListUserForManagement.md)
+[**ApiResponseListUserForManagement**](ApiResponseListUserForManagement.md)
 
 ### Authorization
 
@@ -64,20 +70,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="organisationgroupusersupdateorganisationgroupusers"></a>
-# **OrganisationGroupUsersUpdateOrganisationGroupUsers**
-> CSApiResponseBoolean OrganisationGroupUsersUpdateOrganisationGroupUsers (CSSetOrganisationGroupUsersRequest request, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## OrganisationGroupUsersUpdateOrganisationGroupUsers
+
+> ApiResponseBoolean OrganisationGroupUsersUpdateOrganisationGroupUsers (string xChronosheetsAuth, SetOrganisationGroupUsersRequest request)
 
 Set the users who belong to an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -87,21 +103,24 @@ namespace Example
 {
     public class OrganisationGroupUsersUpdateOrganisationGroupUsersExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new OrganisationGroupUsersApi();
-            var request = new CSSetOrganisationGroupUsersRequest(); // CSSetOrganisationGroupUsersRequest | A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new OrganisationGroupUsersApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new SetOrganisationGroupUsersRequest(); // SetOrganisationGroupUsersRequest | A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4
 
             try
             {
                 // Set the users who belong to an organisation group.    Requires the 'ManageOrganisationGroups' permissions.
-                CSApiResponseBoolean result = apiInstance.OrganisationGroupUsersUpdateOrganisationGroupUsers(request, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.OrganisationGroupUsersUpdateOrganisationGroupUsers(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling OrganisationGroupUsersApi.OrganisationGroupUsersUpdateOrganisationGroupUsers: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -110,14 +129,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSetOrganisationGroupUsersRequest**](CSSetOrganisationGroupUsersRequest.md)| A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4 | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**SetOrganisationGroupUsersRequest**](SetOrganisationGroupUsersRequest.md)| A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4 | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -125,8 +145,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

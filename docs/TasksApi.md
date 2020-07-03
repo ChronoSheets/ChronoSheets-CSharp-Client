@@ -12,15 +12,17 @@ Method | HTTP request | Description
 [**TasksUpdateTask**](TasksApi.md#tasksupdatetask) | **PUT** /Tasks/UpdateTask | Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 
-<a name="taskscreatetask"></a>
-# **TasksCreateTask**
-> CSApiResponseInt32 TasksCreateTask (CSInsertTaskRequest request, string xChronosheetsAuth)
+
+## TasksCreateTask
+
+> ApiResponseInt32 TasksCreateTask (string xChronosheetsAuth, InsertTaskRequest request)
 
 Create a task.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -30,21 +32,24 @@ namespace Example
 {
     public class TasksCreateTaskExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TasksApi();
-            var request = new CSInsertTaskRequest(); // CSInsertTaskRequest | An Insert Task Request object containing values for the new Task to create
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TasksApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new InsertTaskRequest(); // InsertTaskRequest | An Insert Task Request object containing values for the new Task to create
 
             try
             {
                 // Create a task.    Requires the 'ManageJobsAndTask' permission.
-                CSApiResponseInt32 result = apiInstance.TasksCreateTask(request, xChronosheetsAuth);
+                ApiResponseInt32 result = apiInstance.TasksCreateTask(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TasksApi.TasksCreateTask: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -53,14 +58,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertTaskRequest**](CSInsertTaskRequest.md)| An Insert Task Request object containing values for the new Task to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**InsertTaskRequest**](InsertTaskRequest.md)| An Insert Task Request object containing values for the new Task to create | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -68,20 +74,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="tasksdeletetask"></a>
-# **TasksDeleteTask**
-> CSApiResponseBoolean TasksDeleteTask (int? taskId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## TasksDeleteTask
+
+> ApiResponseBoolean TasksDeleteTask (int taskId, string xChronosheetsAuth)
 
 Delete a task.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -91,21 +107,24 @@ namespace Example
 {
     public class TasksDeleteTaskExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TasksApi();
-            var taskId = 56;  // int? | The ID of the Task you want to delete
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TasksApi(Configuration.Default);
+            var taskId = 56;  // int | The ID of the Task you want to delete
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Delete a task.    Requires the 'ManageJobsAndTask' permission.
-                CSApiResponseBoolean result = apiInstance.TasksDeleteTask(taskId, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.TasksDeleteTask(taskId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TasksApi.TasksDeleteTask: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -114,14 +133,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taskId** | **int?**| The ID of the Task you want to delete | 
+ **taskId** | **int**| The ID of the Task you want to delete | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -129,20 +149,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="tasksgettaskbyid"></a>
-# **TasksGetTaskById**
-> CSApiResponseTimesheetTask TasksGetTaskById (int? taskId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## TasksGetTaskById
+
+> ApiResponseTimesheetTask TasksGetTaskById (int taskId, string xChronosheetsAuth)
 
 Get a particular task by Id.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -152,21 +182,24 @@ namespace Example
 {
     public class TasksGetTaskByIdExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TasksApi();
-            var taskId = 56;  // int? | The ID of the TimesheetTask you want to get
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TasksApi(Configuration.Default);
+            var taskId = 56;  // int | The ID of the TimesheetTask you want to get
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get a particular task by Id.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
-                CSApiResponseTimesheetTask result = apiInstance.TasksGetTaskById(taskId, xChronosheetsAuth);
+                ApiResponseTimesheetTask result = apiInstance.TasksGetTaskById(taskId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TasksApi.TasksGetTaskById: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -175,14 +208,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **taskId** | **int?**| The ID of the TimesheetTask you want to get | 
+ **taskId** | **int**| The ID of the TimesheetTask you want to get | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseTimesheetTask**](CSApiResponseTimesheetTask.md)
+[**ApiResponseTimesheetTask**](ApiResponseTimesheetTask.md)
 
 ### Authorization
 
@@ -190,20 +224,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="tasksgettasks"></a>
-# **TasksGetTasks**
-> CSApiResponseListTimesheetTask TasksGetTasks (string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## TasksGetTasks
+
+> ApiResponseListTimesheetTask TasksGetTasks (string xChronosheetsAuth)
 
 Get tasks in your organisation.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -213,20 +257,23 @@ namespace Example
 {
     public class TasksGetTasksExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TasksApi();
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TasksApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get tasks in your organisation.   Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
-                CSApiResponseListTimesheetTask result = apiInstance.TasksGetTasks(xChronosheetsAuth);
+                ApiResponseListTimesheetTask result = apiInstance.TasksGetTasks(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TasksApi.TasksGetTasks: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -235,13 +282,14 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
+[**ApiResponseListTimesheetTask**](ApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -249,20 +297,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="tasksgettasksforjob"></a>
-# **TasksGetTasksForJob**
-> CSApiResponseListTimesheetTask TasksGetTasksForJob (int? jobId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## TasksGetTasksForJob
+
+> ApiResponseListTimesheetTask TasksGetTasksForJob (int jobId, string xChronosheetsAuth)
 
 Get a collection of tasks for a particular Job, specified by JobId.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -272,21 +330,24 @@ namespace Example
 {
     public class TasksGetTasksForJobExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TasksApi();
-            var jobId = 56;  // int? | The ID of the job
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TasksApi(Configuration.Default);
+            var jobId = 56;  // int | The ID of the job
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get a collection of tasks for a particular Job, specified by JobId.    Requires the 'SubmitTimesheets' or 'ManageJobsAndTask' permissions.
-                CSApiResponseListTimesheetTask result = apiInstance.TasksGetTasksForJob(jobId, xChronosheetsAuth);
+                ApiResponseListTimesheetTask result = apiInstance.TasksGetTasksForJob(jobId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TasksApi.TasksGetTasksForJob: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -295,14 +356,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobId** | **int?**| The ID of the job | 
+ **jobId** | **int**| The ID of the job | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListTimesheetTask**](CSApiResponseListTimesheetTask.md)
+[**ApiResponseListTimesheetTask**](ApiResponseListTimesheetTask.md)
 
 ### Authorization
 
@@ -310,20 +372,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="tasksupdatetask"></a>
-# **TasksUpdateTask**
-> CSApiResponseBoolean TasksUpdateTask (CSUpdateTaskRequest request, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## TasksUpdateTask
+
+> ApiResponseBoolean TasksUpdateTask (string xChronosheetsAuth, UpdateTaskRequest request)
 
 Update a task.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -333,21 +405,24 @@ namespace Example
 {
     public class TasksUpdateTaskExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TasksApi();
-            var request = new CSUpdateTaskRequest(); // CSUpdateTaskRequest | An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TasksApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new UpdateTaskRequest(); // UpdateTaskRequest | An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update
 
             try
             {
                 // Update a task.    Requires the 'ManageJobsAndTask' permission.
-                CSApiResponseBoolean result = apiInstance.TasksUpdateTask(request, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.TasksUpdateTask(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TasksApi.TasksUpdateTask: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -356,14 +431,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateTaskRequest**](CSUpdateTaskRequest.md)| An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**UpdateTaskRequest**](UpdateTaskRequest.md)| An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -371,8 +447,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

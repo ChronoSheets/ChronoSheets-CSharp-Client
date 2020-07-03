@@ -10,15 +10,17 @@ Method | HTTP request | Description
 [**ClientsUpdateClient**](ClientsApi.md#clientsupdateclient) | **PUT** /Clients/UpdateClient | Update a client.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
-<a name="clientscreateclient"></a>
-# **ClientsCreateClient**
-> CSApiResponseInt32 ClientsCreateClient (CSInsertClientRequest request, string xChronosheetsAuth)
+
+## ClientsCreateClient
+
+> ApiResponseInt32 ClientsCreateClient (string xChronosheetsAuth, InsertClientRequest request)
 
 Create a client.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -28,21 +30,24 @@ namespace Example
 {
     public class ClientsCreateClientExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new ClientsApi();
-            var request = new CSInsertClientRequest(); // CSInsertClientRequest | An Insert Client Request object containing values for the new Client to create
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new ClientsApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new InsertClientRequest(); // InsertClientRequest | An Insert Client Request object containing values for the new Client to create
 
             try
             {
                 // Create a client.    Requires the 'ManageClientsAndProjects' permission.
-                CSApiResponseInt32 result = apiInstance.ClientsCreateClient(request, xChronosheetsAuth);
+                ApiResponseInt32 result = apiInstance.ClientsCreateClient(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling ClientsApi.ClientsCreateClient: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -51,14 +56,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertClientRequest**](CSInsertClientRequest.md)| An Insert Client Request object containing values for the new Client to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**InsertClientRequest**](InsertClientRequest.md)| An Insert Client Request object containing values for the new Client to create | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -66,20 +72,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="clientsgetclient"></a>
-# **ClientsGetClient**
-> CSApiResponseClient ClientsGetClient (int? clientId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ClientsGetClient
+
+> ApiResponseClient ClientsGetClient (int clientId, string xChronosheetsAuth)
 
 Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -89,21 +105,24 @@ namespace Example
 {
     public class ClientsGetClientExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new ClientsApi();
-            var clientId = 56;  // int? | The ID of the Client you want to get
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new ClientsApi(Configuration.Default);
+            var clientId = 56;  // int | The ID of the Client you want to get
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
-                CSApiResponseClient result = apiInstance.ClientsGetClient(clientId, xChronosheetsAuth);
+                ApiResponseClient result = apiInstance.ClientsGetClient(clientId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling ClientsApi.ClientsGetClient: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -112,14 +131,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **int?**| The ID of the Client you want to get | 
+ **clientId** | **int**| The ID of the Client you want to get | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseClient**](CSApiResponseClient.md)
+[**ApiResponseClient**](ApiResponseClient.md)
 
 ### Authorization
 
@@ -127,20 +147,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="clientsgetclients"></a>
-# **ClientsGetClients**
-> CSApiResponseListClient ClientsGetClients (string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ClientsGetClients
+
+> ApiResponseListClient ClientsGetClients (string xChronosheetsAuth)
 
 Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -150,20 +180,23 @@ namespace Example
 {
     public class ClientsGetClientsExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new ClientsApi();
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new ClientsApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get a collection of clients that are under your organisation.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
-                CSApiResponseListClient result = apiInstance.ClientsGetClients(xChronosheetsAuth);
+                ApiResponseListClient result = apiInstance.ClientsGetClients(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling ClientsApi.ClientsGetClients: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -172,13 +205,14 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListClient**](CSApiResponseListClient.md)
+[**ApiResponseListClient**](ApiResponseListClient.md)
 
 ### Authorization
 
@@ -186,20 +220,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="clientsupdateclient"></a>
-# **ClientsUpdateClient**
-> CSApiResponseBoolean ClientsUpdateClient (CSSaveClientRequest request, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ClientsUpdateClient
+
+> ApiResponseBoolean ClientsUpdateClient (string xChronosheetsAuth, SaveClientRequest request)
 
 Update a client.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -209,21 +253,24 @@ namespace Example
 {
     public class ClientsUpdateClientExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new ClientsApi();
-            var request = new CSSaveClientRequest(); // CSSaveClientRequest | A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new ClientsApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new SaveClientRequest(); // SaveClientRequest | A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update
 
             try
             {
                 // Update a client.    Requires the 'ManageClientsAndProjects' permission.
-                CSApiResponseBoolean result = apiInstance.ClientsUpdateClient(request, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.ClientsUpdateClient(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling ClientsApi.ClientsUpdateClient: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -232,14 +279,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSaveClientRequest**](CSSaveClientRequest.md)| A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**SaveClientRequest**](SaveClientRequest.md)| A Save Client Request object containing updated fields.  Make sure to specify the Client Id in the request object so that ChronoSheets knows which Client to update | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -247,8 +295,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

@@ -11,15 +11,17 @@ Method | HTTP request | Description
 [**JobCodesUpdateJobCode**](JobCodesApi.md#jobcodesupdatejobcode) | **PUT** /JobCodes/UpdateJobCode | Update a job code.    Requires the &#39;ManageJobsAndTask&#39; permission.
 
 
-<a name="jobcodescreatejobcode"></a>
-# **JobCodesCreateJobCode**
-> CSApiResponseInt32 JobCodesCreateJobCode (CSInsertJobCodeRequest request, string xChronosheetsAuth)
+
+## JobCodesCreateJobCode
+
+> ApiResponseInt32 JobCodesCreateJobCode (string xChronosheetsAuth, InsertJobCodeRequest request)
 
 Create a job code.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -29,21 +31,24 @@ namespace Example
 {
     public class JobCodesCreateJobCodeExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new JobCodesApi();
-            var request = new CSInsertJobCodeRequest(); // CSInsertJobCodeRequest | An Insert JobCode Request object containing values for the new JobCode to create
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new JobCodesApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new InsertJobCodeRequest(); // InsertJobCodeRequest | An Insert JobCode Request object containing values for the new JobCode to create
 
             try
             {
                 // Create a job code.    Requires the 'ManageJobsAndTask' permission.
-                CSApiResponseInt32 result = apiInstance.JobCodesCreateJobCode(request, xChronosheetsAuth);
+                ApiResponseInt32 result = apiInstance.JobCodesCreateJobCode(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling JobCodesApi.JobCodesCreateJobCode: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -52,14 +57,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertJobCodeRequest**](CSInsertJobCodeRequest.md)| An Insert JobCode Request object containing values for the new JobCode to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**InsertJobCodeRequest**](InsertJobCodeRequest.md)| An Insert JobCode Request object containing values for the new JobCode to create | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -67,20 +73,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="jobcodesdeletejobcode"></a>
-# **JobCodesDeleteJobCode**
-> CSApiResponseBoolean JobCodesDeleteJobCode (int? jobCodeId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## JobCodesDeleteJobCode
+
+> ApiResponseBoolean JobCodesDeleteJobCode (int jobCodeId, string xChronosheetsAuth)
 
 Delete a job code.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -90,21 +106,24 @@ namespace Example
 {
     public class JobCodesDeleteJobCodeExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new JobCodesApi();
-            var jobCodeId = 56;  // int? | The ID of the job code you want to delete
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new JobCodesApi(Configuration.Default);
+            var jobCodeId = 56;  // int | The ID of the job code you want to delete
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Delete a job code.    Requires the 'ManageJobsAndTask' permission.
-                CSApiResponseBoolean result = apiInstance.JobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.JobCodesDeleteJobCode(jobCodeId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling JobCodesApi.JobCodesDeleteJobCode: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -113,14 +132,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobCodeId** | **int?**| The ID of the job code you want to delete | 
+ **jobCodeId** | **int**| The ID of the job code you want to delete | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -128,20 +148,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="jobcodesgetjobcodebyid"></a>
-# **JobCodesGetJobCodeById**
-> CSApiResponseJobCode JobCodesGetJobCodeById (int? jobCodeId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## JobCodesGetJobCodeById
+
+> ApiResponseJobCode JobCodesGetJobCodeById (int jobCodeId, string xChronosheetsAuth)
 
 Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -151,21 +181,24 @@ namespace Example
 {
     public class JobCodesGetJobCodeByIdExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new JobCodesApi();
-            var jobCodeId = 56;  // int? | The ID of the JobCode you want to get
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new JobCodesApi(Configuration.Default);
+            var jobCodeId = 56;  // int | The ID of the JobCode you want to get
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get a particular job code by job code id.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
-                CSApiResponseJobCode result = apiInstance.JobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
+                ApiResponseJobCode result = apiInstance.JobCodesGetJobCodeById(jobCodeId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling JobCodesApi.JobCodesGetJobCodeById: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -174,14 +207,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobCodeId** | **int?**| The ID of the JobCode you want to get | 
+ **jobCodeId** | **int**| The ID of the JobCode you want to get | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseJobCode**](CSApiResponseJobCode.md)
+[**ApiResponseJobCode**](ApiResponseJobCode.md)
 
 ### Authorization
 
@@ -189,20 +223,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="jobcodesgetjobcodes"></a>
-# **JobCodesGetJobCodes**
-> CSApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## JobCodesGetJobCodes
+
+> ApiResponseListJobCode JobCodesGetJobCodes (string xChronosheetsAuth)
 
 Get job codes for your organisation.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -212,20 +256,23 @@ namespace Example
 {
     public class JobCodesGetJobCodesExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new JobCodesApi();
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new JobCodesApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get job codes for your organisation.    Requires 'SubmitTimesheets' or 'ManageJobsAndTasks' permissions.
-                CSApiResponseListJobCode result = apiInstance.JobCodesGetJobCodes(xChronosheetsAuth);
+                ApiResponseListJobCode result = apiInstance.JobCodesGetJobCodes(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling JobCodesApi.JobCodesGetJobCodes: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -234,13 +281,14 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListJobCode**](CSApiResponseListJobCode.md)
+[**ApiResponseListJobCode**](ApiResponseListJobCode.md)
 
 ### Authorization
 
@@ -248,20 +296,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="jobcodesupdatejobcode"></a>
-# **JobCodesUpdateJobCode**
-> CSApiResponseBoolean JobCodesUpdateJobCode (CSUpdateJobCodeRequest request, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## JobCodesUpdateJobCode
+
+> ApiResponseBoolean JobCodesUpdateJobCode (string xChronosheetsAuth, UpdateJobCodeRequest request)
 
 Update a job code.    Requires the 'ManageJobsAndTask' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -271,21 +329,24 @@ namespace Example
 {
     public class JobCodesUpdateJobCodeExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new JobCodesApi();
-            var request = new CSUpdateJobCodeRequest(); // CSUpdateJobCodeRequest | A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new JobCodesApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new UpdateJobCodeRequest(); // UpdateJobCodeRequest | A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update
 
             try
             {
                 // Update a job code.    Requires the 'ManageJobsAndTask' permission.
-                CSApiResponseBoolean result = apiInstance.JobCodesUpdateJobCode(request, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.JobCodesUpdateJobCode(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling JobCodesApi.JobCodesUpdateJobCode: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -294,14 +355,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateJobCodeRequest**](CSUpdateJobCodeRequest.md)| A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**UpdateJobCodeRequest**](UpdateJobCodeRequest.md)| A Update JobCode Request object containing updated fields.  Make sure to specify the JobCode Id in the request object so that ChronoSheets knows which JobCode to update | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -309,8 +371,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

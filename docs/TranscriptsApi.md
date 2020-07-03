@@ -8,15 +8,17 @@ Method | HTTP request | Description
 [**TranscriptsGetMyTranscripts**](TranscriptsApi.md#transcriptsgetmytranscripts) | **GET** /Transcripts/GetMyTranscripts | Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
 
 
-<a name="transcriptsgetmytranscript"></a>
-# **TranscriptsGetMyTranscript**
-> CSApiResponseTranscription TranscriptsGetMyTranscript (int? fileAttachmentId, string xChronosheetsAuth)
+
+## TranscriptsGetMyTranscript
+
+> ApiResponseTranscription TranscriptsGetMyTranscript (int fileAttachmentId, string xChronosheetsAuth)
 
 Get an audio to text transcript for a particular audio file attachment
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -26,21 +28,24 @@ namespace Example
 {
     public class TranscriptsGetMyTranscriptExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TranscriptsApi();
-            var fileAttachmentId = 56;  // int? | The ID of the file attachment that has a transcript.  It should be an audio file attachment.
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TranscriptsApi(Configuration.Default);
+            var fileAttachmentId = 56;  // int | The ID of the file attachment that has a transcript.  It should be an audio file attachment.
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get an audio to text transcript for a particular audio file attachment
-                CSApiResponseTranscription result = apiInstance.TranscriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
+                ApiResponseTranscription result = apiInstance.TranscriptsGetMyTranscript(fileAttachmentId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TranscriptsApi.TranscriptsGetMyTranscript: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -49,14 +54,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **fileAttachmentId** | **int?**| The ID of the file attachment that has a transcript.  It should be an audio file attachment. | 
+ **fileAttachmentId** | **int**| The ID of the file attachment that has a transcript.  It should be an audio file attachment. | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseTranscription**](CSApiResponseTranscription.md)
+[**ApiResponseTranscription**](ApiResponseTranscription.md)
 
 ### Authorization
 
@@ -64,20 +70,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="transcriptsgetmytranscripts"></a>
-# **TranscriptsGetMyTranscripts**
-> CSApiResponseForPaginatedListOrgReportTranscript TranscriptsGetMyTranscripts (DateTime? startDate, DateTime? endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## TranscriptsGetMyTranscripts
+
+> ApiResponseForPaginatedListOrgReportTranscript TranscriptsGetMyTranscripts (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = null, int? take = null, string keyword = null)
 
 Get my file transcripts.  Get audio to text transcripts that you've created.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -87,11 +103,12 @@ namespace Example
 {
     public class TranscriptsGetMyTranscriptsExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TranscriptsApi();
-            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The Start date of the date range.  Transcripts after this date will be obtained.
-            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime? | The End date of the date range.  Transcripts before this date will be obtained.
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TranscriptsApi(Configuration.Default);
+            var startDate = 2013-10-20T19:20:30+01:00;  // DateTime | The Start date of the date range.  Transcripts after this date will be obtained.
+            var endDate = 2013-10-20T19:20:30+01:00;  // DateTime | The End date of the date range.  Transcripts before this date will be obtained.
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
             var skip = 56;  // int? | Skip this many transcripts (optional) 
             var take = 56;  // int? | Take this many transcripts (optional) 
@@ -100,12 +117,14 @@ namespace Example
             try
             {
                 // Get my file transcripts.  Get audio to text transcripts that you've created.
-                CSApiResponseForPaginatedListOrgReportTranscript result = apiInstance.TranscriptsGetMyTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, keyword);
+                ApiResponseForPaginatedListOrgReportTranscript result = apiInstance.TranscriptsGetMyTranscripts(startDate, endDate, xChronosheetsAuth, skip, take, keyword);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TranscriptsApi.TranscriptsGetMyTranscripts: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -114,10 +133,11 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **startDate** | **DateTime?**| The Start date of the date range.  Transcripts after this date will be obtained. | 
- **endDate** | **DateTime?**| The End date of the date range.  Transcripts before this date will be obtained. | 
+ **startDate** | **DateTime**| The Start date of the date range.  Transcripts after this date will be obtained. | 
+ **endDate** | **DateTime**| The End date of the date range.  Transcripts before this date will be obtained. | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
  **skip** | **int?**| Skip this many transcripts | [optional] 
  **take** | **int?**| Take this many transcripts | [optional] 
@@ -125,7 +145,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseForPaginatedListOrgReportTranscript**](CSApiResponseForPaginatedListOrgReportTranscript.md)
+[**ApiResponseForPaginatedListOrgReportTranscript**](ApiResponseForPaginatedListOrgReportTranscript.md)
 
 ### Authorization
 
@@ -133,8 +153,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

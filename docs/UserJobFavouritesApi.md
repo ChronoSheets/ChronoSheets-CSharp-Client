@@ -9,15 +9,17 @@ Method | HTTP request | Description
 [**UserJobFavouritesGetJobFavourites**](UserJobFavouritesApi.md#userjobfavouritesgetjobfavourites) | **GET** /UserJobFavourites/GetJobFavourites | Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
 
 
-<a name="userjobfavouritescreatejobfavourite"></a>
-# **UserJobFavouritesCreateJobFavourite**
-> CSApiResponseInt32 UserJobFavouritesCreateJobFavourite (CSInsertUserJobFavouriteRequest request, string xChronosheetsAuth)
+
+## UserJobFavouritesCreateJobFavourite
+
+> ApiResponseInt32 UserJobFavouritesCreateJobFavourite (string xChronosheetsAuth, InsertUserJobFavouriteRequest request)
 
 Create a job favourite.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -27,21 +29,24 @@ namespace Example
 {
     public class UserJobFavouritesCreateJobFavouriteExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new UserJobFavouritesApi();
-            var request = new CSInsertUserJobFavouriteRequest(); // CSInsertUserJobFavouriteRequest | An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new UserJobFavouritesApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new InsertUserJobFavouriteRequest(); // InsertUserJobFavouriteRequest | An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create
 
             try
             {
                 // Create a job favourite.    Requires the 'SubmitTimesheets' permission.
-                CSApiResponseInt32 result = apiInstance.UserJobFavouritesCreateJobFavourite(request, xChronosheetsAuth);
+                ApiResponseInt32 result = apiInstance.UserJobFavouritesCreateJobFavourite(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling UserJobFavouritesApi.UserJobFavouritesCreateJobFavourite: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -50,14 +55,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertUserJobFavouriteRequest**](CSInsertUserJobFavouriteRequest.md)| An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**InsertUserJobFavouriteRequest**](InsertUserJobFavouriteRequest.md)| An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -65,20 +71,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="userjobfavouritesdeletejobfavourite"></a>
-# **UserJobFavouritesDeleteJobFavourite**
-> CSApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int? jobId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UserJobFavouritesDeleteJobFavourite
+
+> ApiResponseBoolean UserJobFavouritesDeleteJobFavourite (int jobId, string xChronosheetsAuth)
 
 Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -88,21 +104,24 @@ namespace Example
 {
     public class UserJobFavouritesDeleteJobFavouriteExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new UserJobFavouritesApi();
-            var jobId = 56;  // int? | The ID of the Job for the Job Favourite you want to delete.
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new UserJobFavouritesApi(Configuration.Default);
+            var jobId = 56;  // int | The ID of the Job for the Job Favourite you want to delete.
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Delete a job favourite.    Requires the 'SubmitTimesheets' permission.
-                CSApiResponseBoolean result = apiInstance.UserJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.UserJobFavouritesDeleteJobFavourite(jobId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling UserJobFavouritesApi.UserJobFavouritesDeleteJobFavourite: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -111,14 +130,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **jobId** | **int?**| The ID of the Job for the Job Favourite you want to delete. | 
+ **jobId** | **int**| The ID of the Job for the Job Favourite you want to delete. | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -126,20 +146,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="userjobfavouritesgetjobfavourites"></a>
-# **UserJobFavouritesGetJobFavourites**
-> CSApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## UserJobFavouritesGetJobFavourites
+
+> ApiResponseListUserJobFavourite UserJobFavouritesGetJobFavourites (string xChronosheetsAuth)
 
 Get your job favourites.    Requires the 'SubmitTimesheets' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -149,20 +179,23 @@ namespace Example
 {
     public class UserJobFavouritesGetJobFavouritesExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new UserJobFavouritesApi();
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new UserJobFavouritesApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get your job favourites.    Requires the 'SubmitTimesheets' permission.
-                CSApiResponseListUserJobFavourite result = apiInstance.UserJobFavouritesGetJobFavourites(xChronosheetsAuth);
+                ApiResponseListUserJobFavourite result = apiInstance.UserJobFavouritesGetJobFavourites(xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling UserJobFavouritesApi.UserJobFavouritesGetJobFavourites: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -171,13 +204,14 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListUserJobFavourite**](CSApiResponseListUserJobFavourite.md)
+[**ApiResponseListUserJobFavourite**](ApiResponseListUserJobFavourite.md)
 
 ### Authorization
 
@@ -185,8 +219,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

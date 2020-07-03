@@ -8,15 +8,17 @@ Method | HTTP request | Description
 [**TimesheetAutomationGetTimesheetAutomationAuditTrail**](TimesheetAutomationApi.md#timesheetautomationgettimesheetautomationaudittrail) | **GET** /TimesheetAutomation/GetTimesheetAutomationAuditTrail | Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
 
 
-<a name="timesheetautomationcreateautomationstep"></a>
-# **TimesheetAutomationCreateAutomationStep**
-> CSApiResponseInt32 TimesheetAutomationCreateAutomationStep (CSCreateAutomationStepRequest request, string xChronosheetsAuth)
+
+## TimesheetAutomationCreateAutomationStep
+
+> ApiResponseInt32 TimesheetAutomationCreateAutomationStep (string xChronosheetsAuth, CreateAutomationStepRequest request)
 
 Creates an automation step.  Timesheet automation is determined by looking at steps taken by the user.  Create a step to log some automation action, such as entering a geofence or tapping on an NFC badge.  Requires the 'SubmitTimesheets' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -26,21 +28,24 @@ namespace Example
 {
     public class TimesheetAutomationCreateAutomationStepExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TimesheetAutomationApi();
-            var request = new CSCreateAutomationStepRequest(); // CSCreateAutomationStepRequest | 
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TimesheetAutomationApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new CreateAutomationStepRequest(); // CreateAutomationStepRequest | 
 
             try
             {
                 // Creates an automation step.  Timesheet automation is determined by looking at steps taken by the user.  Create a step to log some automation action, such as entering a geofence or tapping on an NFC badge.  Requires the 'SubmitTimesheets' permission.
-                CSApiResponseInt32 result = apiInstance.TimesheetAutomationCreateAutomationStep(request, xChronosheetsAuth);
+                ApiResponseInt32 result = apiInstance.TimesheetAutomationCreateAutomationStep(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TimesheetAutomationApi.TimesheetAutomationCreateAutomationStep: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -49,14 +54,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSCreateAutomationStepRequest**](CSCreateAutomationStepRequest.md)|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**CreateAutomationStepRequest**](CreateAutomationStepRequest.md)|  | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -64,20 +70,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="timesheetautomationgettimesheetautomationaudittrail"></a>
-# **TimesheetAutomationGetTimesheetAutomationAuditTrail**
-> CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int? geofenceId, int? userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## TimesheetAutomationGetTimesheetAutomationAuditTrail
+
+> ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null)
 
 Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the 'ManageGeofencing' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -87,11 +103,12 @@ namespace Example
 {
     public class TimesheetAutomationGetTimesheetAutomationAuditTrailExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new TimesheetAutomationApi();
-            var geofenceId = 56;  // int? | The ID of the Geofence
-            var userId = 56;  // int? | 
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new TimesheetAutomationApi(Configuration.Default);
+            var geofenceId = 56;  // int | The ID of the Geofence
+            var userId = 56;  // int | 
             var sort = sort_example;  // string | 
             var order = order_example;  // string | 
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
@@ -101,12 +118,14 @@ namespace Example
             try
             {
                 // Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the 'ManageGeofencing' permission.
-                CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence result = apiInstance.TimesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+                ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence result = apiInstance.TimesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling TimesheetAutomationApi.TimesheetAutomationGetTimesheetAutomationAuditTrail: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -115,10 +134,11 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **geofenceId** | **int?**| The ID of the Geofence | 
- **userId** | **int?**|  | 
+ **geofenceId** | **int**| The ID of the Geofence | 
+ **userId** | **int**|  | 
  **sort** | **string**|  | 
  **order** | **string**|  | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
@@ -127,7 +147,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence**](CSApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence.md)
+[**ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence**](ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence.md)
 
 ### Authorization
 
@@ -135,8 +155,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

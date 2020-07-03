@@ -11,15 +11,17 @@ Method | HTTP request | Description
 [**FleetUpdateVehicle**](FleetApi.md#fleetupdatevehicle) | **PUT** /Fleet/UpdateVehicle | Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
 
 
-<a name="fleetcreatevehicle"></a>
-# **FleetCreateVehicle**
-> CSApiResponseInt32 FleetCreateVehicle (CSInsertVehicleRequest request, string xChronosheetsAuth)
+
+## FleetCreateVehicle
+
+> ApiResponseInt32 FleetCreateVehicle (string xChronosheetsAuth, InsertVehicleRequest request)
 
 Create a vehicle.    Requires the 'ManageFleet' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -29,21 +31,24 @@ namespace Example
 {
     public class FleetCreateVehicleExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new FleetApi();
-            var request = new CSInsertVehicleRequest(); // CSInsertVehicleRequest | An Insert Vehicle Request object containing values for the new Vehicle to create
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new FleetApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new InsertVehicleRequest(); // InsertVehicleRequest | An Insert Vehicle Request object containing values for the new Vehicle to create
 
             try
             {
                 // Create a vehicle.    Requires the 'ManageFleet' permission.
-                CSApiResponseInt32 result = apiInstance.FleetCreateVehicle(request, xChronosheetsAuth);
+                ApiResponseInt32 result = apiInstance.FleetCreateVehicle(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling FleetApi.FleetCreateVehicle: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -52,14 +57,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertVehicleRequest**](CSInsertVehicleRequest.md)| An Insert Vehicle Request object containing values for the new Vehicle to create | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**InsertVehicleRequest**](InsertVehicleRequest.md)| An Insert Vehicle Request object containing values for the new Vehicle to create | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -67,20 +73,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="fleetdeletevehicle"></a>
-# **FleetDeleteVehicle**
-> CSApiResponseBoolean FleetDeleteVehicle (int? vehicleId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## FleetDeleteVehicle
+
+> ApiResponseBoolean FleetDeleteVehicle (int vehicleId, string xChronosheetsAuth)
 
 Delete a vehicle from the fleet.  Requires the 'ManageFleet' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -90,21 +106,24 @@ namespace Example
 {
     public class FleetDeleteVehicleExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new FleetApi();
-            var vehicleId = 56;  // int? | The unique ID of the vehicle you wish to delete
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new FleetApi(Configuration.Default);
+            var vehicleId = 56;  // int | The unique ID of the vehicle you wish to delete
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Delete a vehicle from the fleet.  Requires the 'ManageFleet' permission.
-                CSApiResponseBoolean result = apiInstance.FleetDeleteVehicle(vehicleId, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.FleetDeleteVehicle(vehicleId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling FleetApi.FleetDeleteVehicle: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -113,14 +132,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **vehicleId** | **int?**| The unique ID of the vehicle you wish to delete | 
+ **vehicleId** | **int**| The unique ID of the vehicle you wish to delete | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -128,20 +148,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="fleetgetvehiclebyid"></a>
-# **FleetGetVehicleById**
-> CSApiResponseFleetVehicle FleetGetVehicleById (int? vehicleId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## FleetGetVehicleById
+
+> ApiResponseFleetVehicle FleetGetVehicleById (int vehicleId, string xChronosheetsAuth)
 
 Get a particular vehicle.  Does not require any special permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -151,21 +181,24 @@ namespace Example
 {
     public class FleetGetVehicleByIdExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new FleetApi();
-            var vehicleId = 56;  // int? | The ID of the Vehicle you want to get
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new FleetApi(Configuration.Default);
+            var vehicleId = 56;  // int | The ID of the Vehicle you want to get
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get a particular vehicle.  Does not require any special permission.
-                CSApiResponseFleetVehicle result = apiInstance.FleetGetVehicleById(vehicleId, xChronosheetsAuth);
+                ApiResponseFleetVehicle result = apiInstance.FleetGetVehicleById(vehicleId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling FleetApi.FleetGetVehicleById: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -174,14 +207,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **vehicleId** | **int?**| The ID of the Vehicle you want to get | 
+ **vehicleId** | **int**| The ID of the Vehicle you want to get | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseFleetVehicle**](CSApiResponseFleetVehicle.md)
+[**ApiResponseFleetVehicle**](ApiResponseFleetVehicle.md)
 
 ### Authorization
 
@@ -189,20 +223,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="fleetgetvehicles"></a>
-# **FleetGetVehicles**
-> CSApiResponseListFleetVehicle FleetGetVehicles (string xChronosheetsAuth, bool? includeDeleted = null)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## FleetGetVehicles
+
+> ApiResponseListFleetVehicle FleetGetVehicles (string xChronosheetsAuth, bool? includeDeleted = null)
 
 Get a collection of vehicles that are under your organisation.    Does not require any special permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -212,21 +256,24 @@ namespace Example
 {
     public class FleetGetVehiclesExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new FleetApi();
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new FleetApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
             var includeDeleted = true;  // bool? | Whether or not to include deleted vehicles (optional) 
 
             try
             {
                 // Get a collection of vehicles that are under your organisation.    Does not require any special permission.
-                CSApiResponseListFleetVehicle result = apiInstance.FleetGetVehicles(xChronosheetsAuth, includeDeleted);
+                ApiResponseListFleetVehicle result = apiInstance.FleetGetVehicles(xChronosheetsAuth, includeDeleted);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling FleetApi.FleetGetVehicles: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -235,6 +282,7 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
@@ -242,7 +290,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**CSApiResponseListFleetVehicle**](CSApiResponseListFleetVehicle.md)
+[**ApiResponseListFleetVehicle**](ApiResponseListFleetVehicle.md)
 
 ### Authorization
 
@@ -250,20 +298,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="fleetupdatevehicle"></a>
-# **FleetUpdateVehicle**
-> CSApiResponseBoolean FleetUpdateVehicle (CSSaveVehicleRequest request, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## FleetUpdateVehicle
+
+> ApiResponseBoolean FleetUpdateVehicle (string xChronosheetsAuth, SaveVehicleRequest request)
 
 Update a vehicle.    Requires the 'ManageFleet' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -273,21 +331,24 @@ namespace Example
 {
     public class FleetUpdateVehicleExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new FleetApi();
-            var request = new CSSaveVehicleRequest(); // CSSaveVehicleRequest | A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new FleetApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new SaveVehicleRequest(); // SaveVehicleRequest | A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update
 
             try
             {
                 // Update a vehicle.    Requires the 'ManageFleet' permission.
-                CSApiResponseBoolean result = apiInstance.FleetUpdateVehicle(request, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.FleetUpdateVehicle(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling FleetApi.FleetUpdateVehicle: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -296,14 +357,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSSaveVehicleRequest**](CSSaveVehicleRequest.md)| A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**SaveVehicleRequest**](SaveVehicleRequest.md)| A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -311,8 +373,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 

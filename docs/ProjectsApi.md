@@ -10,15 +10,17 @@ Method | HTTP request | Description
 [**ProjectsUpdateProject**](ProjectsApi.md#projectsupdateproject) | **PUT** /Projects/UpdateProject | Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
 
 
-<a name="projectscreateproject"></a>
-# **ProjectsCreateProject**
-> CSApiResponseInt32 ProjectsCreateProject (CSInsertProjectRequest request, string xChronosheetsAuth)
+
+## ProjectsCreateProject
+
+> ApiResponseInt32 ProjectsCreateProject (string xChronosheetsAuth, InsertProjectRequest request)
 
 Create a project.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -28,21 +30,24 @@ namespace Example
 {
     public class ProjectsCreateProjectExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new ProjectsApi();
-            var request = new CSInsertProjectRequest(); // CSInsertProjectRequest | An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new ProjectsApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new InsertProjectRequest(); // InsertProjectRequest | An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.
 
             try
             {
                 // Create a project.    Requires the 'ManageClientsAndProjects' permission.
-                CSApiResponseInt32 result = apiInstance.ProjectsCreateProject(request, xChronosheetsAuth);
+                ApiResponseInt32 result = apiInstance.ProjectsCreateProject(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling ProjectsApi.ProjectsCreateProject: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -51,14 +56,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSInsertProjectRequest**](CSInsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**InsertProjectRequest**](InsertProjectRequest.md)| An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client. | 
 
 ### Return type
 
-[**CSApiResponseInt32**](CSApiResponseInt32.md)
+[**ApiResponseInt32**](ApiResponseInt32.md)
 
 ### Authorization
 
@@ -66,20 +72,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="projectsgetprojectbyid"></a>
-# **ProjectsGetProjectById**
-> CSApiResponseProject ProjectsGetProjectById (int? projectId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ProjectsGetProjectById
+
+> ApiResponseProject ProjectsGetProjectById (int projectId, string xChronosheetsAuth)
 
 Get a project by its Id.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -89,21 +105,24 @@ namespace Example
 {
     public class ProjectsGetProjectByIdExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new ProjectsApi();
-            var projectId = 56;  // int? | The ID of the Project you want to get
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new ProjectsApi(Configuration.Default);
+            var projectId = 56;  // int | The ID of the Project you want to get
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get a project by its Id.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
-                CSApiResponseProject result = apiInstance.ProjectsGetProjectById(projectId, xChronosheetsAuth);
+                ApiResponseProject result = apiInstance.ProjectsGetProjectById(projectId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling ProjectsApi.ProjectsGetProjectById: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -112,14 +131,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **projectId** | **int?**| The ID of the Project you want to get | 
+ **projectId** | **int**| The ID of the Project you want to get | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseProject**](CSApiResponseProject.md)
+[**ApiResponseProject**](ApiResponseProject.md)
 
 ### Authorization
 
@@ -127,20 +147,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="projectsgetprojectsforclient"></a>
-# **ProjectsGetProjectsForClient**
-> CSApiResponseListProject ProjectsGetProjectsForClient (int? clientId, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ProjectsGetProjectsForClient
+
+> ApiResponseListProject ProjectsGetProjectsForClient (int clientId, string xChronosheetsAuth)
 
 Get projects for a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -150,21 +180,24 @@ namespace Example
 {
     public class ProjectsGetProjectsForClientExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new ProjectsApi();
-            var clientId = 56;  // int? | The ID of the client
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new ProjectsApi(Configuration.Default);
+            var clientId = 56;  // int | The ID of the client
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
 
             try
             {
                 // Get projects for a particular client.    Requires the 'ManageClientsAndProjects' or 'ManageJobsAndTask' permissions.
-                CSApiResponseListProject result = apiInstance.ProjectsGetProjectsForClient(clientId, xChronosheetsAuth);
+                ApiResponseListProject result = apiInstance.ProjectsGetProjectsForClient(clientId, xChronosheetsAuth);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling ProjectsApi.ProjectsGetProjectsForClient: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -173,14 +206,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **clientId** | **int?**| The ID of the client | 
+ **clientId** | **int**| The ID of the client | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
 
 ### Return type
 
-[**CSApiResponseListProject**](CSApiResponseListProject.md)
+[**ApiResponseListProject**](ApiResponseListProject.md)
 
 ### Authorization
 
@@ -188,20 +222,30 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
 
-<a name="projectsupdateproject"></a>
-# **ProjectsUpdateProject**
-> CSApiResponseBoolean ProjectsUpdateProject (CSUpdateProjectRequest request, string xChronosheetsAuth)
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## ProjectsUpdateProject
+
+> ApiResponseBoolean ProjectsUpdateProject (string xChronosheetsAuth, UpdateProjectRequest request)
 
 Update a project.    Requires the 'ManageClientsAndProjects' permission.
 
 ### Example
+
 ```csharp
-using System;
+using System.Collections.Generic;
 using System.Diagnostics;
 using ChronoSheetsAPI.ChronoSheetsClientLibApi;
 using ChronoSheetsAPI.Client;
@@ -211,21 +255,24 @@ namespace Example
 {
     public class ProjectsUpdateProjectExample
     {
-        public void main()
+        public static void Main()
         {
-            var apiInstance = new ProjectsApi();
-            var request = new CSUpdateProjectRequest(); // CSUpdateProjectRequest | An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new ProjectsApi(Configuration.Default);
             var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+            var request = new UpdateProjectRequest(); // UpdateProjectRequest | An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update
 
             try
             {
                 // Update a project.    Requires the 'ManageClientsAndProjects' permission.
-                CSApiResponseBoolean result = apiInstance.ProjectsUpdateProject(request, xChronosheetsAuth);
+                ApiResponseBoolean result = apiInstance.ProjectsUpdateProject(xChronosheetsAuth, request);
                 Debug.WriteLine(result);
             }
-            catch (Exception e)
+            catch (ApiException e)
             {
                 Debug.Print("Exception when calling ProjectsApi.ProjectsUpdateProject: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
             }
         }
     }
@@ -234,14 +281,15 @@ namespace Example
 
 ### Parameters
 
+
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **request** | [**CSUpdateProjectRequest**](CSUpdateProjectRequest.md)| An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update | 
  **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+ **request** | [**UpdateProjectRequest**](UpdateProjectRequest.md)| An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update | 
 
 ### Return type
 
-[**CSApiResponseBoolean**](CSApiResponseBoolean.md)
+[**ApiResponseBoolean**](ApiResponseBoolean.md)
 
 ### Authorization
 
@@ -249,8 +297,16 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
- - **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+- **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded, multipart/form-data
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
 
-[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
 
