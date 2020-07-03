@@ -86,7 +86,7 @@ No authorization required
 
 ## TimesheetAutomationGetTimesheetAutomationAuditTrail
 
-> ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null)
+> ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = null, int? take = null)
 
 Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the 'ManageGeofencing' permission.
 
@@ -108,6 +108,7 @@ namespace Example
             Configuration.Default.BasePath = "https://api.chronosheets.com";
             var apiInstance = new TimesheetAutomationApi(Configuration.Default);
             var geofenceId = 56;  // int | The ID of the Geofence
+            var nfcId = 56;  // int | 
             var userId = 56;  // int | 
             var sort = sort_example;  // string | 
             var order = order_example;  // string | 
@@ -118,7 +119,7 @@ namespace Example
             try
             {
                 // Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the 'ManageGeofencing' permission.
-                ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence result = apiInstance.TimesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+                ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence result = apiInstance.TimesheetAutomationGetTimesheetAutomationAuditTrail(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take);
                 Debug.WriteLine(result);
             }
             catch (ApiException e)
@@ -138,6 +139,7 @@ namespace Example
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **geofenceId** | **int**| The ID of the Geofence | 
+ **nfcId** | **int**|  | 
  **userId** | **int**|  | 
  **sort** | **string**|  | 
  **order** | **string**|  | 

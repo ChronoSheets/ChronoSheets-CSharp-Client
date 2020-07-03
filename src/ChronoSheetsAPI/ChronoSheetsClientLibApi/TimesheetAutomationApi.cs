@@ -55,6 +55,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="nfcId"></param>
         /// <param name="userId"></param>
         /// <param name="sort"></param>
         /// <param name="order"></param>
@@ -62,7 +63,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
         /// <returns>ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
-        ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
 
         /// <summary>
         /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
@@ -72,6 +73,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="nfcId"></param>
         /// <param name="userId"></param>
         /// <param name="sort"></param>
         /// <param name="order"></param>
@@ -79,7 +81,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
         /// <returns>ApiResponse of ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
-        ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -113,6 +115,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="nfcId"></param>
         /// <param name="userId"></param>
         /// <param name="sort"></param>
         /// <param name="order"></param>
@@ -120,7 +123,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
         /// <returns>Task of ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
 
         /// <summary>
         /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
@@ -130,6 +133,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="nfcId"></param>
         /// <param name="userId"></param>
         /// <param name="sort"></param>
         /// <param name="order"></param>
@@ -137,7 +141,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
         #endregion Asynchronous Operations
     }
 
@@ -433,6 +437,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="nfcId"></param>
         /// <param name="userId"></param>
         /// <param name="sort"></param>
         /// <param name="order"></param>
@@ -440,9 +445,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
         /// <returns>ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
-        public ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence TimesheetAutomationGetTimesheetAutomationAuditTrail (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
         {
-             ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResponse = TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+             ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResponse = TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take);
              return localVarResponse.Data;
         }
 
@@ -451,6 +456,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="nfcId"></param>
         /// <param name="userId"></param>
         /// <param name="sort"></param>
         /// <param name="order"></param>
@@ -458,11 +464,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
         /// <returns>ApiResponse of ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
-        public ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfo (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
         {
             // verify the required parameter 'geofenceId' is set
             if (geofenceId == null)
                 throw new ApiException(400, "Missing required parameter 'geofenceId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'nfcId' is set
+            if (nfcId == null)
+                throw new ApiException(400, "Missing required parameter 'nfcId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
@@ -502,6 +511,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (geofenceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "GeofenceId", geofenceId)); // query parameter
+            if (nfcId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NfcId", nfcId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
             if (sort != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Sort", sort)); // query parameter
             if (order != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Order", order)); // query parameter
@@ -533,6 +543,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="nfcId"></param>
         /// <param name="userId"></param>
         /// <param name="sort"></param>
         /// <param name="order"></param>
@@ -540,9 +551,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
         /// <returns>Task of ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
         {
-             ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResponse = await TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo(geofenceId, userId, sort, order, xChronosheetsAuth, skip, take);
+             ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResponse = await TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take);
              return localVarResponse.Data;
 
         }
@@ -552,6 +563,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the Geofence</param>
+        /// <param name="nfcId"></param>
         /// <param name="userId"></param>
         /// <param name="sort"></param>
         /// <param name="order"></param>
@@ -559,11 +571,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo (int geofenceId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
         {
             // verify the required parameter 'geofenceId' is set
             if (geofenceId == null)
                 throw new ApiException(400, "Missing required parameter 'geofenceId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
+            // verify the required parameter 'nfcId' is set
+            if (nfcId == null)
+                throw new ApiException(400, "Missing required parameter 'nfcId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
             // verify the required parameter 'userId' is set
             if (userId == null)
                 throw new ApiException(400, "Missing required parameter 'userId' when calling TimesheetAutomationApi->TimesheetAutomationGetTimesheetAutomationAuditTrail");
@@ -603,6 +618,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
             if (geofenceId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "GeofenceId", geofenceId)); // query parameter
+            if (nfcId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "NfcId", nfcId)); // query parameter
             if (userId != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "UserId", userId)); // query parameter
             if (sort != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Sort", sort)); // query parameter
             if (order != null) localVarQueryParams.AddRange(this.Configuration.ApiClient.ParameterToKeyValuePairs("", "Order", order)); // query parameter
