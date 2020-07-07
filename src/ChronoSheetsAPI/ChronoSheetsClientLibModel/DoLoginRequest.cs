@@ -35,10 +35,12 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// </summary>
         /// <param name="usernameOrEmail">Your ChronoSheets username or registered email address.</param>
         /// <param name="password">Your ChronoSheets password.</param>
-        public DoLoginRequest(string usernameOrEmail = default(string), string password = default(string))
+        /// <param name="rememberMe">Increase session expiry beyond default of 1 hour.</param>
+        public DoLoginRequest(string usernameOrEmail = default(string), string password = default(string), bool rememberMe = default(bool))
         {
             this.UsernameOrEmail = usernameOrEmail;
             this.Password = password;
+            this.RememberMe = rememberMe;
         }
         
         /// <summary>
@@ -56,6 +58,13 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public string Password { get; set; }
 
         /// <summary>
+        /// Increase session expiry beyond default of 1 hour
+        /// </summary>
+        /// <value>Increase session expiry beyond default of 1 hour</value>
+        [DataMember(Name="RememberMe", EmitDefaultValue=false)]
+        public bool RememberMe { get; set; }
+
+        /// <summary>
         /// Returns the string presentation of the object
         /// </summary>
         /// <returns>String presentation of the object</returns>
@@ -65,6 +74,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
             sb.Append("class DoLoginRequest {\n");
             sb.Append("  UsernameOrEmail: ").Append(UsernameOrEmail).Append("\n");
             sb.Append("  Password: ").Append(Password).Append("\n");
+            sb.Append("  RememberMe: ").Append(RememberMe).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
         }
@@ -108,6 +118,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     this.Password == input.Password ||
                     (this.Password != null &&
                     this.Password.Equals(input.Password))
+                ) && 
+                (
+                    this.RememberMe == input.RememberMe ||
+                    (this.RememberMe != null &&
+                    this.RememberMe.Equals(input.RememberMe))
                 );
         }
 
@@ -124,6 +139,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
                     hashCode = hashCode * 59 + this.UsernameOrEmail.GetHashCode();
                 if (this.Password != null)
                     hashCode = hashCode * 59 + this.Password.GetHashCode();
+                if (this.RememberMe != null)
+                    hashCode = hashCode * 59 + this.RememberMe.GetHashCode();
                 return hashCode;
             }
         }
