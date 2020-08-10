@@ -125,6 +125,7 @@ Class | Method | HTTP request | Description
 *GeoFencingApi* | [**GeoFencingDeleteGeofence**](docs/GeoFencingApi.md#geofencingdeletegeofence) | **DELETE** /GeoFencing/DeleteGeofence | Deletes a geofence.  Requires the 'ManageGeofencing' permission.
 *GeoFencingApi* | [**GeoFencingGetGeofenceById**](docs/GeoFencingApi.md#geofencinggetgeofencebyid) | **GET** /GeoFencing/GetGeofenceById | Get a geofence by ID  Requires the 'SubmitTimesheets' permission.
 *GeoFencingApi* | [**GeoFencingGetGeofences**](docs/GeoFencingApi.md#geofencinggetgeofences) | **GET** /GeoFencing/GetGeofences | Get geofences belonging to your organisation  Requires the 'SubmitTimesheets' permission.
+*GeoFencingApi* | [**GeoFencingGetGeofencesBasicInfo**](docs/GeoFencingApi.md#geofencinggetgeofencesbasicinfo) | **GET** /GeoFencing/GetGeofencesBasicInfo | Gets a list of all geofences in your organisation, including just the name and ID.
 *GeoFencingApi* | [**GeoFencingUpdateGeofence**](docs/GeoFencingApi.md#geofencingupdategeofence) | **PUT** /GeoFencing/UpdateGeofence | Updates a geofencing with rules to be used for clock on/off automation.  Requires the 'ManageGeofencing' permission.
 *JobCodesApi* | [**JobCodesCreateJobCode**](docs/JobCodesApi.md#jobcodescreatejobcode) | **POST** /JobCodes/CreateJobCode | Create a job code.    Requires the 'ManageJobsAndTask' permission.
 *JobCodesApi* | [**JobCodesDeleteJobCode**](docs/JobCodesApi.md#jobcodesdeletejobcode) | **DELETE** /JobCodes/DeleteJobCode | Delete a job code.    Requires the 'ManageJobsAndTask' permission.
@@ -202,6 +203,7 @@ Class | Method | HTTP request | Description
  - [ChronoSheetsClientLibModel.ApiResponseCombinedReportsData](docs/ApiResponseCombinedReportsData.md)
  - [ChronoSheetsClientLibModel.ApiResponseDoLoginResponse](docs/ApiResponseDoLoginResponse.md)
  - [ChronoSheetsClientLibModel.ApiResponseFleetVehicle](docs/ApiResponseFleetVehicle.md)
+ - [ChronoSheetsClientLibModel.ApiResponseForPaginatedListBasicGeofence](docs/ApiResponseForPaginatedListBasicGeofence.md)
  - [ChronoSheetsClientLibModel.ApiResponseForPaginatedListExtendedGeofence](docs/ApiResponseForPaginatedListExtendedGeofence.md)
  - [ChronoSheetsClientLibModel.ApiResponseForPaginatedListOrgReportTimesheetFileAttachment](docs/ApiResponseForPaginatedListOrgReportTimesheetFileAttachment.md)
  - [ChronoSheetsClientLibModel.ApiResponseForPaginatedListOrgReportTranscript](docs/ApiResponseForPaginatedListOrgReportTranscript.md)
@@ -244,6 +246,7 @@ Class | Method | HTTP request | Description
  - [ChronoSheetsClientLibModel.ApiResponseUserForManagement](docs/ApiResponseUserForManagement.md)
  - [ChronoSheetsClientLibModel.ApiResponseUserProfile](docs/ApiResponseUserProfile.md)
  - [ChronoSheetsClientLibModel.BasicCoordinate](docs/BasicCoordinate.md)
+ - [ChronoSheetsClientLibModel.BasicGeofence](docs/BasicGeofence.md)
  - [ChronoSheetsClientLibModel.BatchUpdateTimesheetRequest](docs/BatchUpdateTimesheetRequest.md)
  - [ChronoSheetsClientLibModel.ClientSeriesReportItem](docs/ClientSeriesReportItem.md)
  - [ChronoSheetsClientLibModel.ClientSideUser](docs/ClientSideUser.md)

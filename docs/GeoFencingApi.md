@@ -8,6 +8,7 @@ Method | HTTP request | Description
 [**GeoFencingDeleteGeofence**](GeoFencingApi.md#geofencingdeletegeofence) | **DELETE** /GeoFencing/DeleteGeofence | Deletes a geofence.  Requires the &#39;ManageGeofencing&#39; permission.
 [**GeoFencingGetGeofenceById**](GeoFencingApi.md#geofencinggetgeofencebyid) | **GET** /GeoFencing/GetGeofenceById | Get a geofence by ID  Requires the &#39;SubmitTimesheets&#39; permission.
 [**GeoFencingGetGeofences**](GeoFencingApi.md#geofencinggetgeofences) | **GET** /GeoFencing/GetGeofences | Get geofences belonging to your organisation  Requires the &#39;SubmitTimesheets&#39; permission.
+[**GeoFencingGetGeofencesBasicInfo**](GeoFencingApi.md#geofencinggetgeofencesbasicinfo) | **GET** /GeoFencing/GetGeofencesBasicInfo | Gets a list of all geofences in your organisation, including just the name and ID.
 [**GeoFencingUpdateGeofence**](GeoFencingApi.md#geofencingupdategeofence) | **PUT** /GeoFencing/UpdateGeofence | Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
 
 
@@ -293,6 +294,79 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**ApiResponseForPaginatedListExtendedGeofence**](ApiResponseForPaginatedListExtendedGeofence.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json, text/json, application/xml, text/xml, multipart/form-data
+
+### HTTP response details
+| Status code | Description | Response headers |
+|-------------|-------------|------------------|
+| **200** | OK |  -  |
+
+[[Back to top]](#)
+[[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
+## GeoFencingGetGeofencesBasicInfo
+
+> ApiResponseForPaginatedListBasicGeofence GeoFencingGetGeofencesBasicInfo (string xChronosheetsAuth)
+
+Gets a list of all geofences in your organisation, including just the name and ID.
+
+### Example
+
+```csharp
+using System.Collections.Generic;
+using System.Diagnostics;
+using ChronoSheetsAPI.ChronoSheetsClientLibApi;
+using ChronoSheetsAPI.Client;
+using ChronoSheetsAPI.ChronoSheetsClientLibModel;
+
+namespace Example
+{
+    public class GeoFencingGetGeofencesBasicInfoExample
+    {
+        public static void Main()
+        {
+            Configuration.Default.BasePath = "https://api.chronosheets.com";
+            var apiInstance = new GeoFencingApi(Configuration.Default);
+            var xChronosheetsAuth = xChronosheetsAuth_example;  // string | The ChronoSheets Auth Token
+
+            try
+            {
+                // Gets a list of all geofences in your organisation, including just the name and ID.
+                ApiResponseForPaginatedListBasicGeofence result = apiInstance.GeoFencingGetGeofencesBasicInfo(xChronosheetsAuth);
+                Debug.WriteLine(result);
+            }
+            catch (ApiException e)
+            {
+                Debug.Print("Exception when calling GeoFencingApi.GeoFencingGetGeofencesBasicInfo: " + e.Message );
+                Debug.Print("Status Code: "+ e.ErrorCode);
+                Debug.Print(e.StackTrace);
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **xChronosheetsAuth** | **string**| The ChronoSheets Auth Token | 
+
+### Return type
+
+[**ApiResponseForPaginatedListBasicGeofence**](ApiResponseForPaginatedListBasicGeofence.md)
 
 ### Authorization
 

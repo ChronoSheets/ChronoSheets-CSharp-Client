@@ -119,6 +119,27 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <returns>ApiResponse of ApiResponseForPaginatedListExtendedGeofence</returns>
         ApiResponse<ApiResponseForPaginatedListExtendedGeofence> GeoFencingGetGeofencesWithHttpInfo (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
         /// <summary>
+        /// Gets a list of all geofences in your organisation, including just the name and ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponseForPaginatedListBasicGeofence</returns>
+        ApiResponseForPaginatedListBasicGeofence GeoFencingGetGeofencesBasicInfo (string xChronosheetsAuth);
+
+        /// <summary>
+        /// Gets a list of all geofences in your organisation, including just the name and ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of ApiResponseForPaginatedListBasicGeofence</returns>
+        ApiResponse<ApiResponseForPaginatedListBasicGeofence> GeoFencingGetGeofencesBasicInfoWithHttpInfo (string xChronosheetsAuth);
+        /// <summary>
         /// Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
         /// </summary>
         /// <remarks>
@@ -237,6 +258,27 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take">Number of records to take (optional)</param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListExtendedGeofence)</returns>
         System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListExtendedGeofence>> GeoFencingGetGeofencesAsyncWithHttpInfo (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        /// <summary>
+        /// Gets a list of all geofences in your organisation, including just the name and ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponseForPaginatedListBasicGeofence</returns>
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListBasicGeofence> GeoFencingGetGeofencesBasicInfoAsync (string xChronosheetsAuth);
+
+        /// <summary>
+        /// Gets a list of all geofences in your organisation, including just the name and ID.
+        /// </summary>
+        /// <remarks>
+        /// 
+        /// </remarks>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (ApiResponseForPaginatedListBasicGeofence)</returns>
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListBasicGeofence>> GeoFencingGetGeofencesBasicInfoAsyncWithHttpInfo (string xChronosheetsAuth);
         /// <summary>
         /// Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
         /// </summary>
@@ -1007,6 +1049,147 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             return new ApiResponse<ApiResponseForPaginatedListExtendedGeofence>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
                 (ApiResponseForPaginatedListExtendedGeofence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseForPaginatedListExtendedGeofence)));
+        }
+
+        /// <summary>
+        /// Gets a list of all geofences in your organisation, including just the name and ID. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponseForPaginatedListBasicGeofence</returns>
+        public ApiResponseForPaginatedListBasicGeofence GeoFencingGetGeofencesBasicInfo (string xChronosheetsAuth)
+        {
+             ApiResponse<ApiResponseForPaginatedListBasicGeofence> localVarResponse = GeoFencingGetGeofencesBasicInfoWithHttpInfo(xChronosheetsAuth);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Gets a list of all geofences in your organisation, including just the name and ID. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>ApiResponse of ApiResponseForPaginatedListBasicGeofence</returns>
+        public ApiResponse<ApiResponseForPaginatedListBasicGeofence> GeoFencingGetGeofencesBasicInfoWithHttpInfo (string xChronosheetsAuth)
+        {
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingGetGeofencesBasicInfo");
+
+            var localVarPath = "/GeoFencing/GetGeofencesBasicInfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GeoFencingGetGeofencesBasicInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseForPaginatedListBasicGeofence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApiResponseForPaginatedListBasicGeofence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseForPaginatedListBasicGeofence)));
+        }
+
+        /// <summary>
+        /// Gets a list of all geofences in your organisation, including just the name and ID. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponseForPaginatedListBasicGeofence</returns>
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListBasicGeofence> GeoFencingGetGeofencesBasicInfoAsync (string xChronosheetsAuth)
+        {
+             ApiResponse<ApiResponseForPaginatedListBasicGeofence> localVarResponse = await GeoFencingGetGeofencesBasicInfoAsyncWithHttpInfo(xChronosheetsAuth);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Gets a list of all geofences in your organisation, including just the name and ID. 
+        /// </summary>
+        /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <returns>Task of ApiResponse (ApiResponseForPaginatedListBasicGeofence)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListBasicGeofence>> GeoFencingGetGeofencesBasicInfoAsyncWithHttpInfo (string xChronosheetsAuth)
+        {
+            // verify the required parameter 'xChronosheetsAuth' is set
+            if (xChronosheetsAuth == null)
+                throw new ApiException(400, "Missing required parameter 'xChronosheetsAuth' when calling GeoFencingApi->GeoFencingGetGeofencesBasicInfo");
+
+            var localVarPath = "/GeoFencing/GetGeofencesBasicInfo";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json",
+                "text/json",
+                "application/xml",
+                "text/xml",
+                "multipart/form-data"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (xChronosheetsAuth != null) localVarHeaderParams.Add("x-chronosheets-auth", this.Configuration.ApiClient.ParameterToString(xChronosheetsAuth)); // header parameter
+
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("GeoFencingGetGeofencesBasicInfo", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<ApiResponseForPaginatedListBasicGeofence>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => string.Join(",", x.Value)),
+                (ApiResponseForPaginatedListBasicGeofence) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(ApiResponseForPaginatedListBasicGeofence)));
         }
 
         /// <summary>
