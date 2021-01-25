@@ -25,14 +25,15 @@ using OpenAPIDateConverter = ChronoSheetsAPI.Client.OpenAPIDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// Organisation
+    /// An organisation in ChronoSheets
     /// </summary>
     [DataContract]
     public partial class Organisation :  IEquatable<Organisation>, IValidatableObject
     {
         /// <summary>
-        /// Defines SubscriptionSource
+        /// The source of the subscription
         /// </summary>
+        /// <value>The source of the subscription</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SubscriptionSourceEnum
         {
@@ -63,13 +64,15 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
 
         /// <summary>
-        /// Gets or Sets SubscriptionSource
+        /// The source of the subscription
         /// </summary>
+        /// <value>The source of the subscription</value>
         [DataMember(Name="SubscriptionSource", EmitDefaultValue=false)]
         public SubscriptionSourceEnum? SubscriptionSource { get; set; }
         /// <summary>
-        /// Defines SignUpSource
+        /// The source where the organisation signed up
         /// </summary>
+        /// <value>The source where the organisation signed up</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum SignUpSourceEnum
         {
@@ -94,34 +97,35 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
 
         /// <summary>
-        /// Gets or Sets SignUpSource
+        /// The source where the organisation signed up
         /// </summary>
+        /// <value>The source where the organisation signed up</value>
         [DataMember(Name="SignUpSource", EmitDefaultValue=false)]
         public SignUpSourceEnum? SignUpSource { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="Organisation" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="name">name.</param>
-        /// <param name="addressLine01">addressLine01.</param>
-        /// <param name="addressLine02">addressLine02.</param>
-        /// <param name="suburb">suburb.</param>
-        /// <param name="state">state.</param>
-        /// <param name="postcode">postcode.</param>
-        /// <param name="country">country.</param>
-        /// <param name="phone">phone.</param>
-        /// <param name="emailAddress">emailAddress.</param>
-        /// <param name="timezone">timezone.</param>
-        /// <param name="subscriptionCustomerId">subscriptionCustomerId.</param>
-        /// <param name="signupToken">signupToken.</param>
-        /// <param name="isActive">isActive.</param>
-        /// <param name="stripeCouponCode">stripeCouponCode.</param>
-        /// <param name="subscriptionSource">subscriptionSource.</param>
-        /// <param name="signUpSource">signUpSource.</param>
-        /// <param name="mobileSignUpCode">mobileSignUpCode.</param>
-        /// <param name="subscriptionCycleStart">subscriptionCycleStart.</param>
-        /// <param name="subscriptionCycleEnd">subscriptionCycleEnd.</param>
-        /// <param name="pricingPlans">pricingPlans.</param>
+        /// <param name="id">The ID of the organisation.</param>
+        /// <param name="name">The name of the organisation.</param>
+        /// <param name="addressLine01">Address line 1 of the organisation.</param>
+        /// <param name="addressLine02">Address line 2 of the organisation.</param>
+        /// <param name="suburb">The suburb where the organisation is located.</param>
+        /// <param name="state">The state where the organisation is located.</param>
+        /// <param name="postcode">The postcode of the organisation.</param>
+        /// <param name="country">The country of the organisation.</param>
+        /// <param name="phone">The primary phone contact number of the organisation.</param>
+        /// <param name="emailAddress">The primary email address of the organisation.</param>
+        /// <param name="timezone">The timezone of the organisation.</param>
+        /// <param name="subscriptionCustomerId">The customer ID of the payments subscription.</param>
+        /// <param name="signupToken">The sign up token.</param>
+        /// <param name="isActive">Whether or not the organisation is active.</param>
+        /// <param name="stripeCouponCode">The payments coupon code.</param>
+        /// <param name="subscriptionSource">The source of the subscription.</param>
+        /// <param name="signUpSource">The source where the organisation signed up.</param>
+        /// <param name="mobileSignUpCode">A temporary mobile sign up code.</param>
+        /// <param name="subscriptionCycleStart">The start date and time of the organisations subscription.</param>
+        /// <param name="subscriptionCycleEnd">The end date and time of the organisations subscription.</param>
+        /// <param name="pricingPlans">The organisation&#39;s pricing plans.</param>
         public Organisation(int id = default(int), string name = default(string), string addressLine01 = default(string), string addressLine02 = default(string), string suburb = default(string), string state = default(string), string postcode = default(string), string country = default(string), string phone = default(string), string emailAddress = default(string), string timezone = default(string), string subscriptionCustomerId = default(string), string signupToken = default(string), bool isActive = default(bool), string stripeCouponCode = default(string), SubscriptionSourceEnum? subscriptionSource = default(SubscriptionSourceEnum?), SignUpSourceEnum? signUpSource = default(SignUpSourceEnum?), string mobileSignUpCode = default(string), DateTime subscriptionCycleStart = default(DateTime), DateTime subscriptionCycleEnd = default(DateTime), List<OrganisationPricingPlan> pricingPlans = default(List<OrganisationPricingPlan>))
         {
             this.Id = id;
@@ -148,118 +152,137 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the organisation
         /// </summary>
+        /// <value>The ID of the organisation</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The name of the organisation
         /// </summary>
+        /// <value>The name of the organisation</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets AddressLine01
+        /// Address line 1 of the organisation
         /// </summary>
+        /// <value>Address line 1 of the organisation</value>
         [DataMember(Name="AddressLine01", EmitDefaultValue=false)]
         public string AddressLine01 { get; set; }
 
         /// <summary>
-        /// Gets or Sets AddressLine02
+        /// Address line 2 of the organisation
         /// </summary>
+        /// <value>Address line 2 of the organisation</value>
         [DataMember(Name="AddressLine02", EmitDefaultValue=false)]
         public string AddressLine02 { get; set; }
 
         /// <summary>
-        /// Gets or Sets Suburb
+        /// The suburb where the organisation is located
         /// </summary>
+        /// <value>The suburb where the organisation is located</value>
         [DataMember(Name="Suburb", EmitDefaultValue=false)]
         public string Suburb { get; set; }
 
         /// <summary>
-        /// Gets or Sets State
+        /// The state where the organisation is located
         /// </summary>
+        /// <value>The state where the organisation is located</value>
         [DataMember(Name="State", EmitDefaultValue=false)]
         public string State { get; set; }
 
         /// <summary>
-        /// Gets or Sets Postcode
+        /// The postcode of the organisation
         /// </summary>
+        /// <value>The postcode of the organisation</value>
         [DataMember(Name="Postcode", EmitDefaultValue=false)]
         public string Postcode { get; set; }
 
         /// <summary>
-        /// Gets or Sets Country
+        /// The country of the organisation
         /// </summary>
+        /// <value>The country of the organisation</value>
         [DataMember(Name="Country", EmitDefaultValue=false)]
         public string Country { get; set; }
 
         /// <summary>
-        /// Gets or Sets Phone
+        /// The primary phone contact number of the organisation
         /// </summary>
+        /// <value>The primary phone contact number of the organisation</value>
         [DataMember(Name="Phone", EmitDefaultValue=false)]
         public string Phone { get; set; }
 
         /// <summary>
-        /// Gets or Sets EmailAddress
+        /// The primary email address of the organisation
         /// </summary>
+        /// <value>The primary email address of the organisation</value>
         [DataMember(Name="EmailAddress", EmitDefaultValue=false)]
         public string EmailAddress { get; set; }
 
         /// <summary>
-        /// Gets or Sets Timezone
+        /// The timezone of the organisation
         /// </summary>
+        /// <value>The timezone of the organisation</value>
         [DataMember(Name="Timezone", EmitDefaultValue=false)]
         public string Timezone { get; set; }
 
         /// <summary>
-        /// Gets or Sets SubscriptionCustomerId
+        /// The customer ID of the payments subscription
         /// </summary>
+        /// <value>The customer ID of the payments subscription</value>
         [DataMember(Name="SubscriptionCustomerId", EmitDefaultValue=false)]
         public string SubscriptionCustomerId { get; set; }
 
         /// <summary>
-        /// Gets or Sets SignupToken
+        /// The sign up token
         /// </summary>
+        /// <value>The sign up token</value>
         [DataMember(Name="SignupToken", EmitDefaultValue=false)]
         public string SignupToken { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsActive
+        /// Whether or not the organisation is active
         /// </summary>
+        /// <value>Whether or not the organisation is active</value>
         [DataMember(Name="IsActive", EmitDefaultValue=false)]
         public bool IsActive { get; set; }
 
         /// <summary>
-        /// Gets or Sets StripeCouponCode
+        /// The payments coupon code
         /// </summary>
+        /// <value>The payments coupon code</value>
         [DataMember(Name="StripeCouponCode", EmitDefaultValue=false)]
         public string StripeCouponCode { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets MobileSignUpCode
+        /// A temporary mobile sign up code
         /// </summary>
+        /// <value>A temporary mobile sign up code</value>
         [DataMember(Name="MobileSignUpCode", EmitDefaultValue=false)]
         public string MobileSignUpCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets SubscriptionCycleStart
+        /// The start date and time of the organisations subscription
         /// </summary>
+        /// <value>The start date and time of the organisations subscription</value>
         [DataMember(Name="SubscriptionCycleStart", EmitDefaultValue=false)]
         public DateTime SubscriptionCycleStart { get; set; }
 
         /// <summary>
-        /// Gets or Sets SubscriptionCycleEnd
+        /// The end date and time of the organisations subscription
         /// </summary>
+        /// <value>The end date and time of the organisations subscription</value>
         [DataMember(Name="SubscriptionCycleEnd", EmitDefaultValue=false)]
         public DateTime SubscriptionCycleEnd { get; set; }
 
         /// <summary>
-        /// Gets or Sets PricingPlans
+        /// The organisation&#39;s pricing plans
         /// </summary>
+        /// <value>The organisation&#39;s pricing plans</value>
         [DataMember(Name="PricingPlans", EmitDefaultValue=false)]
         public List<OrganisationPricingPlan> PricingPlans { get; set; }
 
@@ -302,7 +325,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

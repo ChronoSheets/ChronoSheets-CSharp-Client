@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -110,8 +111,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> FileAttachmentsDeleteTimesheetFileAttachmentAsync (int fileAttachmentId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseBoolean> FileAttachmentsDeleteTimesheetFileAttachmentAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Delete a particular timesheet file attachment  Requires the &#39;SubmitTimesheets&#39; permission.
@@ -122,8 +124,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FileAttachmentsDeleteTimesheetFileAttachmentAsyncWithHttpInfo (int fileAttachmentId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FileAttachmentsDeleteTimesheetFileAttachmentWithHttpInfoAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a particular file attachment by ID.  User must own the file attachment for access.
         /// </summary>
@@ -133,8 +136,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The ID of the file attachment</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTimesheetFileAttachment</returns>
-        System.Threading.Tasks.Task<ApiResponseTimesheetFileAttachment> FileAttachmentsGetFileAttachmentByIdAsync (int fileAttachmentId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseTimesheetFileAttachment> FileAttachmentsGetFileAttachmentByIdAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a particular file attachment by ID.  User must own the file attachment for access.
@@ -145,8 +149,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The ID of the file attachment</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTimesheetFileAttachment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseTimesheetFileAttachment>> FileAttachmentsGetFileAttachmentByIdAsyncWithHttpInfo (int fileAttachmentId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseTimesheetFileAttachment>> FileAttachmentsGetFileAttachmentByIdWithHttpInfoAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get my file attachments.  Get files you&#39;ve attached to timesheets.
         /// </summary>
@@ -159,8 +164,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Skip this many File attachments (optional)</param>
         /// <param name="take">Take this many File attachments (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListTimesheetFileAttachment</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get my file attachments.  Get files you&#39;ve attached to timesheets.
@@ -174,8 +180,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Skip this many File attachments (optional)</param>
         /// <param name="take">Take this many File attachments (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListTimesheetFileAttachment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetFileAttachment>> FileAttachmentsGetMyFileAttachmentsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetFileAttachment>> FileAttachmentsGetMyFileAttachmentsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -369,10 +376,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> FileAttachmentsDeleteTimesheetFileAttachmentAsync (int fileAttachmentId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> FileAttachmentsDeleteTimesheetFileAttachmentAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await FileAttachmentsDeleteTimesheetFileAttachmentAsyncWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await FileAttachmentsDeleteTimesheetFileAttachmentWithHttpInfoAsync(fileAttachmentId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -383,8 +391,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The Id of the file attachment to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FileAttachmentsDeleteTimesheetFileAttachmentAsyncWithHttpInfo (int fileAttachmentId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FileAttachmentsDeleteTimesheetFileAttachmentWithHttpInfoAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'fileAttachmentId' is set
             if (fileAttachmentId == null)
@@ -425,7 +434,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -522,10 +531,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The ID of the file attachment</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTimesheetFileAttachment</returns>
-        public async System.Threading.Tasks.Task<ApiResponseTimesheetFileAttachment> FileAttachmentsGetFileAttachmentByIdAsync (int fileAttachmentId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseTimesheetFileAttachment> FileAttachmentsGetFileAttachmentByIdAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseTimesheetFileAttachment> localVarResponse = await FileAttachmentsGetFileAttachmentByIdAsyncWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+             ApiResponse<ApiResponseTimesheetFileAttachment> localVarResponse = await FileAttachmentsGetFileAttachmentByIdWithHttpInfoAsync(fileAttachmentId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -536,8 +546,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The ID of the file attachment</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTimesheetFileAttachment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTimesheetFileAttachment>> FileAttachmentsGetFileAttachmentByIdAsyncWithHttpInfo (int fileAttachmentId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTimesheetFileAttachment>> FileAttachmentsGetFileAttachmentByIdWithHttpInfoAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'fileAttachmentId' is set
             if (fileAttachmentId == null)
@@ -578,7 +589,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -690,10 +701,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Skip this many File attachments (optional)</param>
         /// <param name="take">Take this many File attachments (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListTimesheetFileAttachment</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetFileAttachment> FileAttachmentsGetMyFileAttachmentsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListTimesheetFileAttachment> localVarResponse = await FileAttachmentsGetMyFileAttachmentsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take);
+             ApiResponse<ApiResponseForPaginatedListTimesheetFileAttachment> localVarResponse = await FileAttachmentsGetMyFileAttachmentsWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, skip, take, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -707,8 +719,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Skip this many File attachments (optional)</param>
         /// <param name="take">Take this many File attachments (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListTimesheetFileAttachment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetFileAttachment>> FileAttachmentsGetMyFileAttachmentsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetFileAttachment>> FileAttachmentsGetMyFileAttachmentsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -755,7 +768,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

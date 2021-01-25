@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -102,8 +103,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (string xChronosheetsAuth, InsertUserJobFavouriteRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (string xChronosheetsAuth, InsertUserJobFavouriteRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -114,8 +116,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo (string xChronosheetsAuth, InsertUserJobFavouriteRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> UserJobFavouritesCreateJobFavouriteWithHttpInfoAsync (string xChronosheetsAuth, InsertUserJobFavouriteRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
@@ -125,8 +128,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int jobId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Delete a job favourite.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -137,8 +141,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo (int jobId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteWithHttpInfoAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
@@ -147,8 +152,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListUserJobFavourite</returns>
-        System.Threading.Tasks.Task<ApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesAsync (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get your job favourites.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -158,8 +164,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListUserJobFavourite)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserJobFavourite>> UserJobFavouritesGetJobFavouritesAsyncWithHttpInfo (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserJobFavourite>> UserJobFavouritesGetJobFavouritesWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -366,10 +373,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (string xChronosheetsAuth, InsertUserJobFavouriteRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> UserJobFavouritesCreateJobFavouriteAsync (string xChronosheetsAuth, InsertUserJobFavouriteRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await UserJobFavouritesCreateJobFavouriteWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -380,8 +388,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert UserJobFavourite Request object containing values for the new UserJobFavourite to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> UserJobFavouritesCreateJobFavouriteAsyncWithHttpInfo (string xChronosheetsAuth, InsertUserJobFavouriteRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> UserJobFavouritesCreateJobFavouriteWithHttpInfoAsync (string xChronosheetsAuth, InsertUserJobFavouriteRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -435,7 +444,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -532,10 +541,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int jobId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> UserJobFavouritesDeleteJobFavouriteAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo(jobId, xChronosheetsAuth);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await UserJobFavouritesDeleteJobFavouriteWithHttpInfoAsync(jobId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -546,8 +556,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the Job for the Job Favourite you want to delete.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteAsyncWithHttpInfo (int jobId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserJobFavouritesDeleteJobFavouriteWithHttpInfoAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -588,7 +599,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -678,10 +689,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListUserJobFavourite</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesAsync (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListUserJobFavourite> UserJobFavouritesGetJobFavouritesAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListUserJobFavourite> localVarResponse = await UserJobFavouritesGetJobFavouritesAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<ApiResponseListUserJobFavourite> localVarResponse = await UserJobFavouritesGetJobFavouritesWithHttpInfoAsync(xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -691,8 +703,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListUserJobFavourite)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserJobFavourite>> UserJobFavouritesGetJobFavouritesAsyncWithHttpInfo (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserJobFavourite>> UserJobFavouritesGetJobFavouritesWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -729,7 +742,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

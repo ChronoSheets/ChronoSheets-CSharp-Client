@@ -5,8 +5,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**GeoFencingId** | **int** |  | [optional] 
-**Name** | **string** |  | [optional] 
+**GeoFencingId** | **int** | The ID of the geofence | [optional] 
+**Name** | **string** | The descriptive name of the geofence | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models)
 [[Back to API list]](../README.md#documentation-for-api-endpoints)

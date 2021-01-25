@@ -25,7 +25,7 @@ using OpenAPIDateConverter = ChronoSheetsAPI.Client.OpenAPIDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// BasicGeofence
+    /// A basic geofence
     /// </summary>
     [DataContract]
     public partial class BasicGeofence :  IEquatable<BasicGeofence>, IValidatableObject
@@ -33,8 +33,8 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="BasicGeofence" /> class.
         /// </summary>
-        /// <param name="geoFencingId">geoFencingId.</param>
-        /// <param name="name">name.</param>
+        /// <param name="geoFencingId">The ID of the geofence.</param>
+        /// <param name="name">The descriptive name of the geofence.</param>
         public BasicGeofence(int geoFencingId = default(int), string name = default(string))
         {
             this.GeoFencingId = geoFencingId;
@@ -42,14 +42,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets GeoFencingId
+        /// The ID of the geofence
         /// </summary>
+        /// <value>The ID of the geofence</value>
         [DataMember(Name="GeoFencingId", EmitDefaultValue=false)]
         public int GeoFencingId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// The descriptive name of the geofence
         /// </summary>
+        /// <value>The descriptive name of the geofence</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
@@ -73,7 +75,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

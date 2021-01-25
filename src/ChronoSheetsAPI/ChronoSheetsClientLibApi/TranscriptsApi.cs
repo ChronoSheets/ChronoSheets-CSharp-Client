@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -89,8 +90,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTranscription</returns>
-        System.Threading.Tasks.Task<ApiResponseTranscription> TranscriptsGetMyTranscriptAsync (int fileAttachmentId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseTranscription> TranscriptsGetMyTranscriptAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get an audio to text transcript for a particular audio file attachment
@@ -101,8 +103,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTranscription)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseTranscription>> TranscriptsGetMyTranscriptAsyncWithHttpInfo (int fileAttachmentId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseTranscription>> TranscriptsGetMyTranscriptWithHttpInfoAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
         /// </summary>
@@ -116,8 +119,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many transcripts (optional)</param>
         /// <param name="take">Take this many transcripts (optional)</param>
         /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListOrgReportTranscript</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string keyword = default(string));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string keyword = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get my file transcripts.  Get audio to text transcripts that you&#39;ve created.
@@ -132,8 +136,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many transcripts (optional)</param>
         /// <param name="take">Take this many transcripts (optional)</param>
         /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListOrgReportTranscript)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTranscript>> TranscriptsGetMyTranscriptsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string keyword = default(string));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTranscript>> TranscriptsGetMyTranscriptsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string keyword = default(string), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -327,10 +332,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTranscription</returns>
-        public async System.Threading.Tasks.Task<ApiResponseTranscription> TranscriptsGetMyTranscriptAsync (int fileAttachmentId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseTranscription> TranscriptsGetMyTranscriptAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseTranscription> localVarResponse = await TranscriptsGetMyTranscriptAsyncWithHttpInfo(fileAttachmentId, xChronosheetsAuth);
+             ApiResponse<ApiResponseTranscription> localVarResponse = await TranscriptsGetMyTranscriptWithHttpInfoAsync(fileAttachmentId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -341,8 +347,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="fileAttachmentId">The ID of the file attachment that has a transcript.  It should be an audio file attachment.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTranscription)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTranscription>> TranscriptsGetMyTranscriptAsyncWithHttpInfo (int fileAttachmentId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTranscription>> TranscriptsGetMyTranscriptWithHttpInfoAsync (int fileAttachmentId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'fileAttachmentId' is set
             if (fileAttachmentId == null)
@@ -383,7 +390,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -499,10 +506,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many transcripts (optional)</param>
         /// <param name="take">Take this many transcripts (optional)</param>
         /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListOrgReportTranscript</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string keyword = default(string))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTranscript> TranscriptsGetMyTranscriptsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string keyword = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListOrgReportTranscript> localVarResponse = await TranscriptsGetMyTranscriptsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, keyword);
+             ApiResponse<ApiResponseForPaginatedListOrgReportTranscript> localVarResponse = await TranscriptsGetMyTranscriptsWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, skip, take, keyword, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -517,8 +525,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many transcripts (optional)</param>
         /// <param name="take">Take this many transcripts (optional)</param>
         /// <param name="keyword">Search the text content of the transcript keywords (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListOrgReportTranscript)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTranscript>> TranscriptsGetMyTranscriptsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string keyword = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTranscript>> TranscriptsGetMyTranscriptsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string keyword = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -566,7 +575,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

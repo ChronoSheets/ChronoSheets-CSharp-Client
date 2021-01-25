@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -173,8 +174,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> GeoFencingCreateGeofenceAsync (string xChronosheetsAuth, CreateGeoFenceRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> GeoFencingCreateGeofenceAsync (string xChronosheetsAuth, CreateGeoFenceRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
@@ -185,8 +187,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> GeoFencingCreateGeofenceAsyncWithHttpInfo (string xChronosheetsAuth, CreateGeoFenceRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> GeoFencingCreateGeofenceWithHttpInfoAsync (string xChronosheetsAuth, CreateGeoFenceRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Deletes a geofence.  Requires the &#39;ManageGeofencing&#39; permission.
         /// </summary>
@@ -196,8 +199,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">Specify the geofence you want to delete with the geofence ID.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseGeofence</returns>
-        System.Threading.Tasks.Task<ApiResponseGeofence> GeoFencingDeleteGeofenceAsync (int geofenceId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseGeofence> GeoFencingDeleteGeofenceAsync (int geofenceId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Deletes a geofence.  Requires the &#39;ManageGeofencing&#39; permission.
@@ -208,8 +212,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">Specify the geofence you want to delete with the geofence ID.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseGeofence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseGeofence>> GeoFencingDeleteGeofenceAsyncWithHttpInfo (int geofenceId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseGeofence>> GeoFencingDeleteGeofenceWithHttpInfoAsync (int geofenceId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a geofence by ID  Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
@@ -219,8 +224,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the geofence you want to obtain</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseGeofence</returns>
-        System.Threading.Tasks.Task<ApiResponseGeofence> GeoFencingGetGeofenceByIdAsync (int geofenceId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseGeofence> GeoFencingGetGeofenceByIdAsync (int geofenceId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a geofence by ID  Requires the &#39;SubmitTimesheets&#39; permission.
@@ -231,8 +237,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the geofence you want to obtain</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseGeofence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseGeofence>> GeoFencingGetGeofenceByIdAsyncWithHttpInfo (int geofenceId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseGeofence>> GeoFencingGetGeofenceByIdWithHttpInfoAsync (int geofenceId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get geofences belonging to your organisation  Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
@@ -243,8 +250,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Number of records to skip (optional)</param>
         /// <param name="take">Number of records to take (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListExtendedGeofence</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListExtendedGeofence> GeoFencingGetGeofencesAsync (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListExtendedGeofence> GeoFencingGetGeofencesAsync (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get geofences belonging to your organisation  Requires the &#39;SubmitTimesheets&#39; permission.
@@ -256,8 +264,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Number of records to skip (optional)</param>
         /// <param name="take">Number of records to take (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListExtendedGeofence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListExtendedGeofence>> GeoFencingGetGeofencesAsyncWithHttpInfo (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListExtendedGeofence>> GeoFencingGetGeofencesWithHttpInfoAsync (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Gets a list of all geofences in your organisation, including just the name and ID.
         /// </summary>
@@ -266,8 +275,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListBasicGeofence</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListBasicGeofence> GeoFencingGetGeofencesBasicInfoAsync (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListBasicGeofence> GeoFencingGetGeofencesBasicInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Gets a list of all geofences in your organisation, including just the name and ID.
@@ -277,8 +287,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListBasicGeofence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListBasicGeofence>> GeoFencingGetGeofencesBasicInfoAsyncWithHttpInfo (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListBasicGeofence>> GeoFencingGetGeofencesBasicInfoWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
         /// </summary>
@@ -288,8 +299,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> GeoFencingUpdateGeofenceAsync (string xChronosheetsAuth, UpdateGeoFenceRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> GeoFencingUpdateGeofenceAsync (string xChronosheetsAuth, UpdateGeoFenceRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Updates a geofencing with rules to be used for clock on/off automation.  Requires the &#39;ManageGeofencing&#39; permission.
@@ -300,8 +312,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> GeoFencingUpdateGeofenceAsyncWithHttpInfo (string xChronosheetsAuth, UpdateGeoFenceRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> GeoFencingUpdateGeofenceWithHttpInfoAsync (string xChronosheetsAuth, UpdateGeoFenceRequest request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -508,10 +521,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> GeoFencingCreateGeofenceAsync (string xChronosheetsAuth, CreateGeoFenceRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> GeoFencingCreateGeofenceAsync (string xChronosheetsAuth, CreateGeoFenceRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await GeoFencingCreateGeofenceAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await GeoFencingCreateGeofenceWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -522,8 +536,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> GeoFencingCreateGeofenceAsyncWithHttpInfo (string xChronosheetsAuth, CreateGeoFenceRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> GeoFencingCreateGeofenceWithHttpInfoAsync (string xChronosheetsAuth, CreateGeoFenceRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -577,7 +592,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -674,10 +689,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">Specify the geofence you want to delete with the geofence ID.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseGeofence</returns>
-        public async System.Threading.Tasks.Task<ApiResponseGeofence> GeoFencingDeleteGeofenceAsync (int geofenceId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseGeofence> GeoFencingDeleteGeofenceAsync (int geofenceId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseGeofence> localVarResponse = await GeoFencingDeleteGeofenceAsyncWithHttpInfo(geofenceId, xChronosheetsAuth);
+             ApiResponse<ApiResponseGeofence> localVarResponse = await GeoFencingDeleteGeofenceWithHttpInfoAsync(geofenceId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -688,8 +704,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">Specify the geofence you want to delete with the geofence ID.</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseGeofence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseGeofence>> GeoFencingDeleteGeofenceAsyncWithHttpInfo (int geofenceId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseGeofence>> GeoFencingDeleteGeofenceWithHttpInfoAsync (int geofenceId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'geofenceId' is set
             if (geofenceId == null)
@@ -730,7 +747,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -827,10 +844,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the geofence you want to obtain</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseGeofence</returns>
-        public async System.Threading.Tasks.Task<ApiResponseGeofence> GeoFencingGetGeofenceByIdAsync (int geofenceId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseGeofence> GeoFencingGetGeofenceByIdAsync (int geofenceId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseGeofence> localVarResponse = await GeoFencingGetGeofenceByIdAsyncWithHttpInfo(geofenceId, xChronosheetsAuth);
+             ApiResponse<ApiResponseGeofence> localVarResponse = await GeoFencingGetGeofenceByIdWithHttpInfoAsync(geofenceId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -841,8 +859,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="geofenceId">The ID of the geofence you want to obtain</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseGeofence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseGeofence>> GeoFencingGetGeofenceByIdAsyncWithHttpInfo (int geofenceId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseGeofence>> GeoFencingGetGeofenceByIdWithHttpInfoAsync (int geofenceId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'geofenceId' is set
             if (geofenceId == null)
@@ -883,7 +902,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -981,10 +1000,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Number of records to skip (optional)</param>
         /// <param name="take">Number of records to take (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListExtendedGeofence</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListExtendedGeofence> GeoFencingGetGeofencesAsync (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListExtendedGeofence> GeoFencingGetGeofencesAsync (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListExtendedGeofence> localVarResponse = await GeoFencingGetGeofencesAsyncWithHttpInfo(xChronosheetsAuth, skip, take);
+             ApiResponse<ApiResponseForPaginatedListExtendedGeofence> localVarResponse = await GeoFencingGetGeofencesWithHttpInfoAsync(xChronosheetsAuth, skip, take, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -996,8 +1016,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Number of records to skip (optional)</param>
         /// <param name="take">Number of records to take (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListExtendedGeofence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListExtendedGeofence>> GeoFencingGetGeofencesAsyncWithHttpInfo (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListExtendedGeofence>> GeoFencingGetGeofencesWithHttpInfoAsync (string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -1036,7 +1057,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1126,10 +1147,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListBasicGeofence</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListBasicGeofence> GeoFencingGetGeofencesBasicInfoAsync (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListBasicGeofence> GeoFencingGetGeofencesBasicInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListBasicGeofence> localVarResponse = await GeoFencingGetGeofencesBasicInfoAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<ApiResponseForPaginatedListBasicGeofence> localVarResponse = await GeoFencingGetGeofencesBasicInfoWithHttpInfoAsync(xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1139,8 +1161,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListBasicGeofence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListBasicGeofence>> GeoFencingGetGeofencesBasicInfoAsyncWithHttpInfo (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListBasicGeofence>> GeoFencingGetGeofencesBasicInfoWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -1177,7 +1200,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1287,10 +1310,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> GeoFencingUpdateGeofenceAsync (string xChronosheetsAuth, UpdateGeoFenceRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> GeoFencingUpdateGeofenceAsync (string xChronosheetsAuth, UpdateGeoFenceRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await GeoFencingUpdateGeofenceAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await GeoFencingUpdateGeofenceWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1301,8 +1325,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> GeoFencingUpdateGeofenceAsyncWithHttpInfo (string xChronosheetsAuth, UpdateGeoFenceRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> GeoFencingUpdateGeofenceWithHttpInfoAsync (string xChronosheetsAuth, UpdateGeoFenceRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -1356,7 +1381,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

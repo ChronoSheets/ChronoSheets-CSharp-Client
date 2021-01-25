@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -93,8 +94,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> TimesheetAutomationCreateAutomationStepAsync (string xChronosheetsAuth, CreateAutomationStepRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> TimesheetAutomationCreateAutomationStepAsync (string xChronosheetsAuth, CreateAutomationStepRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Creates an automation step.  Timesheet automation is determined by looking at steps taken by the user.  Create a step to log some automation action, such as entering a geofence or tapping on an NFC badge.  Requires the &#39;SubmitTimesheets&#39; permission.
@@ -105,8 +107,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TimesheetAutomationCreateAutomationStepAsyncWithHttpInfo (string xChronosheetsAuth, CreateAutomationStepRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TimesheetAutomationCreateAutomationStepWithHttpInfoAsync (string xChronosheetsAuth, CreateAutomationStepRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
         /// </summary>
@@ -122,8 +125,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Retrieve the timesheet automation / alerts for geofences activities or NFC tap on/off.  Requires the &#39;ManageGeofencing&#39; permission.
@@ -140,8 +144,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfoAsync (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -348,10 +353,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> TimesheetAutomationCreateAutomationStepAsync (string xChronosheetsAuth, CreateAutomationStepRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> TimesheetAutomationCreateAutomationStepAsync (string xChronosheetsAuth, CreateAutomationStepRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await TimesheetAutomationCreateAutomationStepAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await TimesheetAutomationCreateAutomationStepWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -362,8 +368,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request"></param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TimesheetAutomationCreateAutomationStepAsyncWithHttpInfo (string xChronosheetsAuth, CreateAutomationStepRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TimesheetAutomationCreateAutomationStepWithHttpInfoAsync (string xChronosheetsAuth, CreateAutomationStepRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -417,7 +424,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -550,10 +557,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> TimesheetAutomationGetTimesheetAutomationAuditTrailAsync (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResponse = await TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take);
+             ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence> localVarResponse = await TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfoAsync(geofenceId, nfcId, userId, sort, order, xChronosheetsAuth, skip, take, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -570,8 +578,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="skip">Skip this many records (optional)</param>
         /// <param name="take">Take this many records (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailAsyncWithHttpInfo (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTimesheetAutomationWithOrgAndGeofence>> TimesheetAutomationGetTimesheetAutomationAuditTrailWithHttpInfoAsync (int geofenceId, int nfcId, int userId, string sort, string order, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'geofenceId' is set
             if (geofenceId == null)
@@ -630,7 +639,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

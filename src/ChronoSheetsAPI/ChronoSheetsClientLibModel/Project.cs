@@ -25,7 +25,7 @@ using OpenAPIDateConverter = ChronoSheetsAPI.Client.OpenAPIDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// Project
+    /// A project in ChronoSheets
     /// </summary>
     [DataContract]
     public partial class Project :  IEquatable<Project>, IValidatableObject
@@ -33,14 +33,14 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="Project" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="clientId">clientId.</param>
-        /// <param name="organisationId">organisationId.</param>
-        /// <param name="projectName">projectName.</param>
-        /// <param name="costEstimation">costEstimation.</param>
-        /// <param name="costActual">costActual.</param>
-        /// <param name="startDate">startDate.</param>
-        /// <param name="endDate">endDate.</param>
+        /// <param name="id">The ID of the project.</param>
+        /// <param name="clientId">The ID of the client for which the project is being undertaken for.</param>
+        /// <param name="organisationId">The ID of the organisation that is completing the project.</param>
+        /// <param name="projectName">A descriptive name of the project.</param>
+        /// <param name="costEstimation">The project&#39;s estimated cost.</param>
+        /// <param name="costActual">The project&#39;s actual cost.</param>
+        /// <param name="startDate">The start date and time of the project.</param>
+        /// <param name="endDate">The end date and time of the project.</param>
         public Project(int id = default(int), int clientId = default(int), int organisationId = default(int), string projectName = default(string), double costEstimation = default(double), double costActual = default(double), DateTime startDate = default(DateTime), DateTime endDate = default(DateTime))
         {
             this.Id = id;
@@ -54,50 +54,58 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the project
         /// </summary>
+        /// <value>The ID of the project</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets ClientId
+        /// The ID of the client for which the project is being undertaken for
         /// </summary>
+        /// <value>The ID of the client for which the project is being undertaken for</value>
         [DataMember(Name="ClientId", EmitDefaultValue=false)]
         public int ClientId { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrganisationId
+        /// The ID of the organisation that is completing the project
         /// </summary>
+        /// <value>The ID of the organisation that is completing the project</value>
         [DataMember(Name="OrganisationId", EmitDefaultValue=false)]
         public int OrganisationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets ProjectName
+        /// A descriptive name of the project
         /// </summary>
+        /// <value>A descriptive name of the project</value>
         [DataMember(Name="ProjectName", EmitDefaultValue=false)]
         public string ProjectName { get; set; }
 
         /// <summary>
-        /// Gets or Sets CostEstimation
+        /// The project&#39;s estimated cost
         /// </summary>
+        /// <value>The project&#39;s estimated cost</value>
         [DataMember(Name="CostEstimation", EmitDefaultValue=false)]
         public double CostEstimation { get; set; }
 
         /// <summary>
-        /// Gets or Sets CostActual
+        /// The project&#39;s actual cost
         /// </summary>
+        /// <value>The project&#39;s actual cost</value>
         [DataMember(Name="CostActual", EmitDefaultValue=false)]
         public double CostActual { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartDate
+        /// The start date and time of the project
         /// </summary>
+        /// <value>The start date and time of the project</value>
         [DataMember(Name="StartDate", EmitDefaultValue=false)]
         public DateTime StartDate { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndDate
+        /// The end date and time of the project
         /// </summary>
+        /// <value>The end date and time of the project</value>
         [DataMember(Name="EndDate", EmitDefaultValue=false)]
         public DateTime EndDate { get; set; }
 
@@ -127,7 +135,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

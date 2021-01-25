@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -194,8 +195,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> OrganisationGroupsCreateOrganisationGroupAsync (string xChronosheetsAuth, InsertOrganisationGroupRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> OrganisationGroupsCreateOrganisationGroupAsync (string xChronosheetsAuth, InsertOrganisationGroupRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
@@ -206,8 +208,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> OrganisationGroupsCreateOrganisationGroupAsyncWithHttpInfo (string xChronosheetsAuth, InsertOrganisationGroupRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> OrganisationGroupsCreateOrganisationGroupWithHttpInfoAsync (string xChronosheetsAuth, InsertOrganisationGroupRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// 
         /// </summary>
@@ -217,8 +220,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupsDeleteOrganisationGroupAsync (int organisationGroupId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupsDeleteOrganisationGroupAsync (int organisationGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// 
@@ -229,8 +233,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupsDeleteOrganisationGroupAsyncWithHttpInfo (int organisationGroupId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupsDeleteOrganisationGroupWithHttpInfoAsync (int organisationGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
@@ -240,8 +245,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId">The ID of the OrganisationGroup you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseOrganisationGroup</returns>
-        System.Threading.Tasks.Task<ApiResponseOrganisationGroup> OrganisationGroupsGetOrganisationGroupAsync (int organisationGroupId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseOrganisationGroup> OrganisationGroupsGetOrganisationGroupAsync (int organisationGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a particular organisation group.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
@@ -252,8 +258,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId">The ID of the OrganisationGroup you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseOrganisationGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseOrganisationGroup>> OrganisationGroupsGetOrganisationGroupAsyncWithHttpInfo (int organisationGroupId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseOrganisationGroup>> OrganisationGroupsGetOrganisationGroupWithHttpInfoAsync (int organisationGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
@@ -262,8 +269,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListOrganisationGroup</returns>
-        System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsAsync (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a collection of organisation groups that are under your organisation.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
@@ -273,8 +281,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListOrganisationGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsAsyncWithHttpInfo (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
@@ -284,8 +293,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListOrganisationGroup</returns>
-        System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForJobAsync (int jobId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForJobAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get org groups for a particular job.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageJobsAndTask&#39;, &#39;ManageClientsAndProjects&#39; or &#39;ManageOrganisationUsers&#39; permissions.
@@ -296,8 +306,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListOrganisationGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForJobAsyncWithHttpInfo (int jobId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForJobWithHttpInfoAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
         /// </summary>
@@ -307,8 +318,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the vehicle</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListOrganisationGroup</returns>
-        System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForVehicleAsync (int vehicleId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForVehicleAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get org groups for a particular vehicle.    Requires the &#39;ManageOrganisationGroups&#39;, &#39;ManageFleet&#39; or &#39;ManageOrganisationUsers&#39; permissions.
@@ -319,8 +331,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the vehicle</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListOrganisationGroup)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForVehicleAsyncWithHttpInfo (int vehicleId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForVehicleWithHttpInfoAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
@@ -330,8 +343,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupsUpdateOrganisationGroupAsync (string xChronosheetsAuth, SaveOrganisationGroupRequest request);
+        System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupsUpdateOrganisationGroupAsync (string xChronosheetsAuth, SaveOrganisationGroupRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Update an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
@@ -342,8 +356,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupsUpdateOrganisationGroupAsyncWithHttpInfo (string xChronosheetsAuth, SaveOrganisationGroupRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupsUpdateOrganisationGroupWithHttpInfoAsync (string xChronosheetsAuth, SaveOrganisationGroupRequest request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -550,10 +565,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> OrganisationGroupsCreateOrganisationGroupAsync (string xChronosheetsAuth, InsertOrganisationGroupRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> OrganisationGroupsCreateOrganisationGroupAsync (string xChronosheetsAuth, InsertOrganisationGroupRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await OrganisationGroupsCreateOrganisationGroupAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await OrganisationGroupsCreateOrganisationGroupWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -564,8 +580,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert OrganisationGroup Request object containing values for the new OrganisationGroup to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> OrganisationGroupsCreateOrganisationGroupAsyncWithHttpInfo (string xChronosheetsAuth, InsertOrganisationGroupRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> OrganisationGroupsCreateOrganisationGroupWithHttpInfoAsync (string xChronosheetsAuth, InsertOrganisationGroupRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -619,7 +636,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -716,10 +733,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupsDeleteOrganisationGroupAsync (int organisationGroupId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupsDeleteOrganisationGroupAsync (int organisationGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await OrganisationGroupsDeleteOrganisationGroupAsyncWithHttpInfo(organisationGroupId, xChronosheetsAuth);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await OrganisationGroupsDeleteOrganisationGroupWithHttpInfoAsync(organisationGroupId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -730,8 +748,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId"></param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupsDeleteOrganisationGroupAsyncWithHttpInfo (int organisationGroupId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupsDeleteOrganisationGroupWithHttpInfoAsync (int organisationGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'organisationGroupId' is set
             if (organisationGroupId == null)
@@ -772,7 +791,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -869,10 +888,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId">The ID of the OrganisationGroup you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseOrganisationGroup</returns>
-        public async System.Threading.Tasks.Task<ApiResponseOrganisationGroup> OrganisationGroupsGetOrganisationGroupAsync (int organisationGroupId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseOrganisationGroup> OrganisationGroupsGetOrganisationGroupAsync (int organisationGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseOrganisationGroup> localVarResponse = await OrganisationGroupsGetOrganisationGroupAsyncWithHttpInfo(organisationGroupId, xChronosheetsAuth);
+             ApiResponse<ApiResponseOrganisationGroup> localVarResponse = await OrganisationGroupsGetOrganisationGroupWithHttpInfoAsync(organisationGroupId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -883,8 +903,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="organisationGroupId">The ID of the OrganisationGroup you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseOrganisationGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOrganisationGroup>> OrganisationGroupsGetOrganisationGroupAsyncWithHttpInfo (int organisationGroupId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseOrganisationGroup>> OrganisationGroupsGetOrganisationGroupWithHttpInfoAsync (int organisationGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'organisationGroupId' is set
             if (organisationGroupId == null)
@@ -925,7 +946,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1015,10 +1036,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListOrganisationGroup</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsAsync (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListOrganisationGroup> localVarResponse = await OrganisationGroupsGetOrganisationGroupsAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<ApiResponseListOrganisationGroup> localVarResponse = await OrganisationGroupsGetOrganisationGroupsWithHttpInfoAsync(xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1028,8 +1050,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListOrganisationGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsAsyncWithHttpInfo (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -1066,7 +1089,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1163,10 +1186,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListOrganisationGroup</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForJobAsync (int jobId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForJobAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListOrganisationGroup> localVarResponse = await OrganisationGroupsGetOrganisationGroupsForJobAsyncWithHttpInfo(jobId, xChronosheetsAuth);
+             ApiResponse<ApiResponseListOrganisationGroup> localVarResponse = await OrganisationGroupsGetOrganisationGroupsForJobWithHttpInfoAsync(jobId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1177,8 +1201,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListOrganisationGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForJobAsyncWithHttpInfo (int jobId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForJobWithHttpInfoAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -1219,7 +1244,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1316,10 +1341,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the vehicle</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListOrganisationGroup</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForVehicleAsync (int vehicleId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListOrganisationGroup> OrganisationGroupsGetOrganisationGroupsForVehicleAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListOrganisationGroup> localVarResponse = await OrganisationGroupsGetOrganisationGroupsForVehicleAsyncWithHttpInfo(vehicleId, xChronosheetsAuth);
+             ApiResponse<ApiResponseListOrganisationGroup> localVarResponse = await OrganisationGroupsGetOrganisationGroupsForVehicleWithHttpInfoAsync(vehicleId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1330,8 +1356,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the vehicle</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListOrganisationGroup)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForVehicleAsyncWithHttpInfo (int vehicleId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListOrganisationGroup>> OrganisationGroupsGetOrganisationGroupsForVehicleWithHttpInfoAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'vehicleId' is set
             if (vehicleId == null)
@@ -1372,7 +1399,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1482,10 +1509,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupsUpdateOrganisationGroupAsync (string xChronosheetsAuth, SaveOrganisationGroupRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupsUpdateOrganisationGroupAsync (string xChronosheetsAuth, SaveOrganisationGroupRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await OrganisationGroupsUpdateOrganisationGroupAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await OrganisationGroupsUpdateOrganisationGroupWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1496,8 +1524,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Save OrganisationGroup Request object containing updated fields.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupsUpdateOrganisationGroupAsyncWithHttpInfo (string xChronosheetsAuth, SaveOrganisationGroupRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupsUpdateOrganisationGroupWithHttpInfoAsync (string xChronosheetsAuth, SaveOrganisationGroupRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -1551,7 +1580,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

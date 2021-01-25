@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -129,8 +130,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (string xChronosheetsAuth, Timesheet request);
+        System.Threading.Tasks.Task<ApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (string xChronosheetsAuth, Timesheet request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Inserts a single timesheet record.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -141,8 +143,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (string xChronosheetsAuth, Timesheet request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TimesheetsCreateSingleTimesheetWithHttpInfoAsync (string xChronosheetsAuth, Timesheet request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
@@ -152,8 +155,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int timesheetId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int timesheetId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Delete a timesheet.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -164,8 +168,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TimesheetsDeleteTimesheetAsyncWithHttpInfo (int timesheetId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TimesheetsDeleteTimesheetWithHttpInfoAsync (int timesheetId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
@@ -176,8 +181,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListTimesheet</returns>
-        System.Threading.Tasks.Task<ApiResponseListTimesheet> TimesheetsGetTimesheetsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListTimesheet> TimesheetsGetTimesheetsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get timesheets between start and end dates.  Note: the date range cannot exceed 24 hours.  This method is generally used to get timesheets for a particular day.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -189,8 +195,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListTimesheet)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheet>> TimesheetsGetTimesheetsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheet>> TimesheetsGetTimesheetsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
         /// </summary>
@@ -200,8 +207,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (string xChronosheetsAuth, BatchUpdateTimesheetRequest request);
+        System.Threading.Tasks.Task<ApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (string xChronosheetsAuth, BatchUpdateTimesheetRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Batch update timesheets.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -212,8 +220,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (string xChronosheetsAuth, BatchUpdateTimesheetRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListInt32>> TimesheetsUpdateTimesheetsWithHttpInfoAsync (string xChronosheetsAuth, BatchUpdateTimesheetRequest request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -420,10 +429,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (string xChronosheetsAuth, Timesheet request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> TimesheetsCreateSingleTimesheetAsync (string xChronosheetsAuth, Timesheet request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await TimesheetsCreateSingleTimesheetAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await TimesheetsCreateSingleTimesheetWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -434,8 +444,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Timesheet Request object containing values for the new Timesheet to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TimesheetsCreateSingleTimesheetAsyncWithHttpInfo (string xChronosheetsAuth, Timesheet request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TimesheetsCreateSingleTimesheetWithHttpInfoAsync (string xChronosheetsAuth, Timesheet request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -489,7 +500,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -586,10 +597,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int timesheetId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> TimesheetsDeleteTimesheetAsync (int timesheetId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await TimesheetsDeleteTimesheetAsyncWithHttpInfo(timesheetId, xChronosheetsAuth);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await TimesheetsDeleteTimesheetWithHttpInfoAsync(timesheetId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -600,8 +612,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="timesheetId">The ID of the Timesheet you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TimesheetsDeleteTimesheetAsyncWithHttpInfo (int timesheetId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TimesheetsDeleteTimesheetWithHttpInfoAsync (int timesheetId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'timesheetId' is set
             if (timesheetId == null)
@@ -642,7 +655,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -746,10 +759,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListTimesheet</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListTimesheet> TimesheetsGetTimesheetsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListTimesheet> TimesheetsGetTimesheetsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListTimesheet> localVarResponse = await TimesheetsGetTimesheetsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+             ApiResponse<ApiResponseListTimesheet> localVarResponse = await TimesheetsGetTimesheetsWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -761,8 +775,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date of the date range</param>
         /// <param name="endDate">The end date of the date range</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListTimesheet)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheet>> TimesheetsGetTimesheetsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheet>> TimesheetsGetTimesheetsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -807,7 +822,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -917,10 +932,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (string xChronosheetsAuth, BatchUpdateTimesheetRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseListInt32> TimesheetsUpdateTimesheetsAsync (string xChronosheetsAuth, BatchUpdateTimesheetRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListInt32> localVarResponse = await TimesheetsUpdateTimesheetsAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseListInt32> localVarResponse = await TimesheetsUpdateTimesheetsWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -931,8 +947,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A BatchUpdateTimesheet Request object containing values for the new Timesheets to create or update.  If the timesheet Id is specified, then an update will be performed, else the timesheet record will be created.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListInt32>> TimesheetsUpdateTimesheetsAsyncWithHttpInfo (string xChronosheetsAuth, BatchUpdateTimesheetRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListInt32>> TimesheetsUpdateTimesheetsWithHttpInfoAsync (string xChronosheetsAuth, BatchUpdateTimesheetRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -986,7 +1003,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

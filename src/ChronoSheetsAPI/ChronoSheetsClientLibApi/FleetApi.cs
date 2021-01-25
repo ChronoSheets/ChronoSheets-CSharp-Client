@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -150,8 +151,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> FleetCreateVehicleAsync (string xChronosheetsAuth, InsertVehicleRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> FleetCreateVehicleAsync (string xChronosheetsAuth, InsertVehicleRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create a vehicle.    Requires the &#39;ManageFleet&#39; permission.
@@ -162,8 +164,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> FleetCreateVehicleAsyncWithHttpInfo (string xChronosheetsAuth, InsertVehicleRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> FleetCreateVehicleWithHttpInfoAsync (string xChronosheetsAuth, InsertVehicleRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete a vehicle from the fleet.  Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
@@ -173,8 +176,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The unique ID of the vehicle you wish to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> FleetDeleteVehicleAsync (int vehicleId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseBoolean> FleetDeleteVehicleAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Delete a vehicle from the fleet.  Requires the &#39;ManageFleet&#39; permission.
@@ -185,8 +189,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The unique ID of the vehicle you wish to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FleetDeleteVehicleAsyncWithHttpInfo (int vehicleId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FleetDeleteVehicleWithHttpInfoAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a particular vehicle.  Does not require any special permission.
         /// </summary>
@@ -196,8 +201,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseFleetVehicle</returns>
-        System.Threading.Tasks.Task<ApiResponseFleetVehicle> FleetGetVehicleByIdAsync (int vehicleId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseFleetVehicle> FleetGetVehicleByIdAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a particular vehicle.  Does not require any special permission.
@@ -208,8 +214,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseFleetVehicle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseFleetVehicle>> FleetGetVehicleByIdAsyncWithHttpInfo (int vehicleId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseFleetVehicle>> FleetGetVehicleByIdWithHttpInfoAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a collection of vehicles that are under your organisation.    Does not require any special permission.
         /// </summary>
@@ -219,8 +226,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListFleetVehicle</returns>
-        System.Threading.Tasks.Task<ApiResponseListFleetVehicle> FleetGetVehiclesAsync (string xChronosheetsAuth, bool? includeDeleted = default(bool?));
+        System.Threading.Tasks.Task<ApiResponseListFleetVehicle> FleetGetVehiclesAsync (string xChronosheetsAuth, bool? includeDeleted = default(bool?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a collection of vehicles that are under your organisation.    Does not require any special permission.
@@ -231,8 +239,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListFleetVehicle)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListFleetVehicle>> FleetGetVehiclesAsyncWithHttpInfo (string xChronosheetsAuth, bool? includeDeleted = default(bool?));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListFleetVehicle>> FleetGetVehiclesWithHttpInfoAsync (string xChronosheetsAuth, bool? includeDeleted = default(bool?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
         /// </summary>
@@ -242,8 +251,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> FleetUpdateVehicleAsync (string xChronosheetsAuth, SaveVehicleRequest request);
+        System.Threading.Tasks.Task<ApiResponseBoolean> FleetUpdateVehicleAsync (string xChronosheetsAuth, SaveVehicleRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Update a vehicle.    Requires the &#39;ManageFleet&#39; permission.
@@ -254,8 +264,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FleetUpdateVehicleAsyncWithHttpInfo (string xChronosheetsAuth, SaveVehicleRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FleetUpdateVehicleWithHttpInfoAsync (string xChronosheetsAuth, SaveVehicleRequest request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -462,10 +473,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> FleetCreateVehicleAsync (string xChronosheetsAuth, InsertVehicleRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> FleetCreateVehicleAsync (string xChronosheetsAuth, InsertVehicleRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await FleetCreateVehicleAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await FleetCreateVehicleWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -476,8 +488,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Vehicle Request object containing values for the new Vehicle to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> FleetCreateVehicleAsyncWithHttpInfo (string xChronosheetsAuth, InsertVehicleRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> FleetCreateVehicleWithHttpInfoAsync (string xChronosheetsAuth, InsertVehicleRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -531,7 +544,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -628,10 +641,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The unique ID of the vehicle you wish to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> FleetDeleteVehicleAsync (int vehicleId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> FleetDeleteVehicleAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await FleetDeleteVehicleAsyncWithHttpInfo(vehicleId, xChronosheetsAuth);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await FleetDeleteVehicleWithHttpInfoAsync(vehicleId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -642,8 +656,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The unique ID of the vehicle you wish to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FleetDeleteVehicleAsyncWithHttpInfo (int vehicleId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FleetDeleteVehicleWithHttpInfoAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'vehicleId' is set
             if (vehicleId == null)
@@ -684,7 +699,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -781,10 +796,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseFleetVehicle</returns>
-        public async System.Threading.Tasks.Task<ApiResponseFleetVehicle> FleetGetVehicleByIdAsync (int vehicleId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseFleetVehicle> FleetGetVehicleByIdAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseFleetVehicle> localVarResponse = await FleetGetVehicleByIdAsyncWithHttpInfo(vehicleId, xChronosheetsAuth);
+             ApiResponse<ApiResponseFleetVehicle> localVarResponse = await FleetGetVehicleByIdWithHttpInfoAsync(vehicleId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -795,8 +811,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="vehicleId">The ID of the Vehicle you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseFleetVehicle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFleetVehicle>> FleetGetVehicleByIdAsyncWithHttpInfo (int vehicleId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseFleetVehicle>> FleetGetVehicleByIdWithHttpInfoAsync (int vehicleId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'vehicleId' is set
             if (vehicleId == null)
@@ -837,7 +854,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -931,10 +948,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListFleetVehicle</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListFleetVehicle> FleetGetVehiclesAsync (string xChronosheetsAuth, bool? includeDeleted = default(bool?))
+        public async System.Threading.Tasks.Task<ApiResponseListFleetVehicle> FleetGetVehiclesAsync (string xChronosheetsAuth, bool? includeDeleted = default(bool?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListFleetVehicle> localVarResponse = await FleetGetVehiclesAsyncWithHttpInfo(xChronosheetsAuth, includeDeleted);
+             ApiResponse<ApiResponseListFleetVehicle> localVarResponse = await FleetGetVehiclesWithHttpInfoAsync(xChronosheetsAuth, includeDeleted, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -945,8 +963,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="includeDeleted">Whether or not to include deleted vehicles (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListFleetVehicle)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListFleetVehicle>> FleetGetVehiclesAsyncWithHttpInfo (string xChronosheetsAuth, bool? includeDeleted = default(bool?))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListFleetVehicle>> FleetGetVehiclesWithHttpInfoAsync (string xChronosheetsAuth, bool? includeDeleted = default(bool?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -984,7 +1003,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1094,10 +1113,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> FleetUpdateVehicleAsync (string xChronosheetsAuth, SaveVehicleRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> FleetUpdateVehicleAsync (string xChronosheetsAuth, SaveVehicleRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await FleetUpdateVehicleAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await FleetUpdateVehicleWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1108,8 +1128,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Save Vehicle Request object containing updated fields.  Make sure to specify the Vehicle Id in the request object so that ChronoSheets knows which Vehicle to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FleetUpdateVehicleAsyncWithHttpInfo (string xChronosheetsAuth, SaveVehicleRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> FleetUpdateVehicleWithHttpInfoAsync (string xChronosheetsAuth, SaveVehicleRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -1163,7 +1184,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

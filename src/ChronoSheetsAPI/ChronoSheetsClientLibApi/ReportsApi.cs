@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -324,8 +325,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
         /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseCombinedReportsData</returns>
-        System.Threading.Tasks.Task<ApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string forceOnlyThisChart = default(string));
+        System.Threading.Tasks.Task<ApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string forceOnlyThisChart = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get Consolidated Admin Reports Data (Jobs, Tasks, Clients and Projects).  These are the organisation wide reports, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
@@ -339,8 +341,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
         /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseCombinedReportsData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string forceOnlyThisChart = default(string));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string forceOnlyThisChart = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
         /// </summary>
@@ -351,8 +354,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseCombinedReportsData</returns>
-        System.Threading.Tasks.Task<ApiResponseCombinedReportsData> ReportsGetAllChartsDataUserAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseCombinedReportsData> ReportsGetAllChartsDataUserAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get Consolidated User Reports Data (Jobs, Tasks, Clients and Projects).  These are the user&#39;s own reports.    Requires the &#39;ViewOwnReports&#39; permission.
@@ -364,8 +368,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseCombinedReportsData)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
@@ -377,8 +382,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListFleetSummaryReportItem</returns>
-        System.Threading.Tasks.Task<ApiResponseListFleetSummaryReportItem> ReportsGetFleetSummaryAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string));
+        System.Threading.Tasks.Task<ApiResponseListFleetSummaryReportItem> ReportsGetFleetSummaryAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Gets a summary report, which includes total distance travelled and total running costs, for vehicles within your organisation  Requires the &#39;ReportAdmin&#39; permission.
@@ -391,8 +397,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListFleetSummaryReportItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListFleetSummaryReportItem>> ReportsGetFleetSummaryAdminAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListFleetSummaryReportItem>> ReportsGetFleetSummaryAdminWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
@@ -402,8 +409,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTrip</returns>
-        System.Threading.Tasks.Task<ApiResponseTrip> ReportsGetOrgTripByIdAsync (int tripId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseTrip> ReportsGetOrgTripByIdAsync (int tripId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get trip by Id, for reporting purposes.    Requires the &#39;ReportAdmin&#39; permission.
@@ -414,8 +422,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTrip)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseTrip>> ReportsGetOrgTripByIdAsyncWithHttpInfo (int tripId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseTrip>> ReportsGetOrgTripByIdWithHttpInfoAsync (int tripId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
@@ -429,8 +438,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many items (optional)</param>
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Reports on Organisation timesheet file attachments (files uploaded and attached to timesheet records)  Requires the &#39;ReportAdmin&#39; permission.
@@ -445,8 +455,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many items (optional)</param>
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListOrgReportTimesheetFileAttachment)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
@@ -461,8 +472,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
         /// <param name="keywords">Search the transcripts by keyword(s) (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListOrgReportTranscript</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTranscript> ReportsGetOrganisationTranscriptsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), string keywords = default(string));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTranscript> ReportsGetOrganisationTranscriptsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), string keywords = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Reports on Organisation transcripts (When an audio file is attached, it will be automatically transcribed, these are the transcriptions)    Requires the &#39;ReportAdmin&#39; permission.
@@ -478,8 +490,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
         /// <param name="keywords">Search the transcripts by keyword(s) (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListOrgReportTranscript)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTranscript>> ReportsGetOrganisationTranscriptsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), string keywords = default(string));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTranscript>> ReportsGetOrganisationTranscriptsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), string keywords = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
@@ -493,8 +506,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many items (optional)</param>
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListOrgReportTrip</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Reports on Organisation trips (GPS tracking from whole organisation).    Requires the &#39;ReportAdmin&#39; permission.
@@ -509,8 +523,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many items (optional)</param>
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListOrgReportTrip)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTrip>> ReportsGetOrganisationTripsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTrip>> ReportsGetOrganisationTripsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
@@ -526,8 +541,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="order">Decide which direction to sort the column (optional)</param>
         /// <param name="skip">Skip this many rows (optional)</param>
         /// <param name="take">Take this many rows (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListRawReportItem</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string sort = default(string), string order = default(string), int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string sort = default(string), string order = default(string), int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get Timesheets Raw Data.  This data details each timesheet record.  These are the organisation wide timesheet records, with data from potentially all employees.    Requires the &#39;ReportAdmin&#39; permission.
@@ -544,8 +560,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="order">Decide which direction to sort the column (optional)</param>
         /// <param name="skip">Skip this many rows (optional)</param>
         /// <param name="take">Take this many rows (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListRawReportItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string sort = default(string), string order = default(string), int? skip = default(int?), int? take = default(int?));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string sort = default(string), string order = default(string), int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
         /// </summary>
@@ -557,8 +574,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListProjectCostingReportItem</returns>
-        System.Threading.Tasks.Task<ApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string));
+        System.Threading.Tasks.Task<ApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Gets project cost estimations VS actual cost for date range and users.    Requires the &#39;ReportAdmin&#39; permission.
@@ -571,8 +589,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListProjectCostingReportItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListProjectCostingReportItem>> ReportsProjectCostingsAdminAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListProjectCostingReportItem>> ReportsProjectCostingsAdminWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
         /// </summary>
@@ -583,8 +602,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListJobSeriesReportItem</returns>
-        System.Threading.Tasks.Task<ApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Timeseries jobs data for the logged in user.    Requires the &#39;ViewOwnReports&#39; or &#39;SubmitTimesheets&#39;.
@@ -596,8 +616,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListJobSeriesReportItem)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListJobSeriesReportItem>> ReportsUserJobsOverTimeAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListJobSeriesReportItem>> ReportsUserJobsOverTimeWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -806,10 +827,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
         /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseCombinedReportsData</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string forceOnlyThisChart = default(string))
+        public async System.Threading.Tasks.Task<ApiResponseCombinedReportsData> ReportsGetAllChartsDataAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string forceOnlyThisChart = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataAdminAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart);
+             ApiResponse<ApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataAdminWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, userIds, forceOnlyThisChart, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -823,8 +845,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
         /// <param name="forceOnlyThisChart">A flag to indicate which report data you require.  Choose a particular set of data, or if you want all data use the &#39;NotForced&#39; option. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseCombinedReportsData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string forceOnlyThisChart = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCombinedReportsData>> ReportsGetAllChartsDataAdminWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string forceOnlyThisChart = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -871,7 +894,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -975,10 +998,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseCombinedReportsData</returns>
-        public async System.Threading.Tasks.Task<ApiResponseCombinedReportsData> ReportsGetAllChartsDataUserAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseCombinedReportsData> ReportsGetAllChartsDataUserAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataUserAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+             ApiResponse<ApiResponseCombinedReportsData> localVarResponse = await ReportsGetAllChartsDataUserWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -990,8 +1014,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseCombinedReportsData)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseCombinedReportsData>> ReportsGetAllChartsDataUserWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1036,7 +1061,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1144,10 +1169,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListFleetSummaryReportItem</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListFleetSummaryReportItem> ReportsGetFleetSummaryAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string))
+        public async System.Threading.Tasks.Task<ApiResponseListFleetSummaryReportItem> ReportsGetFleetSummaryAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListFleetSummaryReportItem> localVarResponse = await ReportsGetFleetSummaryAdminAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds);
+             ApiResponse<ApiResponseListFleetSummaryReportItem> localVarResponse = await ReportsGetFleetSummaryAdminWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, userIds, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1160,8 +1186,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListFleetSummaryReportItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListFleetSummaryReportItem>> ReportsGetFleetSummaryAdminAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListFleetSummaryReportItem>> ReportsGetFleetSummaryAdminWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1207,7 +1234,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1304,10 +1331,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTrip</returns>
-        public async System.Threading.Tasks.Task<ApiResponseTrip> ReportsGetOrgTripByIdAsync (int tripId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseTrip> ReportsGetOrgTripByIdAsync (int tripId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseTrip> localVarResponse = await ReportsGetOrgTripByIdAsyncWithHttpInfo(tripId, xChronosheetsAuth);
+             ApiResponse<ApiResponseTrip> localVarResponse = await ReportsGetOrgTripByIdWithHttpInfoAsync(tripId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1318,8 +1346,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTrip)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTrip>> ReportsGetOrgTripByIdAsyncWithHttpInfo (int tripId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTrip>> ReportsGetOrgTripByIdWithHttpInfoAsync (int tripId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tripId' is set
             if (tripId == null)
@@ -1360,7 +1389,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1476,10 +1505,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many items (optional)</param>
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListOrgReportTimesheetFileAttachment</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment> ReportsGetOrganisationTimesheetFileAttachmentsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment> localVarResponse = await ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
+             ApiResponse<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment> localVarResponse = await ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, skip, take, userIds, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1494,8 +1524,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many items (optional)</param>
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListOrgReportTimesheetFileAttachment)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTimesheetFileAttachment>> ReportsGetOrganisationTimesheetFileAttachmentsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1543,7 +1574,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1663,10 +1694,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
         /// <param name="keywords">Search the transcripts by keyword(s) (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListOrgReportTranscript</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTranscript> ReportsGetOrganisationTranscriptsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), string keywords = default(string))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTranscript> ReportsGetOrganisationTranscriptsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), string keywords = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListOrgReportTranscript> localVarResponse = await ReportsGetOrganisationTranscriptsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords);
+             ApiResponse<ApiResponseForPaginatedListOrgReportTranscript> localVarResponse = await ReportsGetOrganisationTranscriptsWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, skip, take, userIds, keywords, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1682,8 +1714,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
         /// <param name="keywords">Search the transcripts by keyword(s) (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListOrgReportTranscript)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTranscript>> ReportsGetOrganisationTranscriptsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), string keywords = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTranscript>> ReportsGetOrganisationTranscriptsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), string keywords = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1732,7 +1765,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1848,10 +1881,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many items (optional)</param>
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListOrgReportTrip</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListOrgReportTrip> ReportsGetOrganisationTripsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListOrgReportTrip> localVarResponse = await ReportsGetOrganisationTripsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, userIds);
+             ApiResponse<ApiResponseForPaginatedListOrgReportTrip> localVarResponse = await ReportsGetOrganisationTripsWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, skip, take, userIds, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1866,8 +1900,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many items (optional)</param>
         /// <param name="take">Take this many items (optional)</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListOrgReportTrip)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTrip>> ReportsGetOrganisationTripsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListOrgReportTrip>> ReportsGetOrganisationTripsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -1915,7 +1950,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -2039,10 +2074,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="order">Decide which direction to sort the column (optional)</param>
         /// <param name="skip">Skip this many rows (optional)</param>
         /// <param name="take">Take this many rows (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListRawReportItem</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string sort = default(string), string order = default(string), int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListRawReportItem> ReportsGetRawDataAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string sort = default(string), string order = default(string), int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListRawReportItem> localVarResponse = await ReportsGetRawDataAdminAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take);
+             ApiResponse<ApiResponseForPaginatedListRawReportItem> localVarResponse = await ReportsGetRawDataAdminWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, userIds, sort, order, skip, take, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2059,8 +2095,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="order">Decide which direction to sort the column (optional)</param>
         /// <param name="skip">Skip this many rows (optional)</param>
         /// <param name="take">Take this many rows (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListRawReportItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string sort = default(string), string order = default(string), int? skip = default(int?), int? take = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListRawReportItem>> ReportsGetRawDataAdminWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), string sort = default(string), string order = default(string), int? skip = default(int?), int? take = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -2110,7 +2147,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -2218,10 +2255,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListProjectCostingReportItem</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string))
+        public async System.Threading.Tasks.Task<ApiResponseListProjectCostingReportItem> ReportsProjectCostingsAdminAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListProjectCostingReportItem> localVarResponse = await ReportsProjectCostingsAdminAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, userIds);
+             ApiResponse<ApiResponseListProjectCostingReportItem> localVarResponse = await ReportsProjectCostingsAdminWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, userIds, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2234,8 +2272,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="userIds">A comma-separated list of user Ids, if you want to filter the report data to particular users.  If you want all, send a blank string. (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListProjectCostingReportItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListProjectCostingReportItem>> ReportsProjectCostingsAdminAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListProjectCostingReportItem>> ReportsProjectCostingsAdminWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, string userIds = default(string), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -2281,7 +2320,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -2385,10 +2424,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListJobSeriesReportItem</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListJobSeriesReportItem> ReportsUserJobsOverTimeAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListJobSeriesReportItem> localVarResponse = await ReportsUserJobsOverTimeAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth);
+             ApiResponse<ApiResponseListJobSeriesReportItem> localVarResponse = await ReportsUserJobsOverTimeWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -2400,8 +2440,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="startDate">The start date for the date range.  Report data in the response is after this date</param>
         /// <param name="endDate">The end date for the date range.  Report data in the response is before this date</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListJobSeriesReportItem)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListJobSeriesReportItem>> ReportsUserJobsOverTimeAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListJobSeriesReportItem>> ReportsUserJobsOverTimeWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -2446,7 +2487,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

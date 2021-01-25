@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -112,8 +113,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> TripsCreateTripAsync (string xChronosheetsAuth, CreateTripRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> TripsCreateTripAsync (string xChronosheetsAuth, CreateTripRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create a new trip.  Important: create a timesheet record before calling this, passing in the new timesheet record id as a reference.    Requires the &#39;SubmitTimesheets&#39; permission.
@@ -124,8 +126,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TripsCreateTripAsyncWithHttpInfo (string xChronosheetsAuth, CreateTripRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TripsCreateTripWithHttpInfoAsync (string xChronosheetsAuth, CreateTripRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
@@ -135,8 +138,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTrip</returns>
-        System.Threading.Tasks.Task<ApiResponseTrip> TripsGetMyTripByIdAsync (int tripId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseTrip> TripsGetMyTripByIdAsync (int tripId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get trip by Id.    Requires the &#39;ViewMyTrips&#39; permission.
@@ -147,8 +151,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTrip)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseTrip>> TripsGetMyTripByIdAsyncWithHttpInfo (int tripId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseTrip>> TripsGetMyTripByIdWithHttpInfoAsync (int tripId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
         /// </summary>
@@ -162,8 +167,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many Trips (optional)</param>
         /// <param name="take">Take this many Trips (optional)</param>
         /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListTrip</returns>
-        System.Threading.Tasks.Task<ApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), int? vehicleId = default(int?));
+        System.Threading.Tasks.Task<ApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), int? vehicleId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get my trips.  Get the GPS trips you&#39;ve recorded and submitted.    Requires the &#39;ViewMyTrips&#39; permission.
@@ -178,8 +184,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many Trips (optional)</param>
         /// <param name="take">Take this many Trips (optional)</param>
         /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListTrip)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), int? vehicleId = default(int?));
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTrip>> TripsGetMyTripsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), int? vehicleId = default(int?), CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -386,10 +393,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> TripsCreateTripAsync (string xChronosheetsAuth, CreateTripRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> TripsCreateTripAsync (string xChronosheetsAuth, CreateTripRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await TripsCreateTripAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await TripsCreateTripWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -400,8 +408,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Create Trip Request object containing values for the new Trip to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TripsCreateTripAsyncWithHttpInfo (string xChronosheetsAuth, CreateTripRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TripsCreateTripWithHttpInfoAsync (string xChronosheetsAuth, CreateTripRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -455,7 +464,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -552,10 +561,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTrip</returns>
-        public async System.Threading.Tasks.Task<ApiResponseTrip> TripsGetMyTripByIdAsync (int tripId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseTrip> TripsGetMyTripByIdAsync (int tripId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseTrip> localVarResponse = await TripsGetMyTripByIdAsyncWithHttpInfo(tripId, xChronosheetsAuth);
+             ApiResponse<ApiResponseTrip> localVarResponse = await TripsGetMyTripByIdWithHttpInfoAsync(tripId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -566,8 +576,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="tripId">The ID of the Trip you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTrip)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTrip>> TripsGetMyTripByIdAsyncWithHttpInfo (int tripId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTrip>> TripsGetMyTripByIdWithHttpInfoAsync (int tripId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'tripId' is set
             if (tripId == null)
@@ -608,7 +619,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -724,10 +735,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many Trips (optional)</param>
         /// <param name="take">Take this many Trips (optional)</param>
         /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseForPaginatedListTrip</returns>
-        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), int? vehicleId = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponseForPaginatedListTrip> TripsGetMyTripsAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), int? vehicleId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseForPaginatedListTrip> localVarResponse = await TripsGetMyTripsAsyncWithHttpInfo(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId);
+             ApiResponse<ApiResponseForPaginatedListTrip> localVarResponse = await TripsGetMyTripsWithHttpInfoAsync(startDate, endDate, xChronosheetsAuth, skip, take, vehicleId, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -742,8 +754,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <param name="skip">Skip this many Trips (optional)</param>
         /// <param name="take">Take this many Trips (optional)</param>
         /// <param name="vehicleId">Filter by a particular Vehicle (get trips made with a particular vehicle), specified by VehicleId (optional)</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseForPaginatedListTrip)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTrip>> TripsGetMyTripsAsyncWithHttpInfo (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), int? vehicleId = default(int?))
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseForPaginatedListTrip>> TripsGetMyTripsWithHttpInfoAsync (DateTime startDate, DateTime endDate, string xChronosheetsAuth, int? skip = default(int?), int? take = default(int?), int? vehicleId = default(int?), CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'startDate' is set
             if (startDate == null)
@@ -791,7 +804,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

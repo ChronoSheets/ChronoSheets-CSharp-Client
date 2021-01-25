@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -127,8 +128,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> ProjectsCreateProjectAsync (string xChronosheetsAuth, InsertProjectRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> ProjectsCreateProjectAsync (string xChronosheetsAuth, InsertProjectRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
@@ -139,8 +141,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (string xChronosheetsAuth, InsertProjectRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> ProjectsCreateProjectWithHttpInfoAsync (string xChronosheetsAuth, InsertProjectRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
@@ -150,8 +153,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseProject</returns>
-        System.Threading.Tasks.Task<ApiResponseProject> ProjectsGetProjectByIdAsync (int projectId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseProject> ProjectsGetProjectByIdAsync (int projectId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a project by its Id.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
@@ -162,8 +166,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseProject)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseProject>> ProjectsGetProjectByIdAsyncWithHttpInfo (int projectId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseProject>> ProjectsGetProjectByIdWithHttpInfoAsync (int projectId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
@@ -173,8 +178,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListProject</returns>
-        System.Threading.Tasks.Task<ApiResponseListProject> ProjectsGetProjectsForClientAsync (int clientId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListProject> ProjectsGetProjectsForClientAsync (int clientId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get projects for a particular client.    Requires the &#39;ManageClientsAndProjects&#39; or &#39;ManageJobsAndTask&#39; permissions.
@@ -185,8 +191,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListProject)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListProject>> ProjectsGetProjectsForClientAsyncWithHttpInfo (int clientId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListProject>> ProjectsGetProjectsForClientWithHttpInfoAsync (int clientId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
         /// </summary>
@@ -196,8 +203,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> ProjectsUpdateProjectAsync (string xChronosheetsAuth, UpdateProjectRequest request);
+        System.Threading.Tasks.Task<ApiResponseBoolean> ProjectsUpdateProjectAsync (string xChronosheetsAuth, UpdateProjectRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Update a project.    Requires the &#39;ManageClientsAndProjects&#39; permission.
@@ -208,8 +216,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> ProjectsUpdateProjectAsyncWithHttpInfo (string xChronosheetsAuth, UpdateProjectRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> ProjectsUpdateProjectWithHttpInfoAsync (string xChronosheetsAuth, UpdateProjectRequest request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -416,10 +425,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> ProjectsCreateProjectAsync (string xChronosheetsAuth, InsertProjectRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> ProjectsCreateProjectAsync (string xChronosheetsAuth, InsertProjectRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await ProjectsCreateProjectAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await ProjectsCreateProjectWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -430,8 +440,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Project Request object containing values for the new Project to create.  Make sure to specify a correct Client Id - this will be used to attach the new project under that client.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> ProjectsCreateProjectAsyncWithHttpInfo (string xChronosheetsAuth, InsertProjectRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> ProjectsCreateProjectWithHttpInfoAsync (string xChronosheetsAuth, InsertProjectRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -485,7 +496,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -582,10 +593,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseProject</returns>
-        public async System.Threading.Tasks.Task<ApiResponseProject> ProjectsGetProjectByIdAsync (int projectId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseProject> ProjectsGetProjectByIdAsync (int projectId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseProject> localVarResponse = await ProjectsGetProjectByIdAsyncWithHttpInfo(projectId, xChronosheetsAuth);
+             ApiResponse<ApiResponseProject> localVarResponse = await ProjectsGetProjectByIdWithHttpInfoAsync(projectId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -596,8 +608,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="projectId">The ID of the Project you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseProject)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseProject>> ProjectsGetProjectByIdAsyncWithHttpInfo (int projectId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseProject>> ProjectsGetProjectByIdWithHttpInfoAsync (int projectId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'projectId' is set
             if (projectId == null)
@@ -638,7 +651,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -735,10 +748,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListProject</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListProject> ProjectsGetProjectsForClientAsync (int clientId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListProject> ProjectsGetProjectsForClientAsync (int clientId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListProject> localVarResponse = await ProjectsGetProjectsForClientAsyncWithHttpInfo(clientId, xChronosheetsAuth);
+             ApiResponse<ApiResponseListProject> localVarResponse = await ProjectsGetProjectsForClientWithHttpInfoAsync(clientId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -749,8 +763,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="clientId">The ID of the client</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListProject)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListProject>> ProjectsGetProjectsForClientAsyncWithHttpInfo (int clientId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListProject>> ProjectsGetProjectsForClientWithHttpInfoAsync (int clientId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'clientId' is set
             if (clientId == null)
@@ -791,7 +806,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -901,10 +916,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> ProjectsUpdateProjectAsync (string xChronosheetsAuth, UpdateProjectRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> ProjectsUpdateProjectAsync (string xChronosheetsAuth, UpdateProjectRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await ProjectsUpdateProjectAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await ProjectsUpdateProjectWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -915,8 +931,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update Project Request object containing updated fields.  Make sure to specify the Project Id in the request object so that ChronoSheets knows which Project to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> ProjectsUpdateProjectAsyncWithHttpInfo (string xChronosheetsAuth, UpdateProjectRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> ProjectsUpdateProjectWithHttpInfoAsync (string xChronosheetsAuth, UpdateProjectRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -970,7 +987,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

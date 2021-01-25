@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -81,8 +82,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> UserPayRatesCreatePayRateAsync (string xChronosheetsAuth, InsertUserHourlyRateRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> UserPayRatesCreatePayRateAsync (string xChronosheetsAuth, InsertUserHourlyRateRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create a new pay rate for a particular user, archiving the previous pay rate.    Requires the &#39;ManageOrganisationUsers&#39; permission.
@@ -93,8 +95,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> UserPayRatesCreatePayRateAsyncWithHttpInfo (string xChronosheetsAuth, InsertUserHourlyRateRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> UserPayRatesCreatePayRateWithHttpInfoAsync (string xChronosheetsAuth, InsertUserHourlyRateRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
@@ -104,8 +107,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListUserHourlyRate</returns>
-        System.Threading.Tasks.Task<ApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int userId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int userId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a collection of pay rates for a particular user, specified by user id.    Requires the &#39;ManageOrganisationUsers&#39; permission.
@@ -116,8 +120,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListUserHourlyRate)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesAsyncWithHttpInfo (int userId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesWithHttpInfoAsync (int userId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -324,10 +329,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> UserPayRatesCreatePayRateAsync (string xChronosheetsAuth, InsertUserHourlyRateRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> UserPayRatesCreatePayRateAsync (string xChronosheetsAuth, InsertUserHourlyRateRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await UserPayRatesCreatePayRateAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await UserPayRatesCreatePayRateWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -338,8 +344,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert UserHourlyRate Request object containing values for the new UserHourlyRate to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> UserPayRatesCreatePayRateAsyncWithHttpInfo (string xChronosheetsAuth, InsertUserHourlyRateRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> UserPayRatesCreatePayRateWithHttpInfoAsync (string xChronosheetsAuth, InsertUserHourlyRateRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -393,7 +400,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -490,10 +497,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListUserHourlyRate</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int userId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListUserHourlyRate> UserPayRatesGetPayRatesAsync (int userId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListUserHourlyRate> localVarResponse = await UserPayRatesGetPayRatesAsyncWithHttpInfo(userId, xChronosheetsAuth);
+             ApiResponse<ApiResponseListUserHourlyRate> localVarResponse = await UserPayRatesGetPayRatesWithHttpInfoAsync(userId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -504,8 +512,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of the User for which you want to get UserHourlyRate objects</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListUserHourlyRate)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesAsyncWithHttpInfo (int userId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserHourlyRate>> UserPayRatesGetPayRatesWithHttpInfoAsync (int userId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -546,7 +555,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

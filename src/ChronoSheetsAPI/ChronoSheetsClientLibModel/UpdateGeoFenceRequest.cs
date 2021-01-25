@@ -31,9 +31,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class UpdateGeoFenceRequest :  IEquatable<UpdateGeoFenceRequest>, IValidatableObject
     {
         /// <summary>
-        /// Define when you want the alerts to be setn
+        /// Define when you want the alerts to be sent
         /// </summary>
-        /// <value>Define when you want the alerts to be setn</value>
+        /// <value>Define when you want the alerts to be sent</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AlertSettingsEnum
         {
@@ -64,9 +64,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
 
         /// <summary>
-        /// Define when you want the alerts to be setn
+        /// Define when you want the alerts to be sent
         /// </summary>
-        /// <value>Define when you want the alerts to be setn</value>
+        /// <value>Define when you want the alerts to be sent</value>
         [DataMember(Name="AlertSettings", EmitDefaultValue=false)]
         public AlertSettingsEnum? AlertSettings { get; set; }
         /// <summary>
@@ -117,7 +117,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="triggerJobCodeId">The job code to be used when the person enters/leaves the geofence.</param>
         /// <param name="triggerTaskId">The task to be used when the person enters/leaves the geofence.</param>
         /// <param name="sendAlertToOrgGroupId">Send an alert to a user, specified by their user ID.</param>
-        /// <param name="alertSettings">Define when you want the alerts to be setn.</param>
+        /// <param name="alertSettings">Define when you want the alerts to be sent.</param>
         /// <param name="triggerSettings">Define how to you want to trigger the timesheet automation.</param>
         /// <param name="startTimeHour">The start hour in which this geofence should apply.  After this time, the geofence will be active..</param>
         /// <param name="startTimeMinute">The start minute in which this geofence should apply.  After this time, the geofence will be active..</param>
@@ -241,7 +241,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

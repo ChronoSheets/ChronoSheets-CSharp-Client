@@ -34,18 +34,18 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// Initializes a new instance of the <see cref="UserForManagement" /> class.
         /// </summary>
         /// <param name="isAccountActive">isAccountActive.</param>
-        /// <param name="id">id.</param>
-        /// <param name="organisationId">organisationId.</param>
-        /// <param name="userName">userName.</param>
-        /// <param name="firstName">firstName.</param>
-        /// <param name="lastName">lastName.</param>
-        /// <param name="emailAddress">emailAddress.</param>
-        /// <param name="roles">roles.</param>
-        /// <param name="alertSettings">alertSettings.</param>
-        /// <param name="setupWizardRequired">setupWizardRequired.</param>
-        /// <param name="isSubscribedToNewsletter">isSubscribedToNewsletter.</param>
+        /// <param name="id">The ID of the user.</param>
+        /// <param name="organisationId">The ID of the organisation.</param>
+        /// <param name="userName">The username of the user.</param>
+        /// <param name="firstName">The first name of the user.</param>
+        /// <param name="lastName">The last name of the user.</param>
+        /// <param name="emailAddress">The email address of the user.</param>
+        /// <param name="roles">A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details.</param>
+        /// <param name="alertSettings">A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details.</param>
+        /// <param name="setupWizardRequired">Whether or not the setup wizard is required.</param>
+        /// <param name="isSubscribedToNewsletter">Whether or not the user is subscribed to the user.</param>
         /// <param name="organisation">organisation.</param>
-        /// <param name="isPrimaryAccount">isPrimaryAccount.</param>
+        /// <param name="isPrimaryAccount">Whether or not this account is the organisation&#39;s primary account..</param>
         public UserForManagement(bool isAccountActive = default(bool), int id = default(int), int organisationId = default(int), string userName = default(string), string firstName = default(string), string lastName = default(string), string emailAddress = default(string), long roles = default(long), long alertSettings = default(long), bool setupWizardRequired = default(bool), bool isSubscribedToNewsletter = default(bool), Organisation organisation = default(Organisation), bool isPrimaryAccount = default(bool))
         {
             this.IsAccountActive = isAccountActive;
@@ -70,62 +70,72 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public bool IsAccountActive { get; set; }
 
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the user
         /// </summary>
+        /// <value>The ID of the user</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrganisationId
+        /// The ID of the organisation
         /// </summary>
+        /// <value>The ID of the organisation</value>
         [DataMember(Name="OrganisationId", EmitDefaultValue=false)]
         public int OrganisationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserName
+        /// The username of the user
         /// </summary>
+        /// <value>The username of the user</value>
         [DataMember(Name="UserName", EmitDefaultValue=false)]
         public string UserName { get; set; }
 
         /// <summary>
-        /// Gets or Sets FirstName
+        /// The first name of the user
         /// </summary>
+        /// <value>The first name of the user</value>
         [DataMember(Name="FirstName", EmitDefaultValue=false)]
         public string FirstName { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastName
+        /// The last name of the user
         /// </summary>
+        /// <value>The last name of the user</value>
         [DataMember(Name="LastName", EmitDefaultValue=false)]
         public string LastName { get; set; }
 
         /// <summary>
-        /// Gets or Sets EmailAddress
+        /// The email address of the user
         /// </summary>
+        /// <value>The email address of the user</value>
         [DataMember(Name="EmailAddress", EmitDefaultValue=false)]
         public string EmailAddress { get; set; }
 
         /// <summary>
-        /// Gets or Sets Roles
+        /// A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details
         /// </summary>
+        /// <value>A BIT field designating which Roles/Permissions the employee will have when they sign in.  See the {timesheets.types.Enums.UserRoles} Enum for more details</value>
         [DataMember(Name="Roles", EmitDefaultValue=false)]
         public long Roles { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlertSettings
+        /// A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details
         /// </summary>
+        /// <value>A BIT field designating which Alerts the employee will receive.  See the {timesheets.types.Enums.AlertSettings} Enum for more details</value>
         [DataMember(Name="AlertSettings", EmitDefaultValue=false)]
         public long AlertSettings { get; set; }
 
         /// <summary>
-        /// Gets or Sets SetupWizardRequired
+        /// Whether or not the setup wizard is required
         /// </summary>
+        /// <value>Whether or not the setup wizard is required</value>
         [DataMember(Name="SetupWizardRequired", EmitDefaultValue=false)]
         public bool SetupWizardRequired { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsSubscribedToNewsletter
+        /// Whether or not the user is subscribed to the user
         /// </summary>
+        /// <value>Whether or not the user is subscribed to the user</value>
         [DataMember(Name="IsSubscribedToNewsletter", EmitDefaultValue=false)]
         public bool IsSubscribedToNewsletter { get; set; }
 
@@ -136,8 +146,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public Organisation Organisation { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsPrimaryAccount
+        /// Whether or not this account is the organisation&#39;s primary account.
         /// </summary>
+        /// <value>Whether or not this account is the organisation&#39;s primary account.</value>
         [DataMember(Name="IsPrimaryAccount", EmitDefaultValue=false)]
         public bool IsPrimaryAccount { get; set; }
 
@@ -172,7 +183,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

@@ -31,8 +31,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
     public partial class OrgReportTimesheetFileAttachment :  IEquatable<OrgReportTimesheetFileAttachment>, IValidatableObject
     {
         /// <summary>
-        /// Defines MobilePlatform
+        /// The mobile platform that was used to attach the file
         /// </summary>
+        /// <value>The mobile platform that was used to attach the file</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum MobilePlatformEnum
         {
@@ -57,13 +58,15 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
 
         /// <summary>
-        /// Gets or Sets MobilePlatform
+        /// The mobile platform that was used to attach the file
         /// </summary>
+        /// <value>The mobile platform that was used to attach the file</value>
         [DataMember(Name="MobilePlatform", EmitDefaultValue=false)]
         public MobilePlatformEnum? MobilePlatform { get; set; }
         /// <summary>
-        /// Defines AttachmentType
+        /// The type of file attachment
         /// </summary>
+        /// <value>The type of file attachment</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AttachmentTypeEnum
         {
@@ -124,8 +127,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
 
         /// <summary>
-        /// Gets or Sets AttachmentType
+        /// The type of file attachment
         /// </summary>
+        /// <value>The type of file attachment</value>
         [DataMember(Name="AttachmentType", EmitDefaultValue=false)]
         public AttachmentTypeEnum? AttachmentType { get; set; }
         /// <summary>
@@ -135,30 +139,30 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <param name="emailAddress">emailAddress.</param>
         /// <param name="firstName">firstName.</param>
         /// <param name="lastName">lastName.</param>
-        /// <param name="timesheetId">timesheetId.</param>
-        /// <param name="documentS3SignedUrl">documentS3SignedUrl.</param>
-        /// <param name="imageLargeS3SignedUrl">imageLargeS3SignedUrl.</param>
-        /// <param name="imageMediumS3SignedUrl">imageMediumS3SignedUrl.</param>
-        /// <param name="imageSmallS3SignedUrl">imageSmallS3SignedUrl.</param>
-        /// <param name="timesheetStart">timesheetStart.</param>
-        /// <param name="timesheetEnd">timesheetEnd.</param>
-        /// <param name="fileAttachmentId">fileAttachmentId.</param>
-        /// <param name="userId">userId.</param>
-        /// <param name="orgId">orgId.</param>
-        /// <param name="mobilePlatform">mobilePlatform.</param>
-        /// <param name="attachmentType">attachmentType.</param>
-        /// <param name="notes">notes.</param>
-        /// <param name="nonImageFilePath">nonImageFilePath.</param>
-        /// <param name="imageLargeFilePath">imageLargeFilePath.</param>
-        /// <param name="imageMediumFilePath">imageMediumFilePath.</param>
-        /// <param name="imageSmallFilePath">imageSmallFilePath.</param>
-        /// <param name="originalFileName">originalFileName.</param>
-        /// <param name="latitude">latitude.</param>
-        /// <param name="longitude">longitude.</param>
-        /// <param name="dateUploaded">dateUploaded.</param>
-        /// <param name="dateImageCaptured">dateImageCaptured.</param>
-        /// <param name="storageAllocationBytes">storageAllocationBytes.</param>
-        /// <param name="audioDurationSeconds">audioDurationSeconds.</param>
+        /// <param name="timesheetId">The ID of the timesheet this attachment is attached to..</param>
+        /// <param name="documentS3SignedUrl">The limited use signed URL for the document (if it&#39;s not an image).  This URL is unique and will eventually expire.  If the attachment is an image, then this won&#39;t be set..</param>
+        /// <param name="imageLargeS3SignedUrl">The limited use signed URL for the large version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image..</param>
+        /// <param name="imageMediumS3SignedUrl">The limited use signed URL for the medium version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image..</param>
+        /// <param name="imageSmallS3SignedUrl">The limited use signed URL for the small version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image..</param>
+        /// <param name="timesheetStart">The start date and time of the timesheet that this attachment is attached to.</param>
+        /// <param name="timesheetEnd">The end date and time of the timesheet that this attachment is attached to.</param>
+        /// <param name="fileAttachmentId">The ID of the file attachment.</param>
+        /// <param name="userId">The ID of the user who attached the file.</param>
+        /// <param name="orgId">The ID of the organisation that owns the file and employs the employee.</param>
+        /// <param name="mobilePlatform">The mobile platform that was used to attach the file.</param>
+        /// <param name="attachmentType">The type of file attachment.</param>
+        /// <param name="notes">Any notes regarding the file attachment.</param>
+        /// <param name="nonImageFilePath">The path to the file attachment as hosted by ChronoSheets storage, if it&#39;s not an image.  If the attachment is an image then this won&#39;t be set..</param>
+        /// <param name="imageLargeFilePath">The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the large version of the image..</param>
+        /// <param name="imageMediumFilePath">The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the medium version of the image..</param>
+        /// <param name="imageSmallFilePath">The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the small version of the image..</param>
+        /// <param name="originalFileName">The original file name of the attachment.</param>
+        /// <param name="latitude">Meta-data indicating the latitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file..</param>
+        /// <param name="longitude">Meta-data indicating the longitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file..</param>
+        /// <param name="dateUploaded">The date and time the attachment was uploaded.  Time is in UTC..</param>
+        /// <param name="dateImageCaptured">The original date and time the image was captured, if it was an image.  This data originates from the meta data inside the image file..</param>
+        /// <param name="storageAllocationBytes">The number of bytes allocated for storing the file attachment..</param>
+        /// <param name="audioDurationSeconds">If the attachment was an audio file, this field indicates the duration of the audio file in seconds.  This data originates from the meta data inside the audio file..</param>
         public OrgReportTimesheetFileAttachment(string username = default(string), string emailAddress = default(string), string firstName = default(string), string lastName = default(string), int timesheetId = default(int), string documentS3SignedUrl = default(string), string imageLargeS3SignedUrl = default(string), string imageMediumS3SignedUrl = default(string), string imageSmallS3SignedUrl = default(string), DateTime timesheetStart = default(DateTime), DateTime timesheetEnd = default(DateTime), int fileAttachmentId = default(int), int userId = default(int), int orgId = default(int), MobilePlatformEnum? mobilePlatform = default(MobilePlatformEnum?), AttachmentTypeEnum? attachmentType = default(AttachmentTypeEnum?), string notes = default(string), string nonImageFilePath = default(string), string imageLargeFilePath = default(string), string imageMediumFilePath = default(string), string imageSmallFilePath = default(string), string originalFileName = default(string), double latitude = default(double), double longitude = default(double), DateTime dateUploaded = default(DateTime), DateTime dateImageCaptured = default(DateTime), long storageAllocationBytes = default(long), int audioDurationSeconds = default(int))
         {
             this.Username = username;
@@ -216,136 +220,158 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         public string LastName { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimesheetId
+        /// The ID of the timesheet this attachment is attached to.
         /// </summary>
+        /// <value>The ID of the timesheet this attachment is attached to.</value>
         [DataMember(Name="TimesheetId", EmitDefaultValue=false)]
         public int TimesheetId { get; set; }
 
         /// <summary>
-        /// Gets or Sets DocumentS3SignedUrl
+        /// The limited use signed URL for the document (if it&#39;s not an image).  This URL is unique and will eventually expire.  If the attachment is an image, then this won&#39;t be set.
         /// </summary>
+        /// <value>The limited use signed URL for the document (if it&#39;s not an image).  This URL is unique and will eventually expire.  If the attachment is an image, then this won&#39;t be set.</value>
         [DataMember(Name="DocumentS3SignedUrl", EmitDefaultValue=false)]
         public string DocumentS3SignedUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageLargeS3SignedUrl
+        /// The limited use signed URL for the large version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.
         /// </summary>
+        /// <value>The limited use signed URL for the large version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.</value>
         [DataMember(Name="ImageLargeS3SignedUrl", EmitDefaultValue=false)]
         public string ImageLargeS3SignedUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageMediumS3SignedUrl
+        /// The limited use signed URL for the medium version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.
         /// </summary>
+        /// <value>The limited use signed URL for the medium version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.</value>
         [DataMember(Name="ImageMediumS3SignedUrl", EmitDefaultValue=false)]
         public string ImageMediumS3SignedUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageSmallS3SignedUrl
+        /// The limited use signed URL for the small version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.
         /// </summary>
+        /// <value>The limited use signed URL for the small version of the image.  This URL is unique and will eventually expire.  Only set when the attachment is actually an image.</value>
         [DataMember(Name="ImageSmallS3SignedUrl", EmitDefaultValue=false)]
         public string ImageSmallS3SignedUrl { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimesheetStart
+        /// The start date and time of the timesheet that this attachment is attached to
         /// </summary>
+        /// <value>The start date and time of the timesheet that this attachment is attached to</value>
         [DataMember(Name="TimesheetStart", EmitDefaultValue=false)]
         public DateTime TimesheetStart { get; set; }
 
         /// <summary>
-        /// Gets or Sets TimesheetEnd
+        /// The end date and time of the timesheet that this attachment is attached to
         /// </summary>
+        /// <value>The end date and time of the timesheet that this attachment is attached to</value>
         [DataMember(Name="TimesheetEnd", EmitDefaultValue=false)]
         public DateTime TimesheetEnd { get; set; }
 
         /// <summary>
-        /// Gets or Sets FileAttachmentId
+        /// The ID of the file attachment
         /// </summary>
+        /// <value>The ID of the file attachment</value>
         [DataMember(Name="FileAttachmentId", EmitDefaultValue=false)]
         public int FileAttachmentId { get; set; }
 
         /// <summary>
-        /// Gets or Sets UserId
+        /// The ID of the user who attached the file
         /// </summary>
+        /// <value>The ID of the user who attached the file</value>
         [DataMember(Name="UserId", EmitDefaultValue=false)]
         public int UserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrgId
+        /// The ID of the organisation that owns the file and employs the employee
         /// </summary>
+        /// <value>The ID of the organisation that owns the file and employs the employee</value>
         [DataMember(Name="OrgId", EmitDefaultValue=false)]
         public int OrgId { get; set; }
 
 
 
         /// <summary>
-        /// Gets or Sets Notes
+        /// Any notes regarding the file attachment
         /// </summary>
+        /// <value>Any notes regarding the file attachment</value>
         [DataMember(Name="Notes", EmitDefaultValue=false)]
         public string Notes { get; set; }
 
         /// <summary>
-        /// Gets or Sets NonImageFilePath
+        /// The path to the file attachment as hosted by ChronoSheets storage, if it&#39;s not an image.  If the attachment is an image then this won&#39;t be set.
         /// </summary>
+        /// <value>The path to the file attachment as hosted by ChronoSheets storage, if it&#39;s not an image.  If the attachment is an image then this won&#39;t be set.</value>
         [DataMember(Name="NonImageFilePath", EmitDefaultValue=false)]
         public string NonImageFilePath { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageLargeFilePath
+        /// The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the large version of the image.
         /// </summary>
+        /// <value>The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the large version of the image.</value>
         [DataMember(Name="ImageLargeFilePath", EmitDefaultValue=false)]
         public string ImageLargeFilePath { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageMediumFilePath
+        /// The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the medium version of the image.
         /// </summary>
+        /// <value>The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the medium version of the image.</value>
         [DataMember(Name="ImageMediumFilePath", EmitDefaultValue=false)]
         public string ImageMediumFilePath { get; set; }
 
         /// <summary>
-        /// Gets or Sets ImageSmallFilePath
+        /// The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the small version of the image.
         /// </summary>
+        /// <value>The path to the file attachment as hosted by ChronoSheets storage, only set if it&#39;s an image.  This is regarding the small version of the image.</value>
         [DataMember(Name="ImageSmallFilePath", EmitDefaultValue=false)]
         public string ImageSmallFilePath { get; set; }
 
         /// <summary>
-        /// Gets or Sets OriginalFileName
+        /// The original file name of the attachment
         /// </summary>
+        /// <value>The original file name of the attachment</value>
         [DataMember(Name="OriginalFileName", EmitDefaultValue=false)]
         public string OriginalFileName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Latitude
+        /// Meta-data indicating the latitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.
         /// </summary>
+        /// <value>Meta-data indicating the latitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.</value>
         [DataMember(Name="Latitude", EmitDefaultValue=false)]
         public double Latitude { get; set; }
 
         /// <summary>
-        /// Gets or Sets Longitude
+        /// Meta-data indicating the longitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.
         /// </summary>
+        /// <value>Meta-data indicating the longitude of the file attachment.  If the attachment is an image, this data originates from the meta data inside the image file.</value>
         [DataMember(Name="Longitude", EmitDefaultValue=false)]
         public double Longitude { get; set; }
 
         /// <summary>
-        /// Gets or Sets DateUploaded
+        /// The date and time the attachment was uploaded.  Time is in UTC.
         /// </summary>
+        /// <value>The date and time the attachment was uploaded.  Time is in UTC.</value>
         [DataMember(Name="DateUploaded", EmitDefaultValue=false)]
         public DateTime DateUploaded { get; set; }
 
         /// <summary>
-        /// Gets or Sets DateImageCaptured
+        /// The original date and time the image was captured, if it was an image.  This data originates from the meta data inside the image file.
         /// </summary>
+        /// <value>The original date and time the image was captured, if it was an image.  This data originates from the meta data inside the image file.</value>
         [DataMember(Name="DateImageCaptured", EmitDefaultValue=false)]
         public DateTime DateImageCaptured { get; set; }
 
         /// <summary>
-        /// Gets or Sets StorageAllocationBytes
+        /// The number of bytes allocated for storing the file attachment.
         /// </summary>
+        /// <value>The number of bytes allocated for storing the file attachment.</value>
         [DataMember(Name="StorageAllocationBytes", EmitDefaultValue=false)]
         public long StorageAllocationBytes { get; set; }
 
         /// <summary>
-        /// Gets or Sets AudioDurationSeconds
+        /// If the attachment was an audio file, this field indicates the duration of the audio file in seconds.  This data originates from the meta data inside the audio file.
         /// </summary>
+        /// <value>If the attachment was an audio file, this field indicates the duration of the audio file in seconds.  This data originates from the meta data inside the audio file.</value>
         [DataMember(Name="AudioDurationSeconds", EmitDefaultValue=false)]
         public int AudioDurationSeconds { get; set; }
 
@@ -395,7 +421,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

@@ -25,14 +25,15 @@ using OpenAPIDateConverter = ChronoSheetsAPI.Client.OpenAPIDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// ExtendedGeofence
+    /// An extended geofence record
     /// </summary>
     [DataContract]
     public partial class ExtendedGeofence :  IEquatable<ExtendedGeofence>, IValidatableObject
     {
         /// <summary>
-        /// Defines TriggerSettings
+        /// The settings for triggering actions
         /// </summary>
+        /// <value>The settings for triggering actions</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum TriggerSettingsEnum
         {
@@ -63,13 +64,15 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
 
         /// <summary>
-        /// Gets or Sets TriggerSettings
+        /// The settings for triggering actions
         /// </summary>
+        /// <value>The settings for triggering actions</value>
         [DataMember(Name="TriggerSettings", EmitDefaultValue=false)]
         public TriggerSettingsEnum? TriggerSettings { get; set; }
         /// <summary>
-        /// Defines AlertSettings
+        /// The settings for trigger alerts
         /// </summary>
+        /// <value>The settings for trigger alerts</value>
         [JsonConverter(typeof(StringEnumConverter))]
         public enum AlertSettingsEnum
         {
@@ -100,36 +103,37 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
 
         /// <summary>
-        /// Gets or Sets AlertSettings
+        /// The settings for trigger alerts
         /// </summary>
+        /// <value>The settings for trigger alerts</value>
         [DataMember(Name="AlertSettings", EmitDefaultValue=false)]
         public AlertSettingsEnum? AlertSettings { get; set; }
         /// <summary>
         /// Initializes a new instance of the <see cref="ExtendedGeofence" /> class.
         /// </summary>
-        /// <param name="jobCode">jobCode.</param>
-        /// <param name="taskName">taskName.</param>
-        /// <param name="createdBy">createdBy.</param>
-        /// <param name="updatedBy">updatedBy.</param>
-        /// <param name="alertOrganisation">alertOrganisation.</param>
-        /// <param name="geoFencingId">geoFencingId.</param>
-        /// <param name="orgId">orgId.</param>
-        /// <param name="createdByUserId">createdByUserId.</param>
-        /// <param name="lastUpdatedByUserId">lastUpdatedByUserId.</param>
-        /// <param name="name">name.</param>
-        /// <param name="locationName">locationName.</param>
-        /// <param name="coordinates">coordinates.</param>
-        /// <param name="createdAt">createdAt.</param>
-        /// <param name="updatedAt">updatedAt.</param>
-        /// <param name="triggerJobCodeId">triggerJobCodeId.</param>
-        /// <param name="triggerTaskId">triggerTaskId.</param>
-        /// <param name="triggerSettings">triggerSettings.</param>
-        /// <param name="alertToOrgGroupId">alertToOrgGroupId.</param>
-        /// <param name="alertSettings">alertSettings.</param>
-        /// <param name="startTimeHour">startTimeHour.</param>
-        /// <param name="startTimeMinute">startTimeMinute.</param>
-        /// <param name="endTimeHour">endTimeHour.</param>
-        /// <param name="endTimeMinute">endTimeMinute.</param>
+        /// <param name="jobCode">The Job code used when the employee enters/exits the geofence.</param>
+        /// <param name="taskName">The name of the task used when the employee enters/exits the geofence.</param>
+        /// <param name="createdBy">The name of the employee who created the geofence.</param>
+        /// <param name="updatedBy">The name of the employee who last updated the geofence.</param>
+        /// <param name="alertOrganisation">The name of the organisation group who will be notified when the geofence is triggered.</param>
+        /// <param name="geoFencingId">The ID of the geofence.</param>
+        /// <param name="orgId">The ID of the organisation owning the geofence record.</param>
+        /// <param name="createdByUserId">The ID of the user/employee who created the geofence.</param>
+        /// <param name="lastUpdatedByUserId">The ID of the user/employee who last updated the geofence.</param>
+        /// <param name="name">A descriptive name of the geofence.</param>
+        /// <param name="locationName">The name of the approx. location of the geofence.</param>
+        /// <param name="coordinates">A list of co-ordinates specifying the geofence.</param>
+        /// <param name="createdAt">The date and time the geofence was created.  Time is in UTC..</param>
+        /// <param name="updatedAt">The date and time the geofence was updated last.  Time is in UTC..</param>
+        /// <param name="triggerJobCodeId">The ID of the job code used when the employee enters/exits the geofence.</param>
+        /// <param name="triggerTaskId">The ID of the task used when the employee enters/exits the geofence.</param>
+        /// <param name="triggerSettings">The settings for triggering actions.</param>
+        /// <param name="alertToOrgGroupId">The organisation group that will be notified when the geofence is triggered.</param>
+        /// <param name="alertSettings">The settings for trigger alerts.</param>
+        /// <param name="startTimeHour">The hour start time. E.g. 13 would be 1pm.  Time is in 24hr format..</param>
+        /// <param name="startTimeMinute">The minute start time.  E.g. 46 would be the 46th minute of the hour..</param>
+        /// <param name="endTimeHour">The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format..</param>
+        /// <param name="endTimeMinute">The minute end time.  E.g. 13 would be the 13th minute of the hour..</param>
         public ExtendedGeofence(string jobCode = default(string), string taskName = default(string), string createdBy = default(string), string updatedBy = default(string), string alertOrganisation = default(string), int geoFencingId = default(int), int orgId = default(int), int createdByUserId = default(int), int lastUpdatedByUserId = default(int), string name = default(string), string locationName = default(string), List<BasicCoordinate> coordinates = default(List<BasicCoordinate>), DateTime createdAt = default(DateTime), DateTime updatedAt = default(DateTime), int triggerJobCodeId = default(int), int triggerTaskId = default(int), TriggerSettingsEnum? triggerSettings = default(TriggerSettingsEnum?), int alertToOrgGroupId = default(int), AlertSettingsEnum? alertSettings = default(AlertSettingsEnum?), int startTimeHour = default(int), int startTimeMinute = default(int), int endTimeHour = default(int), int endTimeMinute = default(int))
         {
             this.JobCode = jobCode;
@@ -158,130 +162,151 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets JobCode
+        /// The Job code used when the employee enters/exits the geofence
         /// </summary>
+        /// <value>The Job code used when the employee enters/exits the geofence</value>
         [DataMember(Name="JobCode", EmitDefaultValue=false)]
         public string JobCode { get; set; }
 
         /// <summary>
-        /// Gets or Sets TaskName
+        /// The name of the task used when the employee enters/exits the geofence
         /// </summary>
+        /// <value>The name of the task used when the employee enters/exits the geofence</value>
         [DataMember(Name="TaskName", EmitDefaultValue=false)]
         public string TaskName { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedBy
+        /// The name of the employee who created the geofence
         /// </summary>
+        /// <value>The name of the employee who created the geofence</value>
         [DataMember(Name="CreatedBy", EmitDefaultValue=false)]
         public string CreatedBy { get; set; }
 
         /// <summary>
-        /// Gets or Sets UpdatedBy
+        /// The name of the employee who last updated the geofence
         /// </summary>
+        /// <value>The name of the employee who last updated the geofence</value>
         [DataMember(Name="UpdatedBy", EmitDefaultValue=false)]
         public string UpdatedBy { get; set; }
 
         /// <summary>
-        /// Gets or Sets AlertOrganisation
+        /// The name of the organisation group who will be notified when the geofence is triggered
         /// </summary>
+        /// <value>The name of the organisation group who will be notified when the geofence is triggered</value>
         [DataMember(Name="AlertOrganisation", EmitDefaultValue=false)]
         public string AlertOrganisation { get; set; }
 
         /// <summary>
-        /// Gets or Sets GeoFencingId
+        /// The ID of the geofence
         /// </summary>
+        /// <value>The ID of the geofence</value>
         [DataMember(Name="GeoFencingId", EmitDefaultValue=false)]
         public int GeoFencingId { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrgId
+        /// The ID of the organisation owning the geofence record
         /// </summary>
+        /// <value>The ID of the organisation owning the geofence record</value>
         [DataMember(Name="OrgId", EmitDefaultValue=false)]
         public int OrgId { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedByUserId
+        /// The ID of the user/employee who created the geofence
         /// </summary>
+        /// <value>The ID of the user/employee who created the geofence</value>
         [DataMember(Name="CreatedByUserId", EmitDefaultValue=false)]
         public int CreatedByUserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets LastUpdatedByUserId
+        /// The ID of the user/employee who last updated the geofence
         /// </summary>
+        /// <value>The ID of the user/employee who last updated the geofence</value>
         [DataMember(Name="LastUpdatedByUserId", EmitDefaultValue=false)]
         public int LastUpdatedByUserId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// A descriptive name of the geofence
         /// </summary>
+        /// <value>A descriptive name of the geofence</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets LocationName
+        /// The name of the approx. location of the geofence
         /// </summary>
+        /// <value>The name of the approx. location of the geofence</value>
         [DataMember(Name="LocationName", EmitDefaultValue=false)]
         public string LocationName { get; set; }
 
         /// <summary>
-        /// Gets or Sets Coordinates
+        /// A list of co-ordinates specifying the geofence
         /// </summary>
+        /// <value>A list of co-ordinates specifying the geofence</value>
         [DataMember(Name="Coordinates", EmitDefaultValue=false)]
         public List<BasicCoordinate> Coordinates { get; set; }
 
         /// <summary>
-        /// Gets or Sets CreatedAt
+        /// The date and time the geofence was created.  Time is in UTC.
         /// </summary>
+        /// <value>The date and time the geofence was created.  Time is in UTC.</value>
         [DataMember(Name="CreatedAt", EmitDefaultValue=false)]
         public DateTime CreatedAt { get; set; }
 
         /// <summary>
-        /// Gets or Sets UpdatedAt
+        /// The date and time the geofence was updated last.  Time is in UTC.
         /// </summary>
+        /// <value>The date and time the geofence was updated last.  Time is in UTC.</value>
         [DataMember(Name="UpdatedAt", EmitDefaultValue=false)]
         public DateTime UpdatedAt { get; set; }
 
         /// <summary>
-        /// Gets or Sets TriggerJobCodeId
+        /// The ID of the job code used when the employee enters/exits the geofence
         /// </summary>
+        /// <value>The ID of the job code used when the employee enters/exits the geofence</value>
         [DataMember(Name="TriggerJobCodeId", EmitDefaultValue=false)]
         public int TriggerJobCodeId { get; set; }
 
         /// <summary>
-        /// Gets or Sets TriggerTaskId
+        /// The ID of the task used when the employee enters/exits the geofence
         /// </summary>
+        /// <value>The ID of the task used when the employee enters/exits the geofence</value>
         [DataMember(Name="TriggerTaskId", EmitDefaultValue=false)]
         public int TriggerTaskId { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets AlertToOrgGroupId
+        /// The organisation group that will be notified when the geofence is triggered
         /// </summary>
+        /// <value>The organisation group that will be notified when the geofence is triggered</value>
         [DataMember(Name="AlertToOrgGroupId", EmitDefaultValue=false)]
         public int AlertToOrgGroupId { get; set; }
 
 
         /// <summary>
-        /// Gets or Sets StartTimeHour
+        /// The hour start time. E.g. 13 would be 1pm.  Time is in 24hr format.
         /// </summary>
+        /// <value>The hour start time. E.g. 13 would be 1pm.  Time is in 24hr format.</value>
         [DataMember(Name="StartTimeHour", EmitDefaultValue=false)]
         public int StartTimeHour { get; set; }
 
         /// <summary>
-        /// Gets or Sets StartTimeMinute
+        /// The minute start time.  E.g. 46 would be the 46th minute of the hour.
         /// </summary>
+        /// <value>The minute start time.  E.g. 46 would be the 46th minute of the hour.</value>
         [DataMember(Name="StartTimeMinute", EmitDefaultValue=false)]
         public int StartTimeMinute { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndTimeHour
+        /// The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format.
         /// </summary>
+        /// <value>The hour end time. E.g. 21 would be 9pm.  Time is in 24hr format.</value>
         [DataMember(Name="EndTimeHour", EmitDefaultValue=false)]
         public int EndTimeHour { get; set; }
 
         /// <summary>
-        /// Gets or Sets EndTimeMinute
+        /// The minute end time.  E.g. 13 would be the 13th minute of the hour.
         /// </summary>
+        /// <value>The minute end time.  E.g. 13 would be the 13th minute of the hour.</value>
         [DataMember(Name="EndTimeMinute", EmitDefaultValue=false)]
         public int EndTimeMinute { get; set; }
 
@@ -326,7 +351,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

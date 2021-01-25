@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -81,8 +82,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListUserForManagement</returns>
-        System.Threading.Tasks.Task<ApiResponseListUserForManagement> OrganisationGroupUsersGetOrganisationGroupUsersAsync (int orgGroupId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListUserForManagement> OrganisationGroupUsersGetOrganisationGroupUsersAsync (int orgGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a collection of organisation group users that belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; or &#39;ManageOrganisationUsers&#39; permissions.
@@ -93,8 +95,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListUserForManagement)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserForManagement>> OrganisationGroupUsersGetOrganisationGroupUsersAsyncWithHttpInfo (int orgGroupId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserForManagement>> OrganisationGroupUsersGetOrganisationGroupUsersWithHttpInfoAsync (int orgGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
         /// </summary>
@@ -104,8 +107,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupUsersUpdateOrganisationGroupUsersAsync (string xChronosheetsAuth, SetOrganisationGroupUsersRequest request);
+        System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupUsersUpdateOrganisationGroupUsersAsync (string xChronosheetsAuth, SetOrganisationGroupUsersRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Set the users who belong to an organisation group.    Requires the &#39;ManageOrganisationGroups&#39; permissions.
@@ -116,8 +120,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupUsersUpdateOrganisationGroupUsersAsyncWithHttpInfo (string xChronosheetsAuth, SetOrganisationGroupUsersRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupUsersUpdateOrganisationGroupUsersWithHttpInfoAsync (string xChronosheetsAuth, SetOrganisationGroupUsersRequest request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -311,10 +316,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListUserForManagement</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListUserForManagement> OrganisationGroupUsersGetOrganisationGroupUsersAsync (int orgGroupId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListUserForManagement> OrganisationGroupUsersGetOrganisationGroupUsersAsync (int orgGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListUserForManagement> localVarResponse = await OrganisationGroupUsersGetOrganisationGroupUsersAsyncWithHttpInfo(orgGroupId, xChronosheetsAuth);
+             ApiResponse<ApiResponseListUserForManagement> localVarResponse = await OrganisationGroupUsersGetOrganisationGroupUsersWithHttpInfoAsync(orgGroupId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -325,8 +331,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="orgGroupId">An OrganisationGroup Id</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListUserForManagement)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserForManagement>> OrganisationGroupUsersGetOrganisationGroupUsersAsyncWithHttpInfo (int orgGroupId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListUserForManagement>> OrganisationGroupUsersGetOrganisationGroupUsersWithHttpInfoAsync (int orgGroupId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'orgGroupId' is set
             if (orgGroupId == null)
@@ -367,7 +374,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -477,10 +484,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupUsersUpdateOrganisationGroupUsersAsync (string xChronosheetsAuth, SetOrganisationGroupUsersRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> OrganisationGroupUsersUpdateOrganisationGroupUsersAsync (string xChronosheetsAuth, SetOrganisationGroupUsersRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await OrganisationGroupUsersUpdateOrganisationGroupUsersAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await OrganisationGroupUsersUpdateOrganisationGroupUsersWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -491,8 +499,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A request object specifying which users belong to an organisation group.  Make sure to specify the OrganisationGroup Id in the request object so that ChronoSheets knows which OrganisationGroup to update. CsvUserIds is a comma separated list of User Ids, e.g. 1,2,3,4</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupUsersUpdateOrganisationGroupUsersAsyncWithHttpInfo (string xChronosheetsAuth, SetOrganisationGroupUsersRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> OrganisationGroupUsersUpdateOrganisationGroupUsersWithHttpInfoAsync (string xChronosheetsAuth, SetOrganisationGroupUsersRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -546,7 +555,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

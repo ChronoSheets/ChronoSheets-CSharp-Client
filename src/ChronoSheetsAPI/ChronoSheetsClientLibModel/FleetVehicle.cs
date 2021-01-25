@@ -25,7 +25,7 @@ using OpenAPIDateConverter = ChronoSheetsAPI.Client.OpenAPIDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// FleetVehicle
+    /// A vehicle within the fleet
     /// </summary>
     [DataContract]
     public partial class FleetVehicle :  IEquatable<FleetVehicle>, IValidatableObject
@@ -33,16 +33,16 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="FleetVehicle" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="organisationId">organisationId.</param>
-        /// <param name="name">name.</param>
-        /// <param name="costPerKilometer">costPerKilometer.</param>
-        /// <param name="make">make.</param>
-        /// <param name="model">model.</param>
-        /// <param name="year">year.</param>
-        /// <param name="licencePlateNumber">licencePlateNumber.</param>
-        /// <param name="isDeleted">isDeleted.</param>
-        /// <param name="permittedEmployees">permittedEmployees.</param>
+        /// <param name="id">The ID of the vehicle.</param>
+        /// <param name="organisationId">The ID of the organisation managing the vehicle.</param>
+        /// <param name="name">A name given to the vehicle.</param>
+        /// <param name="costPerKilometer">The cost, in dollars, of running the vehicle over one kilometer.</param>
+        /// <param name="make">The make of the vehicle.</param>
+        /// <param name="model">The model of the vehicle.</param>
+        /// <param name="year">The year the vehicle was manufactured.</param>
+        /// <param name="licencePlateNumber">The licence plate number of the vehicle.</param>
+        /// <param name="isDeleted">Whether or not the vehicle is deleted.</param>
+        /// <param name="permittedEmployees">An array of employee IDs that are permitted to use the vehicle.</param>
         public FleetVehicle(int id = default(int), int organisationId = default(int), string name = default(string), double costPerKilometer = default(double), string make = default(string), string model = default(string), string year = default(string), string licencePlateNumber = default(string), bool isDeleted = default(bool), List<int> permittedEmployees = default(List<int>))
         {
             this.Id = id;
@@ -58,62 +58,72 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the vehicle
         /// </summary>
+        /// <value>The ID of the vehicle</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrganisationId
+        /// The ID of the organisation managing the vehicle
         /// </summary>
+        /// <value>The ID of the organisation managing the vehicle</value>
         [DataMember(Name="OrganisationId", EmitDefaultValue=false)]
         public int OrganisationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets Name
+        /// A name given to the vehicle
         /// </summary>
+        /// <value>A name given to the vehicle</value>
         [DataMember(Name="Name", EmitDefaultValue=false)]
         public string Name { get; set; }
 
         /// <summary>
-        /// Gets or Sets CostPerKilometer
+        /// The cost, in dollars, of running the vehicle over one kilometer
         /// </summary>
+        /// <value>The cost, in dollars, of running the vehicle over one kilometer</value>
         [DataMember(Name="CostPerKilometer", EmitDefaultValue=false)]
         public double CostPerKilometer { get; set; }
 
         /// <summary>
-        /// Gets or Sets Make
+        /// The make of the vehicle
         /// </summary>
+        /// <value>The make of the vehicle</value>
         [DataMember(Name="Make", EmitDefaultValue=false)]
         public string Make { get; set; }
 
         /// <summary>
-        /// Gets or Sets Model
+        /// The model of the vehicle
         /// </summary>
+        /// <value>The model of the vehicle</value>
         [DataMember(Name="Model", EmitDefaultValue=false)]
         public string Model { get; set; }
 
         /// <summary>
-        /// Gets or Sets Year
+        /// The year the vehicle was manufactured
         /// </summary>
+        /// <value>The year the vehicle was manufactured</value>
         [DataMember(Name="Year", EmitDefaultValue=false)]
         public string Year { get; set; }
 
         /// <summary>
-        /// Gets or Sets LicencePlateNumber
+        /// The licence plate number of the vehicle
         /// </summary>
+        /// <value>The licence plate number of the vehicle</value>
         [DataMember(Name="LicencePlateNumber", EmitDefaultValue=false)]
         public string LicencePlateNumber { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsDeleted
+        /// Whether or not the vehicle is deleted
         /// </summary>
+        /// <value>Whether or not the vehicle is deleted</value>
         [DataMember(Name="IsDeleted", EmitDefaultValue=false)]
         public bool IsDeleted { get; set; }
 
         /// <summary>
-        /// Gets or Sets PermittedEmployees
+        /// An array of employee IDs that are permitted to use the vehicle
         /// </summary>
+        /// <value>An array of employee IDs that are permitted to use the vehicle</value>
         [DataMember(Name="PermittedEmployees", EmitDefaultValue=false)]
         public List<int> PermittedEmployees { get; set; }
 
@@ -145,7 +155,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -171,8 +172,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        System.Threading.Tasks.Task<ApiResponseInt32> TasksCreateTaskAsync (string xChronosheetsAuth, InsertTaskRequest request);
+        System.Threading.Tasks.Task<ApiResponseInt32> TasksCreateTaskAsync (string xChronosheetsAuth, InsertTaskRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Create a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
@@ -183,8 +185,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TasksCreateTaskAsyncWithHttpInfo (string xChronosheetsAuth, InsertTaskRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TasksCreateTaskWithHttpInfoAsync (string xChronosheetsAuth, InsertTaskRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
@@ -194,8 +197,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> TasksDeleteTaskAsync (int taskId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseBoolean> TasksDeleteTaskAsync (int taskId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Delete a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
@@ -206,8 +210,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TasksDeleteTaskAsyncWithHttpInfo (int taskId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TasksDeleteTaskWithHttpInfoAsync (int taskId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
@@ -217,8 +222,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTimesheetTask</returns>
-        System.Threading.Tasks.Task<ApiResponseTimesheetTask> TasksGetTaskByIdAsync (int taskId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseTimesheetTask> TasksGetTaskByIdAsync (int taskId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a particular task by Id.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
@@ -229,8 +235,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTimesheetTask)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseTimesheetTask>> TasksGetTaskByIdAsyncWithHttpInfo (int taskId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseTimesheetTask>> TasksGetTaskByIdWithHttpInfoAsync (int taskId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
@@ -239,8 +246,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListTimesheetTask</returns>
-        System.Threading.Tasks.Task<ApiResponseListTimesheetTask> TasksGetTasksAsync (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListTimesheetTask> TasksGetTasksAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get tasks in your organisation.   Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
@@ -250,8 +258,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListTimesheetTask)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheetTask>> TasksGetTasksAsyncWithHttpInfo (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheetTask>> TasksGetTasksWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
         /// </summary>
@@ -261,8 +270,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListTimesheetTask</returns>
-        System.Threading.Tasks.Task<ApiResponseListTimesheetTask> TasksGetTasksForJobAsync (int jobId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListTimesheetTask> TasksGetTasksForJobAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get a collection of tasks for a particular Job, specified by JobId.    Requires the &#39;SubmitTimesheets&#39; or &#39;ManageJobsAndTask&#39; permissions.
@@ -273,8 +283,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListTimesheetTask)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheetTask>> TasksGetTasksForJobAsyncWithHttpInfo (int jobId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheetTask>> TasksGetTasksForJobWithHttpInfoAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
         /// </summary>
@@ -284,8 +295,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> TasksUpdateTaskAsync (string xChronosheetsAuth, UpdateTaskRequest request);
+        System.Threading.Tasks.Task<ApiResponseBoolean> TasksUpdateTaskAsync (string xChronosheetsAuth, UpdateTaskRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Update a task.    Requires the &#39;ManageJobsAndTask&#39; permission.
@@ -296,8 +308,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TasksUpdateTaskAsyncWithHttpInfo (string xChronosheetsAuth, UpdateTaskRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TasksUpdateTaskWithHttpInfoAsync (string xChronosheetsAuth, UpdateTaskRequest request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -504,10 +517,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseInt32</returns>
-        public async System.Threading.Tasks.Task<ApiResponseInt32> TasksCreateTaskAsync (string xChronosheetsAuth, InsertTaskRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseInt32> TasksCreateTaskAsync (string xChronosheetsAuth, InsertTaskRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseInt32> localVarResponse = await TasksCreateTaskAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseInt32> localVarResponse = await TasksCreateTaskWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -518,8 +532,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Insert Task Request object containing values for the new Task to create</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseInt32)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TasksCreateTaskAsyncWithHttpInfo (string xChronosheetsAuth, InsertTaskRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseInt32>> TasksCreateTaskWithHttpInfoAsync (string xChronosheetsAuth, InsertTaskRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -573,7 +588,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -670,10 +685,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> TasksDeleteTaskAsync (int taskId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> TasksDeleteTaskAsync (int taskId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await TasksDeleteTaskAsyncWithHttpInfo(taskId, xChronosheetsAuth);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await TasksDeleteTaskWithHttpInfoAsync(taskId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -684,8 +700,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskId">The ID of the Task you want to delete</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TasksDeleteTaskAsyncWithHttpInfo (int taskId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TasksDeleteTaskWithHttpInfoAsync (int taskId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'taskId' is set
             if (taskId == null)
@@ -726,7 +743,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -823,10 +840,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseTimesheetTask</returns>
-        public async System.Threading.Tasks.Task<ApiResponseTimesheetTask> TasksGetTaskByIdAsync (int taskId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseTimesheetTask> TasksGetTaskByIdAsync (int taskId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseTimesheetTask> localVarResponse = await TasksGetTaskByIdAsyncWithHttpInfo(taskId, xChronosheetsAuth);
+             ApiResponse<ApiResponseTimesheetTask> localVarResponse = await TasksGetTaskByIdWithHttpInfoAsync(taskId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -837,8 +855,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="taskId">The ID of the TimesheetTask you want to get</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseTimesheetTask)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTimesheetTask>> TasksGetTaskByIdAsyncWithHttpInfo (int taskId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseTimesheetTask>> TasksGetTaskByIdWithHttpInfoAsync (int taskId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'taskId' is set
             if (taskId == null)
@@ -879,7 +898,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -969,10 +988,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListTimesheetTask</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListTimesheetTask> TasksGetTasksAsync (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListTimesheetTask> TasksGetTasksAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListTimesheetTask> localVarResponse = await TasksGetTasksAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<ApiResponseListTimesheetTask> localVarResponse = await TasksGetTasksWithHttpInfoAsync(xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -982,8 +1002,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListTimesheetTask)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheetTask>> TasksGetTasksAsyncWithHttpInfo (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheetTask>> TasksGetTasksWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -1020,7 +1041,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1117,10 +1138,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListTimesheetTask</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListTimesheetTask> TasksGetTasksForJobAsync (int jobId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListTimesheetTask> TasksGetTasksForJobAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListTimesheetTask> localVarResponse = await TasksGetTasksForJobAsyncWithHttpInfo(jobId, xChronosheetsAuth);
+             ApiResponse<ApiResponseListTimesheetTask> localVarResponse = await TasksGetTasksForJobWithHttpInfoAsync(jobId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1131,8 +1153,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="jobId">The ID of the job</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListTimesheetTask)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheetTask>> TasksGetTasksForJobAsyncWithHttpInfo (int jobId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListTimesheetTask>> TasksGetTasksForJobWithHttpInfoAsync (int jobId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'jobId' is set
             if (jobId == null)
@@ -1173,7 +1196,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1283,10 +1306,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> TasksUpdateTaskAsync (string xChronosheetsAuth, UpdateTaskRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> TasksUpdateTaskAsync (string xChronosheetsAuth, UpdateTaskRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await TasksUpdateTaskAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await TasksUpdateTaskWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1297,8 +1321,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update Task Request object containing updated fields.  Make sure to specify the Task Id in the request object so that ChronoSheets knows which Task to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TasksUpdateTaskAsyncWithHttpInfo (string xChronosheetsAuth, UpdateTaskRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> TasksUpdateTaskWithHttpInfoAsync (string xChronosheetsAuth, UpdateTaskRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -1352,7 +1377,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

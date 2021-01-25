@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -81,8 +82,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of the User for which you want to get UsualHours for</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListUsualHoursDay</returns>
-        System.Threading.Tasks.Task<ApiResponseListUsualHoursDay> UsualHoursGetUsualHoursAsync (int userId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseListUsualHoursDay> UsualHoursGetUsualHoursAsync (int userId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; permission.
@@ -93,8 +95,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of the User for which you want to get UsualHours for</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListUsualHoursDay)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseListUsualHoursDay>> UsualHoursGetUsualHoursAsyncWithHttpInfo (int userId, string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseListUsualHoursDay>> UsualHoursGetUsualHoursWithHttpInfoAsync (int userId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; permission.
         /// </summary>
@@ -104,8 +107,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> UsualHoursSetUsualHoursAsync (string xChronosheetsAuth, SetUsualHoursRequest request);
+        System.Threading.Tasks.Task<ApiResponseBoolean> UsualHoursSetUsualHoursAsync (string xChronosheetsAuth, SetUsualHoursRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Set usual hours (rostered hours) for an employee.  Requires the &#39;ManageOrganisationUsers&#39; permission.
@@ -116,8 +120,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UsualHoursSetUsualHoursAsyncWithHttpInfo (string xChronosheetsAuth, SetUsualHoursRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UsualHoursSetUsualHoursWithHttpInfoAsync (string xChronosheetsAuth, SetUsualHoursRequest request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -311,10 +316,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of the User for which you want to get UsualHours for</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseListUsualHoursDay</returns>
-        public async System.Threading.Tasks.Task<ApiResponseListUsualHoursDay> UsualHoursGetUsualHoursAsync (int userId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseListUsualHoursDay> UsualHoursGetUsualHoursAsync (int userId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseListUsualHoursDay> localVarResponse = await UsualHoursGetUsualHoursAsyncWithHttpInfo(userId, xChronosheetsAuth);
+             ApiResponse<ApiResponseListUsualHoursDay> localVarResponse = await UsualHoursGetUsualHoursWithHttpInfoAsync(userId, xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -325,8 +331,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="userId">The ID of the User for which you want to get UsualHours for</param>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseListUsualHoursDay)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListUsualHoursDay>> UsualHoursGetUsualHoursAsyncWithHttpInfo (int userId, string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseListUsualHoursDay>> UsualHoursGetUsualHoursWithHttpInfoAsync (int userId, string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'userId' is set
             if (userId == null)
@@ -367,7 +374,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -477,10 +484,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> UsualHoursSetUsualHoursAsync (string xChronosheetsAuth, SetUsualHoursRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> UsualHoursSetUsualHoursAsync (string xChronosheetsAuth, SetUsualHoursRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await UsualHoursSetUsualHoursAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await UsualHoursSetUsualHoursWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -491,8 +499,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">A Set UsualHours Request object containing updated data.  Make sure to specify the Day types in the request object so that ChronoSheets knows which Days to update</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UsualHoursSetUsualHoursAsyncWithHttpInfo (string xChronosheetsAuth, SetUsualHoursRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UsualHoursSetUsualHoursWithHttpInfoAsync (string xChronosheetsAuth, SetUsualHoursRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -546,7 +555,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 

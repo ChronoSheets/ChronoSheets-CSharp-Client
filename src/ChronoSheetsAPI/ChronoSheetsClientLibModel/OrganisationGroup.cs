@@ -25,7 +25,7 @@ using OpenAPIDateConverter = ChronoSheetsAPI.Client.OpenAPIDateConverter;
 namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
 {
     /// <summary>
-    /// OrganisationGroup
+    /// An organisation group.  Organisation groups are used throughout ChronoSheets to assign many groups to one alert, action or restriction.  E.g. you can assign an organisation group to receive geofence alerts, or you could restrict access to vehicles to users within an organisation group.
     /// </summary>
     [DataContract]
     public partial class OrganisationGroup :  IEquatable<OrganisationGroup>, IValidatableObject
@@ -33,10 +33,10 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <summary>
         /// Initializes a new instance of the <see cref="OrganisationGroup" /> class.
         /// </summary>
-        /// <param name="id">id.</param>
-        /// <param name="organisationId">organisationId.</param>
-        /// <param name="organisationGroupName">organisationGroupName.</param>
-        /// <param name="isDeleted">isDeleted.</param>
+        /// <param name="id">The ID of the organisation group.</param>
+        /// <param name="organisationId">The ID of the organisation.</param>
+        /// <param name="organisationGroupName">The descriptive name of the organisation group.</param>
+        /// <param name="isDeleted">Whether or not the organisation group is deleted.</param>
         public OrganisationGroup(int id = default(int), int organisationId = default(int), string organisationGroupName = default(string), bool isDeleted = default(bool))
         {
             this.Id = id;
@@ -46,26 +46,30 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         }
         
         /// <summary>
-        /// Gets or Sets Id
+        /// The ID of the organisation group
         /// </summary>
+        /// <value>The ID of the organisation group</value>
         [DataMember(Name="Id", EmitDefaultValue=false)]
         public int Id { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrganisationId
+        /// The ID of the organisation
         /// </summary>
+        /// <value>The ID of the organisation</value>
         [DataMember(Name="OrganisationId", EmitDefaultValue=false)]
         public int OrganisationId { get; set; }
 
         /// <summary>
-        /// Gets or Sets OrganisationGroupName
+        /// The descriptive name of the organisation group
         /// </summary>
+        /// <value>The descriptive name of the organisation group</value>
         [DataMember(Name="OrganisationGroupName", EmitDefaultValue=false)]
         public string OrganisationGroupName { get; set; }
 
         /// <summary>
-        /// Gets or Sets IsDeleted
+        /// Whether or not the organisation group is deleted
         /// </summary>
+        /// <value>Whether or not the organisation group is deleted</value>
         [DataMember(Name="IsDeleted", EmitDefaultValue=false)]
         public bool IsDeleted { get; set; }
 
@@ -91,7 +95,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibModel
         /// <returns>JSON string presentation of the object</returns>
         public virtual string ToJson()
         {
-            return JsonConvert.SerializeObject(this, Formatting.Indented);
+            return Newtonsoft.Json.JsonConvert.SerializeObject(this, Newtonsoft.Json.Formatting.Indented);
         }
 
         /// <summary>

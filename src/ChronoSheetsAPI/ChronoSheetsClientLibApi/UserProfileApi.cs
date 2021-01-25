@@ -12,6 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading;
 using RestSharp;
 using ChronoSheetsAPI.Client;
 using ChronoSheetsAPI.ChronoSheetsClientLibModel;
@@ -141,8 +142,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A request object containing your username/email and password.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseDoLoginResponse</returns>
-        System.Threading.Tasks.Task<ApiResponseDoLoginResponse> UserProfileDoLoginAsync (DoLoginRequest request);
+        System.Threading.Tasks.Task<ApiResponseDoLoginResponse> UserProfileDoLoginAsync (DoLoginRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Login to your ChronoSheets account and obtain an Auth Token which you can use for other ChronoSheets API methods.    Does not require any special permissions.
@@ -152,8 +154,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A request object containing your username/email and password.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseDoLoginResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseDoLoginResponse>> UserProfileDoLoginAsyncWithHttpInfo (DoLoginRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseDoLoginResponse>> UserProfileDoLoginWithHttpInfoAsync (DoLoginRequest request, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
         /// </summary>
@@ -162,8 +165,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> UserProfileDoLogoutAsync (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseBoolean> UserProfileDoLogoutAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Logout of your ChronoSheets account.  This method ends and deletes your active session.    Does not require any special permissions.
@@ -173,8 +177,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserProfileDoLogoutAsyncWithHttpInfo (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserProfileDoLogoutWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
         /// </summary>
@@ -183,8 +188,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseUserProfile</returns>
-        System.Threading.Tasks.Task<ApiResponseUserProfile> UserProfileGetMyProfileAsync (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseUserProfile> UserProfileGetMyProfileAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Get your own profile.  Use this method to obtain detailed information about your ChronoSheets user profile.    Does not require any special permissions.
@@ -194,8 +200,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseUserProfile)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseUserProfile>> UserProfileGetMyProfileAsyncWithHttpInfo (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseUserProfile>> UserProfileGetMyProfileWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
         /// </summary>
@@ -204,8 +211,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        System.Threading.Tasks.Task<ApiResponseBoolean> UserProfileKeepSessionAliveAsync (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponseBoolean> UserProfileKeepSessionAliveAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Keep a session alive.  Use this method to keep a session active.  You could use this to &#39;ping&#39; ChronoSheets every &#39;x&#39; minutes to make sure your Auth Token will keep working.    Does not require any special permissions.
@@ -215,8 +223,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </remarks>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserProfileKeepSessionAliveAsyncWithHttpInfo (string xChronosheetsAuth);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserProfileKeepSessionAliveWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken));
         /// <summary>
         /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
         /// </summary>
@@ -226,8 +235,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseUpdateProfileResponse</returns>
-        System.Threading.Tasks.Task<ApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileAsync (string xChronosheetsAuth, UpdateMyProfileRequest request);
+        System.Threading.Tasks.Task<ApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileAsync (string xChronosheetsAuth, UpdateMyProfileRequest request, CancellationToken cancellationToken = default(CancellationToken));
 
         /// <summary>
         /// Update your own profile.  Use this method to update your profile information or update/change your password.    Does not require any special permissions.
@@ -238,8 +248,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseUpdateProfileResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<ApiResponseUpdateProfileResponse>> UserProfileUpdateMyProfileAsyncWithHttpInfo (string xChronosheetsAuth, UpdateMyProfileRequest request);
+        System.Threading.Tasks.Task<ApiResponse<ApiResponseUpdateProfileResponse>> UserProfileUpdateMyProfileWithHttpInfoAsync (string xChronosheetsAuth, UpdateMyProfileRequest request, CancellationToken cancellationToken = default(CancellationToken));
         #endregion Asynchronous Operations
     }
 
@@ -439,10 +450,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A request object containing your username/email and password.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseDoLoginResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponseDoLoginResponse> UserProfileDoLoginAsync (DoLoginRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseDoLoginResponse> UserProfileDoLoginAsync (DoLoginRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseDoLoginResponse> localVarResponse = await UserProfileDoLoginAsyncWithHttpInfo(request);
+             ApiResponse<ApiResponseDoLoginResponse> localVarResponse = await UserProfileDoLoginWithHttpInfoAsync(request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -452,8 +464,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="request">A request object containing your username/email and password.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseDoLoginResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDoLoginResponse>> UserProfileDoLoginAsyncWithHttpInfo (DoLoginRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseDoLoginResponse>> UserProfileDoLoginWithHttpInfoAsync (DoLoginRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'request' is set
             if (request == null)
@@ -503,7 +516,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -593,10 +606,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> UserProfileDoLogoutAsync (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> UserProfileDoLogoutAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await UserProfileDoLogoutAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await UserProfileDoLogoutWithHttpInfoAsync(xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -606,8 +620,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserProfileDoLogoutAsyncWithHttpInfo (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserProfileDoLogoutWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -644,7 +659,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.DELETE, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -734,10 +749,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseUserProfile</returns>
-        public async System.Threading.Tasks.Task<ApiResponseUserProfile> UserProfileGetMyProfileAsync (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseUserProfile> UserProfileGetMyProfileAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseUserProfile> localVarResponse = await UserProfileGetMyProfileAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<ApiResponseUserProfile> localVarResponse = await UserProfileGetMyProfileWithHttpInfoAsync(xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -747,8 +763,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseUserProfile)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseUserProfile>> UserProfileGetMyProfileAsyncWithHttpInfo (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseUserProfile>> UserProfileGetMyProfileWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -785,7 +802,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -875,10 +892,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseBoolean</returns>
-        public async System.Threading.Tasks.Task<ApiResponseBoolean> UserProfileKeepSessionAliveAsync (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponseBoolean> UserProfileKeepSessionAliveAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseBoolean> localVarResponse = await UserProfileKeepSessionAliveAsyncWithHttpInfo(xChronosheetsAuth);
+             ApiResponse<ApiResponseBoolean> localVarResponse = await UserProfileKeepSessionAliveWithHttpInfoAsync(xChronosheetsAuth, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -888,8 +906,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// </summary>
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseBoolean)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserProfileKeepSessionAliveAsyncWithHttpInfo (string xChronosheetsAuth)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseBoolean>> UserProfileKeepSessionAliveWithHttpInfoAsync (string xChronosheetsAuth, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -926,7 +945,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.GET, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
@@ -1036,10 +1055,11 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponseUpdateProfileResponse</returns>
-        public async System.Threading.Tasks.Task<ApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileAsync (string xChronosheetsAuth, UpdateMyProfileRequest request)
+        public async System.Threading.Tasks.Task<ApiResponseUpdateProfileResponse> UserProfileUpdateMyProfileAsync (string xChronosheetsAuth, UpdateMyProfileRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
-             ApiResponse<ApiResponseUpdateProfileResponse> localVarResponse = await UserProfileUpdateMyProfileAsyncWithHttpInfo(xChronosheetsAuth, request);
+             ApiResponse<ApiResponseUpdateProfileResponse> localVarResponse = await UserProfileUpdateMyProfileWithHttpInfoAsync(xChronosheetsAuth, request, cancellationToken);
              return localVarResponse.Data;
 
         }
@@ -1050,8 +1070,9 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
         /// <exception cref="ChronoSheetsAPI.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="xChronosheetsAuth">The ChronoSheets Auth Token</param>
         /// <param name="request">An Update MyProfile Request object containing updated fields.</param>
+        /// <param name="cancellationToken">Cancellation Token to cancel request (optional) </param>
         /// <returns>Task of ApiResponse (ApiResponseUpdateProfileResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseUpdateProfileResponse>> UserProfileUpdateMyProfileAsyncWithHttpInfo (string xChronosheetsAuth, UpdateMyProfileRequest request)
+        public async System.Threading.Tasks.Task<ApiResponse<ApiResponseUpdateProfileResponse>> UserProfileUpdateMyProfileWithHttpInfoAsync (string xChronosheetsAuth, UpdateMyProfileRequest request, CancellationToken cancellationToken = default(CancellationToken))
         {
             // verify the required parameter 'xChronosheetsAuth' is set
             if (xChronosheetsAuth == null)
@@ -1105,7 +1126,7 @@ namespace ChronoSheetsAPI.ChronoSheetsClientLibApi
             // make the HTTP request
             IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
                 Method.PUT, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
+                localVarPathParams, localVarHttpContentType, cancellationToken);
 
             int localVarStatusCode = (int) localVarResponse.StatusCode;
 
